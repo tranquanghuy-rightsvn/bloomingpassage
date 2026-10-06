@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tours – Blooming Passage</title>
+<link rel="preload" href="../fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/tours.css">
+</head>
+<body class="page-tours is-inner">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="../index.html"><img src="../images/logo-blooming.png" width="196" height="56" alt="Blooming Passage"></a>
+    <div class="site-header__actions">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div class="menu-overlay"></div>
+    <nav class="main-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <ul class="main-nav__list">
+        <li><a class="main-nav__link" href="../index.html">Home</a></li>
+        <li><a class="main-nav__link" href="../about-us/index.html">About Us</a></li>
+        <li><a class="main-nav__link is-active" href="../tours/index.html" aria-current="page">Journeys</a></li>
+        <li><a class="main-nav__link" href="../contact-us/index.html">Contact</a></li>
+        <li><a class="main-nav__link" href="../faqs/index.html">FAQs</a></li>
+        <li><a class="main-nav__link" href="../blog/index.html">Blog</a></li>
+        <li class="main-nav__cta"><a class="btn-plan" href="../contact-us/index.html">Plan your passage →</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="svg-sprite" aria-hidden="true">
+  <symbol id="i-map" viewBox="0 0 1024 1024"><path d="M826 389Q826 324 802.0 263.5Q778 203 734 157Q690 110 632.0 85.0Q574 60 512 60Q450 60 392.0 85.0Q334 110 290 157Q246 203 222.0 263.5Q198 324 198 389Q198 440 217 498Q237 556 276.0 621.5Q315 687 374 760Q433 832 512 911Q591 832 650 760Q709 687 748.0 621.5Q787 556 807 498Q826 440 826 389ZM512 1011Q416 920 344 835Q272 750 224.0 672.5Q176 595 152 524Q128 453 128 389Q128 309 157.0 235.0Q186 161 240 105Q294 48 365.0 17.5Q436 -13 512 -13Q588 -13 659.0 17.5Q730 48 784 105Q838 161 867.0 235.0Q896 309 896 389Q896 453 872 524Q848 595 800.0 672.5Q752 750 680 835Q608 920 512 1011ZM512 508Q532 508 551.0 499.0Q570 490 584 474Q599 458 606.5 436.5Q614 415 614 392Q614 369 606.5 348.0Q599 327 584 311Q570 295 551.0 286.0Q532 277 512 277Q492 277 473.0 286.0Q454 295 440 311Q425 327 417.5 348.0Q410 369 410 392Q410 415 417.5 436.5Q425 458 440 474Q454 490 473.0 499.0Q492 508 512 508ZM512 584Q478 584 446.5 569.5Q415 555 391 528Q367 501 354.0 466.0Q341 431 341 392Q341 354 354.0 319.0Q367 284 391 257Q415 230 446.5 215.0Q478 200 512 200Q546 200 577.5 215.0Q609 230 633 257Q657 284 670.0 319.0Q683 354 683 392Q683 431 670.0 466.0Q657 501 633 528Q609 555 577.5 569.5Q546 584 512 584Z"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 1365 1024"><path d="M179 -5V751H431V1003H1187V247H935V-5ZM263 79H851V271L454 667H263ZM473 163V205H347V289H554Q550 325 539.0 353.5Q528 382 509 402Q499 398 489.0 394.0Q479 390 471 385Q449 372 440.0 358.0Q431 344 431 331H347Q347 369 367.5 399.5Q388 430 419 450Q403 454 385.0 455.5Q367 457 347 457V541Q403 541 449.0 528.5Q495 516 530 492Q547 495 564.0 497.0Q581 499 599 499V420Q616 392 625.5 358.5Q635 325 638 289H683V205H557V163ZM911 331H1103V919H515V727ZM851 408 811 528 727 780 725 786V835H809V798L810 793H891L893 798V835H977V786L974 780L890 528ZM851 672 862 709H839Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 1365 1024"><path d="M1207 84 469 822 159 511 97 572 439 914 469 943 500 914 1268 146Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 1024 1024"><path d="M922 499Q922 414 889 340Q857 265 801.5 209.5Q746 154 671 122Q597 89 512 89Q427 89 353 122Q278 154 222.5 209.5Q167 265 135 340Q102 414 102 499Q102 584 135 658Q167 733 222.5 788.5Q278 844 353 876Q427 909 512 909Q597 909 671 876Q746 844 801.5 788.5Q857 733 889 658Q922 584 922 499ZM461 316Q461 295 476.0 280.0Q491 265 512 265Q533 265 548.0 280.0Q563 295 563 316V520L701 566Q721 572 730.5 591.0Q740 610 733 630Q727 651 708.0 660.0Q689 669 669 663L496 605Q480 600 470.5 586.5Q461 573 461 557V316ZM1024 499Q1024 605 984 698Q944 792 874.5 861.5Q805 931 711 971Q618 1011 512 1011Q406 1011 313 971Q219 931 149.5 861.5Q80 792 40 698Q0 605 0 499Q0 393 40 300Q80 206 149.5 136.5Q219 67 313 27Q406 -13 512 -13Q618 -13 711 27Q805 67 874.5 136.5Q944 206 984 300Q1024 393 1024 499Z"/></symbol>
+  <symbol id="i-meal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.69566 2.23828L19.9658 19.5084C20.2935 19.8362 20.4776 20.2806 20.4776 20.7441C20.4776 21.2075 20.2935 21.652 19.9658 21.9797C19.638 22.3073 19.1936 22.4913 18.7302 22.4913C18.2668 22.4913 17.8223 22.3073 17.4946 21.9797L13.2758 17.6883C12.9997 17.4079 12.8449 17.0303 12.8446 16.6369V16.3777C12.8446 16.179 12.8052 15.9823 12.7286 15.799C12.652 15.6157 12.5397 15.4494 12.3983 15.3098L11.8536 14.8069C11.6687 14.6363 11.4439 14.5149 11.1998 14.454C10.9557 14.393 10.7002 14.3944 10.4567 14.4581C10.0729 14.5583 9.66957 14.5564 9.28672 14.4525C8.90388 14.3487 8.55484 14.1465 8.27425 13.8661L4.26972 9.86109C1.89409 7.48547 1.01987 3.89812 2.69566 2.23828Z" stroke-linejoin="round"/><path d="M18.7496 1.5L15.1285 5.12109C14.8499 5.39968 14.6288 5.73043 14.478 6.09445C14.3272 6.45847 14.2496 6.84863 14.2496 7.24266V7.93922C14.2496 8.03777 14.2302 8.13536 14.1925 8.22641C14.1548 8.31746 14.0995 8.40018 14.0298 8.46984L13.4996 9M14.9996 10.5L15.5298 9.96984C15.5994 9.90013 15.6821 9.84484 15.7732 9.80711C15.8642 9.76939 15.9618 9.74998 16.0604 9.75H16.7569C17.151 9.75 17.5411 9.67238 17.9051 9.52158C18.2692 9.37078 18.5999 9.14974 18.8785 8.87109L22.4996 5.25M20.6246 3.375L16.8746 7.125M9.3746 17.25L4.70022 21.9506C4.34861 22.3021 3.87178 22.4996 3.3746 22.4996C2.87742 22.4996 2.40059 22.3021 2.04897 21.9506C1.69747 21.599 1.5 21.1222 1.5 20.625C1.5 20.1278 1.69747 19.651 2.04897 19.2994L5.9996 15.375" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-up" viewBox="0 0 1024 1024"><path d="M512 216 484 242 0 727 56 782 512 326 968 782 1024 727 540 242Z"/></symbol>
+  <symbol id="i-down" viewBox="0 0 1024 1024"><path d="M56 216 0 271 484 756 512 782 540 756 1024 271 968 216 512 672Z"/></symbol>
+</svg>
+
+<section class="tp-banner">
+  <div class="tp-banner__inner">
+    <p class="tp-banner__crumb"><a href="../index.html">Home</a><svg width="10" height="16" viewBox="0 0 7 16" aria-hidden="true"><path d="M0 15.5L4.94 0h1.44L1.44 15.5z"/></svg>Tours</p>
+    <h1 class="tp-banner__title">Tours</h1>
+    <div class="tp-banner__text">
+      <p>Thoughtfully paced journeys through Central Vietnam, bringing culture, wellbeing and meaningful connection together.</p>
+      <p class="tp-banner__note">7, 10 or 14 days · Small groups of 5–10 women</p>
+    </div>
+  </div>
+</section>
+
+<main class="tours-main">
+  <section class="tp-journeys">
+    <h2 class="tp-journeys__title">Three journeys. Your own pace.</h2>
+    <p class="tp-journeys__desc">7, 10 or 14 days. Find your balance of discovery, wellbeing and time to simply be.</p>
+    <ul class="tour-grid">
+        <li class="tour-card">
+          <a class="tour-card__media" href="#"><img src="../images/img-1-3-768x576.png" width="768" height="576" alt="7-Day Curated Essence"></a>
+          <p class="tour-card__badge"><svg class="ic ic--clock" aria-hidden="true"><use href="#i-clock"/></svg><span>7 days · 6 nights</span></p>
+          <h3 class="tour-card__title"><a href="#">7-Day Curated Essence</a></h3>
+          <p class="tour-card__excerpt">A beautiful introduction to Central Vietnam. A thoughtfully curated escape that brings together culture, culinary discovery, wellness, and connection — with plenty of time to breathe, slow down, and simply enjoy being somewhere new.</p>
+          <p class="tour-meta"><svg class="ic ic--map" aria-hidden="true"><use href="#i-map"/></svg><span>Da Nang, Central Vietnam</span></p>
+          <ul class="tour-card__info">
+            <li class="tour-meta"><svg class="ic ic--lang" aria-hidden="true"><use href="#i-lang"/></svg><span>English</span></li>
+            <li class="tour-meta"><svg class="ic ic--meal" aria-hidden="true"><use href="#i-meal"/></svg><span>Daily breakfast</span></li>
+          </ul>
+          <p class="tour-card__price">From<span>$900.00</span></p>
+          <p class="tour-meta"><svg class="ic ic--check" aria-hidden="true"><use href="#i-check"/></svg><span>Group Size 5–10 women</span></p>
+          <a class="tour-card__btn" href="#">Explore journey →</a>
+        </li>
+        <li class="tour-card">
+          <a class="tour-card__media" href="#"><img src="../images/img-7-768x576.webp" width="768" height="576" alt="10-Day Balanced Journey"></a>
+          <p class="tour-card__badge"><svg class="ic ic--clock" aria-hidden="true"><use href="#i-clock"/></svg><span>10 days · 9 nights</span></p>
+          <h3 class="tour-card__title"><a href="#">10-Day Balanced Journey</a></h3>
+          <p class="tour-card__excerpt">More time to explore. More time to restore. Settle into the rhythm of Central Vietnam with a deeper blend of culture, culinary experiences, wellness, beauty, personal care, and unhurried moments.</p>
+          <p class="tour-meta"><svg class="ic ic--map" aria-hidden="true"><use href="#i-map"/></svg><span>Da Nang, Central Vietnam</span></p>
+          <ul class="tour-card__info">
+            <li class="tour-meta"><svg class="ic ic--lang" aria-hidden="true"><use href="#i-lang"/></svg><span>English</span></li>
+            <li class="tour-meta"><svg class="ic ic--meal" aria-hidden="true"><use href="#i-meal"/></svg><span>Daily breakfast</span></li>
+          </ul>
+          <p class="tour-card__price">From<span>$900.00</span></p>
+          <p class="tour-meta"><svg class="ic ic--check" aria-hidden="true"><use href="#i-check"/></svg><span>Group Size 5–10 women</span></p>
+          <a class="tour-card__btn" href="#">Explore journey →</a>
+        </li>
+        <li class="tour-card">
+          <a class="tour-card__media" href="#"><img src="../images/Sunlit-Tropical-Resort-Relaxation-768x512.png" width="768" height="512" alt="14-Day Deep Pause"></a>
+          <p class="tour-card__badge"><svg class="ic ic--clock" aria-hidden="true"><use href="#i-clock"/></svg><span>14 days · 13 nights</span></p>
+          <h3 class="tour-card__title"><a href="#">14-Day Deep Pause</a></h3>
+          <p class="tour-card__excerpt">The full Blooming Passage experience. More time to slow down, explore Central Vietnam deeply, and make yourself the priority — with a thoughtful blend of culture, culinary discovery, wellness, beauty, personal care, and proactive health.</p>
+          <p class="tour-meta"><svg class="ic ic--map" aria-hidden="true"><use href="#i-map"/></svg><span>Da Nang, Central Vietnam</span></p>
+          <ul class="tour-card__info">
+            <li class="tour-meta"><svg class="ic ic--lang" aria-hidden="true"><use href="#i-lang"/></svg><span>English</span></li>
+            <li class="tour-meta"><svg class="ic ic--meal" aria-hidden="true"><use href="#i-meal"/></svg><span>Daily breakfast</span></li>
+          </ul>
+          <p class="tour-card__price">From<span>$900.00</span></p>
+          <p class="tour-meta"><svg class="ic ic--check" aria-hidden="true"><use href="#i-check"/></svg><span>Group Size 5–10 women</span></p>
+          <a class="tour-card__btn" href="#">Explore journey →</a>
+        </li>
+    </ul>
+  </section>
+
+  <section class="tp-faq">
+    <h2 class="tp-faq__title">Before your passage.</h2>
+    <div class="tp-faq__cols">
+      <div class="tp-faq__col">
+        <details class="acc" name="tours-faq-1" open>
+          <summary class="acc__title"><span>Which journey is right for me?</span><span class="acc__icon"><svg class="ic ic--up" aria-hidden="true"><use href="#i-up"/></svg><svg class="ic ic--down" aria-hidden="true"><use href="#i-down"/></svg></span></summary>
+          <div class="acc__content"><p>Choose from 7, 10 or 14 days. Explore each itinerary to find the balance of culture, wellbeing and time to rest that suits you.</p></div>
+        </details>
+        <details class="acc" name="tours-faq-1">
+          <summary class="acc__title"><span>Where do the journeys take place?</span><span class="acc__icon"><svg class="ic ic--up" aria-hidden="true"><use href="#i-up"/></svg><svg class="ic ic--down" aria-hidden="true"><use href="#i-down"/></svg></span></summary>
+          <div class="acc__content"><p>Our journeys explore Central Vietnam, from the coast of Da Nang to the lantern-lit streets of Hoi An and the imperial heritage of Hue. See each itinerary for the places and experiences included.</p></div>
+        </details>
+        <details class="acc" name="tours-faq-1">
+          <summary class="acc__title"><span>How large are the groups?</span><span class="acc__icon"><svg class="ic ic--up" aria-hidden="true"><use href="#i-up"/></svg><svg class="ic ic--down" aria-hidden="true"><use href="#i-down"/></svg></span></summary>
+          <div class="acc__content"><p>Travel with a small group of 5–10 women, with space for shared experiences and time for yourself.</p></div>
+        </details>
+      </div>
+      <div class="tp-faq__col">
+        <details class="acc" name="tours-faq-2" open>
+          <summary class="acc__title"><span>Are wellness experiences optional?</span><span class="acc__icon"><svg class="ic ic--up" aria-hidden="true"><use href="#i-up"/></svg><svg class="ic ic--down" aria-hidden="true"><use href="#i-down"/></svg></span></summary>
+          <div class="acc__content"><p>Your wellbeing is personal. Additional medical, dental, beauty and wellness enhancements are optional, so you can choose what feels right for you. Check your itinerary for included experiences.</p></div>
+        </details>
+        <details class="acc" name="tours-faq-2">
+          <summary class="acc__title"><span>How do I choose a departure?</span><span class="acc__icon"><svg class="ic ic--up" aria-hidden="true"><use href="#i-up"/></svg><svg class="ic ic--down" aria-hidden="true"><use href="#i-down"/></svg></span></summary>
+          <div class="acc__content"><p>Browse the upcoming journeys on our homepage, then contact us with your preferred dates and journey length. We can help you confirm availability and the next steps.</p></div>
+        </details>
+        <details class="acc" name="tours-faq-2">
+          <summary class="acc__title"><span>Can I ask a question before booking?</span><span class="acc__icon"><svg class="ic ic--up" aria-hidden="true"><use href="#i-up"/></svg><svg class="ic ic--down" aria-hidden="true"><use href="#i-down"/></svg></span></summary>
+          <div class="acc__content"><p>Of course. <a href="../contact-us/index.html">Start a conversation with Blooming Passage</a> to discuss the itinerary, your preferences or any questions before choosing your journey.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__top">
+    <div class="footer-brand">
+      <a href="../index.html"><img class="footer-brand__logo" src="../images/logo-blooming.png" width="250" height="72" alt="Blooming Passage" loading="lazy"></a>
+      <h3 class="footer-brand__tag">Thoughtful journeys. Space to bloom.</h3>
+      <ul class="footer-list footer-list--contact">
+        <li><a href="#"><img src="../images/icon-map.svg" width="19" height="19" alt="">1901 Thornridge Cir. Shiloh, Hawaii 81063</a></li>
+        <li><a href="tel:3085550121"><img src="../images/icon-phone.svg" width="16" height="16" alt="">(308) 555-0121</a></li>
+        <li><a href="mailto:hello@passage.com"><img src="../images/icon-mail.svg" width="17" height="13" alt="">hello@passage.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-col__title">Our Journeys</h3>
+      <ul class="footer-list">
+        <li><a href="#">7-Day Curated Essence</a></li>
+        <li><a href="#">10-Day Balanced Journey</a></li>
+        <li><a href="#">14-Day Deep Pause</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-col__title">Information</h3>
+      <ul class="footer-list">
+        <li><a href="../about-us/index.html">About Us</a></li>
+        <li><a href="../tours/index.html">Journeys</a></li>
+        <li><a href="../contact-us/index.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-col__title">Follow Us</h3>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><img src="../images/icon-facebook.svg" width="22" height="22" alt="" loading="lazy"></a>
+        <a href="#" aria-label="Instagram"><img src="../images/icon-instagram.svg" width="22" height="22" alt="" loading="lazy"></a>
+        <a href="#" aria-label="X"><img src="../images/icon-x.svg" width="22" height="22" alt="" loading="lazy"></a>
+        <a href="#" aria-label="YouTube"><img src="../images/icon-youtube.svg" width="22" height="22" alt="" loading="lazy"></a>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p>© 2026 Blooming Passage. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="back-top" href="#" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</a>
+
+<nav class="mobile-bar" aria-label="Quick links">
+  <a class="mobile-bar__item" href="../index.html">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M8.14438 19.7824V16.7156C8.14437 15.9384 8.77632 15.307 9.55909 15.3021H12.4333C13.2195 15.3021 13.8569 15.935 13.8569 16.7156V19.7735C13.8569 20.4476 14.4047 20.9954 15.0836 21.0003H17.0445C17.9603 21.0027 18.8394 20.6431 19.4878 20.001C20.1362 19.3589 20.5007 18.4871 20.5007 17.5778V8.86617C20.5006 8.13171 20.1727 7.43504 19.6053 6.96383L12.9436 1.67459C11.7792 0.749448 10.116 0.779334 8.98604 1.74571L2.46766 6.96383C1.87339 7.42115 1.5182 8.11989 1.50065 8.86617V17.569C1.50065 19.464 3.04803 21.0003 4.95682 21.0003H6.87294C7.19982 21.0027 7.51414 20.8754 7.74612 20.6467C7.97811 20.4181 8.10858 20.107 8.10857 19.7824H8.14438Z" stroke-width="1.5"/></svg>
+    <span>Home</span>
+  </a>
+  <a class="mobile-bar__item is-active" href="../tours/index.html">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6H21M8 12H21M8 18H21M3 6H3.01M3 12H3.01M3 18H3.01"/></svg>
+    <span>Tours</span>
+  </a>
+  <a class="mobile-bar__item" href="#">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.25 17.25H6.54375L3.92813 2.86875C3.89752 2.69653 3.80768 2.54042 3.67415 2.42743C3.54062 2.31444 3.37179 2.25168 3.19687 2.25H1.5"/><circle cx="7.5" cy="19.125" r="1.875"/><circle cx="17.25" cy="19.125" r="1.875"/><path d="M5.85938 13.5H17.6344C17.985 13.5011 18.3247 13.3785 18.5939 13.1539C18.8631 12.9293 19.0445 12.617 19.1063 12.2719L20.25 6H4.5"/></svg>
+    <span>Cart</span>
+  </a>
+  <a class="mobile-bar__item" href="#">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.875" cy="10.875" r="7.875"/><path d="M16.4437 16.4437L21 21"/></svg>
+    <span>Search</span>
+  </a>
+</nav>
+
+<script src="../js/main.js" defer></script>
+</body>
+</html>
