@@ -217,3 +217,122 @@ Pixel-diff sau khi đồng bộ (%):
 
 ## 2.10 Dọn `.work/` (2026-10-07)
 Đã xoá `.work/` (khoảng 161MB: DOM/CSS dump, ảnh chụp thô, ảnh so sánh breakpoint phụ, bản sao lưu) theo xác nhận của người dùng.
+
+## 2.11 Trang chi tiết tour `tours/7-day-curated-essence/` (2026-10-07)
+
+**File:**
+- Mới: `tours/7-day-curated-essence/index.html`, `css/tour-detail.css`, `js/tour-detail.js`.
+- Tách dùng chung với bài blog: `css/share.css`, `js/share.js` (nút Share lấy ra từ `post.css`/`post.js`; đo lại bài blog, số liệu không đổi).
+- Ảnh mới: 15 file (ảnh slider và thumbnail 768px).
+
+**Menu/footer:** chép nguyên từ trang chủ (mục "Journeys" và "Tours" ở thanh đáy được đánh dấu active).
+
+**Link nội bộ mới trỏ tới trang này:**
+- link "7-Day Curated Essence" ở footer của mọi trang;
+- thẻ 7 ngày ở trang Journeys;
+- nút "Explore Tour" thẻ đầu ở trang chủ;
+- 2 nút "Reserve" của các đợt 7 ngày ở trang chủ. Nút này mang `?departure=...` để form đặt chỗ tự chọn sẵn ngày.
+
+**Thành phần:**
+- **Slider:** ảnh chính + dải thumbnail (4/3/2 ảnh mỗi khung tuỳ màn hình), mũi tên hiện khi rê chuột.
+- **Thông tin tour:** breadcrumb, tiêu đề, tag, vị trí, nút Share, lưới 6 thông tin. Icon được trích từ icon-font gốc thành SVG.
+- **Lịch trình và FAQ:** accordion `<details name>`, mỗi nhóm chỉ mở 1 mục.
+- **Đặt chỗ:** tab Book/Inquiry. Tổng tiền tự tính theo số vé và dịch vụ thêm. Nút "Booking Now" chỉ bật khi đã chọn ngày khởi hành. Các form là tĩnh, không gửi đi đâu.
+- **Review:** trạng thái rỗng như gốc. Nút "Write a Review" mở hộp thoại form (`<dialog>`). Menu "Sort by" có thể chọn.
+- **"Our signature journeys"** ở cuối trang.
+- **Thanh giá cố định ở đáy màn hình:** nút "Check Availability" cuộn tới khung đặt chỗ. Trên mobile thanh này nằm trên thanh điều hướng đáy và tụt xuống khi thanh đó ẩn.
+
+**Lược bỏ / thay thế:**
+- **Widget thời tiết:** gốc đang báo lỗi "Weather request error. Please make sure that your api is entered", nên em bỏ khối này.
+- **Bản đồ Google:** thay bằng khung placeholder cùng kích thước, giống trang Contact.
+- Khi đo, em ẩn widget thời tiết bên gốc và thanh giá cố định ở cả hai bên.
+
+**Pixel-diff (%):**
+
+| Section | 1920 | 1440 | 1366 | 1024 | 900 | 768 | 480 | 375 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| header | 98.06 | 97.41 | 97.27 | 93.98 | 93.31 | 92.36 | 90.11 | 91.74 |
+| gallery | 100 | 100 | 100 | 99.99 | 99.99 | 99.79 | 97.78 | 98.37 |
+| top | 99.83 | 99.77 | 99.76 | 99.42 | 99.5 | 99.23 | 98.37 | 98.1 |
+| itinerary | 99.72 | 99.62 | 99.6 | 99.64 | 99.62 | 99.55 | 99.51 | 97.86 |
+| content | 99.67 | 99.56 | 99.53 | 99.53 | 99.46 | 99.37 | 98.76 | 98.77 |
+| faq | 99.96 | 99.94 | 99.94 | 99.7 | 99.91 | 99.73 | 99.33 | 99.68 |
+| reviews | 99.74 | 99.65 | 99.63 | 99.22 | 98.95 | 98.28 | 98.04 | 99.11 |
+| booking | 99.58 | 99.44 | 99.4 | 99.36 | 99.3 | 99.2 | 98.87 | 97.73 |
+| related | 99.76 | 99.68 | 99.67 | 99.49 | 96.55 | 96.4 | 96.94 | 98.39 |
+| footer | 98.29 | 97.72 | 97.6 | 96.93 | 96.98 | 96.47 | 95.57 | 94.2 |
+
+- **Header và footer** thấp hơn là do logo mới (giống các trang khác).
+- **Các section nội dung đều ≥96.4%**, trung bình 99.22%.
+- **Related ở 900/768/480 (96.4–96.9%):** lệch phần lẻ sub-pixel. Nguyên nhân: ở màn ≤1024, gốc đặt widget thời tiết phía trên nội dung chính, còn bản clone đã bỏ widget này, nên các khối phía dưới lệch nhau phần lẻ pixel. Bên trong thẻ khớp từng pixel. Theo người dùng, 96% là chấp nhận được.
+
+**Kiểm tra:**
+- Không scroll ngang ở 1920–320px, 0 ảnh lỗi, 0 lỗi JS.
+- Đã bấm thử: slider, thumbnail, accordion, tab, tổng tiền, hộp thoại review, Share, Sort, thanh giá cố định. Đều hoạt động.
+- Link nội bộ của cả 8 trang không có link hỏng.
+
+## 2.12 Tour 10 ngày, 14 ngày · URL dạng `/slug/` · hiệu ứng hero (2026-10-07)
+
+**Trang mới:** `tours/10-day-balanced-journey/` và `tours/14-day-deep-pause/`.
+- Dùng lại đúng HTML khung, `css/tour-detail.css`, `js/tour-detail.js`, `css/share.css`, `js/share.js` của trang 7 ngày. Không thêm file CSS/JS mới.
+- 3 trang tour được sinh từ một template chung. Mỗi tour chỉ khác dữ liệu:
+  - ảnh slider và thumbnail;
+  - tiêu đề, thời lượng, đoạn giới thiệu;
+  - lịch trình (10 và 14 mục);
+  - nội dung "What's Included";
+  - ngày khởi hành;
+  - giá vé ($9.000 và $12.600) và phụ phí (Wifi/Park $100/$1.000 và $140/$1.400).
+- Ảnh mới: 18 file.
+
+| tour10 | 1920 | 1366 | 768 | 375 |
+|---|---:|---:|---:|---:|
+| header | 98.06 | 97.27 | 92.36 | 91.74 |
+| gallery | 100 | 100 | 99.1 | 99.03 |
+| top | 99.83 | 99.76 | 98.82 | 98.87 |
+| itinerary | 99.66 | 99.53 | 99.52 | 97.83 |
+| content | 99.77 | 99.67 | 99.43 | 97.96 |
+| faq | 99.96 | 99.94 | 99.6 | 99.17 |
+| reviews | 99.72 | 99.6 | 98.28 | 98.92 |
+| booking | 99.62 | 99.47 | 99.18 | 98.61 |
+| related | 99.76 | 99.66 | 96.41 | 98.72 |
+| footer | 98.29 | 97.6 | 96.46 | 94.15 |
+
+| tour14 | 1920 | 1366 | 768 | 375 |
+|---|---:|---:|---:|---:|
+| header | 98.06 | 97.27 | 92.36 | 91.74 |
+| gallery | 100 | 100 | 99.99 | 98.66 |
+| top | 99.82 | 99.75 | 99.32 | 98.17 |
+| itinerary | 99.74 | 99.64 | 99.59 | 97.01 |
+| content | 99.76 | 99.67 | 99.42 | 96.37 |
+| faq | 99.96 | 99.94 | 99.4 | 99.14 |
+| reviews | 99.67 | 99.54 | 98.76 | 98.86 |
+| booking | 99.63 | 99.47 | 99.19 | 97.7 |
+| related | 99.77 | 99.68 | 99.34 | 99.46 |
+| footer | 98.26 | 97.56 | 96.51 | 94.17 |
+
+Các section nội dung đều ≥96.37%. Header/footer thấp hơn do logo mới.
+
+**URL dạng `/slug/`:**
+- Mọi link trang nội bộ trên 10 trang đã đổi từ `xxx/index.html` sang đường dẫn tuyệt đối `/`, `/about-us/`, `/tours/`, `/tours/<tour>/`, `/contact-us/`, `/faqs/`, `/blog/`, `/hoi-an-lanterns-craft-and-a-little-wonder/`.
+- Tài nguyên (css/js/ảnh/font) vẫn dùng đường dẫn tương đối.
+- Cần chạy qua web server với thư mục `html/` làm gốc, ví dụ `cd html && python3 -m http.server`. Mở file trực tiếp (`file://`) thì các link trang sẽ không chạy.
+
+**Link đã nối thêm:**
+- footer "10-Day Balanced Journey" và "14-Day Deep Pause" ở mọi trang;
+- 3 thẻ ở trang Journeys;
+- 3 nút "Explore Tour" và 4 nút "Reserve" ở trang chủ. Nút Reserve tự chọn sẵn ngày khởi hành.
+
+**Kiểm tra (qua server, 1440 và 375):**
+- 10 trang đều không lỗi JS, không request ra ngoài, không ảnh lỗi, không scroll ngang;
+- menu mobile mở/đóng được, mục active đúng;
+- 41 link nội bộ đều trả về 200.
+
+**Hero trang chủ:**
+- Tiêu đề, dòng mô tả và nút lần lượt trượt từ trên xuống (48px) và hiện dần khi tải trang. Thời gian 0.9s, bắt đầu lệch nhau 0.15s / 0.4s / 0.65s, viết bằng CSS thuần.
+- Hover nút vẫn phóng to.
+- Người dùng bật chế độ giảm chuyển động trên máy thì chữ hiện ngay, không trượt.
+
+**Sửa thêm:** ảnh lightbox ẩn ở trang chủ trước đây có `src=""`, làm trình duyệt gửi thừa 1 request. Đã bỏ thuộc tính này; lightbox vẫn hoạt động.
+
+## 2.13 Dọn `.work/` (2026-10-07)
+Đã xoá `.work/` lần 2 (khoảng 39MB: dữ liệu crawl trang tour, script sinh trang tour, bản sao lưu trước khi đổi link, ảnh so sánh breakpoint phụ) theo xác nhận của người dùng. Thêm `.gitignore` bỏ qua `.work/` và `.DS_Store`.
