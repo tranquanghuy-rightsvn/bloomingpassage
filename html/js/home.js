@@ -15,6 +15,75 @@
     });
   }
 
+  // Scroll reveal: blocks appear once, one after another in reading order (top→bottom, left→right).
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reduce) {
+    var groups = [
+      ['.pillar', 'up'],
+      ['.exp-tab__title', 'up'],
+      ['.tour-card', 'up'],
+      ['.place:not(.place--reverse) .place__img, .place--reverse .place__body', 'left'],
+      ['.place:not(.place--reverse) .place__body, .place--reverse .place__img', 'right'],
+      ['.lens__item', 'zoom']
+    ];
+    var targets = [];
+    groups.forEach(function (g) {
+      document.querySelectorAll(g[0]).forEach(function (el) { el.dataset.reveal = g[1]; targets.push(el); });
+    });
+    document.documentElement.classList.add('js-reveal');
+    var done = function (el) {
+      // Back to the component's own transitions (hover effects) once revealed.
+      el.removeAttribute('data-reveal');
+      el.style.removeProperty('--reveal-delay');
+    };
+    var pending = targets.slice();
+    var reveal = function (shown) {
+      shown = shown.filter(function (el) { return pending.indexOf(el) !== -1; });
+      shown.sort(function (a, b) {
+        var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+        return Math.abs(ra.top - rb.top) > 24 ? ra.top - rb.top : ra.left - rb.left;
+      });
+      shown.forEach(function (el, i) {
+        io.unobserve(el);
+        pending.splice(pending.indexOf(el), 1);
+        el.style.setProperty('--reveal-delay', Math.min(i * 120, 960) + 'ms');
+        el.classList.add('is-in');
+        el.addEventListener('transitionend', function end(e) {
+          if (e.propertyName !== 'transform') return;
+          el.removeEventListener('transitionend', end);
+          done(el);
+        });
+      });
+    };
+    var io = new IntersectionObserver(function (entries) {
+      reveal(entries.filter(function (e) { return e.isIntersecting; }).map(function (e) { return e.target; }));
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.15 });
+    targets.forEach(function (el) { io.observe(el); });
+    // A jump (anchor link, restored scroll position) skips blocks without them ever intersecting:
+    // reveal anything that is already above the bottom of the viewport.
+    var ticking = false;
+    var catchUp = function () {
+      ticking = false;
+      var passed = pending.filter(function (el) { return el.getBoundingClientRect().top < innerHeight * 0.92; });
+      if (passed.length) reveal(passed);
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking && pending.length) { ticking = true; requestAnimationFrame(catchUp); }
+    }, { passive: true });
+    window.addEventListener('load', catchUp);
+    // Experience images animate in CSS whenever a tab opens; the first time, wait until the section is seen.
+    var exp = document.querySelector('.experience');
+    if (exp) {
+      var expIo = new IntersectionObserver(function (entries) {
+        if (entries.some(function (e) { return e.isIntersecting; })) { exp.classList.add('is-seen'); expIo.disconnect(); }
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.15 });
+      exp.querySelectorAll('.exp-panel__gallery').forEach(function (g) { expIo.observe(g); });
+      window.addEventListener('scroll', function seen() {
+        if (exp.getBoundingClientRect().top < innerHeight * 0.6) { exp.classList.add('is-seen'); window.removeEventListener('scroll', seen); }
+      }, { passive: true });
+    }
+  }
+
   // Experience tabs: <details name> already makes them exclusive;
   // on desktop keep one tab open at all times (tab behaviour).
   var tabQuery = window.matchMedia('(min-width: 768px)');
