@@ -12,7 +12,7 @@
 .eyebrow--accent { color: var(--rust); }
 
 /* ===== Hero ===== */
-/* Home: the header sits above the hero instead of over it, so the whole video frame is visible */
+/* Home: the header sits above the hero instead of over it */
 .site-header { margin-bottom: 0; }
 .hero {
   position: relative;
@@ -20,29 +20,33 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Full width; as tall as the 16:9 video, but never taller than the viewport below the header,
-     so the whole hero (waves included) is in view on arrival. The video covers the box. */
+  /* Full width, 16:9, but never taller than the viewport below the header,
+     so the whole hero (waves included) is in view on arrival. The photo covers the box. */
   width: 100%;
   height: min(56.25vw, calc(100svh - var(--header-h, 97.5px)));
   min-height: 540px;
-  padding: 40px 32px calc(var(--wave-h) + 24px);
-  text-align: center;
+  padding: 40px max(32px, calc((100% - 1200px) / 2)) calc(var(--wave-h) + 24px);
+  text-align: left;
+  align-items: flex-start;
 }
-/* Video background: the poster (first frame) shows at once; the video fades in once it is playing */
+/* Photo background (friends in Hoi An's lantern street): a slow, gentle settle on arrival */
 .hero__media {
   position: absolute;
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  background: var(--ink) url(../images/hero-poster-full.webp) center / cover no-repeat;
+  background: var(--ink);
 }
-.hero__video { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .8s ease; }
-.hero.has-video .hero__video { opacity: 1; }
+.hero__img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 35%; animation: hero-settle 14s cubic-bezier(.22, .61, .36, 1) both; }
+@keyframes hero-settle { from { transform: scale(1.07); } to { transform: none; } }
+/* the two women stand centre-right: the text sits on a soft shade on the left */
 .hero__media::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(45, 56, 50, .32), rgba(45, 56, 50, .45) 55%, rgba(45, 56, 50, .47));
+  background:
+    linear-gradient(90deg, rgba(45, 39, 33, .66), rgba(45, 39, 33, .42) 34%, rgba(45, 39, 33, .06) 62%, rgba(45, 39, 33, 0)),
+    linear-gradient(rgba(45, 39, 33, .18), rgba(45, 39, 33, 0) 30%);
 }
 /* Waves at the foot of the hero (shape from the Hoang Yen banner): a soft terracotta crest behind,
    cream in front so the hero flows straight into the About section below */
@@ -65,13 +69,13 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   width: 100%;
-  max-width: 900px;
+  max-width: 520px;
 }
 .hero__title {
-  font: 500 72px/1.05 var(--serif);
+  font: 500 66px/1.05 var(--serif);
   letter-spacing: -1px;
   color: var(--cream);
 }
@@ -295,6 +299,29 @@
 .link-all { padding: 12px 0; font-size: 13px; font-weight: 600; color: var(--brown); white-space: nowrap; transition: color .25s; }
 .link-all:hover { color: var(--rust); }
 
+/* ===== Six facets (icons as on the brochure) ===== */
+.facets { padding-top: 10px; padding-bottom: 40px; }
+.facets__list { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; padding: 30px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.facet { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.facet__icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  color: #8b785e;
+  background: var(--paper);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition: color .3s, transform .3s;
+}
+.facet__icon svg { width: 27px; height: 27px; }
+.facet:hover .facet__icon { color: var(--rust); transform: translateY(-3px); }
+.facet__label { font: 500 21px/1.2 var(--serif); color: var(--brown); }
+
+/* ===== Travel season line ===== */
+.season { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-top: 4px; font: italic 500 20px/1.4 var(--serif); color: var(--rust); }
+.season span { font: 600 11px/1.6 var(--sans); font-style: normal; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); }
+
 /* ===== Tour cards ===== */
 .tours { gap: 28px; }
 .tours__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 28px; }
@@ -325,8 +352,20 @@
   background: var(--sage);
   border-radius: 30px;
 }
-.tour-card__title { margin: 18px 12px 8px; font: 600 18px/1.35 var(--sans); color: var(--brown); }
-.tour-card__text { margin: 0 12px 18px; font-size: 15px; line-height: 1.6; color: var(--text); }
+/* each journey has its own soft tint (brochure: blush, sage, rose) */
+.tour-card--essence { --tint: #f7e9e3; --accent: #b4644f; }
+.tour-card--balanced { --tint: #eaede2; --accent: #687a5b; }
+.tour-card--pause { --tint: #f3e3da; --accent: #a55427; }
+.tour-card[class*="tour-card--"] { background: var(--tint); }
+.tour-card[class*="tour-card--"] .tour-card__badge { background: var(--accent); }
+.tour-card__title { display: flex; align-items: center; gap: 10px; margin: 18px 12px 8px; font: 500 26px/1.2 var(--serif); color: var(--brown); }
+.tour-card__icon { flex: none; width: 24px; height: 24px; color: var(--accent, var(--sage)); }
+.tour-card__icon svg { display: block; width: 100%; height: 100%; }
+.tour-card__text { margin: 0 12px 14px; font-size: 15px; line-height: 1.6; color: var(--text); }
+.tour-card__list { display: flex; flex-direction: column; align-self: stretch; gap: 8px; margin: 0 12px 22px; padding-top: 14px; border-top: 1px solid rgba(101, 87, 74, .15); }
+.tour-card__list li { position: relative; padding-left: 18px; font-size: 14px; line-height: 1.5; color: var(--ink); }
+.tour-card__list li::before { content: ""; position: absolute; top: .6em; left: 2px; width: 6px; height: 6px; background: var(--accent, var(--sage)); border-radius: 50%; }
+.tour-card .btn-pill { margin-top: auto; }
 .btn-pill {
   margin: 0 12px;
   padding: 8px 16px;
@@ -340,6 +379,23 @@
   transition: background-color .25s, border-color .25s;
 }
 .btn-pill:hover { background: var(--rust); border-color: var(--rust); }
+
+/* ===== Care for your whole self: small round photos ===== */
+.care { gap: 34px; padding-top: 50px; padding-bottom: 50px; }
+.care__list { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px 18px; }
+.care-item { display: flex; flex: 0 0 calc((100% - 6 * 18px) / 7); flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.care-item__img {
+  width: 100%;
+  max-width: 150px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 4px solid var(--paper);
+  border-radius: 50%;
+  box-shadow: 0 8px 22px rgba(56, 45, 38, .1);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+.care-item:hover .care-item__img { transform: scale(1.04); box-shadow: 0 12px 28px rgba(56, 45, 38, .16); }
+.care-item__label { font: 500 18px/1.3 var(--serif); color: var(--brown); }
 
 /* ===== Places ===== */
 .places { gap: 16px; }
@@ -470,6 +526,7 @@
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
   .hero__title { font-size: 60px; }
+  .care-item { flex-basis: calc((100% - 3 * 18px) / 4); }
   .exp-panel > :not(.exp-panel__gallery) { width: calc(44% - 24px); }
   .exp-panel__gallery { width: 54%; gap: 10px; }
   .place { gap: 40px; }
@@ -483,7 +540,11 @@
   .about__text, .about__img { width: 100%; max-width: none; }
 }
 @media (max-width: 767px) {
-  .hero { padding: 40px 24px calc(var(--wave-h) + 40px); }
+  /* phones: the women fill the frame; the text sits low, centred, on a shade from below */
+  .hero { justify-content: flex-end; align-items: center; padding: 40px 24px calc(var(--wave-h) + 24px); text-align: center; }
+  .hero__content { align-items: center; }
+  .hero__img { object-position: 57% center; }
+  .hero__media::after { background: linear-gradient(rgba(45, 39, 33, 0) 35%, rgba(45, 39, 33, .55) 70%, rgba(45, 39, 33, .7)); }
   .hero__title { font-size: 48px; }
   .btn-hero { margin-top: 14px; }
   .about__text { width: 100%; max-width: none; }
@@ -491,6 +552,13 @@
   .about__img { width: 100%; max-width: none; }
   .sec-head { flex-wrap: wrap; }
   .sec-head__text { flex-basis: 100%; }
+  .facets__list { grid-template-columns: repeat(3, 1fr); gap: 26px 10px; padding: 26px 0; }
+  .facet__label { font-size: 19px; }
+  .care { gap: 26px; padding-top: 34px; padding-bottom: 34px; }
+  .care__list { gap: 22px 14px; }
+  .care-item { flex-basis: calc((100% - 2 * 14px) / 3); gap: 10px; }
+  .care-item__label { font-size: 16px; }
+  .tour-card__title { font-size: 24px; }
   /* tabs become an accordion */
   .exp-tabs { display: flex; flex-direction: column; gap: 10px; padding-bottom: 0; }
   .exp-tab__title { gap: 14px; height: auto; min-height: 62px; text-align: left; }

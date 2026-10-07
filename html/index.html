@@ -50,7 +50,7 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero__media" aria-hidden="true">
-      <video class="hero__video" muted loop playsinline preload="none" poster="images/hero-poster-full.webp" data-src="videos/hero-full-1080.mp4" data-src-small="videos/hero-full-720.mp4"></video>
+      <img class="hero__img" src="images/banner-04.webp" width="1536" height="1024" alt="" fetchpriority="high">
     </div>
     <div class="hero__content">
       <h1 class="hero__title">IT’S YOUR TIME<br>TO BLOOM.</h1>
@@ -75,39 +75,87 @@
     </div>
   </section>
 
+  <!-- What a passage holds (as on the brochure) -->
+  <section class="sec facets" aria-label="What a passage holds">
+    <ul class="facets__list">
+      <li class="facet"><span class="facet__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span><span class="facet__label">Food</span></li>
+      <li class="facet"><span class="facet__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4Z"/></svg></span><span class="facet__label">Culture</span></li>
+      <li class="facet"><span class="facet__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span><span class="facet__label">Adventure</span></li>
+      <li class="facet"><span class="facet__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1"/><circle cx="12" cy="8" r="2"/><path d="M12 10v12"/><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"/><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"/></svg></span><span class="facet__label">Wellness</span></li>
+      <li class="facet"><span class="facet__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg></span><span class="facet__label">Beauty</span></li>
+      <li class="facet"><span class="facet__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 15 6 6"/><path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"/></svg></span><span class="facet__label">Personal Care</span></li>
+    </ul>
+  </section>
+
   <!-- Signature journeys -->
   <section class="sec tours">
     <div class="sec-head">
       <div class="sec-head__text">
         <p class="eyebrow eyebrow--muted">FEATURED TOURS</p>
         <h2 class="sec-head__title">Signature Journeys</h2>
-        <p class="sec-head__desc">Thoughtfully designed for rest, discovery and a brighter you.</p>
+        <p class="sec-head__desc">Thoughtfully designed for rest, discovery and a brighter you, with a personal concierge from arrival to farewell.</p>
+        <p class="season"><span>Central Vietnam travel season</span> Mid-February – Mid-May 2027</p>
       </div>
       <a class="link-all" href="/tours/">View All Tours →</a>
     </div>
     <div class="tours__grid">
-      <article class="tour-card">
+      <article class="tour-card tour-card--essence">
         <img class="tour-card__img" src="images/img-1-3-768x576.png" width="365" height="224" alt="Friends by the Japanese Covered Bridge in Hoi An" loading="lazy">
         <p class="tour-card__badge">7 Days</p>
-        <h3 class="tour-card__title">7-Day Curated Essence</h3>
+        <h3 class="tour-card__title"><span class="tour-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/></svg></span>7-Day Curated Essence</h3>
         <p class="tour-card__text">Culture, wellness and coastal beauty in perfect balance.</p>
+        <ul class="tour-card__list">
+          <li>Hoi An heritage, cyclo ride &amp; custom tailoring</li>
+          <li>Cooking class, tea ceremony &amp; Hue imperial tour</li>
+          <li>Skin analysis, facial &amp; full-body massage</li>
+        </ul>
         <a class="btn-pill" href="/tours/7-day-curated-essence/">Explore Tour →</a>
       </article>
-      <article class="tour-card">
+      <article class="tour-card tour-card--balanced">
         <img class="tour-card__img" src="images/img-7-768x576.webp" width="365" height="224" alt="Choosing fabrics at a tailor shop in Hoi An" loading="lazy">
         <p class="tour-card__badge">10 Days</p>
-        <h3 class="tour-card__title">10-Day Balanced Journey</h3>
+        <h3 class="tour-card__title"><span class="tour-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>10-Day Balanced Journey</h3>
         <p class="tour-card__text">A deeper journey with more time to explore and unwind.</p>
+        <ul class="tour-card__list">
+          <li>Everything in the 7-day journey</li>
+          <li>Vespa food tour &amp; organic fruit farm</li>
+          <li>More time for spa, beauty &amp; tailoring</li>
+        </ul>
         <a class="btn-pill" href="/tours/10-day-balanced-journey/">Explore Tour →</a>
       </article>
-      <article class="tour-card">
+      <article class="tour-card tour-card--pause">
         <img class="tour-card__img" src="images/Sunlit-Tropical-Resort-Relaxation-768x512.png" width="365" height="224" alt="Relaxing at a sunlit tropical resort" loading="lazy">
         <p class="tour-card__badge">14 Days</p>
-        <h3 class="tour-card__title">14-Day Deep Pause</h3>
+        <h3 class="tour-card__title"><span class="tour-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1"/><circle cx="12" cy="8" r="2"/><path d="M12 10v12"/><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"/><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"/></svg></span>14-Day Deep Pause</h3>
         <p class="tour-card__text">A well-rounded experience of culture, health and self-care.</p>
+        <ul class="tour-card__list">
+          <li>Everything in the 10-day journey</li>
+          <li>Extra wellness &amp; deep-reset days</li>
+          <li>Optional medical &amp; dental care, flexibly scheduled</li>
+        </ul>
         <a class="btn-pill" href="/tours/14-day-deep-pause/">Explore Tour →</a>
       </article>
     </div>
+  </section>
+
+  <!-- Care for your whole self: small round photos (as on the brochure) -->
+  <section class="sec care">
+    <div class="sec-head">
+      <div class="sec-head__text">
+        <p class="eyebrow eyebrow--accent">WELLNESS · BEAUTY · HEALTH</p>
+        <h2 class="sec-head__title">Care for your <em>whole self.</em></h2>
+        <p class="sec-head__desc">Optional treatments woven gently into your days: chosen by you, arranged by us with trusted local spas and clinics.</p>
+      </div>
+    </div>
+    <ul class="care__list">
+      <li class="care-item"><img class="care-item__img" src="images/BP%20-%20Beauty%204.jpeg" width="150" height="150" alt="A relaxing shoulder massage in a calm spa" loading="lazy"><span class="care-item__label">Rejuvenating massage</span></li>
+      <li class="care-item"><img class="care-item__img" src="images/BP%20-%20Beauty%208.jpeg" width="150" height="150" alt="A nourishing facial mask being applied" loading="lazy"><span class="care-item__label">Facial treatment</span></li>
+      <li class="care-item"><img class="care-item__img" src="images/BP%20-%20Healthcare%202.jpeg" width="150" height="150" alt="A friendly consultation with a doctor" loading="lazy"><span class="care-item__label">Expert consultation</span></li>
+      <li class="care-item"><img class="care-item__img" src="images/BP%20-%20Beauty%203.jpeg" width="150" height="150" alt="A manicure in a bright salon" loading="lazy"><span class="care-item__label">Mani &amp; pedi</span></li>
+      <li class="care-item"><img class="care-item__img" src="images/BP%20-%20Beauty%202.jpeg" width="150" height="150" alt="A blow-dry and styling session" loading="lazy"><span class="care-item__label">Styling session</span></li>
+      <li class="care-item"><img class="care-item__img" src="images/BP%20-%20Healthcare%201.jpeg" width="150" height="150" alt="A blood pressure check during a health screening" loading="lazy"><span class="care-item__label">Health check</span></li>
+      <li class="care-item"><img class="care-item__img" src="images/BP%20-%20Healthcare%206.jpeg" width="150" height="150" alt="A smiling guest at a dental check-up" loading="lazy"><span class="care-item__label">Dental care</span></li>
+    </ul>
   </section>
 
   <!-- Gallery -->

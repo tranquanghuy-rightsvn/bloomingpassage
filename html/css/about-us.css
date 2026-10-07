@@ -110,6 +110,25 @@ body { color: #2d3832; background: var(--cream); }
 .ab-approach__note { padding-top: 18px; }
 
 /* ----- Care ----- */
+/* Founder note: round portrait (monogram until the client's photo arrives) beside a short letter */
+.ab-founder { display: grid; grid-template-columns: 300px minmax(0, 1fr); align-items: center; gap: 64px; }
+.ab-founder__photo { position: relative; width: 300px; aspect-ratio: 1; }
+.ab-founder__photo::before { content: ""; position: absolute; inset: -14px; border: 1px solid #d5c9b8; border-radius: 50%; }
+.ab-founder__monogram {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font: italic 500 88px/1 var(--serif);
+  color: #9f572f;
+  background: radial-gradient(circle at 35% 30%, #fbf3ea, #efdfd2);
+  border-radius: 50%;
+}
+.ab-founder__body { display: flex; flex-direction: column; gap: 22px; }
+.ab-founder__quote { display: flex; flex-direction: column; gap: 14px; max-width: 640px; font: italic 400 23px/1.55 var(--serif); color: #4a4038; }
+.ab-founder__name { display: flex; flex-direction: column; gap: 2px; font: 500 26px/1.2 var(--serif); color: #2d3832; }
+.ab-founder__name span { font: 600 11px/1.6 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; color: #8b765c; }
+
 .ab-care { display: grid; grid-template-columns: 1fr 1.1fr; gap: 38px 68px; }
 .ab-care__intro { align-self: center; }
 .ab-care__grid {
@@ -217,6 +236,9 @@ body { color: #2d3832; background: var(--cream); }
   .ab-approach { grid-template-areas: "heading" "lead" "image" "body"; grid-template-columns: minmax(0, 1fr); row-gap: 24px; }
   .ab-approach__img { height: 320px; border-radius: 3px 42px 3px 3px; }
   .ab-care { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .ab-founder { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 40px; }
+  .ab-founder__photo { width: min(220px, 60vw); }
+  .ab-founder__quote { font-size: 20px; }
   .ab-care__grid { grid-template-areas: "photo" "rest" "choice"; grid-template-columns: minmax(0, 1fr); gap: 26px; }
   .ab-care__img { height: 320px; border-radius: 3px 3px 42px; }
   .ab-place { grid-template-areas: "title" "copy" "image" "cta"; grid-template-columns: minmax(0, 1fr); gap: 24px; }
