@@ -208,29 +208,6 @@
 @keyframes leaf-sway { from { rotate: -5deg; } to { rotate: 5deg; } }
 
 /* ===== Pillars ===== */
-.pillars { gap: 14px; text-align: center; }
-.pillars__title { max-width: 800px; font: 500 clamp(34px, 3.6vw, 48px)/1.1 var(--serif); color: var(--brown); }
-.pillars__desc { max-width: 720px; margin-bottom: 14px; font-size: 15px; line-height: 1.65; color: var(--text); }
-.pillars__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 24px; }
-.pillar { display: flex; flex-direction: column; overflow: hidden; background: var(--paper); border-radius: 16px; }
-.pillar__img { width: 100%; height: 224px; object-fit: cover; }
-.pillar__body {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  min-height: 160px;
-  margin-top: -40px;
-  padding: 24px 16px;
-  background: var(--paper);
-  border-radius: 50% 50% 0 0;
-}
-.pillar__icon { display: block; width: 30px; height: 30px; color: #8b785e; }
-.pillar__icon svg { display: block; width: 100%; height: 100%; }
-.pillar__title { font: 700 13px/1.4 var(--sans); letter-spacing: .7px; text-transform: uppercase; color: #514b42; }
-.pillar__text { font-size: 14px; line-height: 1.55; color: var(--text); }
 
 /* ===== Experience tabs ===== */
 .experience { gap: 16px; }
@@ -309,7 +286,7 @@
 @keyframes fig-in { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
 @keyframes fig-settle { from { transform: scale(1.08); } to { transform: none; } }
 
-/* ===== Section head (tours / upcoming) ===== */
+/* ===== Section head (tours / gallery) ===== */
 .sec-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .sec-head__text { display: flex; flex: 1; flex-direction: column; gap: 8px; }
 .sec-head__title { font: 500 clamp(34px, 3.5vw, 46px)/1.1 var(--serif); color: var(--brown); }
@@ -364,68 +341,6 @@
 }
 .btn-pill:hover { background: var(--rust); border-color: var(--rust); }
 
-/* ===== Departures table ===== */
-.upcoming { gap: 24px; }
-.departures {
-  overflow: hidden;
-  font-family: var(--sans);
-  color: var(--text);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 3px;
-}
-.departures__head, .departures__row {
-  display: grid;
-  grid-template-columns: 1.3fr 1.55fr 1.35fr .75fr .95fr .7fr;
-  align-items: center;
-  gap: 12px;
-}
-.departures__head {
-  padding: 17px 18px;
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 22.4px;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-  color: var(--paper);
-  background: var(--sage);
-}
-.departures__row {
-  padding: 22px 18px;
-  font-size: 13px;
-  line-height: 1.6;
-  border-bottom: 1px solid var(--line);
-  transition: background-color .2s;
-}
-.departures__row:last-child { border-bottom: 0; }
-.departures__row:hover { background: #f5f0e6; }
-.departures__row h3 { font: 600 14px/1.5 var(--sans); color: var(--brown); }
-.status {
-  display: inline-block;
-  padding: 5px 9px;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 1.5;
-  text-transform: uppercase;
-  color: #344637;
-  background: #e4ebdd;
-  border-radius: 2px;
-}
-.status--limited { color: #694323; background: #efdfc0; }
-.btn-reserve {
-  padding: 10px 12px;
-  font-size: 12px;
-  font-weight: 600;
-  text-align: center;
-  white-space: nowrap;
-  color: var(--paper);
-  background: var(--rust);
-  border: 1px solid var(--rust);
-  border-radius: 3px;
-  transition: background-color .2s, border-color .2s;
-}
-.btn-reserve:hover { background: var(--sage); border-color: var(--sage); }
-
 /* ===== Places ===== */
 .places { gap: 16px; }
 .places__eyebrow { color: #a16749; }
@@ -449,10 +364,8 @@
 .place__tags b:first-child { padding-left: 0; border-left: 0; }
 
 /* ===== Gallery ===== */
-.lens__eyebrow { margin-bottom: 10px; font: 600 11px/1.6 var(--sans); letter-spacing: 2.4px; color: var(--rust); }
-.lens__title { margin-bottom: 14px; font: 500 clamp(34px, 3.8vw, 48px)/1.15 var(--serif); color: var(--brown-2); }
-.lens__desc { max-width: 780px; margin-bottom: 28px; font: 400 15px/1.8 var(--sans); color: var(--text); }
-.lens__grid { display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(3, 180px) auto; grid-auto-rows: auto; gap: 24px; }
+.lens { gap: 28px; }
+.lens__grid { display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(3, 180px) auto; grid-auto-rows: 180px; gap: 24px; }
 .lens__item { position: relative; display: block; overflow: hidden; border-radius: 16px; transition: transform .3s, box-shadow .3s; }
 .lens__item img { width: 100%; height: 100%; object-fit: cover; }
 .lens__item::before {
@@ -493,9 +406,17 @@
 .lens__item:nth-child(5) { grid-area: 3 / 4 / 4 / 5; }
 .lens__item:nth-child(6) { grid-area: 1 / 5 / 2 / 7; }
 .lens__item:nth-child(7) { grid-area: 2 / 5 / 4 / 7; }
-.lens__item:nth-child(n+8) { aspect-ratio: 180 / 311.38; }
-/* rows of six tall photos; the last two share a row as wide frames */
-.lens__item:nth-child(n+20) { grid-column: span 3; aspect-ratio: 3 / 2; }
+.lens__item:nth-child(n+8) { grid-row: 4; aspect-ratio: 180 / 311.38; }
+/* second mosaic (rows 5-7): big / wide+big / big, small pairs underneath */
+.lens__item:nth-child(n+14) { aspect-ratio: auto; }
+.lens__item:nth-child(14) { grid-area: 5 / 1 / 7 / 3; }
+.lens__item:nth-child(15) { grid-area: 7 / 1 / 8 / 2; }
+.lens__item:nth-child(16) { grid-area: 7 / 2 / 8 / 3; }
+.lens__item:nth-child(17) { grid-area: 5 / 3 / 6 / 5; }
+.lens__item:nth-child(18) { grid-area: 6 / 3 / 8 / 5; }
+.lens__item:nth-child(19) { grid-area: 5 / 5 / 7 / 7; }
+.lens__item:nth-child(20) { grid-area: 7 / 5 / 8 / 6; }
+.lens__item:nth-child(21) { grid-area: 7 / 6 / 8 / 7; }
 
 /* ===== CTA ===== */
 .cta {
@@ -554,35 +475,12 @@
   .place { gap: 40px; }
   .place__img { flex-basis: calc(50% - 20px); width: calc(50% - 20px); }
   .place__body { padding: 24px 8px; }
-  .lens__grid { gap: 18px; grid-template-rows: repeat(3, 145px) auto; grid-auto-rows: auto; }
+  .lens__grid { gap: 18px; grid-template-rows: repeat(3, 145px) auto; grid-auto-rows: 145px; }
 }
 @media (max-width: 900px) {
   .hero { height: calc(100svh - var(--header-h, 91px)); min-height: 520px; }
   .about { flex-direction: column; align-items: stretch; gap: 40px; }
   .about__text, .about__img { width: 100%; max-width: none; }
-  .departures { background: transparent; border: 0; }
-  .departures__head { display: none; }
-  .departures__row {
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-bottom: 14px;
-    padding: 20px;
-    background: var(--paper);
-    border: 1px solid var(--line) !important;
-    border-radius: 4px;
-  }
-  .departures__row h3 { grid-area: 1 / 1 / auto / -1; }
-  .departures__row > [data-label]::before {
-    content: attr(data-label);
-    display: block;
-    margin-bottom: 3px;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: .7px;
-    text-transform: uppercase;
-    color: #827365;
-  }
-  .btn-reserve { place-self: end; }
 }
 @media (max-width: 767px) {
   .hero { padding: 40px 24px calc(var(--wave-h) + 40px); }
@@ -615,16 +513,12 @@
   .place__meta b { font-size: 30px; }
   .place__meta em { font-size: 9px; }
   .lens { padding: 30px 20px; }
-  .lens__desc { font-size: 14px; }
   .lens__grid { grid-template-columns: 1fr 1fr; grid-template-rows: none; grid-auto-rows: 160px; gap: 14px; }
   .lens__grid .lens__item { grid-area: auto; aspect-ratio: auto; }
   .lens__grid .lens__item:nth-child(3), .lens__grid .lens__item:nth-child(7) { grid-column: span 2; grid-row: span 2; }
   .lens__grid .lens__item:nth-child(6) { grid-column: span 2; }
-}
-@media (max-width: 480px) {
-  .departures__row { padding: 18px 15px; column-gap: 10px; font-size: 12px; }
-  .departures__row > [data-label="Dates"] { grid-column: 1 / -1; }
-  .departures__row h3 { font-size: 16px; }
+  .lens__grid .lens__item:nth-child(14) { grid-column: span 2; grid-row: span 2; }
+  .lens__grid .lens__item:nth-child(17) { grid-column: span 2; }
 }
 /* Phones / small tablets: keep the waves above the fixed mobile bar (62px) */
 @media (max-width: 768px) {

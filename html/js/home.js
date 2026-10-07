@@ -27,7 +27,6 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if ('IntersectionObserver' in window && !reduce) {
     var groups = [
-      ['.pillar', 'up'],
       ['.exp-tab__title', 'up'],
       ['.tour-card', 'up'],
       ['.place:not(.place--reverse) .place__img, .place--reverse .place__body', 'left'],

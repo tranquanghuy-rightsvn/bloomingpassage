@@ -63,7 +63,7 @@
   if (book) {
     var unit = Number(book.dataset.price);
     var money = function (n) {
-      return n.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     };
     var update = function () {
       var qty = Math.max(1, parseInt(book.querySelector('[data-qty]').value, 10) || 1);
