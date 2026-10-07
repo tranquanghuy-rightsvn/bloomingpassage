@@ -206,6 +206,19 @@
 .ink-art__leaves .ink-art__sprig path:nth-child(3n) { animation-duration: 3.8s; animation-delay: -2.3s; }
 .ink-art__leaves .ink-art__sprig path:nth-child(5) { animation-duration: 2.9s; animation-delay: -.6s; }
 @keyframes leaf-sway { from { rotate: -5deg; } to { rotate: 5deg; } }
+/* ...and the whole sprig (stem + leaves) sways together from its base at the photo's left edge,
+   like a branch in a light breeze; a slow, uneven rhythm so it never looks mechanical */
+.ink-art__stem .ink-art__sprig, .ink-art__leaves g.ink-art__sprig {
+  transform-box: view-box;
+  transform-origin: 0 150px;
+  animation: branch-sway 7s ease-in-out infinite;
+}
+@keyframes branch-sway {
+  0%, 100% { rotate: -1.5deg; }
+  30% { rotate: 2.6deg; }
+  45% { rotate: 1.4deg; }
+  70% { rotate: 3.2deg; }
+}
 
 /* ===== Pillars ===== */
 
