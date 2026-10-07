@@ -5,7 +5,7 @@ body.page-tours { background: var(--cream); }
 .tp-banner {
   position: relative;
   padding: 64px 24px 70px;
-  background: #b89a72 url(../images/experience-hoian.webp) 50% 58% / cover no-repeat;
+  background: #b89a72 url(../images/banner-04.webp) 50% 40% / cover no-repeat;
 }
 .tp-banner::before {
   content: "";
