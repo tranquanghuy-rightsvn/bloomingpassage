@@ -1,5 +1,28 @@
-// Home page: scroll reveal, experience tabs, gallery lightbox.
+// Home page: hero slideshow, experience tabs, gallery lightbox.
 (function () {
+  // Hero video: poster first; pick a size, load, fade in once playing. Skipped for reduced motion / data saver.
+  var hero = document.querySelector('.hero');
+  var video = hero && hero.querySelector('.hero__video');
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+    (navigator.connection && navigator.connection.saveData);
+  if (video && !calm) {
+    video.src = window.matchMedia('(max-width: 767px)').matches ? video.dataset.srcSmall : video.dataset.src;
+    video.preload = 'auto';
+    video.addEventListener('playing', function () { hero.classList.add('has-video'); });
+    var play = function () {
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {}); // autoplay refused: the poster stays
+    };
+    var visible = true;
+    new IntersectionObserver(function (entries) {
+      visible = entries[0].isIntersecting;
+      if (visible && !document.hidden) play(); else video.pause();
+    }).observe(hero);
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) video.pause(); else if (visible) play();
+    });
+  }
+
   // Scroll reveal: blocks appear once, one after another in reading order (top→bottom, left→right).
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if ('IntersectionObserver' in window && !reduce) {
