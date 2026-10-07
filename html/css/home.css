@@ -125,6 +125,7 @@
   justify-content: center;
   gap: 64px;
   padding: 60px 6% 30px;
+  overflow-x: clip;
   background: var(--cream);
 }
 .about__text { display: flex; flex: 0 1 auto; width: calc(40% - 25.6px); max-width: 450px; flex-direction: column; align-items: flex-start; gap: 22px; }
@@ -148,10 +149,63 @@
   max-width: 630px;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border: 1px solid rgba(95, 112, 95, .22);
-  border-radius: 72px 6px;
-  box-shadow: 12px 12px 0 rgba(95, 112, 95, .16);
 }
+/* Ink-brush frame: the photo only shows where the brush strokes are (images/ink-mask.svg) */
+.ink-frame {
+  -webkit-mask: url(../images/ink-mask.svg) center / 100% 100% no-repeat;
+  mask: url(../images/ink-mask.svg) center / 100% 100% no-repeat;
+}
+/* Painted composition: watercolour washes behind, hand-drawn accents in front */
+.ink-art { position: relative; margin: 0; isolation: isolate; }
+.ink-art > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ink-art::before, .ink-art::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-mask: url(../images/ink-wash.svg) center / 100% 100% no-repeat;
+  mask: url(../images/ink-wash.svg) center / 100% 100% no-repeat;
+}
+.ink-art::before { inset: 14% 22% -9% -7%; background: var(--gold); opacity: .42; }
+.ink-art::after { inset: -8% -6% 40% 46%; background: var(--rust); opacity: .2; transform: scaleX(-1) rotate(4deg); }
+.ink-art__deco { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.ink-art__swoosh { fill: var(--rust); opacity: .85; }
+.ink-art__sprig { fill: var(--sage); opacity: .9; }
+.ink-art__splat { fill: var(--rust); opacity: .7; }
+.ink-art__deco path, .ink-art__deco circle { transform-box: fill-box; transform-origin: center; }
+
+/* Appears in sequence when scrolled into view (home.js adds .is-in):
+   washes -> photo -> branch, then its leaves -> brush underline wiped right to left -> ink dots.
+   The two "drawn" layers are separate <svg> elements so clip-path works on a real box. */
+.js-reveal .ink-art:not(.is-in)::before { opacity: 0; transform: scale(.88); }
+.js-reveal .ink-art:not(.is-in)::after { opacity: 0; transform: scaleX(-1) rotate(4deg) scale(.88); }
+.js-reveal .ink-art:not(.is-in) > img { opacity: 0; transform: scale(1.04); }
+.js-reveal .ink-art:not(.is-in) .ink-art__stem { clip-path: inset(-30% 100% -30% -30%); }
+.js-reveal .ink-art:not(.is-in) .ink-art__leaves .ink-art__sprig path { opacity: 0; transform: scale(.2) rotate(-20deg); }
+.js-reveal .ink-art:not(.is-in) .ink-art__line { clip-path: inset(-30% -30% -30% 100%); }
+.js-reveal .ink-art:not(.is-in) .ink-art__splat circle { opacity: 0; transform: scale(0); }
+.ink-art__stem { clip-path: inset(-30% 75% -30% -30%); }
+.ink-art__line { clip-path: inset(-30% -30% -30% 0%); }
+.ink-art.is-in::before { transition: opacity 1s ease, transform 1.2s cubic-bezier(.22, .61, .36, 1); }
+.ink-art.is-in::after { transition: opacity 1s ease .25s, transform 1.2s cubic-bezier(.22, .61, .36, 1) .25s; }
+.ink-art.is-in > img { transition: opacity 1s ease .6s, transform 1.4s cubic-bezier(.22, .61, .36, 1) .6s; }
+.ink-art.is-in .ink-art__stem { transition: clip-path .8s ease-out 1.3s; }
+.ink-art.is-in .ink-art__leaves .ink-art__sprig path { transition: opacity .5s ease, transform .6s cubic-bezier(.34, 1.4, .64, 1); }
+.ink-art.is-in .ink-art__leaves .ink-art__sprig path:nth-child(1) { transition-delay: 1.6s; }
+.ink-art.is-in .ink-art__leaves .ink-art__sprig path:nth-child(2) { transition-delay: 1.7s; }
+.ink-art.is-in .ink-art__leaves .ink-art__sprig path:nth-child(3) { transition-delay: 1.8s; }
+.ink-art.is-in .ink-art__leaves .ink-art__sprig path:nth-child(4) { transition-delay: 1.9s; }
+.ink-art.is-in .ink-art__leaves .ink-art__sprig path:nth-child(5) { transition-delay: 2s; }
+.ink-art.is-in .ink-art__leaves .ink-art__sprig path:nth-child(6) { transition-delay: 2.1s; }
+.ink-art.is-in .ink-art__leaves .ink-art__sprig path:nth-child(7) { transition-delay: 2.2s; }
+.ink-art.is-in .ink-art__line { transition: clip-path 1.1s cubic-bezier(.45, .05, .25, 1) 2.4s; }
+.ink-art.is-in .ink-art__splat circle { transition: opacity .3s ease 3.4s, transform .4s cubic-bezier(.34, 1.6, .64, 1) 3.4s; }
+.ink-art.is-in .ink-art__splat circle:nth-child(even) { transition-delay: 3.52s; }
+/* Leaves sway gently in a breeze: own `rotate` property, so it never fights the reveal transform */
+.ink-art__leaves .ink-art__sprig path { animation: leaf-sway 3.2s ease-in-out infinite alternate; }
+.ink-art__leaves .ink-art__sprig path:nth-child(2n) { animation-duration: 2.6s; animation-delay: -1.1s; }
+.ink-art__leaves .ink-art__sprig path:nth-child(3n) { animation-duration: 3.8s; animation-delay: -2.3s; }
+.ink-art__leaves .ink-art__sprig path:nth-child(5) { animation-duration: 2.9s; animation-delay: -.6s; }
+@keyframes leaf-sway { from { rotate: -5deg; } to { rotate: 5deg; } }
 
 /* ===== Pillars ===== */
 .pillars { gap: 14px; text-align: center; }

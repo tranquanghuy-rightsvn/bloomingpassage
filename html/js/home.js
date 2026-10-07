@@ -79,6 +79,18 @@
       if (!ticking && pending.length) { ticking = true; requestAnimationFrame(catchUp); }
     }, { passive: true });
     window.addEventListener('load', catchUp);
+    // Ink-painted photo (About): its layers appear in sequence once the figure is in view (see home.css).
+    document.querySelectorAll('.ink-art').forEach(function (art) {
+      var show = function () { art.classList.add('is-in'); };
+      var artIo = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { show(); artIo.disconnect(); }
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.3 });
+      artIo.observe(art);
+      window.addEventListener('scroll', function passed() {
+        if (art.getBoundingClientRect().top < innerHeight * 0.5) { show(); artIo.disconnect(); window.removeEventListener('scroll', passed); }
+      }, { passive: true });
+    });
+
     // Experience images animate in CSS whenever a tab opens; the first time, wait until the section is seen.
     var exp = document.querySelector('.experience');
     if (exp) {
