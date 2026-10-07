@@ -125,7 +125,7 @@ body { color: #2d3832; background: var(--cream); }
   border-radius: 50%;
 }
 .ab-founder__body { display: flex; flex-direction: column; gap: 22px; }
-.ab-founder__quote { display: flex; flex-direction: column; gap: 14px; max-width: 640px; font: italic 400 23px/1.55 var(--serif); color: #4a4038; }
+.ab-founder__quote { display: flex; flex-direction: column; gap: 14px; max-width: 640px; margin: 0; font: italic 400 23px/1.55 var(--serif); color: #4a4038; }
 .ab-founder__name { display: flex; flex-direction: column; gap: 2px; font: 500 26px/1.2 var(--serif); color: #2d3832; }
 .ab-founder__name span { font: 600 11px/1.6 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; color: #8b765c; }
 
