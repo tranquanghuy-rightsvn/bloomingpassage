@@ -30,6 +30,7 @@
     ['10-Day Balanced Journey', '/tours/10-day-balanced-journey/', 'More time to explore and restore. 10 days · 9 nights.', '10 days ten vespa food orchard fruit farm spa beauty tailoring hoi an hue da nang'],
     ['14-Day Deep Pause', '/tours/14-day-deep-pause/', 'The full Blooming Passage experience. 14 days · 13 nights.', '14 days fourteen two weeks wellness medical dental health check longevity spa relaxation'],
     ['Contact', '/contact-us/', 'A small step, a beautiful beginning. Tell us about your passage.', 'contact enquiry inquiry email phone plan book question'],
+    ['Gallery', '/gallery/', 'Moments worth keeping: culture, flavour and shared moments in Central Vietnam.', 'gallery photos pictures images moments experience culture food cooking tailoring spa beauty'],
     ['FAQs', '/faqs/', 'A few answers to help you feel at home with Blooming Passage.', 'faq questions group size travel alone included optional wellness departure booking'],
     ['Blog – The Passage Journal', '/blog/', 'Stories, travel inspiration and little moments worth keeping.', 'blog journal stories articles hoi an hue da nang'],
     ['Hoi An: Lanterns, Craft and a Little Wonder', '/hoi-an-lanterns-craft-and-a-little-wonder/', 'Lantern-lit streets, local flavours, countryside gardens and makers.', 'hoi an lanterns craft food cao lau tra que cam thanh an bang beach evening blog']

@@ -87,7 +87,21 @@ em { font-style: italic; }
 }
 .search-toggle svg { width: 21px; height: 21px; }
 .search-toggle:hover { color: var(--rust); background: rgba(165, 84, 39, .08); }
-.search-toggle--bar { grid-column: 3; grid-row: 1; justify-self: end; }
+.site-header__tools { grid-column: 3; grid-row: 1; justify-self: end; display: flex; align-items: center; gap: 14px; }
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 20px;
+  font: 600 13px/1 var(--sans);
+  letter-spacing: .4px;
+  white-space: nowrap;
+  color: var(--cream);
+  background: var(--sage);
+  border-radius: 999px;
+  transition: background-color .25s;
+}
+.header-cta:hover { background: var(--rust); }
 .main-nav__link {
   display: flex;
   align-items: center;
@@ -226,6 +240,8 @@ em { font-style: italic; }
   .site-header__logo img { width: min(210px, 46vw); }
   .search-toggle--bar { width: 46px; height: 46px; }
   .search-toggle--bar svg { width: 23px; height: 23px; }
+  .site-header__tools { gap: 8px; }
+  .header-cta { height: 38px; padding: 0 16px; font-size: 12px; }
   /* Inner pages: content starts 1px below the top, as under the original 77px inner header,
      whatever height the (home-sized) logo gives the header. --header-h is set by main.js. */
   .is-inner .site-header { margin-bottom: calc(1px - var(--header-h, 77px)); }
@@ -304,6 +320,7 @@ em { font-style: italic; }
   body { padding-bottom: 62px; }
 }
 @media (max-width: 767px) {
+  .header-cta { display: none; }
   .site-header { margin-bottom: -76px; }
   .site-footer__top { gap: 32px 24px; padding: 44px 24px 32px; }
   .footer-brand { grid-column: 1 / -1; }

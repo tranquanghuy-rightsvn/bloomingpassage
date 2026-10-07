@@ -1,0 +1,21 @@
+/* Gallery page: the home gallery + experience sections (home.css) under an inner-page banner. */
+body.page-gallery { background: var(--cream); }
+
+/* home.css pins the header in the flow (home hero); inner pages overlap it like the other banners */
+@media (min-width: 1025px) {
+  .is-inner .site-header { margin-bottom: -90px; }
+}
+
+/* ===== Banner (as on FAQs) ===== */
+.gallery-banner { padding: 60px 24px 0; }
+.gallery-banner__inner { display: flex; flex-direction: column; gap: 16px; max-width: 1200px; margin: 0 auto; text-align: center; }
+.gallery-banner__crumb { font: 500 12px/1.5 var(--sans); color: #8b765c; }
+.gallery-banner__crumb svg { margin: 0 3px; fill: #fff; }
+.gallery-banner__title { font: 500 64px/1.1 var(--serif); color: #2d3832; }
+
+.gallery-main { padding: 24px 0 60px; }
+
+@media (max-width: 767px) {
+  .gallery-banner { padding: 40px 20px 0; }
+  .gallery-banner__title { font-size: 48px; }
+}
