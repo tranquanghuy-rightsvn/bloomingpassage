@@ -310,7 +310,7 @@
   box-shadow: inset 0 0 0 1px var(--line);
   transition: color .3s, transform .3s;
 }
-.facet__icon svg { width: 27px; height: 27px; }
+.facet__icon svg { width: 30px; height: 30px; }
 .facet:hover .facet__icon { color: var(--rust); transform: translateY(-3px); }
 .facet__label { font: 500 21px/1.2 var(--serif); color: var(--brown); }
 
@@ -348,10 +348,10 @@
   background: var(--sage);
   border-radius: 30px;
 }
-/* each journey has its own soft tint (brochure: blush, sage, rose) */
+/* each journey has its own soft tint: blush, sage, warm sand */
 .tour-card--essence { --tint: #f7e9e3; --accent: #b4644f; }
 .tour-card--balanced { --tint: #eaede2; --accent: #687a5b; }
-.tour-card--pause { --tint: #f3e3da; --accent: #a55427; }
+.tour-card--pause { --tint: #f1e8d3; --accent: #9a7536; }
 .tour-card[class*="tour-card--"] { background: var(--tint); }
 .tour-card[class*="tour-card--"] .tour-card__badge { background: var(--accent); }
 .tour-card__title { display: flex; align-items: center; gap: 10px; margin: 18px 12px 8px; font: 500 26px/1.2 var(--serif); color: var(--brown); }

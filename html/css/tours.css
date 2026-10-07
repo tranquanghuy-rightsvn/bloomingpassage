@@ -65,10 +65,10 @@ body.page-tours { background: var(--cream); }
   border-radius: 8px;
   transition: transform .3s, box-shadow .3s;
 }
-/* each journey has its own soft tint (brochure: blush, sage, rose) */
+/* each journey has its own soft tint: blush, sage, warm sand */
 .tour-card--essence { --tint: #f7e9e3; --accent: #b4644f; }
 .tour-card--balanced { --tint: #eaede2; --accent: #687a5b; }
-.tour-card--pause { --tint: #f3e3da; --accent: #a55427; }
+.tour-card--pause { --tint: #f1e8d3; --accent: #9a7536; }
 .tour-card[class*="tour-card--"] { background: var(--tint); border-color: transparent; }
 .tour-card[class*="tour-card--"] .tour-card__badge { background: var(--accent); }
 .tour-card__media { display: block; overflow: hidden; border-radius: 5px; }
