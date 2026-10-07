@@ -1,4 +1,4 @@
-// Tour detail: image gallery + thumbnails, booking tabs and price total, review dialog, sort menu.
+// Tour detail: image gallery + thumbnails, reservation tabs and price total.
 (function () {
   // Gallery: main slide follows the active thumbnail; thumbnail strip pages with its arrows.
   var gallery = document.querySelector('[data-gallery]');
@@ -45,7 +45,7 @@
     placeStrip();
   }
 
-  // Booking card: Book / Inquiry tabs.
+  // Booking card: Reserve / Inquiry tabs.
   var tabs = document.querySelectorAll('.booking__tab');
   tabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
@@ -58,7 +58,7 @@
     });
   });
 
-  // Booking form: total = tickets x price + extras; enabled once a departure is chosen.
+  // Booking form: total = guests x price per guest; enabled once a departure is chosen.
   var book = document.querySelector('.book-form');
   if (book) {
     var unit = Number(book.dataset.price);
@@ -67,9 +67,7 @@
     };
     var update = function () {
       var qty = Math.max(1, parseInt(book.querySelector('[data-qty]').value, 10) || 1);
-      var extras = 0;
-      book.querySelectorAll('[data-extra]:checked').forEach(function (c) { extras += Number(c.value); });
-      book.querySelector('[data-total]').textContent = money(qty * unit + extras);
+      book.querySelector('[data-total]').textContent = money(qty * unit);
       book.querySelector('.book-form__submit').disabled = !book.querySelector('select').value;
     };
     book.addEventListener('input', update);
@@ -83,23 +81,4 @@
   }
   var inquiry = document.querySelector('.inquiry-form');
   if (inquiry) inquiry.addEventListener('submit', function (e) { e.preventDefault(); });
-
-  // "Write a Review" dialog (static form, nothing is sent).
-  var dialog = document.querySelector('.review-dialog');
-  var openReview = document.querySelector('[data-open-review]');
-  if (dialog && openReview && dialog.showModal) {
-    openReview.addEventListener('click', function () { dialog.showModal(); });
-    dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
-  }
-
-  // Sort menu: pick an option, update the label, close.
-  var sort = document.querySelector('.sort-menu');
-  if (sort) {
-    sort.querySelectorAll('ul button').forEach(function (b) {
-      b.addEventListener('click', function () {
-        sort.querySelector('summary').firstChild.textContent = b.textContent;
-        sort.open = false;
-      });
-    });
-  }
 })();
