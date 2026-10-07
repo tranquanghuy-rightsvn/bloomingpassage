@@ -2,21 +2,34 @@
 body.is-cream { background: var(--cream); }
 
 
-/* Page title sits under the overlapping header, as on the original */
-.page-head { padding: 60px 24px 0; }
-.page-head__title {
+/* ===== Banner (as on the other inner pages) ===== */
+.journal-banner {
+  position: relative;
+  padding: 64px 24px 70px;
+  background: #b89a72 url(../images/img-5.webp) 50% 20% / cover no-repeat;
+}
+.journal-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(30, 43, 34, .6), rgba(30, 43, 34, .4));
+}
+.journal-banner__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
-  font: 600 11px/17.6px var(--sans);
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  padding: 155px 0 90px;
   text-align: center;
-  color: var(--rust);
 }
-
-.journal-intro { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 24px 24px 0; text-align: center; }
-.journal-intro__title { font: 500 60px/66px var(--serif); color: var(--ink); }
-.journal-intro__desc { max-width: 640px; margin-bottom: 24px; font: 400 15px/27px var(--sans); color: var(--text); }
+.journal-banner__crumb { font: 600 12px/1.6 var(--sans); letter-spacing: .6px; color: #fff; }
+.journal-banner__crumb a { font-weight: 400; color: #e8edf1; transition: color .2s; }
+.journal-banner__crumb a:hover { color: #fff; }
+.journal-banner__crumb svg { margin: 0 3px; fill: #e8edf1; }
+.journal-banner__title { font: 500 clamp(48px, 5.5vw, 76px)/1.08 var(--serif); letter-spacing: -1px; color: #fffcf7; }
+.journal-banner__text { max-width: 650px; margin: 0 auto; font: 400 16px/1.75 var(--sans); color: #fffcf7; }
 
 .journal { display: flex; flex-direction: column; align-items: center; padding: 60px 24px; }
 .journal__grid {
@@ -81,11 +94,14 @@ body.is-cream { background: var(--cream); }
   .journal__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 767px) {
-  .page-head { padding: 40px 20px 0; }
-  .journal-intro { padding: 24px 20px 0; }
-  .journal-intro__title { font-size: 42px; line-height: 46.2px; }
+  .journal-banner { padding: 46px 22px 48px; }
+  .journal-banner__text { font-size: 14px; }
   .journal { padding: 60px 20px; }
   .journal__grid { grid-template-columns: 1fr; }
   .story-card { min-height: 0; }
   .btn-round { margin-top: 38px; }
+}
+
+@media (max-width: 1024px) {
+  .journal-banner__inner { padding: 120px 0 65px; }
 }
