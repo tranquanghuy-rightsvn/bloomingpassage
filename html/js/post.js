@@ -1,4 +1,4 @@
-// Blog post: related-stories slider, static comment form.
+// Blog post: related-stories slider.
 (function () {
   var track = document.querySelector('.related__track');
   if (track) {
@@ -20,7 +20,4 @@
     window.addEventListener('resize', update);
     update();
   }
-
-  var form = document.querySelector('.comment-form');
-  if (form) form.addEventListener('submit', function (e) { e.preventDefault(); });
 })();

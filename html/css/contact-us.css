@@ -4,7 +4,7 @@ body { background: var(--cream); }
 /* ----- Page banner ----- */
 .page-banner {
   padding: 150px 15px 70px;
-  background: linear-gradient(rgba(45, 39, 33, .48), rgba(45, 39, 33, .48)), url(../images/destination-hoian.webp) center / cover, var(--gold);
+  background: linear-gradient(90deg, rgba(45, 39, 33, .55), rgba(45, 39, 33, .35)), url(../images/banner-02.webp) center 36% / cover, var(--gold);
 }
 .page-banner__inner {
   display: flex;
@@ -76,13 +76,11 @@ body { background: var(--cream); }
 }
 .ct-form__submit:hover { background: #85401f; border-color: #85401f; }
 
-/* ----- Map ----- */
-.ct-map { display: flex; flex-direction: column; gap: 14px; }
-.ct-map__frame { display: grid; place-items: center; height: 392px; background: var(--cream); border: 1px solid #d9cec0; border-radius: 4px; }
-.ct-map__pin { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 13px; line-height: 1.6; color: var(--muted); }
-.ct-map__pin svg { width: 26px; height: 26px; color: var(--gold); }
-.ct-map__caption { margin-top: 16px; font-size: 10px; line-height: 18px; letter-spacing: .2em; color: var(--rust); }
-.ct-map__caption strong { display: inline-block; margin-top: 3px; font-size: 14px; font-weight: 500; line-height: 1.8; letter-spacing: 0; color: var(--text); }
+/* ----- Photo ----- */
+.ct-photo { display: flex; flex-direction: column; gap: 14px; }
+.ct-photo__img { width: 100%; height: 440px; object-fit: cover; object-position: center 40%; border-radius: 4px 70px 4px 4px; }
+.ct-photo__caption { margin-top: 16px; font-size: 10px; line-height: 18px; letter-spacing: .2em; color: var(--rust); }
+.ct-photo__caption strong { display: inline-block; margin-top: 3px; font-size: 14px; font-weight: 500; line-height: 1.8; letter-spacing: 0; color: var(--text); }
 
 /* ----- Details ----- */
 .ct-info { display: flex; flex-direction: column; gap: 20px; }
@@ -120,5 +118,5 @@ body { background: var(--cream); }
   .ct-title { font-size: 38px; }
   .ct-card { padding: 24px; }
   .ct-info { order: -1; }
-  .ct-map__frame { height: 302px; }
+  .ct-photo__img { height: 300px; border-radius: 4px 48px 4px 4px; }
 }
