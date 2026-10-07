@@ -1,17 +1,25 @@
 // Home page: hero slideshow, experience tabs, gallery lightbox.
 (function () {
-  // Hero background slideshow (fade + Ken Burns via CSS)
+  // Hero video: poster first; pick a size, load, fade in once playing. Skipped for reduced motion / data saver.
   var hero = document.querySelector('.hero');
-  if (hero) {
-    var slides = hero.querySelectorAll('.hero__slide');
-    var current = 0;
-    window.addEventListener('load', function () {
-      hero.classList.add('is-ready');
-      setInterval(function () {
-        slides[current].classList.remove('is-active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('is-active');
-      }, 5000);
+  var video = hero && hero.querySelector('.hero__video');
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+    (navigator.connection && navigator.connection.saveData);
+  if (video && !calm) {
+    video.src = window.matchMedia('(max-width: 767px)').matches ? video.dataset.srcSmall : video.dataset.src;
+    video.preload = 'auto';
+    video.addEventListener('playing', function () { hero.classList.add('has-video'); });
+    var play = function () {
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {}); // autoplay refused: the poster stays
+    };
+    var visible = true;
+    new IntersectionObserver(function (entries) {
+      visible = entries[0].isIntersecting;
+      if (visible && !document.hidden) play(); else video.pause();
+    }).observe(hero);
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) video.pause(); else if (visible) play();
     });
   }
 
