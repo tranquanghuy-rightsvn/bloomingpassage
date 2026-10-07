@@ -1,0 +1,67 @@
+Dạ rất xin lỗi 2 chị về hiểu lầm hồi sáng của em ạ
+
+Em cũng đọc đi đọc lại rất kỹ những lưu ý của chị và nghiên cứu từng hình ảnh mà chị cung cấp để có thể hiểu hơn về mong muốn của chị. Hiện tại em đã sửa lại theo bố cục mới, thiết kế có nhiều chi tiết độc bản tạo dấu ấn cá nhân riêng, k bị trùng lặp với website khác, và cố gắng bám sát yêu cầu đặt ra.
+
+Tuy nhiên em biết rằng có thể chưa phù hợp với nhu cầu của chị 100%, em rất mong được lắng nghe góp ý của chị, càng chi tiết càng tốt, để em chỉnh sửa demo tốt hơn nữa và kịp hoàn thành trong 7-10 ngày deadline.
+
+Link demo: https://bloomingpassage-html.vercel.app/
+
+VỀ BỐ CỤC TRANG CHỦ
+
+Em sắp xếp các section theo đúng hành trình suy nghĩ của một khách hàng khi lần đầu vào website: bị thu hút → hiểu thương hiệu là ai → thấy sản phẩm → tin tưởng → hình dung bản thân trong chuyến đi → liên hệ.
+
+1. Hero banner: Em đang để video ngắn ở Hội An, khi làm thật em sẽ thiết kế video có tính chung chung hơn thay vì tập trung ở 1 điểm du lịch cụ thể.
+
+2. Giới thiệu "A Different Way to Experience Vietnam": ảnh nhóm chị em du khách trước Chùa Cầu được đặt trong khung viền nét cọ mực, có cành lá vẽ tay khẽ rung rinh như có gió. Đây là chi tiết em thiết kế riêng để tạo cảm giác mềm mại, nghệ thuật và gần gũi, thay vì một khung ảnh vuông thông thường.
+
+3. Sáu điểm nhấn (Food, Culture, Adventure, Wellness, Beauty, Personal Care)
+Nhiều khách chỉ lướt chứ không đọc kỹ. Hàng biểu tượng này giúp họ nắm được chuyến đi mang lại những gì chỉ trong 2–3 giây. Các biểu tượng được vẽ riêng mang chất Việt Nam (tô phở có đôi đũa, đèn lồng Hội An...) để không bị chung chung.
+
+4. Signature Journeys (3 hành trình 7, 10, 14 ngày)
+Em đưa phần tour lên sớm để tăng khả năng chuyển đổi: khi khách vừa hiểu và bắt đầu có hứng thú thì sản phẩm đã xuất hiện ngay, không bắt họ phải cuộn xa mới thấy. Mỗi gói một màu riêng giúp phân biệt nhanh; vài điểm nổi bật ngắn giúp so sánh dễ dàng; dòng mùa du lịch (October – December 2026) tạo mốc thời gian để khách lên kế hoạch sớm; dịch vụ concierge riêng tạo cảm giác được chăm sóc.
+
+5. Care for your whole self
+Đây là điểm khác biệt lớn nhất so với các tour du lịch thông thường (massage, chăm sóc da, làm móng, làm tóc, khám sức khoẻ, nha khoa), nên em đặt ngay sau phần tour để củng cố lý do khách chọn Blooming Passage. Ảnh để dạng tròn nhỏ vì đây là trải nghiệm bổ trợ, không lấn át phần chính, đồng thời nhấn mạnh tất cả đều tuỳ chọn, khách thoải mái quyết định.
+
+6. Moments worth keeping (bộ sưu tập ảnh)
+Sau khi đã biết sản phẩm, khách cần "nhìn thấy" để tin. Ảnh được xếp so le lớn nhỏ, toàn là khoảnh khắc phụ nữ đi cùng nhau, ăn uống, trò chuyện, thư giãn, giúp khách tự hình dung chính mình trong chuyến đi thay vì chỉ đọc mô tả. Bấm vào ảnh sẽ được phóng to để xem rõ.
+
+7. Experience Vietnam Differently
+Dành cho những khách muốn tìm hiểu sâu hơn trước khi quyết định. Nội dung chia theo tab (ẩm thực, ngoài lối mòn du lịch, Việt Nam về đêm, chăm sóc bản thân, sức khoẻ chủ động, nghỉ dưỡng biển) để vẫn đầy đủ thông tin mà trang không bị dài và nặng.
+
+8. Three places. One beautiful passage.
+Giới thiệu 3 điểm đến Đà Nẵng, Hội An, Huế. Em đặt phía sau vì với nhóm khách này, cảm giác và trải nghiệm quan trọng hơn danh sách địa danh; phần này đóng vai trò khơi gợi cảm hứng thêm một lần nữa trước khi chốt.
+
+9. Lời mời cuối trang "Come curious. Come open. Come as you are."
+Chốt lại bằng 2 lựa chọn: xem hành trình, hoặc bắt đầu một cuộc trò chuyện. Với sản phẩm giá trị cao, khách thường cần hỏi thêm trước khi quyết định, nên lựa chọn "trò chuyện" giúp họ dễ bước tiếp mà không bị áp lực đặt chỗ.
+
+Ngoài ra, nút "Contact Us" luôn hiển thị ở góc trên của mọi trang, menu được tinh gọn, để khách có thể liên hệ bất cứ lúc nào họ sẵn sàng.
+
+CÁC TRANG KHÁC
+
+• About Us: xây dựng niềm tin bằng câu chuyện thương hiệu, 4 giá trị cốt lõi và lời nhắn từ người sáng lập kèm ảnh chị Amy. Khách nữ khi chọn chuyến đi dài ngày thường muốn biết "ai sẽ đồng hành cùng mình", nên yếu tố con người thật rất quan trọng. Đoạn lời nhắn hiện em viết tạm, chị chỉnh lại theo giọng văn của chị giúp em nhé.
+
+• Journeys và trang chi tiết từng hành trình: lịch trình từng ngày đều có ảnh minh hoạ để khách hình dung cụ thể mỗi ngày mình sẽ làm gì; phần đặt chỗ dùng "Reserve your place" và "Enquiry" nhẹ nhàng, tránh cảm giác mua vé kiểu thương mại.
+
+• Gallery: trang riêng cho những khách thích xem nhiều hình ảnh trước khi quyết định.
+
+• Contact, FAQs, Blog: giải đáp thắc mắc thường gặp, chia sẻ cảm hứng du lịch, giúp khách thêm yên tâm và quay lại website nhiều lần.
+
+VỀ PHONG CÁCH CHUNG
+
+• Tông màu đất ấm (kem, be, đỏ gạch terracotta, xanh sage): tạo cảm giác thư thái, gần gũi và cao cấp, khác với màu xanh dương/cam rực rỡ thường thấy ở các website bán tour.
+• Font chữ có chân mềm mại kết hợp chữ không chân dễ đọc, cỡ chữ vừa phải và nhiều khoảng trắng, phù hợp với khách hàng từ 40 tuổi trở lên.
+• Hình ảnh ưu tiên phụ nữ phương Tây để khách hàng mục tiêu dễ đồng cảm và thấy chính mình trong đó.
+• Hiệu ứng nhẹ nhàng (nội dung hiện dần khi cuộn, ảnh phóng nhẹ khi rê chuột), tinh tế, không dồn dập.
+• Hiển thị tốt trên điện thoại, máy tính bảng và máy tính, vì phần lớn khách sẽ xem lần đầu trên điện thoại.
+
+NHỮNG THÔNG TIN EM CẦN CHỊ CUNG CẤP / XÁC NHẬN
+
+1. Địa chỉ, số điện thoại, email và các link mạng xã hội (Facebook, Instagram, LinkedIn, TikTok).
+2. Nội dung lời nhắn của chị Amy trong trang About Us.
+3. Giá từng gói: hiện em đang để giá tham khảo $3,490 / $4,690 / $6,290 (giá từ, mỗi khách), chị điều chỉnh lại giúp em.
+4. Nếu chị có thêm ảnh thật từ các chuyến đi (đặc biệt vườn trái cây, khám sức khoẻ, nha khoa...), em sẽ thay vào để website chân thật hơn.
+
+Chị xem demo và góp ý giúp em về bất cứ điểm nào chị chưa ưng (màu sắc, font chữ, hình ảnh, bố cục, câu chữ...). Chị có thể chụp màn hình và ghi chú trực tiếp lên chỗ cần sửa để em nắm chính xác nhất ạ.
+
+Em cảm ơn 2 chị rất nhiều ạ!
