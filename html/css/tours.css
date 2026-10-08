@@ -5,7 +5,7 @@ body.page-tours { background: var(--cream); }
 .tp-banner {
   position: relative;
   padding: 64px 24px 70px;
-  background: #b89a72 url(../images/banner-03.webp) 50% 45% / cover no-repeat;
+  background: var(--gold) url(../images/banner-03.webp) 50% 45% / cover no-repeat;
 }
 .tp-banner::before {
   content: "";
@@ -35,9 +35,9 @@ body.page-tours { background: var(--cream); }
   margin-bottom: 8px;
   font: 500 clamp(48px, 5.5vw, 76px)/1.08 var(--serif);
   letter-spacing: -1px;
-  color: #fffcf7;
+  color: var(--paper);
 }
-.tp-banner__text { max-width: 650px; margin: 0 auto; font: 400 16px/1.75 var(--sans); color: #fffcf7; }
+.tp-banner__text { max-width: 650px; margin: 0 auto; font: 400 16px/1.75 var(--sans); color: var(--paper); }
 .tp-banner__note { margin-top: 18px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
 
 /* ===== Journeys grid ===== */
@@ -47,7 +47,7 @@ body.page-tours { background: var(--cream); }
   margin-bottom: 12px;
   font: 500 44px/1.12 var(--serif);
   letter-spacing: -.5px;
-  color: #2d3832;
+  color: var(--ink);
 }
 .tp-journeys__desc { margin-bottom: 10px; font: 400 15px/1.8 var(--sans); color: var(--text); }
 .tp-season { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 32px; font: italic 500 20px/1.4 var(--serif); color: var(--rust); }
@@ -60,15 +60,15 @@ body.page-tours { background: var(--cream); }
   gap: 14px;
   padding: 12px 12px 24px;
   font-family: var(--sans);
-  background: #fffcf7;
-  border: 1px solid #e3d9cc;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
   border-radius: 8px;
   transition: transform .3s, box-shadow .3s;
 }
 /* each journey has its own soft tint: blush, sage, warm sand */
-.tour-card--essence { --tint: #f7e9e3; --accent: #b4644f; }
-.tour-card--balanced { --tint: #eaede2; --accent: #687a5b; }
-.tour-card--pause { --tint: #f1e8d3; --accent: #9a7536; }
+.tour-card--essence { --tint: color-mix(in srgb, var(--rust) 11%, var(--paper)); --accent: color-mix(in srgb, var(--rust) 85%, #fff); }
+.tour-card--balanced { --tint: color-mix(in srgb, var(--sage) 13%, var(--paper)); --accent: var(--sage); }
+.tour-card--pause { --tint: color-mix(in srgb, var(--ochre) 15%, var(--paper)); --accent: var(--ochre); }
 .tour-card[class*="tour-card--"] { background: var(--tint); border-color: transparent; }
 .tour-card[class*="tour-card--"] .tour-card__badge { background: var(--accent); }
 .tour-card__media { display: block; overflow: hidden; border-radius: 5px; }
@@ -115,7 +115,7 @@ body.page-tours { background: var(--cream); }
   padding-top: 14px;
   font: 500 25px/1.3 var(--serif);
   color: var(--brown);
-  border-top: 1px solid #e3d9cc;
+  border-top: 1px solid var(--line-soft);
 }
 .tour-card__price span { margin: 0 4px; }
 .tour-card__btn {
@@ -136,14 +136,14 @@ body.page-tours { background: var(--cream); }
 
 /* ===== FAQ accordion ===== */
 .tp-faq { display: flex; flex-direction: column; align-items: center; padding: 60px 0; }
-.tp-faq__title { font: 500 46px/1.1 var(--serif); text-align: center; color: #2d3832; }
+.tp-faq__title { font: 500 46px/1.1 var(--serif); text-align: center; color: var(--ink); }
 .tp-faq__cols { display: flex; gap: 28px; width: 100%; margin-top: 30px; }
 .tp-faq__col { flex: 1; min-width: 0; }
 .acc {
   margin-bottom: 12px;
   overflow: hidden;
-  background: #fffcf7;
-  border: 1px solid #e3d9cc;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
   border-radius: 5px;
   interpolate-size: allow-keywords;
 }
@@ -173,12 +173,12 @@ body.page-tours { background: var(--cream); }
   width: 44px;
   height: 44px;
   color: var(--sage);
-  background: #f2f4f4;
+  background: color-mix(in srgb, var(--sage) 8%, #fff);
   border-radius: 50%;
   transition: background-color .2s, color .2s;
 }
 .acc__icon .ic { width: 14px; height: 14px; }
-.acc[open] .acc__icon { color: #fffcf7; background: var(--sage); }
+.acc[open] .acc__icon { color: var(--paper); background: var(--sage); }
 .acc .ic--up, .acc[open] .ic--down { display: none; }
 .acc[open] .ic--up { display: block; }
 .acc__content { padding: 0 20px 20px; font: 400 13px/1.8 var(--sans); color: var(--text); }

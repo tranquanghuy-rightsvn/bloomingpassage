@@ -18,7 +18,7 @@ body { background: var(--cream); }
 .breadcrumb a { font-weight: 400; color: #e8edf1; }
 .breadcrumb__sep { margin: 0 3px; }
 .breadcrumb__sep svg { display: inline; width: 10px; height: 16px; vertical-align: -2px; }
-.page-banner__title { margin-bottom: 8px; font: 500 clamp(48px, 5vw, 72px)/1.1 var(--serif); color: #fffcf7; }
+.page-banner__title { margin-bottom: 8px; font: 500 clamp(48px, 5vw, 72px)/1.1 var(--serif); color: var(--paper); }
 .page-banner__desc { font: 400 15px/1.7 var(--sans); color: #e8edf1; }
 
 /* ----- Layout ----- */
@@ -43,7 +43,7 @@ body { background: var(--cream); }
 .ct-lead { font-size: 15px; line-height: 1.8; color: var(--text); }
 
 /* ----- Form ----- */
-.ct-card { padding: 36px; background: #efe6d7; border: 1px solid #d7c5ad; border-radius: 4px; }
+.ct-card { padding: 36px; background: var(--sand); border: 1px solid #d7c5ad; border-radius: 4px; }
 .ct-form { display: flex; flex-direction: column; gap: 20px; }
 .ct-form__field { padding-bottom: 10px; }
 .ct-form__label { display: block; margin-bottom: 7px; font-size: 12px; font-weight: 500; line-height: 1.6; color: var(--text); }
@@ -68,13 +68,13 @@ body { background: var(--cream); }
   font-size: 13px;
   font-weight: 600;
   line-height: 1.6;
-  color: #fffcf7;
+  color: var(--paper);
   background: var(--rust);
   border: 1px solid var(--rust);
   border-radius: 3px;
   transition: background-color .25s;
 }
-.ct-form__submit:hover { background: #85401f; border-color: #85401f; }
+.ct-form__submit:hover { background: var(--rust-dark); border-color: var(--rust-dark); }
 
 /* ----- Photo ----- */
 .ct-photo { display: flex; flex-direction: column; gap: 14px; }
@@ -101,12 +101,14 @@ body { background: var(--cream); }
   fill: var(--sage);
   transition: background-color .25s, fill .25s;
 }
-.ct-social__link svg { width: 12px; height: 12px; }
-.ct-social__link:hover { background: var(--sage); fill: var(--cream); }
+.ct-social__link { color: var(--sage); }
+.ct-social__link svg { width: 15px; height: 15px; }
+.ct-social__link:hover { color: var(--cream); background: var(--sage); fill: var(--cream); }
+.ct-info__list a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
 .ct-info__text { font-size: 14px; line-height: 1.8; color: var(--text); }
 .ct-info__text p { margin-bottom: 16px; }
 .ct-link { padding-bottom: 5px; font-weight: 600; color: var(--rust); border-bottom: 1px solid var(--gold); transition: color .25s; }
-.ct-link:hover { color: #85401f; }
+.ct-link:hover { color: var(--rust-dark); }
 
 /* ----- Mobile ----- */
 @media (max-width: 767px) {

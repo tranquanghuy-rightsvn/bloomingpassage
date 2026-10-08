@@ -11,11 +11,22 @@ body.page-gallery { background: var(--cream); }
 .gallery-banner__inner { display: flex; flex-direction: column; gap: 16px; max-width: 1200px; margin: 0 auto; text-align: center; }
 .gallery-banner__crumb { font: 500 12px/1.5 var(--sans); color: #8b765c; }
 .gallery-banner__crumb svg { margin: 0 3px; fill: #fff; }
-.gallery-banner__title { font: 500 64px/1.1 var(--serif); color: #2d3832; }
+.gallery-banner__title { font: 500 64px/1.1 var(--serif); color: var(--ink); }
 
 .gallery-main { padding: 24px 0 60px; }
 
+/* Full gallery: a calm masonry of natural proportions (the home mosaic is tuned for its own 9 photos) */
+.lens__grid--masonry { display: block; columns: 3; column-gap: 22px; }
+.lens__grid--masonry .lens__item { grid-area: auto; height: auto; margin-bottom: 22px; break-inside: avoid; aspect-ratio: auto; }
+.lens__grid--masonry .lens__item img { height: auto; }
+
+@media (max-width: 1024px) {
+  .lens__grid--masonry { column-gap: 16px; }
+  .lens__grid--masonry .lens__item { margin-bottom: 16px; }
+}
 @media (max-width: 767px) {
+  .lens__grid--masonry { columns: 2; column-gap: 12px; }
+  .lens__grid--masonry .lens__item { margin-bottom: 12px; grid-column: auto; grid-row: auto; }
   .gallery-banner { padding: 40px 20px 0; }
   .gallery-banner__title { font-size: 48px; }
 }

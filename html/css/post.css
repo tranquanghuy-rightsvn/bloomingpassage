@@ -38,7 +38,7 @@ body { background: var(--cream); }
 .post-content p { margin-bottom: 18px; }
 .post-content h2 { margin: 40px 0 14px; font: 500 34px/1.15 var(--serif); letter-spacing: -.01em; color: var(--brown); }
 .post-content a { font-weight: 600; color: var(--rust); transition: color .2s; }
-.post-content a:hover { color: #85401f; }
+.post-content a:hover { color: var(--rust-dark); }
 .post-content .post-content__source { margin: 0; }
 .post-content small { font-size: 12.8px; }
 
@@ -54,7 +54,7 @@ body { background: var(--cream); }
   height: 48px;
   color: var(--ink);
   background: var(--paper);
-  border: 1px solid #e0d6c8;
+  border: 1px solid var(--line-soft);
   border-radius: 200px;
   transition: background-color .2s, color .2s, opacity .2s;
 }
@@ -79,7 +79,7 @@ body { background: var(--cream); }
   gap: 12px;
   padding: 20px;
   background: var(--paper);
-  border: 1px solid #e0d6c8;
+  border: 1px solid var(--line-soft);
   border-radius: 16px;
   scroll-snap-align: start;
 }

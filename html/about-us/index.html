@@ -9,8 +9,9 @@
 <title>About Us – Blooming Passage</title>
 <link rel="preload" href="../fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../css/main.css?v=20261007">
-<link rel="stylesheet" href="../css/about-us.css?v=20261007">
+<link rel="stylesheet" href="../css/main.css?v=20261011">
+<script>/* Design options (demo): apply the chosen palette before first paint */try{var bp=new URLSearchParams(location.search).get("palette");if(bp===null)bp=localStorage.getItem("bp-palette");if(bp)document.documentElement.dataset.palette=bp}catch(e){}</script>
+<link rel="stylesheet" href="../css/about-us.css?v=20261011">
 </head>
 <body class="is-inner">
 
@@ -57,7 +58,7 @@
   <!-- Our story -->
   <section class="ab-sec ab-story">
     <div class="ab-story__intro">
-      <p class="ab-eyebrow ab-story__eyebrow">BLOOMING PASSAGE / OUR STORY</p>
+      <p class="ab-eyebrow ab-story__eyebrow">BLOOMING PASSAGE</p>
       <h2 class="ab-title ab-story__title">A passage through Vietnam.<br><em>A return to yourself.</em></h2>
       <p class="ab-text ab-story__copy">Blooming Passage is a different way to experience Central Vietnam: thoughtfully paced journeys for women, shaped around culture, wellness, beauty and meaningful connection.<br><br>We believe a journey can be both an exploration of a place and a little space for yourself. Through Da Nang, Hoi An and Hue, we make room to slow down, meet local people and enjoy the moments that stay with you.</p>
     </div>
@@ -93,19 +94,28 @@
     </div>
   </section>
 
-  <!-- A note from our founder (as on the brochure). Wording to be confirmed by the client. -->
-  <section class="ab-sec">
+  <!-- Our story: the founder's own words (client copy, October 2026) -->
+  <section class="ab-sec ab-letter" id="our-story">
     <div class="ab-founder">
       <figure class="ab-founder__photo">
-        <img class="ab-founder__img" src="../images/amy-tran.webp" width="300" height="300" alt="Amy Tran, founder of Blooming Passage" loading="lazy">
+        <span class="ab-founder__frame"><img class="ab-founder__img" src="../images/amy-tran.webp" width="300" height="300" alt="Amy Tran, founder of Blooming Passage" loading="lazy"></span>
+        <figcaption class="ab-founder__name">Amy Tran<span>Founder, Blooming Passage</span></figcaption>
       </figure>
       <div class="ab-founder__body">
-        <h2 class="ab-title ab-founder__title" data-eyebrow="A NOTE FROM OUR FOUNDER">Why I created<br><em>Blooming Passage.</em></h2>
-        <blockquote class="ab-founder__quote">
-          <p>I created Blooming Passage for women who are curious, a little tired, and ready for travel that looks after the whole of them. Central Vietnam has a way of slowing you down: its food, its craft, its people and its gentle rhythm.</p>
-          <p>I would love to share it with you, in a small group, with time to explore, to rest, to talk, and simply to be.</p>
-        </blockquote>
-        <p class="ab-founder__name">Amy Tran<span>Founder, Blooming Passage</span></p>
+        <h2 class="ab-title ab-founder__title" data-eyebrow="OUR STORY">Reclaiming<br><em>Your Vitality.</em></h2>
+        <p class="ab-letter__lead">When was the last time you felt completely heard, cared for, and informed by your doctor?</p>
+        <div class="ab-letter__text">
+          <p>If you are like most women, navigating healthcare at home feels like an uphill battle of rushed 10-minute visits, complex patient portals, and unanswered questions.</p>
+          <p>For a long time, I spent years putting everyone and everything else first &ndash; my career, my family, my daily responsibilities &ndash; while placing my own well-being on the back burner.</p>
+          <p>Then, a sudden, unexpected health scare completely stopped me in my tracks.</p>
+          <p>Realizing I needed clarity and a deep mental, emotional, and physical reset instead of endless waiting rooms, I took a leap of faith and traveled to Vietnam on my own for the first time.</p>
+          <p class="ab-letter__turn">That journey changed everything.</p>
+          <p>In just days, I completed a comprehensive executive physical and sat down face-to-face with providers who walked me through my scans and bloodwork line by line. For the first time, I walked away with complete peace of mind, knowing exactly where I stood health-wise and how to naturally support my body moving forward.</p>
+          <p>After sharing my experience with my closest girlfriends, their encouragement gave me the courage to create Blooming Passage.</p>
+          <p>I created Blooming Passage for women who are ready to make space for themselves &ndash; to pause, reconnect, and experience something meaningful at their own pace.</p>
+          <p>If you&rsquo;re in a season of life where you&rsquo;re ready to put yourself back on the list, I hope you&rsquo;ll join me in Central Vietnam.</p>
+        </div>
+        <p class="ab-letter__close">Come curious. Come open. <em>Come as you are.</em></p>
       </div>
     </div>
   </section>
@@ -133,7 +143,7 @@
       <p class="ab-text ab-care__intro">Wellness, beauty and optional proactive health experiences can sit alongside culture and discovery. Choose what feels right for you, with room for rest, curiosity and the simple pleasures of being away.</p>
       <div class="ab-care__grid">
         <div class="ab-care__photo">
-          <img class="ab-care__img" src="../images/BP%20-%20Beauty%206.jpeg" width="560" height="430" alt="A relaxing hot stone massage in a candlelit spa" loading="lazy">
+          <img class="ab-care__img" src="../images/spa-relax.webp" width="560" height="430" alt="Relaxing in a soft robe after a spa treatment" loading="lazy">
         </div>
         <div class="ab-care__item ab-care__item--rest">
           <h3 class="ab-subtitle">A little more room to rest.</h3>
@@ -192,9 +202,8 @@
       <a href="/"><img class="footer-brand__logo" src="../images/logo-blooming.png" width="250" height="72" alt="Blooming Passage" loading="lazy"></a>
       <h3 class="footer-brand__tag">Thoughtful journeys. Space to bloom.</h3>
       <ul class="footer-list footer-list--contact">
-        <li><a href="#"><img src="../images/icon-map.svg" width="19" height="19" alt="">1901 Thornridge Cir. Shiloh, Hawaii 81063</a></li>
-        <li><a href="tel:3085550121"><img src="../images/icon-phone.svg" width="16" height="16" alt="">(308) 555-0121</a></li>
-        <li><a href="mailto:hello@passage.com"><img src="../images/icon-mail.svg" width="17" height="13" alt="">hello@passage.com</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=38+Lake+Bluff+Ct,+Henderson,+NV+89011" target="_blank" rel="noopener"><img src="../images/icon-map.svg" width="19" height="19" alt="">38 Lake Bluff Ct, Henderson, NV 89011</a></li>
+        <li><a href="mailto:travel@bloomingpassage.com"><img src="../images/icon-mail.svg" width="17" height="13" alt="">travel@bloomingpassage.com</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -218,11 +227,10 @@
     <div class="footer-col">
       <h3 class="footer-col__title">Follow Us</h3>
       <div class="socials">
-        <a href="#" aria-label="Facebook"><img src="../images/icon-facebook.svg" width="22" height="22" alt="" loading="lazy"></a>
-        <a href="#" aria-label="Instagram"><img src="../images/icon-instagram.svg" width="22" height="22" alt="" loading="lazy"></a>
-        <a href="#" aria-label="X"><img src="../images/icon-x.svg" width="22" height="22" alt="" loading="lazy"></a>
-        <a href="#" aria-label="YouTube"><img src="../images/icon-youtube.svg" width="22" height="22" alt="" loading="lazy"></a>
+        <a href="https://www.instagram.com/bloomingpassage.com/" target="_blank" rel="noopener" aria-label="Instagram @bloomingpassage.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.05" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.tiktok.com/@bloomingpassage.com" target="_blank" rel="noopener" aria-label="TikTok @bloomingpassage.com"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
       </div>
+      <p class="socials__handle">@bloomingpassage.com</p>
     </div>
   </div>
   <div class="site-footer__bottom">
@@ -253,6 +261,6 @@
   </a>
 </nav>
 
-<script src="../js/main.js?v=20261007" defer></script>
+<script src="../js/main.js?v=20261011" defer></script>
 </body>
 </html>

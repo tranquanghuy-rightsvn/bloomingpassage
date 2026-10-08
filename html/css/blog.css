@@ -6,7 +6,7 @@ body.is-cream { background: var(--cream); }
 .journal-banner {
   position: relative;
   padding: 64px 24px 70px;
-  background: #b89a72 url(../images/img-5.webp) 50% 20% / cover no-repeat;
+  background: var(--gold) url(../images/experience-hoian.webp) 50% 55% / cover no-repeat;
 }
 .journal-banner::before {
   content: "";
@@ -28,8 +28,8 @@ body.is-cream { background: var(--cream); }
 .journal-banner__crumb a { font-weight: 400; color: #e8edf1; transition: color .2s; }
 .journal-banner__crumb a:hover { color: #fff; }
 .journal-banner__crumb svg { margin: 0 3px; fill: #e8edf1; }
-.journal-banner__title { font: 500 clamp(48px, 5.5vw, 76px)/1.08 var(--serif); letter-spacing: -1px; color: #fffcf7; }
-.journal-banner__text { max-width: 650px; margin: 0 auto; font: 400 16px/1.75 var(--sans); color: #fffcf7; }
+.journal-banner__title { font: 500 clamp(48px, 5.5vw, 76px)/1.08 var(--serif); letter-spacing: -1px; color: var(--paper); }
+.journal-banner__text { max-width: 650px; margin: 0 auto; font: 400 16px/1.75 var(--sans); color: var(--paper); }
 
 .journal { display: flex; flex-direction: column; align-items: center; padding: 60px 24px; }
 .journal__grid {
@@ -48,7 +48,7 @@ body.is-cream { background: var(--cream); }
   min-height: 530px;
   overflow: hidden;
   background: var(--paper);
-  border: 1px solid #e0d6c8;
+  border: 1px solid var(--line-soft);
   border-radius: 6px;
 }
 .story-card__media { display: block; overflow: hidden; }
@@ -71,7 +71,7 @@ body.is-cream { background: var(--cream); }
 .story-card__date {
   margin-top: auto;
   padding-top: 10px;
-  border-top: 1px solid #e0d6c8;
+  border-top: 1px solid var(--line-soft);
   font: 400 12px/19.2px var(--sans);
   color: #8b765c;
 }

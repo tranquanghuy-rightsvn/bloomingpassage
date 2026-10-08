@@ -128,7 +128,7 @@
 .itin__item summary::-webkit-details-marker, .tfaq__item summary::-webkit-details-marker { display: none; }
 .itin__icon, .tfaq__icon { width: 14px; height: 16px; fill: currentColor; transition: transform .25s; }
 .itin__icon { position: absolute; top: 50%; right: 0; margin-top: -8px; color: var(--rust); }
-.itin__item[open] .itin__icon { transform: rotate(180deg); color: #fd4621; }
+.itin__item[open] .itin__icon { transform: rotate(180deg); color: var(--rust); }
 /* Open day: a photo beside the day's notes (stacked on phones), fading in softly */
 .itin__body {
   display: grid;
@@ -242,7 +242,7 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
   font: inherit;
   font-size: 13px;
   color: var(--brown);
-  background: #fffcf7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%23382d26' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 12px center;
+  background: var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%23382d26' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 12px center;
   border: 1px solid #cbbdaa;
   border-radius: 4px;
   appearance: none;
@@ -268,8 +268,8 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
 .inquiry-form p { margin-bottom: 15px; font-size: 15px; line-height: 27px; }
 .inquiry-form .field { height: 58px; }
 .inquiry-form textarea.field { height: 110px; }
-.inquiry-form__submit { background: #fd4621; }
-.inquiry-form__submit:hover { background: #e23510; }
+.inquiry-form__submit { background: var(--rust); }
+.inquiry-form__submit:hover { background: var(--rust-dark); }
 .booking__panel[hidden] { display: none; }
 
 /* ----- Related journeys ----- */
@@ -283,7 +283,7 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
   gap: 12px;
   padding: 14px 14px 20px;
   background: var(--paper);
-  border: 1px solid #e3d9cc;
+  border: 1px solid var(--line-soft);
   border-radius: 8px;
   transition: box-shadow .25s, transform .25s;
 }
@@ -298,7 +298,7 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
 .jcard__meta .ic { width: 22px; height: 14px; padding-right: 9px; color: var(--sage); }
 .jcard__meta--group { min-height: 22px; padding-bottom: 0; }
 .jcard__meta--group .ic { width: 23px; padding-right: 5px; }
-.jcard__price { padding-top: 12px; border-top: 1px solid #e3d9cc; font: 500 24px/31.2px var(--serif); color: var(--ink); }
+.jcard__price { padding-top: 12px; border-top: 1px solid var(--line-soft); font: 500 24px/31.2px var(--serif); color: var(--ink); }
 .jcard__price span { margin: 0 4px; }
 .jcard__btn {
   display: flex;
