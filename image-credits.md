@@ -9,16 +9,21 @@ Free files below: commercial use allowed, no attribution required.
 | File (html/images/) | Source |
 |---|---|
 | hero-hoian-1 | Unsplash 3bH7VkSj4fg |
-| hero-hoian-2 | **Unsplash+ e18QHKZBWjM (clean file)** |
+| hero-hoian-friends (hero slide 2) | Supplied by the team (own image, 2026-10-08) |
+| hero-hoian-2 (7-day tour gallery only) | **Unsplash+ e18QHKZBWjM (clean file)** |
 | hero-hoian-3 | Unsplash z62LX_Sh8cY |
-| hero-hoian-4 | Unsplash DTwAg5cqcaM |
-| hero-hoian-5 | Unsplash SPhqG6KirQM |
+| hero-hoian-cyclo (hero slide 4) | Supplied by the team (own image, 2026-10-08) |
+| hero-hoian-4 (14-day tour itinerary only) | Unsplash DTwAg5cqcaM |
+| hero-hoian-5 | Unsplash TRtyDemHzGM |
 | hoian-japanese-bridge | Pexels 14021776 |
-| women-friends-tea (default) | **Unsplash+ CY7HRD-XChk (clean file)** |
-| women-friends-arches | **Unsplash+ S3a3_kD1-rU (clean file)** |
+| women-friends-hoian (default) | Supplied by the team (own image, 2026-10-08) |
+| women-friends-tea | **Unsplash+ CY7HRD-XChk (clean file)** |
+| women-friends-seaside | Pexels 6540137 |
+| women-friends-dinner | Pexels 11368641 |
 | women-friends-garden | **Unsplash+ 5nlE10fnnNA (clean file)** |
-| cooking-class | **Unsplash+ ovn9HDmP9sg (PREVIEW – licence required)** |
-| massage-rejuvenate | **Unsplash+ 18ynuQDRMu4 (PREVIEW – licence required)** |
+| cooking-class | Pexels 5463852 |
+| massage-rejuvenate | Pexels 6560265 |
+| massage-spa | Pexels 5888099 |
 | spa-relax | Pexels 6234117 |
 | breakfast-by-the-sea | Pexels 12401733 |
 | health-consultation | Pexels 12599544 |
