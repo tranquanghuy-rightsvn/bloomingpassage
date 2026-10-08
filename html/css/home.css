@@ -47,13 +47,13 @@
   transition: opacity 1.8s ease;
   will-change: opacity, transform;
 }
-.hero__slide.is-active, .hero__slide.is-leaving { opacity: 1; animation: hero-drift 9s linear forwards; }
+.hero__slide.is-active, .hero__slide.is-leaving { opacity: 1; animation: hero-drift 7.5s linear forwards; }
 .hero__slide.is-leaving { opacity: 0; }
-.hero__slide:nth-child(2n) { --drift-x: -2%; transform-origin: 30% 60%; }
-.hero__slide:nth-child(2n+1) { --drift-x: 2%; transform-origin: 70% 40%; }
+.hero__slide:nth-child(2n) { --drift-x: -4%; transform-origin: 30% 60%; }
+.hero__slide:nth-child(2n+1) { --drift-x: 4%; transform-origin: 70% 40%; }
 @keyframes hero-drift {
-  from { transform: scale(1.04) translateX(0); }
-  to { transform: scale(1.14) translateX(var(--drift-x, 0)); }
+  from { transform: scale(1) translateX(0); }
+  to { transform: scale(1.24) translateX(var(--drift-x, 0)); }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero__slide.is-active { animation: none; transform: none; }
