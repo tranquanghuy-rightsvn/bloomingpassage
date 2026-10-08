@@ -17,8 +17,6 @@ Free files below: commercial use allowed, no attribution required.
 | women-friends-tea (default) | **Unsplash+ CY7HRD-XChk (clean file)** |
 | women-friends-arches | **Unsplash+ S3a3_kD1-rU (clean file)** |
 | women-friends-garden | **Unsplash+ 5nlE10fnnNA (clean file)** |
-| women-friends-oldtown | **Unsplash+ 89DMirvHUwg (clean file)** |
-| women-friends-retreat | Unsplash 4rHt6yM_6YA |
 | cooking-class | Pexels 7964654 |
 | massage-rejuvenate | Pexels 7235053 |
 | spa-relax | Pexels 6234117 |

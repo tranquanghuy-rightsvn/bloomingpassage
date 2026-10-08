@@ -9,3 +9,5 @@ File names: `<web file name>__<source + id>`.
 
 Not in this folder (not published to the web): files in `html/images/` that came with the project
 (BP - Beauty/Healthcare, img-*, banner-*, food-*, night-*, …).
+
+Not used on the site any more (kept only as reference): `free/women-friends-retreat__…`, `unsplash-plus/women-friends-oldtown__…`.
