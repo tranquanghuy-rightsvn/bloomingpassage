@@ -7,7 +7,7 @@ body { color: var(--ink); background: var(--cream); }
   isolation: isolate;
   min-height: 370px;
   padding: 64px 32px;
-  background: linear-gradient(rgba(29, 43, 34, .5), rgba(29, 43, 34, .5)), url(../images/img-1-3.webp) center 46% / cover, var(--gold);
+  background: linear-gradient(rgba(29, 43, 34, .5), rgba(29, 43, 34, .5)), url(../images/hero-hoian-2.webp?v=20261012) center 40% / cover, var(--gold);
 }
 .page-banner__inner {
   display: flex;
