@@ -11,3 +11,6 @@ Not in this folder (not published to the web): files in `html/images/` that came
 (BP - Beauty/Healthcare, img-*, banner-*, food-*, night-*, …).
 
 Not used on the site any more (kept only as reference): `free/women-friends-retreat__…`, `unsplash-plus/women-friends-oldtown__…`.
+
+`unsplash-plus/*__PREVIEW.jpg`: still watermarked previews (cooking class, massage). Replace with the clean download, then re-export.
+`unused/`: originals of photos that have since been replaced.
