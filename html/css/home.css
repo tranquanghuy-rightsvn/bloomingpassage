@@ -34,7 +34,7 @@
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  background: var(--ink) url(../images/hero-day-poster.webp) center / cover no-repeat;
+  background: var(--ink) url(../images/hero-day-poster.webp?v=2) center / cover no-repeat;
 }
 .hero__video { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease; }
 .hero.has-video .hero__video { opacity: 1; }
