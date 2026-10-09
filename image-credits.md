@@ -35,11 +35,10 @@ Hoi An photos were softened slightly (saturation/contrast) so they sit together 
 
 ## Home hero video (`html/videos/hoi-an-day-1080.mp4`, `hoi-an-day-720.mp4`)
 
-22.7-second seamless loop, bright day to golden hour, edited from five free clips
-(Pexels and Pixabay licences: free for commercial use, no attribution required):
-1. Pixabay 59295 – drone over Hoi An rooftops and boats
-2. Pexels 7217095 – woman in white ao dai with a bicycle by a yellow wall
-3. Pexels 15693478 – lantern boats in the golden-hour sun
-4. Pexels 7217096 – woman in ao dai and conical hat strolling the old town
+23-second seamless loop, day to dusk. Free clips (Pexels / Pixabay licences: commercial use allowed, no attribution required):
+1. Pixabay 59295 – drone over Hoi An rooftops and boats (opening frame / poster)
+2. Pexels 3783700 – Western woman in a conical hat looking over Vietnamese rice fields
+3. Pexels 15693478 – Hoi An lantern boats in the golden-hour sun
+4. Pexels 16566719 – woman in a straw hat walking past a yellow colonial wall (filmed in Izamal, Mexico)
 5. Pexels 36670076 – drone over the Hoai River at dusk
 Poster frame: `html/images/hero-day-poster.webp`.
