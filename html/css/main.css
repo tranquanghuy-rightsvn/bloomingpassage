@@ -12,39 +12,25 @@
 
 /* ===== Tokens ===== */
 :root {
-  --sage: #5f705f;
-  --sage-dark: #485b49;
-  --cream: #f7f3ec;
-  --paper: #fffcf7;
-  --rust: #a55427;
-  --ink: #2d3832;
+  /* Olive & Champagne (chosen by the client, 2026-10-09) */
+  --sage: #5b5f45;
+  --sage-dark: #474a35;
+  --cream: #f5f2ea;
+  --paper: #fdfcf8;
+  --rust: #8c6a4f;
+  --ink: #2f302a;
   --brown: #382d26;
   --brown-2: #2d2721;
-  --text: #65574a;
+  --text: #5f5a4e;
   --muted: #8b897d;
-  --gold: #b89a72;
-  --line: #d9cbb9;
-  --line-soft: #e1d7c9;
-  --sand: #efe7d8;
-  --rust-dark: #8f4a24;
-  --ochre: #9a7536;
+  --gold: #b9a27a;
+  --line: #d8d0bf;
+  --line-soft: #e4ded1;
+  --sand: #ece6d9;
+  --rust-dark: #6f533d;
+  --ochre: #857447;
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: Manrope, sans-serif;
-}
-
-/* Alternative palettes for the client to compare (same warm, calm mood).
-   Set on <html data-palette="..."> by the Design options panel (main.js). Remove the unused ones at launch. */
-:root[data-palette="lotus"] {
-  --sage: #4e6a62; --sage-dark: #3c554e; --cream: #f8f2ee; --paper: #fffbf8; --rust: #ad6157; --rust-dark: #8c4a42;
-  --ink: #2a3532; --text: #6a5650; --gold: #c3a27f; --line: #e2cfc6; --line-soft: #ecdfd8; --sand: #f1e4dd; --ochre: #9c7650;
-}
-:root[data-palette="lantern"] {
-  --sage: #3e5468; --sage-dark: #2f4254; --cream: #f6f1e6; --paper: #fffcf5; --rust: #b0702a; --rust-dark: #8c571d;
-  --ink: #253040; --text: #5d5546; --gold: #c19a5b; --line: #ddd0b8; --line-soft: #e8dfcd; --sand: #efe6d3; --ochre: #86683a;
-}
-:root[data-palette="olive"] {
-  --sage: #5b5f45; --sage-dark: #474a35; --cream: #f5f2ea; --paper: #fdfcf8; --rust: #8c6a4f; --rust-dark: #6f533d;
-  --ink: #2f302a; --text: #5f5a4e; --gold: #b9a27a; --line: #d8d0bf; --line-soft: #e4ded1; --sand: #ece6d9; --ochre: #857447;
 }
 
 /* ===== Reset ===== */
@@ -357,35 +343,58 @@ em { font-style: italic; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
-/* ===== Design options (demo only: palettes + photo choices for the client; remove at launch) ===== */
-.design-opts { position: fixed; bottom: 30px; left: 30px; z-index: 98; font: 500 13px/1.4 var(--sans); color: var(--ink); }
-.design-opts__toggle {
-  display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px;
-  font: 600 12px/1 var(--sans); letter-spacing: .6px; color: var(--paper); background: var(--ink);
-  border-radius: 999px; box-shadow: 0 8px 24px rgba(30, 30, 30, .22);
+/* ===== Motion (inner pages; main.js tags the blocks) =====
+   Blocks rise into place as they scroll into view, one after another; photos open up from a soft zoom.
+   Banners with a photo drift slowly (Ken Burns) behind their text, which drops in like the home hero. */
+.js-anim [data-anim] {
+  opacity: 0;
+  transition: opacity .9s ease, transform 1s cubic-bezier(.22, .61, .36, 1), clip-path 1.1s cubic-bezier(.22, .61, .36, 1);
+  transition-delay: var(--anim-delay, 0ms);
 }
-.design-opts__toggle i { display: flex; }
-.design-opts__toggle i b { width: 10px; height: 10px; margin-left: -3px; border: 1.5px solid var(--ink); border-radius: 50%; }
-.design-opts__panel {
-  position: absolute; bottom: calc(100% + 10px); left: 0; width: 300px; max-height: min(70vh, 560px); overflow-y: auto;
-  padding: 18px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 44px rgba(30, 30, 30, .2);
+.js-anim [data-anim="up"] { transform: translateY(34px); }
+.js-anim [data-anim="left"] { transform: translateX(-56px); }
+.js-anim [data-anim="right"] { transform: translateX(56px); }
+.js-anim [data-anim="img"] { transform: scale(1.08); clip-path: inset(8% 6% 8% 6% round 6px); }
+.js-anim [data-anim].is-in { opacity: 1; transform: none; clip-path: inset(0 0 0 0 round 0); }
+
+.page-banner, .tp-banner, .journal-banner, .photo-banner { position: relative; overflow: hidden; isolation: isolate; }
+.page-banner::after, .tp-banner::after, .journal-banner::after, .photo-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: inherit;
+  transform-origin: 60% 50%;
+  animation: banner-drift 22s ease-out both;
 }
-.design-opts__panel[hidden] { display: none; }
-.design-opts__title { margin: 0 0 10px; font: 600 10px/1.4 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); }
-.design-opts__group + .design-opts__group { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line-soft); }
-.design-opts__opt {
-  display: flex; align-items: center; gap: 12px; width: 100%; padding: 8px 10px; text-align: left;
-  border: 1px solid transparent; border-radius: 10px; transition: background-color .2s, border-color .2s;
+@keyframes banner-drift { from { transform: scale(1.14); } to { transform: scale(1); } }
+.page-banner__inner > *, .tp-banner__inner > *, .journal-banner__inner > *, .photo-banner__inner > * {
+  animation: banner-text .9s cubic-bezier(.22, .61, .36, 1) backwards;
 }
-.design-opts__opt:hover { background: var(--cream); }
-.design-opts__opt[aria-pressed="true"] { background: var(--cream); border-color: var(--sage); }
-.design-opts__sw { display: flex; flex: none; }
-.design-opts__sw b { width: 18px; height: 18px; margin-right: -5px; border: 2px solid var(--paper); border-radius: 50%; }
-.design-opts__thumb { flex: none; width: 54px; height: 40px; object-fit: cover; border-radius: 6px; }
-.design-opts__name { display: flex; flex-direction: column; font-weight: 600; }
-.design-opts__name small { font-weight: 400; font-size: 11.5px; color: var(--muted); }
-@media (max-width: 768px) {
-  .design-opts { bottom: 76px; left: 12px; }
-  .design-opts__panel { width: min(300px, calc(100vw - 24px)); max-height: 60vh; }
+.page-banner__inner > :nth-child(2), .tp-banner__inner > :nth-child(2), .journal-banner__inner > :nth-child(2), .photo-banner__inner > :nth-child(2) { animation-delay: .15s; }
+.page-banner__inner > :nth-child(n+3), .tp-banner__inner > :nth-child(n+3), .journal-banner__inner > :nth-child(n+3), .photo-banner__inner > :nth-child(n+3) { animation-delay: .3s; }
+@keyframes banner-text { from { opacity: 0; transform: translateY(-26px); } }
+
+/* Text-only banners (Gallery, FAQs) given a photo, styled like the other inner-page banners */
+.photo-banner {
+  padding: 150px 15px 70px;
+  background: linear-gradient(90deg, rgba(45, 39, 33, .58), rgba(45, 39, 33, .32)), var(--banner) var(--banner-pos, center) / cover no-repeat, var(--gold);
 }
-@media print { .design-opts { display: none; } }
+.photo-banner [class$="__crumb"], .photo-banner [class$="__crumb"] a { color: #e8edf1; }
+.photo-banner [class$="__crumb"] svg { fill: #e8edf1; }
+.photo-banner [class$="__title"] { color: var(--paper); }
+.photo-banner__desc { font: 400 15px/1.7 var(--sans); color: #e8edf1; }
+
+
+/* Photos in cards and sections lift and zoom a touch on hover */
+.ab-value__img, .ab-approach__img, .ab-care__img, .ab-place__img, .ab-talk__img, .ct-photo__img,
+.story-card__media img, .mini-card__img img, .itin__img, .jcard__img img, .tour-card__media img { transition: transform .7s cubic-bezier(.22, .61, .36, 1); }
+.ab-value:hover .ab-value__img, .ab-approach__media:hover .ab-approach__img, .ab-care__photo:hover .ab-care__img,
+.ab-place:hover .ab-place__img, .ab-talk__media:hover .ab-talk__img, .ct-photo:hover .ct-photo__img,
+.story-card:hover .story-card__media img, .mini-card:hover .mini-card__img img, .itin__body:hover .itin__img,
+.jcard:hover .jcard__img img, .tour-card:hover .tour-card__media img { transform: scale(1.05); }
+.ab-value, .ab-approach__media, .ab-care__photo, .ab-talk__media, .ct-photo, .story-card__media, .mini-card__img, .jcard__img, .tour-card__media { overflow: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js-anim [data-anim] { opacity: 1; transform: none; clip-path: none; }
+}

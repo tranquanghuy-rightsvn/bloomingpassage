@@ -129,82 +129,56 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // Design options (demo only — remove this block, the panel CSS and the head snippet at launch):
-  // lets the client compare palettes site-wide and, on the home page, the "first impression" group photo.
-  // Choices persist across pages (localStorage) and can be shared with ?palette=lotus / ?photo=b.
-  var PALETTES = [
-    ['', 'Terracotta & Sage', 'Current', ['#5f705f', '#a55427', '#b89a72', '#f7f3ec']],
-    ['lotus', 'Lotus & Jade', 'Softer, more feminine', ['#4e6a62', '#ad6157', '#c3a27f', '#f8f2ee']],
-    ['lantern', 'Lantern Indigo', 'Hoi An at dusk', ['#3e5468', '#b0702a', '#c19a5b', '#f6f1e6']],
-    ['olive', 'Olive & Champagne', 'Quiet luxury', ['#5b5f45', '#8c6a4f', '#b9a27a', '#f5f2ea']]
+
+  // Motion on inner pages: blocks appear once, in reading order, as they scroll into view
+  // (the home page and the gallery run their own version in home.js).
+  var ANIM = [
+    ['.ab-story__intro > *, .ab-title, .ab-text, .ab-letter__lead, .ab-letter__text > p, .ab-letter__turn, .ab-letter__close, .ab-care__item, .ab-talk__card', 'up'],
+    ['.ab-value, .tour-card, .jcard, .story-card, .mini-card, .faq-item, .acc, .tfaq__item, .itin__item, .ct-card, .ct-info, .faq-cta, .tour-h, .tp-journeys__title, .tp-journeys__desc, .tp-faq__title, .tour-related__title, .faq-col__title, .post-content > h2, .post-content > p, .ct-intro > *', 'up'],
+    ['.ab-founder__photo, .ab-approach__img, .ab-care__img, .ab-place__img, .ab-talk__img, .ct-photo__img, .post-content img, .post-head__img', 'img']
   ];
-  var store = {
-    get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
-    set: function (k, v) { try { if (v) localStorage.setItem(k, v); else localStorage.removeItem(k); } catch (e) {} }
-  };
-  var params = new URLSearchParams(location.search);
-  var root = document.documentElement;
-  function setPalette(id) {
-    if (id) root.dataset.palette = id; else delete root.dataset.palette;
-    store.set('bp-palette', id);
-  }
-  if (params.has('palette')) setPalette(PALETTES.some(function (p) { return p[0] === params.get('palette'); }) ? params.get('palette') : '');
-  else if (store.get('bp-palette')) setPalette(store.get('bp-palette'));
-
-  var photo = document.querySelector('[data-photo-options]');
-  var photos = photo ? JSON.parse(photo.dataset.photoOptions) : [];
-  function setPhoto(id) {
-    var opt = photos.filter(function (o) { return o.id === id; })[0] || photos[0];
-    photo.srcset = opt.srcset;
-    photo.src = opt.src;
-    photo.alt = opt.alt;
-    store.set('bp-photo', opt.id === photos[0].id ? '' : opt.id);
-    return opt.id;
-  }
-  var photoId = photos.length ? setPhoto(params.get('photo') || store.get('bp-photo')) : null;
-
-  var opts = document.createElement('div');
-  opts.className = 'design-opts';
-  var html = '<button class="design-opts__toggle" type="button" aria-expanded="false" aria-controls="design-opts-panel">' +
-    '<i aria-hidden="true">' + PALETTES[0][3].slice(0, 3).map(function (c) { return '<b style="background:' + c + '"></b>'; }).join('') + '</i>Design options</button>' +
-    '<div class="design-opts__panel" id="design-opts-panel" hidden><div class="design-opts__group"><p class="design-opts__title">Colour palette</p>';
-  PALETTES.forEach(function (p) {
-    html += '<button class="design-opts__opt" type="button" data-palette-id="' + p[0] + '"><span class="design-opts__sw" aria-hidden="true">' +
-      p[3].map(function (c) { return '<b style="background:' + c + '"></b>'; }).join('') +
-      '</span><span class="design-opts__name">' + p[1] + '<small>' + p[2] + '</small></span></button>';
-  });
-  html += '</div>';
-  if (photos.length) {
-    html += '<div class="design-opts__group"><p class="design-opts__title">First-impression photo</p>';
-    photos.forEach(function (o) {
-      html += '<button class="design-opts__opt" type="button" data-photo-id="' + o.id + '"><img class="design-opts__thumb" src="' + o.thumb + '" alt="">' +
-        '<span class="design-opts__name">' + o.label + '<small>' + o.note + '</small></span></button>';
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!document.querySelector('.hero, .lens') && 'IntersectionObserver' in window && !still) {
+    var animEls = [];
+    ANIM.forEach(function (g) {
+      document.querySelectorAll(g[0]).forEach(function (el) {
+        if (el.dataset.anim || el.closest('[data-anim]')) return;
+        el.dataset.anim = g[1];
+        animEls.push(el);
+      });
     });
-    html += '</div>';
+    document.documentElement.classList.add('js-anim');
+    var waiting = animEls.slice();
+    var show = function (list) {
+      list = list.filter(function (el) { return waiting.indexOf(el) !== -1; });
+      list.sort(function (a, b) {
+        var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+        return Math.abs(ra.top - rb.top) > 24 ? ra.top - rb.top : ra.left - rb.left;
+      });
+      list.forEach(function (el, i) {
+        animIo.unobserve(el);
+        waiting.splice(waiting.indexOf(el), 1);
+        el.style.setProperty('--anim-delay', Math.min(i * 110, 770) + 'ms');
+        el.classList.add('is-in');
+        setTimeout(function () { el.style.removeProperty('--anim-delay'); }, 2200);
+      });
+    };
+    var animIo = new IntersectionObserver(function (entries) {
+      show(entries.filter(function (e) { return e.isIntersecting; }).map(function (e) { return e.target; }));
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.12 });
+    animEls.forEach(function (el) { animIo.observe(el); });
+    // Anchor jumps / restored scroll skip past blocks: show anything already above the fold line.
+    var animTick = false;
+    window.addEventListener('scroll', function () {
+      if (animTick || !waiting.length) return;
+      animTick = true;
+      requestAnimationFrame(function () {
+        animTick = false;
+        show(waiting.filter(function (el) { return el.getBoundingClientRect().top < innerHeight * 0.92; }));
+      });
+    }, { passive: true });
+    window.addEventListener('load', function () {
+      show(waiting.filter(function (el) { return el.getBoundingClientRect().top < innerHeight * 0.92; }));
+    });
   }
-  opts.innerHTML = html + '</div>';
-  body.appendChild(opts);
-  var optsToggle = opts.querySelector('.design-opts__toggle');
-  var optsPanel = opts.querySelector('.design-opts__panel');
-  function mark() {
-    var cur = root.dataset.palette || '';
-    opts.querySelectorAll('[data-palette-id]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.paletteId === cur)); });
-    opts.querySelectorAll('[data-photo-id]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.photoId === photoId)); });
-  }
-  mark();
-  optsToggle.addEventListener('click', function () {
-    var open = optsPanel.hidden;
-    optsPanel.hidden = !open;
-    optsToggle.setAttribute('aria-expanded', String(open));
-  });
-  document.addEventListener('click', function (e) {
-    if (!optsPanel.hidden && !opts.contains(e.target)) { optsPanel.hidden = true; optsToggle.setAttribute('aria-expanded', 'false'); }
-  });
-  opts.addEventListener('click', function (e) {
-    var b = e.target.closest('.design-opts__opt');
-    if (!b) return;
-    if ('paletteId' in b.dataset) setPalette(b.dataset.paletteId);
-    if (b.dataset.photoId) photoId = setPhoto(b.dataset.photoId);
-    mark();
-  });
 })();

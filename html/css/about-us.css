@@ -50,7 +50,7 @@ body { color: var(--ink); background: var(--cream); }
 }
 .ab-subtitle { font: 500 32px/1.12 var(--serif); letter-spacing: -.025em; color: var(--ink); }
 .ab-subtitle--30 { font-size: 30px; line-height: 1.15; }
-.ab-text { font-size: 15px; line-height: 1.85; color: #62685f; }
+.ab-text { font-size: 15px; line-height: 1.85; color: var(--text); }
 .ab-eyebrow { font-size: 10px; font-weight: 600; line-height: 1.85; letter-spacing: .24em; color: var(--rust-dark); }
 .ab-btn {
   display: inline-block;
@@ -87,9 +87,9 @@ body { color: var(--ink); background: var(--cream); }
   border-radius: 24px 4px 4px;
   transition: transform .5s, filter .5s;
 }
-.ab-value__body { display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 1px solid #d5c9b8; }
+.ab-value__body { display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 1px solid var(--line); }
 .ab-value__title { margin-bottom: 10px; font: 500 29px/1.15 var(--serif); letter-spacing: -.025em; color: var(--ink); }
-.ab-value__text { font-size: 13px; line-height: 1.8; color: #62685f; }
+.ab-value__text { font-size: 13px; line-height: 1.8; color: var(--text); }
 @media (min-width: 1025px) and (hover: hover) {
   .ab-value:hover .ab-value__img { transform: scale(1.035); filter: saturate(1.06); }
 }
@@ -106,32 +106,32 @@ body { color: var(--ink); background: var(--cream); }
 .ab-approach__lead { grid-area: lead; max-width: 460px; }
 .ab-approach__media { grid-area: image; align-self: stretch; min-width: 0; }
 .ab-approach__img { width: 100%; height: 500px; object-fit: cover; object-position: center; border-radius: 4px 70px 4px 4px; }
-.ab-approach__body { grid-area: body; display: flex; flex-direction: column; gap: 16px; padding-top: 22px; border-top: 1px solid #d5c9b8; }
+.ab-approach__body { grid-area: body; display: flex; flex-direction: column; gap: 16px; padding-top: 22px; border-top: 1px solid var(--line); }
 .ab-approach__note { padding-top: 18px; }
 
 /* ----- Care ----- */
 /* Founder note: round portrait beside a short letter */
 .ab-founder { display: grid; grid-template-columns: 300px minmax(0, 1fr); align-items: center; gap: 64px; }
 .ab-founder__photo { position: relative; width: 300px; aspect-ratio: 1; }
-.ab-founder__photo::before { content: ""; position: absolute; inset: -14px; border: 1px solid #d5c9b8; border-radius: 50%; }
+.ab-founder__photo::before { content: ""; position: absolute; inset: -14px; border: 1px solid var(--line); border-radius: 50%; }
 .ab-founder__img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; border-radius: 50%; box-shadow: 0 10px 28px rgba(56, 45, 38, .12); }
 .ab-founder__body { display: flex; flex-direction: column; gap: 22px; }
-.ab-founder__quote { display: flex; flex-direction: column; gap: 14px; max-width: 640px; margin: 0; font: italic 400 23px/1.55 var(--serif); color: #4a4038; }
+.ab-founder__quote { display: flex; flex-direction: column; gap: 14px; max-width: 640px; margin: 0; font: italic 400 23px/1.55 var(--serif); color: var(--ink); }
 .ab-founder__name { display: flex; flex-direction: column; gap: 2px; font: 500 26px/1.2 var(--serif); color: var(--ink); }
 /* Our story: a long letter, so the portrait stays in view beside it on wide screens */
 .ab-letter .ab-founder { align-items: start; }
 .ab-letter .ab-founder__photo { position: sticky; top: calc(var(--header-h, 90px) + 40px); display: flex; flex-direction: column; align-items: center; gap: 34px; aspect-ratio: auto; }
 .ab-letter .ab-founder__photo::before { content: none; }
 .ab-founder__frame { position: relative; display: block; width: 100%; aspect-ratio: 1; }
-.ab-founder__frame::before { content: ""; position: absolute; inset: -14px; border: 1px solid #d5c9b8; border-radius: 50%; }
+.ab-founder__frame::before { content: ""; position: absolute; inset: -14px; border: 1px solid var(--line); border-radius: 50%; }
 .ab-letter .ab-founder__name { align-items: center; text-align: center; }
 .ab-letter .ab-founder__body { max-width: 680px; }
-.ab-letter__lead { font: italic 400 26px/1.45 var(--serif); color: #4a4038; }
-.ab-letter__text { display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.9; color: #62685f; }
+.ab-letter__lead { font: italic 400 26px/1.45 var(--serif); color: var(--ink); }
+.ab-letter__text { display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.9; color: var(--text); }
 .ab-letter__turn { padding: 6px 0 6px 20px; font: italic 500 24px/1.4 var(--serif); color: var(--rust-dark); border-left: 2px solid var(--gold); }
 .ab-letter__close { margin-top: 6px; font: 500 28px/1.3 var(--serif); color: var(--ink); }
 .ab-letter__close em { color: var(--rust-dark); white-space: nowrap; }
-.ab-founder__name span { font: 600 11px/1.6 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; color: #8b765c; }
+.ab-founder__name span { font: 600 11px/1.6 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; color: var(--rust); }
 
 .ab-care { display: grid; grid-template-columns: 1fr 1.1fr; gap: 38px 68px; }
 .ab-care__intro { align-self: center; }
@@ -147,7 +147,7 @@ body { color: var(--ink); background: var(--cream); }
 .ab-care__photo { grid-area: photo; min-width: 0; }
 .ab-care__img { width: 100%; height: 430px; object-fit: cover; object-position: center 60%; border-radius: 4px 4px 70px; }
 .ab-care__item { display: flex; flex-direction: column; gap: 16px; }
-.ab-care__item--rest { grid-area: rest; align-self: end; padding-bottom: 26px; border-bottom: 1px solid #d5c9b8; }
+.ab-care__item--rest { grid-area: rest; align-self: end; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
 .ab-care__item--choice { grid-area: choice; align-self: start; }
 
 /* ----- Place ----- */

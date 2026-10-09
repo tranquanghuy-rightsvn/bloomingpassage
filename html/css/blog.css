@@ -73,7 +73,7 @@ body.is-cream { background: var(--cream); }
   padding-top: 10px;
   border-top: 1px solid var(--line-soft);
   font: 400 12px/19.2px var(--sans);
-  color: #8b765c;
+  color: var(--rust);
 }
 
 .btn-round {

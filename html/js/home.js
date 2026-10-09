@@ -1,43 +1,26 @@
-// Home page: hero slideshow, experience tabs, gallery lightbox.
+// Home page: hero video, experience tabs, gallery lightbox.
 (function () {
-  // Hero slideshow: the first Hoi An photo shows at once; the rest load lazily and cross-fade in turn.
-  // Paused off-screen and in background tabs; reduced motion / data saver keep the first photo still.
+  // Hero video (Hoi An, golden hour to lantern night): poster first; pick a size, load, fade in once playing.
+  // Paused off-screen and in background tabs; skipped for reduced motion / data saver (the poster stays).
   var hero = document.querySelector('.hero');
-  var slides = hero ? Array.prototype.slice.call(hero.querySelectorAll('.hero__slide')) : [];
+  var video = hero && hero.querySelector('.hero__video');
   var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
     (navigator.connection && navigator.connection.saveData);
-  if (slides.length > 1 && !calm) {
-    var current = 0;
-    var timer = null;
-    var waiting = false;
-    var load = function (slide) {
-      if (slide.dataset.srcset) { slide.srcset = slide.dataset.srcset; slide.removeAttribute('data-srcset'); }
+  if (video && !calm) {
+    video.src = window.matchMedia('(max-width: 767px)').matches ? video.dataset.srcSmall : video.dataset.src;
+    video.preload = 'auto';
+    video.addEventListener('playing', function () { hero.classList.add('has-video'); });
+    var play = function () {
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {}); // autoplay refused: the poster stays
     };
-    var next = function () {
-      if (waiting) return; // the next photo is still loading
-      var from = slides[current];
-      var to = slides[(current + 1) % slides.length];
-      var go = function () {
-        waiting = false;
-        from.classList.remove('is-active');
-        from.classList.add('is-leaving');
-        setTimeout(function () { from.classList.remove('is-leaving'); }, 1900);
-        to.classList.add('is-active');
-        current = slides.indexOf(to);
-        load(slides[(current + 1) % slides.length]); // warm up the one after
-      };
-      if (to.complete && to.currentSrc) go(); else { waiting = true; load(to); to.addEventListener('load', go, { once: true }); }
-    };
-    var start = function () { if (!timer) timer = setInterval(next, 6000); };
-    var stop = function () { clearInterval(timer); timer = null; };
-    load(slides[1]);
     var visible = true;
     new IntersectionObserver(function (entries) {
       visible = entries[0].isIntersecting;
-      if (visible && !document.hidden) start(); else stop();
+      if (visible && !document.hidden) play(); else video.pause();
     }).observe(hero);
     document.addEventListener('visibilitychange', function () {
-      if (document.hidden) stop(); else if (visible) start();
+      if (document.hidden) video.pause(); else if (visible) play();
     });
   }
 
@@ -45,6 +28,9 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if ('IntersectionObserver' in window && !reduce) {
     var groups = [
+      ['.about__text > *', 'right'],
+      ['.sec-head__text > *, .link-all, .experience__eyebrow, .experience__title, .experience__desc, .places__eyebrow, .places__title', 'up'],
+      ['.cta__left > *, .cta__right > *', 'up'],
       ['.exp-tab__title', 'up'],
       ['.facet', 'up'],
       ['.tour-card', 'up'],

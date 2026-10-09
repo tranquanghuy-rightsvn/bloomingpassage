@@ -8,6 +8,8 @@ Free files below: commercial use allowed, no attribution required.
 
 | File (html/images/) | Source |
 |---|---|
+| banner-lanterns (Gallery banner) | Unsplash D8VgKZERw6o |
+| banner-golden-stroll (FAQs banner) | **Unsplash+ ja1wUdEQxro (PREVIEW – licence required)** |
 | hero-hoian-1 | Unsplash 3bH7VkSj4fg |
 | hero-hoian-friends (hero slide 2) | Supplied by the team (own image, 2026-10-08) |
 | hero-hoian-2 (7-day tour gallery only) | **Unsplash+ e18QHKZBWjM (clean file)** |
@@ -16,11 +18,11 @@ Free files below: commercial use allowed, no attribution required.
 | hero-hoian-4 (14-day tour itinerary only) | Unsplash DTwAg5cqcaM |
 | hero-hoian-5 | Unsplash TRtyDemHzGM |
 | hoian-japanese-bridge | Pexels 14021776 |
-| women-friends-hoian (default) | Supplied by the team (own image, 2026-10-08) |
+| women-friends-hoian-journey (home group photo) | Supplied by the team ("Friends’ Journey Through Hoi An", 2026-10-09); sides and sky extended slightly so all six women sit inside the ink-brush frame |
 | women-friends-tea | **Unsplash+ CY7HRD-XChk (clean file)** |
 | women-friends-seaside | Pexels 6540137 |
 | women-friends-dinner | Pexels 11368641 |
-| women-friends-garden | **Unsplash+ 5nlE10fnnNA (clean file)** |
+| women-friends-garden | **Unsplash+ 5nlE10fnnNA** (14-day tour gallery) |
 | cooking-class | Pexels 5463852 |
 | massage-rejuvenate | Pexels 6560265 |
 | massage-spa | Pexels 5888099 |
@@ -30,3 +32,14 @@ Free files below: commercial use allowed, no attribution required.
 
 Unsplash: https://unsplash.com/photos/<id> · Pexels: https://www.pexels.com/photo/<id>/ · Pixabay: https://pixabay.com/photos/<id>/
 Hoi An photos were softened slightly (saturation/contrast) so they sit together as one set.
+
+## Home hero video (`html/videos/hoi-an-day-1080.mp4`, `hoi-an-day-720.mp4`)
+
+22.7-second seamless loop, bright day to golden hour, edited from five free clips
+(Pexels and Pixabay licences: free for commercial use, no attribution required):
+1. Pixabay 59295 – drone over Hoi An rooftops and boats
+2. Pexels 7217095 – woman in white ao dai with a bicycle by a yellow wall
+3. Pexels 15693478 – lantern boats in the golden-hour sun
+4. Pexels 7217096 – woman in ao dai and conical hat strolling the old town
+5. Pexels 36670076 – drone over the Hoai River at dusk
+Poster frame: `html/images/hero-day-poster.webp`.

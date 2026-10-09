@@ -7,9 +7,9 @@ body.page-gallery { background: var(--cream); }
 }
 
 /* ===== Banner (as on FAQs) ===== */
-.gallery-banner { padding: 60px 24px 0; }
+.gallery-banner { padding: 150px 15px 70px; }
 .gallery-banner__inner { display: flex; flex-direction: column; gap: 16px; max-width: 1200px; margin: 0 auto; text-align: center; }
-.gallery-banner__crumb { font: 500 12px/1.5 var(--sans); color: #8b765c; }
+.gallery-banner__crumb { font: 500 12px/1.5 var(--sans); color: var(--rust); }
 .gallery-banner__crumb svg { margin: 0 3px; fill: #fff; }
 .gallery-banner__title { font: 500 64px/1.1 var(--serif); color: var(--ink); }
 
@@ -27,6 +27,6 @@ body.page-gallery { background: var(--cream); }
 @media (max-width: 767px) {
   .lens__grid--masonry { columns: 2; column-gap: 12px; }
   .lens__grid--masonry .lens__item { margin-bottom: 12px; grid-column: auto; grid-row: auto; }
-  .gallery-banner { padding: 40px 20px 0; }
+  .gallery-banner { padding: 60px 20px 50px; }
   .gallery-banner__title { font-size: 48px; }
 }
