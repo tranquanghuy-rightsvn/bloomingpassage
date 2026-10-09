@@ -1,26 +1,43 @@
 // Home page: hero video, experience tabs, gallery lightbox.
 (function () {
-  // Hero video (Hoi An, golden hour to lantern night): poster first; pick a size, load, fade in once playing.
+  // Hero video (Hoi An from above, then the old town): poster first, then the parts play in turn and loop.
+  // The video is split at a scene cut into parts under 50 MB (GitHub); the next part preloads while one plays,
+  // and is shown only once it is playing, so the hand-over has no blank frame.
   // Paused off-screen and in background tabs; skipped for reduced motion / data saver (the poster stays).
   var hero = document.querySelector('.hero');
-  var video = hero && hero.querySelector('.hero__video');
+  var parts = hero ? Array.prototype.slice.call(hero.querySelectorAll('.hero__video')) : [];
   var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
     (navigator.connection && navigator.connection.saveData);
-  if (video && !calm) {
-    video.src = window.matchMedia('(max-width: 767px)').matches ? video.dataset.srcSmall : video.dataset.src;
-    video.preload = 'auto';
-    video.addEventListener('playing', function () { hero.classList.add('has-video'); });
-    var play = function () {
-      var p = video.play();
+  if (parts.length && !calm) {
+    var current = 0;
+    var start = function (v) {
+      var p = v.play();
       if (p && p.catch) p.catch(function () {}); // autoplay refused: the poster stays
     };
+    parts.forEach(function (v, i) {
+      v.src = v.dataset.src;
+      v.preload = 'auto';
+      v.addEventListener('playing', function () {
+        if (i !== current) return;
+        parts.forEach(function (o) { o.classList.toggle('is-active', o === v); });
+        hero.classList.add('has-video');
+      });
+      v.addEventListener('ended', function () {
+        current = (i + 1) % parts.length;
+        var next = parts[current];
+        next.currentTime = 0;
+        start(next); // this part stays on its last frame until the next one is playing
+      });
+    });
     var visible = true;
+    var play = function () { start(parts[current]); };
+    var pause = function () { parts[current].pause(); };
     new IntersectionObserver(function (entries) {
       visible = entries[0].isIntersecting;
-      if (visible && !document.hidden) play(); else video.pause();
+      if (visible && !document.hidden) play(); else pause();
     }).observe(hero);
     document.addEventListener('visibilitychange', function () {
-      if (document.hidden) video.pause(); else if (visible) play();
+      if (document.hidden) pause(); else if (visible) play();
     });
   }
 

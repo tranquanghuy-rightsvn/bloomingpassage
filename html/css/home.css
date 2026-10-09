@@ -34,10 +34,12 @@
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  background: var(--ink) url(../images/hero-day-poster.webp) center / cover no-repeat;
+  background: var(--ink) url(../images/hero-banner-poster.webp?v=2) center / cover no-repeat;
 }
-.hero__video { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease; }
-.hero.has-video .hero__video { opacity: 1; }
+/* The video comes in two parts (each under GitHub's 50 MB warning) stacked here; home.js plays them in turn.
+   No cross-fade: the poster is the first frame, and fading a moving shot over a still one ghosts */
+.hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+.hero.has-video .hero__video.is-active { opacity: 1; }
 .hero__media::after {
   content: "";
   position: absolute;
