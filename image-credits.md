@@ -67,13 +67,12 @@ Hue:
 4. hue-hien-lam-gate – Unsplash fFghADH20qk (Chu CHU)
 5. hue-perfume-river – Unsplash vTigW1wO1wU
 
-## Client favourites (supplied by the team, 2026-10-10)
+## Client favourites (supplied by the team, 2026-10-10; a fifth, Hoi An lantern walk, was added by mistake and removed)
 
 Originals in `source-images/own/<name>__team.png`. Two of them (bay lunch, bay sunset) show a karst bay, not Central Vietnam,
 so they are used where no place is named.
 | File (html/images/) | Where |
 |---|---|
-| hoian-lantern-walk (+ `-slide` 7:6 crop) | Home Hoi An slideshow (slide 1), 7-day tour gallery cover, Gallery |
 | friends-garden-lunch | Home Culinary tab, Gallery |
 | friends-bay-lunch | Home gallery (large tile), Gallery |
 | woman-pool-relax (+ `-tall` crop) | Home Beachfront tab, 10-day tour gallery cover, Gallery |
