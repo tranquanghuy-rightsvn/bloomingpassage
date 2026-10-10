@@ -4,7 +4,7 @@ Full-size originals behind the web files in `html/images/` (web files are resize
 File names: `<web file name>__<source + id>`.
 
 - `free/`: free licences (Unsplash / Pexels / Pixabay), fine to publish.
-- `own/`: images supplied by the team (`women-friends-hoian-journey__team.png` = home group photo; `women-friends-hoian`, `hero-hoian-friends`, `hero-hoian-cyclo` are earlier versions).
+- `own/`: images supplied by the team (`*__team.png` from 2026-10-10 = client favourites, see image-credits.md; `women-friends-hoian-journey__team.png` = home group photo; `women-friends-hoian`, `hero-hoian-friends`, `hero-hoian-cyclo` are earlier versions).
 - `unsplash-plus/`: clean Unsplash+ originals (licence held by Blooming Passage). To change a crop,
   re-export from these files under the same web file name.
 
