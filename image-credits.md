@@ -42,3 +42,27 @@ Hoi An photos were softened slightly (saturation/contrast) so they sit together 
 4. Pexels 16566719 – woman in a straw hat walking past a yellow colonial wall (filmed in Izamal, Mexico)
 5. Pexels 36670076 – drone over the Hoai River at dusk
 Poster frame: `html/images/hero-day-poster.webp`.
+
+## Home destination slideshows: Da Nang, Hoi An, Hue (`html/images/danang-*`, `hoian-*-slide`/`hoian-lantern-street`…, `hue-*`)
+
+Free Unsplash photos (Unsplash licence: commercial use allowed, no attribution required), cropped to 7:6, no watermarks.
+Scenes zoom in slowly and cross-fade (home.css `.place__slides`, home.js).
+1. danang-my-khe-beach – Unsplash w_0Dk0_JN3A (Thach Tran), My Khe coastline from above
+2. danang-dragon-bridge – Unsplash 6Oy-fhKD7Y4 (Cong Long Vu), Dragon Bridge over the Han River
+3. danang-linh-ung-pagoda – Unsplash dUT3XpUoJIE (Chris Thompson), Linh Ung Pagoda, Son Tra
+4. danang-golden-bridge – Unsplash CsoQ-jm_0vQ (Linda Gerbec), Golden Bridge, Ba Na Hills
+5. danang-son-tra-cove – Unsplash dxT7riEFsRg (Ji Nguyen), cove on the Da Nang coast
+
+Hoi An (same licence, 7:6 crops):
+1. hoian-japanese-bridge-slide – Pexels 14021776 (same photo as hoian-japanese-bridge, re-cropped from source-images/free)
+2. hoian-lantern-street – Unsplash dpj0K1CEjAw (allPhoto Bangkok)
+3. hoian-basket-boat – Unsplash ZiEeHSFY76k (Bui Ngoc), Cam Thanh coconut forest
+4. hoian-lanterns – Unsplash J4qoCOug9EY (Benjamin Wong)
+5. hoian-river-night – Unsplash IBt5j35OIj4 (Patrick Pellegrini), Thu Bon River at blue hour
+
+Hue:
+1. aerial-view-of-a-verdant-imperial-citadel – existing site photo (unchanged)
+2. hue-ngo-mon-gate – Unsplash c49_D1jw9l4 (Hau Nguyen)
+3. hue-thien-mu-pagoda – Unsplash OWbKgnoKkL8 (Quang Nguyen Vinh)
+4. hue-hien-lam-gate – Unsplash fFghADH20qk (Chu CHU)
+5. hue-perfume-river – Unsplash vTigW1wO1wU

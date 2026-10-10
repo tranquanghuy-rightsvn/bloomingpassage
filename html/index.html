@@ -11,7 +11,7 @@
 <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="images/hero-banner-poster.webp?v=2" imagesrcset="images/hero-banner-poster-960.webp?v=2 960w, images/hero-banner-poster.webp?v=2 1920w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="css/main.css?v=20261022">
-<link rel="stylesheet" href="css/home.css?v=20261025">
+<link rel="stylesheet" href="css/home.css?v=20261026">
 </head>
 <body>
 
@@ -288,21 +288,39 @@
     <h2 class="places__title">Three places. <em>One beautiful passage.</em></h2>
     <div class="places__list">
       <article class="place">
-        <img class="place__img" src="images/coastal-city-panorama-with-river-bridges.jpg" width="560" height="480" alt="" loading="lazy">
+        <div class="place__img place__slides" data-slides>
+          <img class="place__slide is-active" src="images/danang-my-khe-beach.webp" srcset="images/danang-my-khe-beach-768.webp 768w, images/danang-my-khe-beach.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="My Khe Beach and the Da Nang coastline from above" loading="lazy">
+          <img class="place__slide" src="images/danang-dragon-bridge.webp" srcset="images/danang-dragon-bridge-768.webp 768w, images/danang-dragon-bridge.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="The Dragon Bridge across the Han River in the morning light" loading="lazy">
+          <img class="place__slide" src="images/danang-linh-ung-pagoda.webp" srcset="images/danang-linh-ung-pagoda-768.webp 768w, images/danang-linh-ung-pagoda.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="Linh Ung Pagoda on the Son Tra Peninsula, framed by bonsai gardens" loading="lazy">
+          <img class="place__slide" src="images/danang-golden-bridge.webp" srcset="images/danang-golden-bridge-768.webp 768w, images/danang-golden-bridge.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="The Golden Bridge held by stone hands above the clouds at Ba Na Hills" loading="lazy">
+          <img class="place__slide" src="images/danang-son-tra-cove.webp" srcset="images/danang-son-tra-cove-768.webp 768w, images/danang-son-tra-cove.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="A boat in a turquoise cove below the forested Son Tra cliffs" loading="lazy">
+        </div>
         <div class="place__body">
           <h3 class="place__title"><span class="place__meta"><b>01</b><em>THE COAST</em></span><span class="place__name">Da <em>Nang</em></span></h3>
           <p class="place__text"><span class="place__tags"><b>Ocean</b><b>Space</b><b>Renewal</b></span><br><br>Ease into your journey beside the sea. Da Nang offers open beaches, coastal walks and time to unwind — a gentle beginning to your passage through Central Vietnam.</p>
         </div>
       </article>
       <article class="place place--reverse">
-        <img class="place__img" src="images/hoian-japanese-bridge.webp?v=20261012" srcset="images/hoian-japanese-bridge-768.webp?v=20261012 768w, images/hoian-japanese-bridge.webp?v=20261012 1200w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="The Japanese Covered Bridge in Hoi An" loading="lazy">
+        <div class="place__img place__slides" data-slides>
+          <img class="place__slide is-active" src="images/hoian-japanese-bridge-slide.webp" srcset="images/hoian-japanese-bridge-slide-768.webp 768w, images/hoian-japanese-bridge-slide.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="The Japanese Covered Bridge in Hoi An" loading="lazy">
+          <img class="place__slide" src="images/hoian-lantern-street.webp" srcset="images/hoian-lantern-street-768.webp 768w, images/hoian-lantern-street.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="Lantern-lit cafés and cyclos on a Hoi An street at dusk" loading="lazy">
+          <img class="place__slide" src="images/hoian-basket-boat.webp" srcset="images/hoian-basket-boat-768.webp 768w, images/hoian-basket-boat.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="A basket boat spinning through the Cam Thanh coconut forest" loading="lazy">
+          <img class="place__slide" src="images/hoian-lanterns.webp" srcset="images/hoian-lanterns-768.webp 768w, images/hoian-lanterns.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="Silk lanterns glowing in red, gold and green" loading="lazy">
+          <img class="place__slide" src="images/hoian-river-night.webp" srcset="images/hoian-river-night-768.webp 768w, images/hoian-river-night.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="The old town reflected in the Thu Bon River at blue hour" loading="lazy">
+        </div>
         <div class="place__body">
           <h3 class="place__title"><span class="place__meta"><b>02</b><em>LIVING HERITAGE</em></span><span class="place__name">Hoi <em>An</em></span></h3>
           <p class="place__text"><span class="place__tags"><b>Heritage</b><b>Craft</b><b>Discovery</b></span><br><br>Follow lantern-lit streets, discover local flavors and meet the people behind traditional crafts. Hoi An invites you to slow down and enjoy the small moments that make a place unforgettable.</p>
         </div>
       </article>
       <article class="place">
-        <img class="place__img" src="images/aerial-view-of-a-verdant-imperial-citadel.jpg" width="560" height="480" alt="" loading="lazy">
+        <div class="place__img place__slides" data-slides>
+          <img class="place__slide is-active" src="images/aerial-view-of-a-verdant-imperial-citadel.jpg" srcset="images/aerial-view-of-a-verdant-imperial-citadel-768x620.jpg 768w, images/aerial-view-of-a-verdant-imperial-citadel.jpg 1396w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="Aerial view of the Hue Imperial City surrounded by green trees" loading="lazy">
+          <img class="place__slide" src="images/hue-ngo-mon-gate.webp" srcset="images/hue-ngo-mon-gate-768.webp 768w, images/hue-ngo-mon-gate.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="Ngo Mon Gate, the entrance to the Hue Imperial City" loading="lazy">
+          <img class="place__slide" src="images/hue-thien-mu-pagoda.webp" srcset="images/hue-thien-mu-pagoda-768.webp 768w, images/hue-thien-mu-pagoda.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="A woman in an ao dai before the tower of Thien Mu Pagoda" loading="lazy">
+          <img class="place__slide" src="images/hue-hien-lam-gate.webp" srcset="images/hue-hien-lam-gate-768.webp 768w, images/hue-hien-lam-gate.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="The ornate gate of Hien Lam Pavilion in the Imperial City" loading="lazy">
+          <img class="place__slide" src="images/hue-perfume-river.webp" srcset="images/hue-perfume-river-768.webp 768w, images/hue-perfume-river.webp 1400w" sizes="(max-width: 767px) 100vw, 560px" width="560" height="480" alt="A boat drifting on the Perfume River under a wide sky" loading="lazy">
+        </div>
         <div class="place__body">
           <h3 class="place__title"><span class="place__meta"><b>03</b><em>A QUIETER RHYTHM</em></span><span class="place__name"><em>Hue</em></span></h3>
           <p class="place__text"><span class="place__tags"><b>History</b><b>Grace</b><b>Tranquility</b></span><br><br>Discover imperial architecture, peaceful gardens and stories along the Perfume River. Hue brings a quieter rhythm to your journey, with space to explore, reflect and take it all in.</p>
@@ -402,6 +420,6 @@
 </div>
 
 <script src="js/main.js?v=20261022" defer></script>
-<script src="js/home.js?v=20261025" defer></script>
+<script src="js/home.js?v=20261026" defer></script>
 </body>
 </html>

@@ -417,6 +417,19 @@
 .place { display: flex; align-items: center; gap: 80px; }
 .place--reverse { flex-direction: row-reverse; }
 .place__img { flex: 0 0 calc(50% - 40px); width: calc(50% - 40px); height: 480px; object-fit: cover; border-radius: 4px; }
+/* Destination photos (Da Nang, Hoi An, Hue): scenes cross-fade while each one slowly zooms in (home.js moves .is-active along) */
+.place__slides { position: relative; overflow: hidden; }
+.place__slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.2s ease; }
+.place__slide.is-active { opacity: 1; }
+/* Same animation on the outgoing slide, so its zoom carries on while it fades out */
+.place__slides.is-playing .place__slide.is-active,
+.place__slides.is-playing .place__slide.is-prev { animation: place-zoom 4.5s linear both; }
+.place__slide:nth-child(1) { transform-origin: 65% 60%; }
+.place__slide:nth-child(2) { transform-origin: 30% 60%; }
+.place__slide:nth-child(3) { transform-origin: 50% 35%; }
+.place__slide:nth-child(4) { transform-origin: 55% 45%; }
+.place__slide:nth-child(5) { transform-origin: 30% 75%; }
+@keyframes place-zoom { from { transform: scale(1); } to { transform: scale(1.22); } }
 .place__body { display: flex; flex: 1; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; padding: 36px 24px; }
 .place__title { width: 100%; font: 500 clamp(40px, 4.6vw, 56px)/1.08 var(--serif); color: var(--brown-2); }
 .place__meta { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }

@@ -41,6 +41,36 @@
     });
   }
 
+  // Destination scenes (Da Nang, Hoi An, Hue): each slowly zooms in, then cross-fades to the next (see .place__slides in home.css).
+  // Runs only while in view and the tab is visible; reduced motion / data saver keep the first photo.
+  document.querySelectorAll('[data-slides]').forEach(function (box) {
+    var slides = Array.prototype.slice.call(box.querySelectorAll('.place__slide'));
+    if (slides.length < 2 || calm) return;
+    var index = 0, timer = null, inView = false;
+    var next = function () {
+      var prev = slides[index];
+      index = (index + 1) % slides.length;
+      slides.forEach(function (s) { s.classList.remove('is-prev'); });
+      prev.classList.remove('is-active');
+      prev.classList.add('is-prev');
+      slides[index].classList.add('is-active');
+      slides[(index + 1) % slides.length].loading = 'eager'; // fetch the one after while this one shows
+    };
+    var run = function () {
+      if (timer || !inView || document.hidden) return;
+      box.classList.add('is-playing');
+      timer = setInterval(next, 3250);
+    };
+    var stop = function () { clearInterval(timer); timer = null; box.classList.remove('is-playing'); }; // the zoom restarts on return
+    new IntersectionObserver(function (entries) {
+      inView = entries[0].isIntersecting;
+      if (inView) { slides[1].loading = 'eager'; run(); } else stop();
+    }, { threshold: 0.2 }).observe(box);
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stop(); else run();
+    });
+  });
+
   // Scroll reveal: blocks appear once, one after another in reading order (top→bottom, left→right).
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if ('IntersectionObserver' in window && !reduce) {
