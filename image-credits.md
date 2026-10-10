@@ -8,7 +8,7 @@ Free files below: commercial use allowed, no attribution required.
 
 | File (html/images/) | Source |
 |---|---|
-| banner-lanterns (Gallery banner) | Unsplash D8VgKZERw6o |
+| banner-lantern-street (Gallery banner) | Unsplash mYNGbkIBIGM (Steven Wilcox), Hoi An; replaces banner-lanterns (D8VgKZERw6o), whose crop centred on a woman's bare back |
 | banner-golden-stroll (FAQs banner) | **Unsplash+ ja1wUdEQxro (PREVIEW – licence required)** |
 | hero-hoian-1 | Unsplash 3bH7VkSj4fg |
 | hero-hoian-friends (hero slide 2) | Supplied by the team (own image, 2026-10-08) |
