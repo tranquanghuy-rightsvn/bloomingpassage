@@ -5,6 +5,9 @@ body.page-faqs { background: var(--cream); }
 
 /* ===== Banner (title sits just under the header) ===== */
 .faq-banner { padding: 150px 15px 70px; }
+/* taller photo banner (about the height of the About and Blog banners); the title block is centred in it */
+.faq-banner { display: flex; flex-direction: column; justify-content: center; min-height: 620px; }
+.faq-banner__inner { width: 100%; }
 .faq-banner__inner { display: flex; flex-direction: column; gap: 16px; max-width: 1200px; margin: 0 auto; text-align: center; }
 .faq-banner__crumb { font: 500 12px/1.5 var(--sans); color: var(--rust); }
 .faq-banner__crumb svg { margin: 0 3px; fill: #fff; }
@@ -89,6 +92,7 @@ body.page-faqs { background: var(--cream); }
 .faq-item .ic--up, .faq-item[open] .ic--down { display: none; }
 .faq-item[open] .ic--up { display: block; }
 .faq-item__a { padding: 18px 20px 22px; font: 400 14px/1.8 var(--sans); color: var(--text); }
+.faq-item__a a { color: var(--rust); text-decoration: underline; text-underline-offset: 3px; }
 
 /* CTA box */
 .faq-cta {
@@ -120,6 +124,7 @@ body.page-faqs { background: var(--cream); }
 /* ===== Responsive ===== */
 @media (max-width: 767px) {
   .faq-banner { padding: 60px 20px 50px; }
+  .faq-banner { min-height: 420px; }
   .faq-banner__title { font-size: 48px; }
   .faq-main { padding: 24px 20px 60px; }
   .faq-wrap { grid-template-columns: minmax(0, 1fr); }

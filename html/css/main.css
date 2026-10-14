@@ -242,6 +242,13 @@ em { font-style: italic; }
   .main-nav__list { gap: 24px; }
   .site-header__inner { column-gap: 28px; }
 }
+/* seven menu items: tighten a little more just above the burger breakpoint */
+@media (min-width: 1025px) and (max-width: 1160px) {
+  .main-nav__list { gap: 18px; }
+  .main-nav__link { font-size: 14px; }
+  .site-header__inner { column-gap: 22px; }
+  .site-header__logo img { width: 176px; }
+}
 @media (max-width: 1024px) {
   .site-header { margin-bottom: -76px; }
   .site-header__inner { height: auto; min-height: 76px; padding: 15px 0; column-gap: 12px; }

@@ -82,6 +82,8 @@
       ['.facet', 'up'],
       ['.tour-card', 'up'],
       ['.care-item', 'up'],
+      ['.why__text > *', 'up'],
+      ['.why__img', 'zoom'],
       ['.place:not(.place--reverse) .place__img, .place--reverse .place__body', 'left'],
       ['.place:not(.place--reverse) .place__body, .place--reverse .place__img', 'right'],
       ['.lens__item', 'zoom']

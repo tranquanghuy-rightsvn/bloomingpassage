@@ -101,6 +101,9 @@
 .tour-facts__value { font-size: 14px; font-weight: 600; line-height: 23.1px; color: var(--brown-2); }
 
 .tour-intro { margin-top: 20px; line-height: 22.4px; }
+.tour-route { margin-top: 22px; font: 600 11px/1.7 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; color: var(--rust); }
+.tour-route + .tour-intro { margin-top: 10px; }
+.tour-tagline { margin-top: 16px; font: italic 500 22px/1.4 var(--serif); color: var(--brown-2); }
 
 /* ----- Body: main column + booking sidebar ----- */
 .tour-body {
@@ -113,6 +116,7 @@
 .tour-main { display: flex; flex: 1; flex-direction: column; gap: 30px; min-width: 0; }
 .tour-side { flex: 0 0 403px; position: sticky; top: 117px; }
 .tour-h { font: 500 32px/40px var(--serif); color: var(--brown-2); }
+.itin-intro { margin-top: -18px; font-size: 15px; line-height: 27px; }
 
 .itin__item { margin-bottom: 12px; padding: 20px; border: 1px solid #e8edf1; border-radius: 16px; }
 .itin__item summary {
@@ -148,6 +152,8 @@
   border-radius: 12px;
 }
 .itin__text { padding-top: 4px; }
+/* days without a photo: notes take the full width */
+.itin__body--text { grid-template-columns: minmax(0, 1fr); }
 .itin__body p { margin-bottom: 12px; font-size: 15px; line-height: 27px; }
 .itin__body ul { margin: 0 0 0 22px; list-style: disc; }
 .itin__body li { font-size: 15px; line-height: 27px; }
@@ -161,6 +167,21 @@
 .tour-content .tour-h { margin: 24px 0; }
 .tour-content ul { margin: 0 0 32px 24px; list-style: disc; }
 .tour-content li { margin-bottom: 16px; font-size: 15px; line-height: 27px; }
+/* Optional wellness enhancements: a soft card with two columns of ticks */
+.tour-sub { margin: 26px 0 14px; font: 600 11px/1.7 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; color: var(--rust); }
+.tour-content .tour-optional {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 28px;
+  margin: 0 0 24px;
+  padding: 22px 24px;
+  list-style: none;
+  background: var(--cream);
+  border-radius: 16px;
+}
+.tour-content .tour-optional li { position: relative; margin: 0; padding-left: 26px; }
+.tour-content .tour-optional li::before { content: ""; position: absolute; top: 8px; left: 2px; width: 12px; height: 7px; border: solid var(--sage); border-width: 0 0 2px 2px; transform: rotate(-45deg); }
+.tour-content .tour-note { padding-left: 16px; font-size: 13px; line-height: 23px; color: var(--muted); border-left: 2px solid var(--gold); }
 
 .tfaq__title { margin-bottom: 20px; font-size: 24px; font-weight: 700; line-height: 33.6px; color: var(--gold); }
 .tfaq__item { margin-bottom: 20px; overflow: hidden; border: 1px solid var(--cream); border-radius: 16px; }
@@ -380,6 +401,8 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
   .tour-h { font-size: 28px; line-height: 35px; }
   .itin__body p, .itin__body li, .tour-content p, .tour-content li, .tfaq__item p { font-size: 14px; line-height: 25.2px; }
   .tour-content ul { display: flow-root; }
+  .tour-content .tour-optional { grid-template-columns: minmax(0, 1fr); padding: 18px; }
+  .tour-tagline { font-size: 20px; }
   .booking__price { height: 33.6px; }
   .inquiry-form p { font-size: 14px; line-height: 25.2px; }
   .itin__item { padding: 20px; }

@@ -25,13 +25,13 @@
   var PAGES = [
     ['Home', '/', 'Intentional travel and proactive longevity for women in Central Vietnam.', 'blooming passage time to bloom culture wellness beauty connection'],
     ['About Us', '/about-us/', 'A passage through Vietnam, a return to yourself: small groups, care and discovery.', 'story approach intention longevity discovery connection small group women wellbeing'],
-    ['Journeys', '/tours/', 'Three journeys, your own pace: 7, 10 or 14 days in Central Vietnam.', 'tours journeys trips packages itinerary price'],
+    ['Signature Journeys', '/tours/', 'Travel with intention. 7, 10 or 14 days in Central Vietnam, departing February – May 2027.', 'tours journeys trips packages itinerary price departures dates included how it works small group wellness longevity'],
     ['7-Day Curated Essence', '/tours/7-day-curated-essence/', 'A beautiful introduction to Central Vietnam. 7 days · 6 nights.', '7 days seven week hoi an hue da nang cooking tea tailoring massage facial beach'],
     ['10-Day Balanced Journey', '/tours/10-day-balanced-journey/', 'More time to explore and restore. 10 days · 9 nights.', '10 days ten vespa food orchard fruit farm spa beauty tailoring hoi an hue da nang'],
     ['14-Day Deep Pause', '/tours/14-day-deep-pause/', 'The full Blooming Passage experience. 14 days · 13 nights.', '14 days fourteen two weeks wellness medical dental health check longevity spa relaxation'],
     ['Contact', '/contact-us/', 'A small step, a beautiful beginning. Tell us about your passage.', 'contact enquiry inquiry email phone plan book question'],
     ['Gallery', '/gallery/', 'Moments worth keeping: culture, flavour and shared moments in Central Vietnam.', 'gallery photos pictures images moments experience culture food cooking tailoring spa beauty'],
-    ['FAQs', '/faqs/', 'A few answers to help you feel at home with Blooming Passage.', 'faq questions group size travel alone included optional wellness departure booking'],
+    ['FAQs', '/faqs/', 'A few answers to help you feel at home with Blooming Passage.', 'faq questions group size travel alone included optional wellness departure booking medical tourism pace airport reserve deposit'],
     ['Blog – The Passage Journal', '/blog/', 'Stories, travel inspiration and little moments worth keeping.', 'blog journal stories articles hoi an hue da nang'],
     ['Hoi An: Lanterns, Craft and a Little Wonder', '/hoi-an-lanterns-craft-and-a-little-wonder/', 'Lantern-lit streets, local flavours, countryside gardens and makers.', 'hoi an lanterns craft food cao lau tra que cam thanh an bang beach evening blog']
   ];
@@ -135,6 +135,8 @@
   var ANIM = [
     ['.ab-story__intro > *, .ab-title, .ab-text, .ab-letter__lead, .ab-letter__text > p, .ab-letter__turn, .ab-letter__close, .ab-care__item, .ab-talk__card', 'up'],
     ['.ab-value, .tour-card, .jcard, .story-card, .mini-card, .faq-item, .acc, .tfaq__item, .itin__item, .ct-card, .ct-info, .faq-cta, .tour-h, .tp-journeys__title, .tp-journeys__desc, .tp-faq__title, .tour-related__title, .faq-col__title, .post-content > h2, .post-content > p, .ct-intro > *', 'up'],
+    ['.ab-philo__head > *, .ab-philo__item, .ab-philo__close > *, .sj-head > *, .sj-intro__lead > *, .sj-intro__body > *, .sj-formula__inner > *, .sj-card, .sj-well__text > *, .sj-well__card, .sj-group__text > *, .sj-group__band, .sj-incl__list, .sj-incl__close, .sj-step, .sj-bloom > *, .sj-date, .sj-day', 'up'],
+    ['.sj-group__img', 'img'],
     ['.ab-founder__photo, .ab-approach__img, .ab-care__img, .ab-place__img, .ab-talk__img, .ct-photo__img, .post-content img, .post-head__img', 'img']
   ];
   var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
