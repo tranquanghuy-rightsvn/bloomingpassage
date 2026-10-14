@@ -209,3 +209,10 @@ so they are used where no place is named.
 | friends-bay-lunch | Home gallery (large tile), Gallery |
 | woman-pool-relax (+ `-tall` crop) | Home Beachfront tab, 10-day tour gallery cover, Gallery |
 | woman-bay-sunset (+ `-card` landscape crop) | 14-Day Deep Pause card (home, Journeys, tour pages), Gallery |
+
+| Social share banners (1200×630, og:image only) | Source |
+|---|---|
+| og-7-day-curated-essence.jpg | crop of curated-essence-massage (client) |
+| og-10-day-balanced-journey.jpg | crop of women-friends-seaside (Pexels 6540137) |
+| og-14-day-deep-pause.jpg | crop of woman-bay-sunset (team) |
+| og-hoi-an-lanterns.jpg | crop of lantern-maker (client, "Make Lanterns") |
