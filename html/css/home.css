@@ -590,6 +590,7 @@
   .about__text { width: 100%; max-width: none; }
   .about__title { font-size: 38px; }
   .about__img { width: 100%; max-width: none; }
+  .ink-art__bamboo { transform: translateX(10px); } /* stalks start left of the photo; nudge them in so the edge of the screen does not cut them */
   .sec-head { flex-wrap: wrap; }
   .sec-head__text { flex-basis: 100%; }
   .facets__list { grid-template-columns: repeat(3, 1fr); gap: 26px 10px; padding: 26px 0; }
