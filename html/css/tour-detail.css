@@ -1,7 +1,5 @@
 /* ===== Tour detail (7-Day Curated Essence) ===== */
 .tour-page { padding-top: 90px; font-family: var(--sans); color: var(--text); }
-.page-tour { padding-bottom: 83px; }
-.page-tour .back-top { bottom: 113px; }
 
 /* ----- Top: gallery, title, meta, facts ----- */
 .tour-top {
@@ -114,7 +112,7 @@
   margin: 0 auto;
 }
 .tour-main { display: flex; flex: 1; flex-direction: column; gap: 30px; min-width: 0; }
-.tour-side { flex: 0 0 403px; position: sticky; top: 117px; }
+.tour-side { flex: 0 0 403px; } /* scrolls with the page (no sticky): a sticky card taller than the screen hid its own Book button until the end of the page */
 .tour-h { font: 500 32px/40px var(--serif); color: var(--brown-2); }
 .itin-intro { margin-top: -18px; font-size: 15px; line-height: 27px; }
 
@@ -221,7 +219,7 @@
 }
 .booking__price { display: flex; align-items: baseline; justify-content: center; gap: 10px; height: 34px; font-weight: 500; line-height: 33.6px; }
 .booking__price span { font-size: 15px; }
-.booking__price strong, .tour-bar__price strong { font-weight: 700; color: var(--sage); }
+.booking__price strong { font-weight: 700; color: var(--sage); }
 .booking__price strong { font-size: 24px; }
 .booking__tabs { display: flex; justify-content: center; margin-bottom: 4px; }
 .booking__tab {
@@ -338,33 +336,6 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
 }
 .jcard__btn:hover { background: var(--sage-dark); }
 
-/* ----- Fixed price bar ----- */
-.tour-bar {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 90;
-  padding: 0 15px;
-  background: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
-  transition: bottom .3s;
-}
-.tour-bar__inner { display: flex; align-items: center; justify-content: space-between; max-width: 1290px; margin: 0 auto; padding: 12px 0; }
-.tour-bar__price { display: flex; align-items: baseline; gap: 10px; font-size: 15px; }
-.tour-bar__price strong { font-size: 32px; line-height: 44.8px; }
-.tour-bar__btn {
-  margin-top: 8px;
-  padding: 15px 24px;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 21px;
-  color: #fff;
-  background: var(--sage);
-  border-radius: 200px;
-  transition: background-color .2s;
-}
-.tour-bar__btn:hover { background: var(--sage-dark); }
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
@@ -376,12 +347,6 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
 }
 @media (max-width: 900px) {
   .tgal__strip { --per: 3; }
-}
-@media (max-width: 768px) {
-  .page-tour { padding-bottom: 130px; }
-  .page-tour .back-top { bottom: 146px; }
-  .tour-bar { bottom: 62px; }
-  .mobile-bar.is-hidden ~ .tour-bar { bottom: 0; }
 }
 @media (max-width: 767px) {
   .tour-page { padding-top: 76px; }
@@ -414,9 +379,4 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
   .tour-related { padding: 40px 20px; }
   .tour-related__title { font-size: 32px; line-height: 38.4px; }
   .jcards { grid-template-columns: minmax(0, 1fr); gap: 22px; }
-  .tour-bar { padding: 0 16px; }
-  .tour-bar__inner { padding: 8px 0; }
-  .tour-bar__price { font-size: 14px; }
-  .tour-bar__price strong { font-size: 24px; line-height: 33.6px; }
-  .tour-bar__btn { padding: 12px 16px; font-size: 14px; line-height: 20px; }
 }
