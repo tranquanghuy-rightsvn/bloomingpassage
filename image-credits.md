@@ -31,7 +31,7 @@ Free files below: commercial use allowed, no attribution required.
 | night-market-portrait-sketch (Gallery) | Client (source-images-client/night-market-portrait-sketch.png — "Phác họa bên chợ đêm ven sông.png") |
 | pottery-class-friends (Gallery) | Client (source-images-client/pottery-class-friends.png — "Xưởng gốm ấm áp đầy sáng tạo.png") |
 | coconut-basket-boat (Gallery; bottom strip with AI-generator mark cropped off) | Client (source-images-client/coconut-basket-boat.jpeg) |
-| cooking-class-papaya (Gallery) | Client (source-images-client/cooking-class-papaya.jpeg) |
+| cooking-class-papaya (Home, "Through the lens"; swapped with img-9 on 2026-10-15) | Client (source-images-client/cooking-class-papaya.jpeg) |
 | son-tra-banyan-hike (Gallery) | Client (source-images-client/son-tra-banyan-hike.jpeg) |
 | hoian-ao-dai-lotus (Gallery) | Client (source-images-client/hoian-ao-dai-lotus.png — "Nụ cười bên phố đèn lồng vàng xưa.png") |
 | hoian-lantern-boat-sunset (Gallery) | Client (source-images-client/hoian-lantern-boat-sunset.png) |
