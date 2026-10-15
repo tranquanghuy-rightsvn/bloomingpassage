@@ -180,6 +180,22 @@
 .tour-content .tour-optional li { position: relative; margin: 0; padding-left: 26px; }
 .tour-content .tour-optional li::before { content: ""; position: absolute; top: 8px; left: 2px; width: 12px; height: 7px; border: solid var(--sage); border-width: 0 0 2px 2px; transform: rotate(-45deg); }
 .tour-content .tour-note { padding-left: 16px; font-size: 13px; line-height: 23px; color: var(--muted); border-left: 2px solid var(--gold); }
+/* Journey highlights, "Why choose", included / not included and the concierge disclaimer (client copy, 2026-10-15) */
+.tour-route + .tour-tagline { margin-top: 10px; }
+.tour-tagline + .tour-intro { margin-top: 12px; }
+.itin-intro--plus { font-style: italic; }
+.itin-intro--plus a { color: var(--rust); text-decoration: underline; text-underline-offset: 3px; }
+.tour-content .tour-lead { font: italic 500 21px/1.45 var(--serif); color: var(--brown-2); }
+.tour-content .tour-incl, .tour-content .tour-excl { display: grid; gap: 14px; margin-left: 0; list-style: none; }
+.tour-content .tour-incl li, .tour-content .tour-excl li { position: relative; margin: 0; padding-left: 30px; }
+.tour-content .tour-incl strong { display: block; font-weight: 700; color: var(--ink); }
+.tour-content .tour-incl li::before { content: ""; position: absolute; top: 6px; left: 0; width: 18px; height: 18px; background: color-mix(in srgb, var(--sage) 12%, #fff); border-radius: 50%; }
+.tour-content .tour-incl li::after { content: ""; position: absolute; top: 11px; left: 5px; width: 8px; height: 4px; border: solid var(--sage); border-width: 0 0 1.6px 1.6px; transform: rotate(-45deg); }
+.tour-content .tour-excl li::before { content: "×"; position: absolute; top: 0; left: 4px; font-size: 19px; line-height: 27px; color: var(--rust); }
+.tour-disclaimer { margin-top: 28px; padding: 22px 24px; background: var(--paper); border: 1px solid var(--line-soft); border-left: 3px solid var(--gold); border-radius: 4px; }
+.tour-content .tour-disclaimer p { margin-bottom: 10px; font-size: 13.5px; line-height: 23px; color: var(--muted); }
+.tour-content .tour-disclaimer .tour-disclaimer__title { margin-bottom: 8px; font: 600 11px/1.7 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; color: var(--rust); }
+.booking__per { margin: -2px 0 10px; font-size: 12px; text-align: center; color: var(--muted); }
 
 .tfaq__title { margin-bottom: 20px; font-size: 24px; font-weight: 700; line-height: 33.6px; color: var(--gold); }
 .tfaq__item { margin-bottom: 20px; overflow: hidden; border: 1px solid var(--cream); border-radius: 16px; }
@@ -380,3 +396,4 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
   .tour-related__title { font-size: 32px; line-height: 38.4px; }
   .jcards { grid-template-columns: minmax(0, 1fr); gap: 22px; }
 }
+.tfaq__item p a { color: var(--rust); text-decoration: underline; text-underline-offset: 3px; }

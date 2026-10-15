@@ -255,6 +255,19 @@ body.page-tours { background: var(--cream); }
 /* What's included */
 .sj-incl__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 32px; padding: 34px; background: var(--paper); border: 1px solid var(--line-soft); border-radius: 6px; }
 .sj-incl__close { max-width: 760px; margin-top: 28px; font: italic 400 21px/1.5 var(--serif); color: var(--brown-2); }
+.sj-incl__list strong { display: block; margin-bottom: 2px; font-weight: 700; }
+.sj-incl__list li { color: var(--text); }
+.sj-incl__fine { max-width: 760px; margin-top: 16px; }
+.sj-excl__head { margin-top: 64px; }
+.sj-excl__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 32px; padding: 30px 34px; font-size: 14.5px; line-height: 1.7; color: var(--text); background: var(--paper); border: 1px solid var(--line-soft); border-radius: 6px; }
+.sj-excl__list li { position: relative; padding-left: 26px; }
+.sj-excl__list li::before { content: "×"; position: absolute; top: -3px; left: 3px; font-size: 20px; color: var(--rust); }
+.sj-disclaimer { padding: 18px 20px; font-size: 13px; line-height: 1.75; color: var(--muted); background: var(--paper); border-left: 3px solid var(--gold); border-radius: 4px; }
+.sj-disclaimer p + p { margin-top: 8px; }
+.sj-disclaimer .sj-disclaimer__title { font: 600 11px/1.6 var(--sans); letter-spacing: 1.6px; text-transform: uppercase; color: var(--rust); }
+.tour-card__price small { margin-left: auto; font: 500 11px/1.4 var(--sans); letter-spacing: .4px; color: var(--muted); }
+.tp-note { max-width: 860px; margin: 28px auto 0; font-size: 13px; line-height: 1.7; text-align: center; color: var(--muted); }
+.sj-day p strong { color: var(--ink); }
 
 /* How it works */
 .sj-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; list-style: none; }
@@ -307,7 +320,7 @@ body.page-tours { background: var(--cream); }
   .sj-intro, .sj-well, .sj-group { column-gap: 40px; }
   .sj-exp__grid, .sj-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sj-step:not(:last-child)::after { content: none; }
-  .sj-incl__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sj-incl__list, .sj-excl__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sj-date { grid-template-columns: minmax(0, 1fr); }
   .sj-group__img { height: 520px; }
   .tp-faq__title { font-size: 40px; }
@@ -338,7 +351,9 @@ body.page-tours { background: var(--cream); }
   .sj-time { font-size: 19px; }
   .sj-formula { padding: 48px 20px; }
   .sj-formula__list li + li::before { margin: 0 10px; }
-  .sj-exp__grid, .sj-steps, .sj-incl__list { grid-template-columns: minmax(0, 1fr); }
+  .sj-exp__grid, .sj-steps, .sj-incl__list, .sj-excl__list { grid-template-columns: minmax(0, 1fr); }
+  .sj-excl__list { padding: 24px; }
+  .sj-excl__head { margin-top: 44px; }
   .sj-well__card { padding: 24px; border-radius: 6px 42px 6px 6px; }
   .sj-incl__list { padding: 24px; }
   .sj-group__img { height: 300px; border-radius: 3px 42px 3px 3px; }

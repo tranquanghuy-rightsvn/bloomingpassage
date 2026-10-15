@@ -106,6 +106,9 @@ Free files below: commercial use allowed, no attribution required.
 | golden-bridge-garden (tour pages; original in source-images/free/) | Pexels 20602155 |
 | grass-meditation (tour pages; original in source-images/free/) | Pexels 39031139 |
 | basket-boat-sunrise (tour pages; original in source-images/free/) | Pexels 36123455 |
+| phong-nha-river-cave (14-day highlight "Natural Wonders of Phong Nha"; original in source-images/free/) | Pexels 36092064 |
+| phong-nha-cave (14-day highlight "An Extraordinary Cave Experience"; original in source-images/free/) | Pexels 20748532 |
+| perfume-river-hue (10-day highlight "The Beauty of the Perfume River"; original in source-images/free/) | Pexels 36605996 |
 | banner-lantern-boats (About banner) | Client (source-images-client/banner-lantern-boats.png — "Lantern Boats on a Historic River.png") |
 | hoian-market | Client (source-images-client/hoi-an-market-1.jpg) |
 | hoian-lantern-lane | Client (source-images-client/Hoi An.jpg) |
