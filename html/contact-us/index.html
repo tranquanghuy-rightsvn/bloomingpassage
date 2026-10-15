@@ -80,7 +80,7 @@
 <link rel="preload" href="../fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../css/main.css?v=20261101">
-<link rel="stylesheet" href="../css/contact-us.css?v=20261103">
+<link rel="stylesheet" href="../css/contact-us.css?v=20261104">
 </head>
 <body class="is-inner">
 
@@ -133,7 +133,7 @@
         <p class="ct-lead">Tell us what you are looking for — culture, connection, time to rest, or a little of everything. We will help you find your passage through Central Vietnam.</p>
       </div>
       <div class="ct-card">
-        <form class="ct-form" action="#">
+        <form class="ct-form" action="#" id="plan">
           <div class="ct-form__field">
             <label class="ct-form__label" for="ct-name">Name</label>
             <input class="ct-form__control" id="ct-name" type="text" name="name" placeholder="Your name">
@@ -141,6 +141,28 @@
           <div class="ct-form__field">
             <label class="ct-form__label" for="ct-email">Email</label>
             <input class="ct-form__control" id="ct-email" type="email" name="email" placeholder="hello@email.com">
+          </div>
+          <div class="ct-form__field">
+            <label class="ct-form__label" for="ct-departure">Preferred departure (tentative)</label>
+            <select class="ct-form__control" id="ct-departure" name="departure">
+              <option value="">Not sure yet</option>
+              <option value="2027-02-15">Feb 15, 2027</option>
+              <option value="2027-03-01">Mar 1, 2027</option>
+              <option value="2027-03-15">Mar 15, 2027</option>
+              <option value="2027-03-29">Mar 29, 2027</option>
+              <option value="2027-04-12">Apr 12, 2027</option>
+              <option value="2027-04-26">Apr 26, 2027</option>
+              <option value="2027-05-10">May 10, 2027</option>
+            </select>
+          </div>
+          <div class="ct-form__field">
+            <label class="ct-form__label" for="ct-journey">Journey</label>
+            <select class="ct-form__control" id="ct-journey" name="journey">
+              <option value="">Not sure yet</option>
+              <option value="7-day">7-Day Vietnam Escape</option>
+              <option value="10-day">10-Day Vietnam Journey</option>
+              <option value="14-day">14-Day Vietnam Discovery</option>
+            </select>
           </div>
           <div class="ct-form__field">
             <label class="ct-form__label" for="ct-msg">How can we help?</label>
@@ -185,7 +207,7 @@
   <div class="site-footer__top">
     <div class="footer-brand">
       <a href="/"><img class="footer-brand__logo" src="../images/logo-blooming.png" width="250" height="72" alt="Blooming Passage" loading="lazy"></a>
-      <h3 class="footer-brand__tag">Thoughtful journeys. Space to bloom.</h3>
+      <h3 class="footer-brand__tag">Boutique, curated journeys through Central Vietnam for women ready to bloom.</h3>
       <ul class="footer-list footer-list--contact">
         <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Las+Vegas,+NV" target="_blank" rel="noopener"><img src="../images/icon-map.svg" width="19" height="19" alt="">Las Vegas, NV</a></li>
         <li><a href="mailto:travel@bloomingpassage.com"><img src="../images/icon-mail.svg" width="17" height="13" alt="">travel@bloomingpassage.com</a></li>
@@ -246,6 +268,24 @@
   </a>
 </nav>
 
+<script>
+  // "Plan Your Journey" links carry ?departure=YYYY-MM-DD (and optionally &journey=7-day): preselect them in the form.
+  (function () {
+    var q = new URLSearchParams(location.search);
+    [['departure', 'ct-departure'], ['journey', 'ct-journey']].forEach(function (p) {
+      var el = document.getElementById(p[1]), v = q.get(p[0]);
+      if (el && v && el.querySelector('option[value="' + v + '"]')) el.value = v;
+    });
+    var form = document.getElementById('plan');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var val = function (id) { return document.getElementById(id).value.trim(); };
+      var txt = function (id) { var el = document.getElementById(id); return el.options[el.selectedIndex].text; };
+      var body = ['Name: ' + val('ct-name'), 'Email: ' + val('ct-email'), 'Preferred departure: ' + txt('ct-departure'), 'Journey: ' + txt('ct-journey'), '', val('ct-msg')].join('\n');
+      location.href = 'mailto:travel@bloomingpassage.com?subject=' + encodeURIComponent('Plan my journey') + '&body=' + encodeURIComponent(body);
+    });
+  })();
+</script>
 <script src="../js/main.js?v=20261102" defer></script>
 </body>
 </html>

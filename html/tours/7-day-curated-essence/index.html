@@ -157,7 +157,7 @@
     "@type": "Offer",
     "price": "3295.00",
     "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
+    "availability": "https://schema.org/PreOrder",
     "url": "https://www.bloomingpassage.com/tours/7-day-curated-essence/",
     "category": "Per person, double occupancy (tentative)",
     "seller": {
@@ -172,7 +172,7 @@
 <link rel="preload" href="../../fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../css/main.css?v=20261101">
 <link rel="stylesheet" href="../../css/share.css?v=20261022">
-<link rel="stylesheet" href="../../css/tour-detail.css?v=20261107">
+<link rel="stylesheet" href="../../css/tour-detail.css?v=20261108">
 </head>
 <body class="is-inner page-tour">
 
@@ -410,44 +410,42 @@
       <div class="booking" id="booking">
         <p class="booking__price"><span>From</span> <strong>$3,295.00</strong></p>
         <p class="booking__per">Tentative price per person</p>
-        <div class="booking__tabs" role="tablist">
-          <button class="booking__tab is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-book" id="tab-book-btn">Reserve</button>
-          <button class="booking__tab" type="button" role="tab" aria-selected="false" aria-controls="tab-inquiry" id="tab-inquiry-btn">Inquiry</button>
-        </div>
+        <h2 class="booking__title">Plan Your Journey</h2>
+        <p class="booking__intro">Tell us which departure date and journey interest you, and we’ll be in touch to help you plan. Departure dates are tentative until confirmed, so no booking or payment is taken yet.</p>
 
-        <form class="booking__panel book-form" id="tab-book" role="tabpanel" aria-labelledby="tab-book-btn" data-price="3295">
-          <input class="field" type="text" placeholder="First name" aria-label="First name">
-          <input class="field" type="text" placeholder="Last name" aria-label="Last name">
-          <input class="field" type="email" placeholder="Email" aria-label="Email">
-          <input class="field" type="tel" placeholder="Phone" aria-label="Phone">
+        <form class="booking__panel book-form plan-form" id="plan-form">
+          <input class="field" type="text" name="first_name" placeholder="First name" aria-label="First name">
+          <input class="field" type="text" name="last_name" placeholder="Last name" aria-label="Last name">
+          <input class="field" type="email" name="email" placeholder="Email*" aria-label="Email" required>
+          <input class="field" type="tel" name="phone" placeholder="Phone" aria-label="Phone">
           <div class="book-form__departure">
-            <label for="departure">Choose your departure</label>
+            <label for="departure">Preferred departure (tentative)</label>
             <select id="departure" name="departure">
-              <option value="">Select a scheduled departure</option>
-              <option value="2027-02-15">Feb 15 – Feb 21, 2027 · Open</option>
-              <option value="2027-03-01">Mar 01 – Mar 07, 2027 · Open</option>
-              <option value="2027-03-15">Mar 15 – Mar 21, 2027 · Open</option>
-              <option value="2027-03-29">Mar 29 – Apr 04, 2027 · Open</option>
-              <option value="2027-04-12">Apr 12 – Apr 18, 2027 · Open</option>
-              <option value="2027-04-26">Apr 26 – May 02, 2027 · Open</option>
-              <option value="2027-05-10">May 10 – May 16, 2027 · Open</option>
+              <option value="">Select a departure date</option>
+              <option value="2027-02-15">Feb 15, 2027 · returns Feb 21, 2027</option>
+              <option value="2027-03-01">Mar 1, 2027 · returns Mar 7, 2027</option>
+              <option value="2027-03-15">Mar 15, 2027 · returns Mar 21, 2027</option>
+              <option value="2027-03-29">Mar 29, 2027 · returns Apr 4, 2027</option>
+              <option value="2027-04-12">Apr 12, 2027 · returns Apr 18, 2027</option>
+              <option value="2027-04-26">Apr 26, 2027 · returns May 2, 2027</option>
+              <option value="2027-05-10">May 10, 2027 · returns May 16, 2027</option>
+              <option value="flexible">I’m flexible / not sure yet</option>
             </select>
-            <p>Fixed departure dates. Your return date is included above.</p>
+          </div>
+          <div class="book-form__departure">
+            <label for="journey">Journey</label>
+            <select id="journey" name="journey">
+              <option value="7-day-curated-essence" selected>7-Day Vietnam Escape</option>
+              <option value="10-day-balanced-journey">10-Day Vietnam Journey</option>
+              <option value="14-day-deep-pause">14-Day Vietnam Discovery</option>
+            </select>
           </div>
           <div class="book-form__qty">
-            <input type="number" min="1" value="1" aria-label="Guests" data-qty>
-            <span>Guests</span> × <span>$<span data-unit>3,295.00</span></span>
+            <input type="number" name="guests" min="1" value="1" aria-label="Guests">
+            <span>Guest(s)</span>
           </div>
-          <p class="book-form__total">Total = $<span data-total>3,295.00</span></p>
-          <button class="book-form__submit" type="submit" disabled>Reserve your place</button>
-        </form>
-
-        <form class="booking__panel inquiry-form" id="tab-inquiry" role="tabpanel" aria-labelledby="tab-inquiry-btn" hidden>
-          <p>Fill up the form below to tell us what you're looking for</p>
-          <input class="field" type="text" placeholder="Your name*" aria-label="Your name" required>
-          <input class="field" type="email" placeholder="Email*" aria-label="Email" required>
-          <textarea class="field" rows="4" placeholder="Message" aria-label="Message"></textarea>
-          <button class="inquiry-form__submit" type="submit">Send Enquiry</button>
+          <textarea class="field" name="message" rows="3" placeholder="Anything you’d like us to know?" aria-label="Message"></textarea>
+          <button class="book-form__submit" type="submit">Plan Your Journey</button>
         </form>
       </div>
     </aside>
@@ -490,7 +488,7 @@
   <div class="site-footer__top">
     <div class="footer-brand">
       <a href="/"><img class="footer-brand__logo" src="../../images/logo-blooming.png" width="250" height="72" alt="Blooming Passage" loading="lazy"></a>
-      <h3 class="footer-brand__tag">Thoughtful journeys. Space to bloom.</h3>
+      <h3 class="footer-brand__tag">Boutique, curated journeys through Central Vietnam for women ready to bloom.</h3>
       <ul class="footer-list footer-list--contact">
         <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Las+Vegas,+NV" target="_blank" rel="noopener"><img src="../../images/icon-map.svg" width="19" height="19" alt="">Las Vegas, NV</a></li>
         <li><a href="mailto:travel@bloomingpassage.com"><img src="../../images/icon-mail.svg" width="17" height="13" alt="">travel@bloomingpassage.com</a></li>
@@ -553,6 +551,6 @@
 
 <script src="../../js/main.js?v=20261102" defer></script>
 <script src="../../js/share.js?v=20261022" defer></script>
-<script src="../../js/tour-detail.js?v=20261022" defer></script>
+<script src="../../js/tour-detail.js?v=20261015p" defer></script>
 </body>
 </html>

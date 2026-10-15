@@ -364,6 +364,11 @@
 .facet__icon svg { width: 30px; height: 30px; }
 .facet:hover .facet__icon { color: var(--rust); transform: translateY(-3px); }
 .facet__label { font: 500 21px/1.2 var(--serif); color: var(--brown); }
+/* Four core values (The Blooming Passage Experience): same band as the facets, four columns, a short line under each */
+.facets--values { padding-top: 40px; }
+.facets__eyebrow { margin-bottom: 18px; text-align: center; }
+.facets--values .facets__list { grid-template-columns: repeat(4, 1fr); }
+.facet__text { max-width: 220px; font-size: 13.5px; line-height: 1.55; text-align: center; color: var(--text); }
 
 /* ===== Travel season line ===== */
 .season { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-top: 4px; font: italic 500 20px/1.4 var(--serif); color: var(--rust); }
@@ -628,6 +633,7 @@
   .sec-head { flex-wrap: wrap; }
   .sec-head__text { flex-basis: 100%; }
   .facets__list { grid-template-columns: repeat(3, 1fr); gap: 26px 10px; padding: 26px 0; }
+  .facets--values .facets__list { grid-template-columns: repeat(2, 1fr); }
   .facet__label { font-size: 19px; }
   .care { gap: 26px; padding-top: 34px; padding-bottom: 34px; }
   .care__list { gap: 22px 14px; }

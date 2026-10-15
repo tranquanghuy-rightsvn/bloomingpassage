@@ -397,3 +397,8 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
   .jcards { grid-template-columns: minmax(0, 1fr); gap: 22px; }
 }
 .tfaq__item p a { color: var(--rust); text-decoration: underline; text-underline-offset: 3px; }
+
+/* "Plan Your Journey" card (tentative departures: no booking or payment yet) */
+.booking__title { margin: 6px 0 8px; font: 500 26px/1.25 var(--serif); text-align: center; color: var(--brown-2); }
+.booking__intro { margin-bottom: 18px; font-size: 13.5px; line-height: 1.65; text-align: center; color: var(--muted); }
+.plan-form textarea.field { height: 96px; margin-bottom: 18px; }

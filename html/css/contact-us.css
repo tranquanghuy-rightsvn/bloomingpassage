@@ -122,3 +122,4 @@ body { background: var(--cream); }
   .ct-info { order: -1; }
   .ct-photo__img { height: 300px; border-radius: 4px 48px 4px 4px; }
 }
+#plan { scroll-margin-top: 130px; } /* "Plan Your Journey" links land on the whole form, below the fixed header */

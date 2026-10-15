@@ -45,40 +45,28 @@
     placeStrip();
   }
 
-  // Booking card: Reserve / Inquiry tabs.
-  var tabs = document.querySelectorAll('.booking__tab');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      tabs.forEach(function (t) {
-        var on = t === tab;
-        t.classList.toggle('is-active', on);
-        t.setAttribute('aria-selected', String(on));
-        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
-      });
-    });
-  });
-
-  // Booking form: total = guests x price per guest; enabled once a departure is chosen.
-  var book = document.querySelector('.book-form');
-  if (book) {
-    var unit = Number(book.dataset.price);
-    var money = function (n) {
-      return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    };
-    var update = function () {
-      var qty = Math.max(1, parseInt(book.querySelector('[data-qty]').value, 10) || 1);
-      book.querySelector('[data-total]').textContent = money(qty * unit);
-      book.querySelector('.book-form__submit').disabled = !book.querySelector('select').value;
-    };
-    book.addEventListener('input', update);
-    book.addEventListener('change', update);
-    book.addEventListener('submit', function (e) { e.preventDefault(); });
-    // Departure chosen from the home page ("Reserve →" links carry ?departure=YYYY-MM-DD).
+  // "Plan Your Journey" card: no booking or payment while departures are tentative. A departure picked on the
+  // Journeys page (?departure=YYYY-MM-DD) is preselected; sending opens the visitor's email app with the details filled in.
+  var plan = document.querySelector('.plan-form');
+  if (plan) {
     var wanted = new URLSearchParams(location.search).get('departure');
-    var select = book.querySelector('select');
-    if (wanted && select.querySelector('option[value="' + wanted + '"]')) select.value = wanted;
-    update();
+    var dep = plan.querySelector('[name="departure"]');
+    if (wanted && dep.querySelector('option[value="' + wanted + '"]')) dep.value = wanted;
+    plan.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = function (n) { var el = plan.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
+      var txt = function (n) { var el = plan.querySelector('[name="' + n + '"]'); return el && el.selectedIndex > -1 ? el.options[el.selectedIndex].text : ''; };
+      var body = [
+        'Name: ' + (v('first_name') + ' ' + v('last_name')).trim(),
+        'Email: ' + v('email'),
+        'Phone: ' + v('phone'),
+        'Preferred departure: ' + (v('departure') ? txt('departure') : 'Not chosen yet'),
+        'Journey: ' + txt('journey'),
+        'Guests: ' + v('guests'),
+        '',
+        v('message')
+      ].join('\n');
+      location.href = 'mailto:travel@bloomingpassage.com?subject=' + encodeURIComponent('Plan my journey: ' + txt('journey')) + '&body=' + encodeURIComponent(body);
+    });
   }
-  var inquiry = document.querySelector('.inquiry-form');
-  if (inquiry) inquiry.addEventListener('submit', function (e) { e.preventDefault(); });
 })();
