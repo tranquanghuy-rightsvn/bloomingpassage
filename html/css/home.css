@@ -219,6 +219,8 @@
 }
 /* Flower (bottom right, at the end of the brush underline) blooms last, after the ink dots: petals open one by one from their base (--d set inline),
    then the orange heart and stamens pop; afterwards the head sways gently and the petals breathe */
+.about__img .ink-art__line { display: none; } /* brush underline hidden: the bloom cluster replaces it (approved 2026-10-15) */
+.ink-art__flower { transform: translateY(10px); } /* the whole bloom cluster sits 10px lower */
 .ink-art__flower .fl-petal path { fill: #fff; stroke: #d8c3a5; stroke-width: 1.1; stroke-linejoin: round; }
 .ink-art__flower .fl-petal .fl-vein { fill: none; stroke: #eadbc6; stroke-width: 1; stroke-linecap: round; }
 .ink-art__flower .fl-core { fill: #e8892b; }
@@ -235,6 +237,16 @@
 .ink-art__flower .fl-head--small { animation-duration: 5s; animation-delay: -2s; }
 .ink-art__flower .fl-petal { animation: petal-breathe 4s ease-in-out infinite alternate; }
 @keyframes flower-sway { 0%, 100% { rotate: -4deg; } 50% { rotate: 4deg; } }
+/* The bloom cluster (a mirrored L in the corner, 1/3 as tall as it is long): leaves unfurl first, then the flowers
+   open in a wave from the corner outwards (--d inline), buds swell last. Only a few background flowers sway. */
+.ink-art__flower .fl-leaf { fill: #5f7d34; }
+.ink-art__flower .fl-leaf--light { fill: #87a250; }
+.ink-art__flower .fl-leaf, .ink-art__flower .fl-bud { transform-box: fill-box; transform-origin: 50% 100%; }
+.js-reveal .ink-art:not(.is-in) .fl-leaf, .js-reveal .ink-art:not(.is-in) .fl-bud { opacity: 0; transform: scale(0); }
+.ink-art.is-in .fl-leaf { transition: opacity .4s ease var(--d), transform .8s cubic-bezier(.34, 1.3, .64, 1) var(--d); }
+.ink-art.is-in .fl-bud { transition: opacity .4s ease var(--d), transform .7s cubic-bezier(.34, 1.6, .64, 1) var(--d); }
+.ink-art__flower .fl-head--bg, .ink-art__flower .fl-head--bg .fl-petal { animation: none; }
+.ink-art__flower .fl-head--bg.fl-head--sway { animation: flower-sway 7s ease-in-out infinite; }
 @keyframes petal-breathe { from { scale: 1; } to { scale: 1.05; } }
 @media (prefers-reduced-motion: reduce) {
   .ink-art__flower .fl-head, .ink-art__flower .fl-petal { animation: none; }
