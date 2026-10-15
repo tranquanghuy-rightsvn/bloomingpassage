@@ -1,4 +1,5 @@
-"""Bloom cluster for the home 'about' photo: flowers of many sizes crowding into a mirrored L (⅃) in the
+"""(Timing: the cluster leaves start ~2.8s and the flowers open ~3s, just as the bamboo leaves finish; the two original flowers in the page are shifted to match (large flower 3.4s).)
+Bloom cluster for the home 'about' photo: flowers of many sizes crowding into a mirrored L (⅃) in the
 bottom-right corner. The horizontal arm runs left along the bottom edge; the vertical arm climbs the
 right edge and is 1/3 as tall as the arm is long. The original large flower keeps its exact place and
 markup and is painted last (on top). Everything else uses <use> of shared petal/heart symbols to keep the HTML small."""
@@ -100,15 +101,15 @@ def leaf_path(L):
 out = [f'<svg class="ink-art__deco ink-art__flower" viewBox="0 0 640 480" aria-hidden="true">{DEFS}']
 total = HGT + LEN
 for (lx, ly), rot, L in leaves:
-    d = 3.3 + 0.7 * corner_dist((lx, ly)) / total
+    d = 2.8 + 0.7 * corner_dist((lx, ly)) / total
     out.append(f'<g transform="translate({f(lx)} {f(ly)}) rotate({f(rot + 90)})"><path class="fl-leaf{" fl-leaf--light" if R.random() < .4 else ""}" style="--d:{d:.2f}s" d="{leaf_path(L)}"/></g>')
 # buds (with their green sepals) sit behind every flower too
 for bx, by, rot, sc in buds:
-    d = 3.6 + 1.3 * corner_dist((bx, by)) / total
+    d = 3.1 + 1.3 * corner_dist((bx, by)) / total
     out.append(f'<g transform="translate({f(bx)} {f(by)}) rotate({f(rot + 90)}) scale({sc:.2f})"><g class="fl-bud" style="--d:{d:.2f}s"><path d="M0 0C-5-5-6-13 0-20C6-13 5-5 0 0Z" fill="#fff" stroke="#d8c3a5" stroke-width="1"/><path d="M0 0C-4-2-5-6-4-9C-1-6 1-6 4-9C5-6 4-2 0 0Z" fill="#6b8a3a"/></g></g>')
 # back to front: small/far flowers first, bigger ones later, so the larger blooms overlap the smaller
 for x, y, sc, rot, back, d in sorted(flowers, key=lambda q: q[2]):
-    d0 = 3.5 + 1.25 * d / total + R.uniform(0, 0.15)
+    d0 = 3.0 + 1.25 * d / total + R.uniform(0, 0.15)
     sym = '#flp2' if back else '#flp'
     petals = ''.join(f'<g transform="rotate({f(rot + i * 72)})"><use class="fl-petal" href="{sym}" style="--d:{d0 + i * 0.07:.2f}s"/></g>' for i in range(5))
     sway = f' fl-head--sway" style="animation-delay:-{R.uniform(0, 7):.1f}s' if R.random() < 0.35 else ''

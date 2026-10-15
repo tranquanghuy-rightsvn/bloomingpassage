@@ -217,7 +217,7 @@
 @media (prefers-reduced-motion: reduce) {
   .ink-art__bamboo .bb-branch, .ink-art__bamboo .bb-leaves path { animation: none; }
 }
-/* Flower (bottom right, at the end of the brush underline) blooms last, after the ink dots: petals open one by one from their base (--d set inline),
+/* Flowers (bottom right) open straight after the bamboo leaves finish (~3s), so the sequence flows without a pause: petals open one by one from their base (--d set inline),
    then the orange heart and stamens pop; afterwards the head sways gently and the petals breathe */
 .about__img .ink-art__line { display: none; } /* brush underline hidden: the bloom cluster replaces it (approved 2026-10-15) */
 .ink-art__flower { transform: translateY(10px); } /* the whole bloom cluster sits 10px lower */
