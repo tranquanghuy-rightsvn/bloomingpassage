@@ -205,4 +205,14 @@
     if (e.key === 'ArrowLeft') show(index - 1);
     if (e.key === 'ArrowRight') show(index + 1);
   });
+
+  // Pause the painting's idle sway / breathe loops while it is off screen (see "Performance" in home.css).
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    document.querySelectorAll('.ink-art').forEach(function (art) {
+      new IntersectionObserver(function (entries) {
+        art.classList.toggle('is-offscreen', !entries[0].isIntersecting);
+      }, { rootMargin: '80px 0px' }).observe(art);
+    });
+  })();
 })();
