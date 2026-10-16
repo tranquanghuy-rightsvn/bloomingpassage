@@ -78,8 +78,8 @@
 }
 </script>
 <link rel="preload" href="../fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../css/main.css?v=20261101">
+<link rel="preload" href="../fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/main.css?v=20261120">
 <link rel="stylesheet" href="../css/contact-us.css?v=20261104">
 </head>
 <body class="is-inner">
@@ -146,13 +146,24 @@
             <label class="ct-form__label" for="ct-departure">Preferred departure (tentative)</label>
             <select class="ct-form__control" id="ct-departure" name="departure">
               <option value="">Not sure yet</option>
-              <option value="2027-02-15">Feb 15, 2027</option>
-              <option value="2027-03-01">Mar 1, 2027</option>
-              <option value="2027-03-15">Mar 15, 2027</option>
-              <option value="2027-03-29">Mar 29, 2027</option>
-              <option value="2027-04-12">Apr 12, 2027</option>
-              <option value="2027-04-26">Apr 26, 2027</option>
-              <option value="2027-05-10">May 10, 2027</option>
+              <optgroup label="7-Day Vietnam Escape">
+                <option value="2027-02-15" data-journey="7-day">Feb 15 – Feb 21, 2027</option>
+                <option value="2027-02-21" data-journey="7-day">Feb 21 – Feb 27, 2027</option>
+                <option value="2027-03-08" data-journey="7-day">Mar 8 – Mar 14, 2027</option>
+                <option value="2027-03-23" data-journey="7-day">Mar 23 – Mar 29, 2027</option>
+                <option value="2027-04-07" data-journey="7-day">Apr 7 – Apr 13, 2027</option>
+                <option value="2027-04-22" data-journey="7-day">Apr 22 – Apr 28, 2027</option>
+                <option value="2027-05-07" data-journey="7-day">May 7 – May 13, 2027</option>
+                <option value="2027-05-22" data-journey="7-day">May 22 – May 28, 2027</option>
+              </optgroup>
+              <optgroup label="10-Day Vietnam Journey">
+                <option value="2027-02-27" data-journey="10-day">Feb 27 – Mar 8, 2027</option>
+                <option value="2027-03-14" data-journey="10-day">Mar 14 – Mar 23, 2027</option>
+                <option value="2027-03-29" data-journey="10-day">Mar 29 – Apr 7, 2027</option>
+                <option value="2027-04-13" data-journey="10-day">Apr 13 – Apr 22, 2027</option>
+                <option value="2027-04-28" data-journey="10-day">Apr 28 – May 7, 2027</option>
+                <option value="2027-05-13" data-journey="10-day">May 13 – May 22, 2027</option>
+              </optgroup>
             </select>
           </div>
           <div class="ct-form__field">
@@ -161,7 +172,6 @@
               <option value="">Not sure yet</option>
               <option value="7-day">7-Day Vietnam Escape</option>
               <option value="10-day">10-Day Vietnam Journey</option>
-              <option value="14-day">14-Day Vietnam Discovery</option>
             </select>
           </div>
           <div class="ct-form__field">
@@ -195,7 +205,7 @@
         </div>
         <div class="ct-info__text">
           <p>Our journeys connect Da Nang, Hoi An and Hue through culture, wellbeing and meaningful moments.</p>
-          <p>Whether you are considering a 7, 10 or 14-day passage, share your preferred dates and what matters to you.</p>
+          <p>Whether you are considering a 7 or 10-day passage, share your preferred dates and what matters to you.</p>
           <p><a class="ct-link" href="/tours/">Explore our journeys →</a></p>
         </div>
       </div>
@@ -218,7 +228,6 @@
       <ul class="footer-list">
         <li><a href="/tours/7-day-curated-essence/">7-Day Vietnam Escape</a></li>
         <li><a href="/tours/10-day-balanced-journey/">10-Day Vietnam Journey</a></li>
-        <li><a href="/tours/14-day-deep-pause/">14-Day Vietnam Discovery</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -276,6 +285,12 @@
       var el = document.getElementById(p[1]), v = q.get(p[0]);
       if (el && v && el.querySelector('option[value="' + v + '"]')) el.value = v;
     });
+    // each departure belongs to one journey: keep the two selects in step
+    var dep = document.getElementById('ct-departure'), jour = document.getElementById('ct-journey');
+    var depJourney = function () { var o = dep.options[dep.selectedIndex]; return o ? o.getAttribute('data-journey') : null; };
+    dep.addEventListener('change', function () { if (depJourney()) jour.value = depJourney(); });
+    jour.addEventListener('change', function () { if (depJourney() && jour.value && depJourney() !== jour.value) dep.value = ''; });
+    if (depJourney()) jour.value = depJourney();
     var form = document.getElementById('plan');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -286,6 +301,6 @@
     });
   })();
 </script>
-<script src="../js/main.js?v=20261102" defer></script>
+<script src="../js/main.js?v=20261120" defer></script>
 </body>
 </html>

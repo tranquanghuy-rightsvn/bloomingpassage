@@ -88,8 +88,8 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
   padding: 24px 0;
-  border-top: 1px solid #e8edf1;
-  border-bottom: 1px solid #e8edf1;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
 }
 .tour-facts li { display: flex; flex-wrap: wrap; align-items: center; column-gap: 10px; min-height: 26px; padding-left: 38px; position: relative; }
 .tour-facts .ic { position: absolute; left: 0; top: 0; width: 26px; height: 24px; color: var(--rust); fill: currentColor; }
@@ -98,7 +98,7 @@
 .tour-facts__label { font-size: 13px; font-weight: 600; line-height: 19.5px; }
 .tour-facts__value { font-size: 14px; font-weight: 600; line-height: 23.1px; color: var(--brown-2); }
 
-.tour-intro { margin-top: 20px; line-height: 22.4px; }
+.tour-intro { margin-top: 20px; margin-bottom: 36px; line-height: 1.75; }
 .tour-route { margin-top: 22px; font: 600 11px/1.7 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; color: var(--rust); }
 .tour-route + .tour-intro { margin-top: 10px; }
 .tour-tagline { margin-top: 16px; font: italic 500 22px/1.4 var(--serif); color: var(--brown-2); }
@@ -116,7 +116,7 @@
 .tour-h { font: 500 32px/40px var(--serif); color: var(--brown-2); }
 .itin-intro { margin-top: -18px; font-size: 15px; line-height: 27px; }
 
-.itin__item { margin-bottom: 12px; padding: 20px; border: 1px solid #e8edf1; border-radius: 16px; }
+.itin__item { margin-bottom: 12px; padding: 20px; border: 1px solid var(--line-soft); border-radius: 16px; }
 .itin__item summary {
   position: relative;
   padding-right: 30px;
@@ -308,10 +308,10 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
 .booking__panel[hidden] { display: none; }
 
 /* ----- Related journeys ----- */
-.tour-related { margin: 90px 0 120px; padding: 60px 24px; background: var(--cream); }
+.tour-related { margin: 90px 0 0; padding: 60px 24px 80px; background: var(--cream); }
 .tour-related__inner { display: flex; flex-direction: column; gap: 26px; max-width: 1200px; margin: 0 auto; }
 .tour-related__title { font: 500 38px/45.6px var(--serif); color: var(--ink); }
-.jcards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+.jcards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; max-width: 760px; }
 .jcard {
   display: flex;
   flex-direction: column;
@@ -324,7 +324,7 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
 }
 .jcard:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(56, 45, 38, .08); }
 .jcard__img { overflow: hidden; border-radius: 5px; }
-.jcard__img img { width: 100%; height: 220px; object-fit: cover; transition: transform .4s; }
+.jcard__img img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .4s; }
 .jcard:hover .jcard__img img { transform: scale(1.04); }
 .jcard__title { min-height: 66px; margin-top: 2px; font: 500 30px/33px var(--serif); color: var(--ink); }
 .jcard__title a { transition: color .2s; }
@@ -359,7 +359,7 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
   .tour-body { flex-direction: column-reverse; align-items: stretch; gap: 20px; }
   .tour-side { flex: none; position: static; }
   .booking { padding: 20px; }
-  .tour-related { margin: 60px 0 100px; }
+  .tour-related { margin: 60px 0 0; }
 }
 @media (max-width: 900px) {
   .tgal__strip { --per: 3; }

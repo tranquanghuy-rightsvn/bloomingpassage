@@ -30,3 +30,24 @@ body.page-gallery { background: var(--cream); }
   .gallery-banner { padding: 60px 20px 50px; }
   .gallery-banner__title { font-size: 48px; }
 }
+
+/* TEMPORARY: number badge on every photo of this page so the client can say "use photo #x there" (remove before going live) */
+.exp-panel__fig[data-num] { position: relative; }
+.lens__num {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 8px;
+  font: 700 16px/1 var(--sans);
+  color: #fff;
+  background: var(--rust);
+  border: 2px solid #fff;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+  pointer-events: none;
+}

@@ -17,32 +17,25 @@ Free files below: commercial use allowed, no attribution required.
 | hero-hoian-5 | Unsplash TRtyDemHzGM |
 | hoian-japanese-bridge | Pexels 14021776 |
 | women-friends-hoian-journey (home group photo) | Supplied by the team ("Friends’ Journey Through Hoi An", 2026-10-09); sides and sky extended slightly so all six women sit inside the ink-brush frame |
-| women-friends-tea | **Unsplash+ CY7HRD-XChk (clean file)** |
-| women-friends-seaside | Pexels 6540137 |
 | women-friends-garden | **Unsplash+ 5nlE10fnnNA** (14-day tour gallery) |
 | massage-rejuvenate | Pexels 6560265 |
-| beach-friends-relax | Client (source-images-client/beach-friends-relax.png — "Thư giãn bên biển và núi xa.png") |
-| beach-bay (Home, "Why Central Vietnam" collage) | Client (source-images-client/bai-bien-da-nang-non-nuoc-1722829280.jpg) |
+| beach-bay (not used since 2026-10-17: the bay is not Da Nang) | Client (source-images-client/bai-bien-da-nang-non-nuoc-1722829280.jpg) |
+| danang-beach-huts (Home "Why Central Vietnam" collage) | Pexels 6875504 (Quang Nguyen Vinh), thatched beach umbrellas along the Da Nang coast; original source-images/free/danang-beach-huts__pexels-6875504.jpg |
+| banner-hoian-aerial-dusk (Journeys page banner) | Pexels 12354626 (Ba Uoc Phung), Hoi An from above at dusk; original source-images/free/hoian-aerial-dusk__pexels-12354626.jpg |
 | danang-dragon-fire (Home, Da Nang slides) | Client (source-images-client/cau1749269131_3972.jpg) |
-| hue-walking-street (Home, Hue slides) | Client (source-images-client/pho-di-bo-nguyen-dinh-chieu.png) |
 | danang-street-food-dinner (Gallery) | Client (source-images-client/danang-street-food-dinner.png — "Bữa tối street food bên cầu Rồng.png") |
-| son-tra-hikers (Gallery) | Client (source-images-client/son-tra-hikers.png — "Coastal Trail Hikers’ Scenic Vista.png") |
 | hue-cyclo-riverside (Gallery) | Client (source-images-client/hue-cyclo-riverside.png — "Cyclo Ride Along the Historic Riverside.png") |
 | night-market-portrait-sketch (Gallery) | Client (source-images-client/night-market-portrait-sketch.png — "Phác họa bên chợ đêm ven sông.png") |
 | pottery-class-friends (Gallery) | Client (source-images-client/pottery-class-friends.png — "Xưởng gốm ấm áp đầy sáng tạo.png") |
 | coconut-basket-boat (Gallery; bottom strip with AI-generator mark cropped off) | Client (source-images-client/coconut-basket-boat.jpeg) |
-| cooking-class-papaya (Home, "Through the lens"; swapped with img-9 on 2026-10-15) | Client (source-images-client/cooking-class-papaya.jpeg) |
-| son-tra-banyan-hike (Gallery) | Client (source-images-client/son-tra-banyan-hike.jpeg) |
 | hoian-ao-dai-lotus (Gallery) | Client (source-images-client/hoian-ao-dai-lotus.png — "Nụ cười bên phố đèn lồng vàng xưa.png") |
 | hoian-lantern-boat-sunset (Gallery) | Client (source-images-client/hoian-lantern-boat-sunset.png) |
-| street-snack-friends (Gallery) | Client (source-images-client/street-snack-friends.png) |
 | rice-field-cycling (Gallery) | Client (source-images-client/rice-field-cycling.png) |
-| lantern-making-class (Gallery) | Client (source-images-client/lantern-making-class.png) |
 | hoian-cycling-lanterns (Gallery; `-768` is a 3:2 crop) | Client (source-images-client/hoian-cycling-lanterns.png — "Đạp xe giữa phố đèn lồng Hội An.png") |
 | mineral-mud-bath (Gallery) | Client (source-images-client/mineral-mud-bath.png — "Thư giãn trong bồn tắm bùn khoáng.png") |
 | curated-essence-massage (7-Day Curated Essence cover: home, Journeys, journey cards; `-card` is a 1.6:1 crop) | Client (source-images-client/curated-essence-massage.png — "Ảnh ChatGPT 20_57_22 14 thg 10, 2026.png") |
 | danang-cafe-reading (About Us values card) | Client (source-images-client/danang-cafe-reading.png — "e4170e5e-f12c-4021-b6bc-9dad4df5091c.png") |
-| heart-check-up (About Us values card "Longevity") | Client (source-images-client/heart-check-up.png — "Bác sĩ khám tim cho bệnh nhân.png") |
+| women-friends-beach-sunset (About Us values card "Longevity") | Supplied by the team (2026-10-16, "Ảnh ChatGPT 23_39_06 … -1.png"); full-size PNG kept in html/images until it is optimised |
 | health-consultation-team | Client (source-images-client/tuvanykhoa.png) |
 | traditional-weaving (Home, "Beyond the Tourist Trail") | Client (source-images-client/tradional-det.png) |
 | pho-bo-herbs (Home Culinary tab) | Client (source-images-client/pho-bo-herbs.png — "Phở bò nóng hổi bên gia vị tươi.png") |
@@ -59,7 +52,7 @@ Free files below: commercial use allowed, no attribution required.
 | group-cooking-class | Client (source-images-client/Group Cooking Class.webp) |
 | hoian-river-aodai | Client (source-images-client/hoi-an.jpg) |
 | resort-aerial-gardens (tour pages; original in source-images/free/) | Pexels 6875472 |
-| resort-hillside-villas (tour pages; original in source-images/free/) | Pexels 2476645 |
+| resort-hillside-villas (not used since 2026-10-17; original in source-images/free/) | Pexels 2476645 |
 | resort-beach-aerial (tour pages; original in source-images/free/) | Pexels 32824424 |
 | poolside-lounger (tour pages; original in source-images/free/) | Pexels 12969293 |
 | tropical-pool-hat (tour pages; original in source-images/free/) | Pexels 5490747 |
@@ -68,19 +61,24 @@ Free files below: commercial use allowed, no attribution required.
 | facial-smile-treatment (tour pages; original in source-images/free/) | Pexels 7581075 |
 | hoian-yellow-street (tour pages; original in source-images/free/) | Pexels 38207562 |
 | conical-hat-makers (tour pages; original in source-images/free/) | Pexels 30174367 |
-| village-pottery-wheel (tour pages; original in source-images/free/) | Pexels 2134816 |
 | pottery-painting-hat (tour pages; original in source-images/free/) | Pexels 36652609 |
 | lotus-tea-ceremony (tour pages; original in source-images/free/) | Pexels 35869746 |
 | bamboo-tea-aodai (tour pages; original in source-images/free/) | Pexels 9779469 |
 | hue-hien-lam-pavilion (tour pages; original in source-images/free/) | Pexels 37855977 |
 | hue-citadel-moat (tour pages; original in source-images/free/) | Pexels 38282169 |
-| hue-lakeside-pavilion (tour pages; original in source-images/free/) | Pexels 36605975 |
+| hue-lakeside-pavilion (not used since 2026-10-17; original in source-images/free/) | Pexels 36605975 |
+| hue-ngo-mon-night (Home "Why Central Vietnam" collage; original source-images/free/hue-ngo-mon-night__pexels-14021269.jpg) | Pexels 14021269 (Quang Nguyen Vinh), Ngo Mon Gate lit at night, reflected in the moat |
+| hue-thien-mu-aodai (10-Day Deeper Discovery cover: home, Journeys, journey cards, og image) | Supplied by the team (2026-10-16, "image (1).png"; original in source-images-client/hue-thien-mu-aodai.png) |
+| hoian-aodai-friends (7-Day Curated Essence cover: home, Journeys, journey cards) | Supplied by the team (2026-10-16, "image.png"; original in source-images-client/hoian-aodai-friends.png) |
+| rice-field-cycling-friends (Gallery #61, free to place) | Supplied by the team (2026-10-17, "Ảnh ChatGPT 00_30_01 … -1.png"; original in source-images-client/rice-field-cycling-friends.png) |
+| bp-experiences-collage (About Us "Your next chapter starts with a conversation") | Supplied by the team (2026-10-16, "Ảnh ChatGPT 23_39_09 … -4.png"; original in source-images-client/bp-experiences-collage.png) |
+| longan-harvest (Home "Through the lens", large middle photo) | Supplied by the team (2026-10-16, "image (5).png"; original in source-images-client/longan-harvest.png) |
+| banh-mi-iced-coffee (Home + Gallery "Culinary Discovery" tab, replaces food-2-1024x1024) | Supplied by the team (2026-10-16, "image (17).png"; original in source-images-client/banh-mi-iced-coffee.png) |
 | facial-mask-brush (tour pages; original in source-images/free/) | Pexels 5659018 |
-| facial-treatment-clinic (tour pages; original in source-images/free/) | Pexels 3985361 |
 | boutique-friends-shopping (tour pages; original in source-images/free/) | Pexels 8386647 |
 | clothes-shopping-friends (tour pages; original in source-images/free/) | Pexels 36730407 |
-| pomelo-orchard-walk (tour pages; original in source-images/free/) | Pexels 30201055 |
-| fruit-garden-harvest (tour pages; original in source-images/free/) | Pexels 35573254 |
+| pomelo-orchard-walk (About Us values card "Discovery"; original in source-images/free/) | Pexels 30201055 |
+| fruit-garden-harvest (Journeys page "Artisan & Orchard" card; original in source-images/free/) | Pexels 35573254 |
 | vespa-aodai-street (tour pages; original in source-images/free/) | Pexels 1368565 |
 | hoian-river-palms (tour pages; original in source-images/free/) | Pexels 38190219 |
 | lantern-shop-aodai (tour pages; original in source-images/free/) | Pexels 35083807 |
@@ -112,11 +110,10 @@ Free files below: commercial use allowed, no attribution required.
 | banner-lantern-boats (About banner) | Client (source-images-client/banner-lantern-boats.png — "Lantern Boats on a Historic River.png") |
 | hoian-market | Client (source-images-client/hoi-an-market-1.jpg) |
 | hoian-lantern-lane | Client (source-images-client/Hoi An.jpg) |
-| basket-weaving | Client (source-images-client/Basket Weaving.webp) |
+| basket-weaving (not used since 2026-10-17) | Client (source-images-client/Basket Weaving.webp) |
 | vn-coffee | Client (source-images-client/VN Coffee.webp) |
-| cultural-immersion-dance | Client (source-images-client/Cultural Immersion 2.jpg) |
+| cultural-immersion-dance (not used since 2026-10-17, was the Journeys banner) | Client (source-images-client/Cultural Immersion 2.jpg) |
 | hoian-old-town-stroll | Client (source-images-client/Foreigner in Hoi An) |
-| rice-paper-making | Client (source-images-client/Handmade Rice Paper.webp) |
 | banh-xeo | Client (source-images-client/Banh Xeo.webp) |
 | foot-massage-spa (Journeys, signature-journey card) | Client (source-images-client/foot-massage-spa.png — "Thư giãn chân trong không gian spa nhiệt đới.png") |
 | bp-garden-group | Client (source-images-client/BP - Act 3.jpg) |
@@ -125,7 +122,7 @@ Free files below: commercial use allowed, no attribution required.
 | women-coffee-laughing | Client (source-images-client/Women with coffee.webp) |
 | lantern-making | Client (source-images-client/Lantern Making.jpg) |
 | tea-harvesting | Client (source-images-client/Tea Harvesting.jpg) |
-| cooking-class-table | Client (source-images-client/Cooking class.png) |
+| cooking-class-table (not used since 2026-10-17) | Client (source-images-client/Cooking class.png) |
 | fresh-market | Client (source-images-client/Flea Market.webp) |
 | cultural-immersion-village | Client (source-images-client/Cultural Immersion 1.jpg) |
 | ethnic-women-friends | Client (source-images-client/Ethnic women.png) |
@@ -164,6 +161,18 @@ These photos were deleted for good (web files and originals) and must not be bro
 destination-hoian, food-3 (Hoi An banh mi), night-2 (lantern street-food alley), BP - Beauty 6 (hot stone massage),
 spa-relax (Pexels 6234117), massage-spa (Pexels 5888099), women-friends-dinner (Pexels 11368641),
 cooking-class (Pexels 5463852), hero-hoian-1 (Unsplash 3bH7VkSj4fg), hero-hoian-2 (Unsplash+ e18QHKZBWjM).
+Added 2026-10-16: heart-check-up (doctor listening to a heart, client file "Bác sĩ khám tim cho bệnh nhân.png"), n-place6 (old About Us "Discovery" card).
+Added 2026-10-17: BP - Beauty 8 (facial mask, old Home "Facial Treatment" circle; replaced by BP - Beauty 7).
+Added 2026-10-17: lantern-making-class, street-snack-friends, son-tra-hikers ("Coastal Trail Hikers’ Scenic Vista"), son-tra-banyan-hike (Gallery photos #15, #25, #28, #41).
+Added 2026-10-17: cooking-class-papaya (Home "Through the lens"; replaced by cooking-class-table).
+Added 2026-10-17: women-friends-seaside (Pexels 6540137, old 10-Day cover).
+Added 2026-10-17: BP- Healthcare 3 (blood pressure check, old "Proactive Health & Longevity" tab photo).
+Added 2026-10-17: beach-friends-relax (two friends on a sun lounger, client file "Thư giãn bên biển và núi xa.png").
+Added 2026-10-17: facial-treatment-clinic (Pexels 3985361, Health & Longevity tab).
+Added 2026-10-17: rice-paper-making (client file "Handmade Rice Paper.webp", Journeys "Artisan & Orchard" card).
+Added 2026-10-17: danang-beach-sign (Pexels 26550067, DANANG letters), hue-walking-street (client file "pho-di-bo-nguyen-dinh-chieu.png", Home Hue slide).
+Added 2026-10-17: village-pottery-wheel (Pexels 2134816, Journeys "Artisan & Orchard" card).
+Added 2026-10-17: women-friends-tea (Unsplash+ CY7HRD-XChk).
 
 Unsplash: https://unsplash.com/photos/<id> · Pexels: https://www.pexels.com/photo/<id>/ · Pixabay: https://pixabay.com/photos/<id>/
 Hoi An photos were softened slightly (saturation/contrast) so they sit together as one set.
@@ -201,6 +210,7 @@ Hue:
 3. hue-thien-mu-pagoda – Unsplash OWbKgnoKkL8 (Quang Nguyen Vinh)
 4. hue-hien-lam-gate – Unsplash fFghADH20qk (Chu CHU)
 5. hue-perfume-river – Unsplash vTigW1wO1wU
+(hue-walking-street, the Nguyen Dinh Chieu walking street slide, was deleted on 2026-10-17)
 
 ## Client favourites (supplied by the team, 2026-10-10; a fifth, Hoi An lantern walk, was added by mistake and removed)
 
@@ -210,12 +220,12 @@ so they are used where no place is named.
 |---|---|
 | friends-garden-lunch | About Us values card ("Connection") |
 | friends-bay-lunch | Home gallery (large tile), Gallery |
-| woman-pool-relax (+ `-tall` crop) | Home Beachfront tab, 10-day tour gallery cover, Gallery |
+| woman-pool-relax (`-tall` crop no longer used) | Home + Gallery Beachfront tab, second photo |
 | woman-bay-sunset (+ `-card` landscape crop) | 14-Day Deep Pause card (home, Journeys, tour pages), Gallery |
 
 | Social share banners (1200×630, og:image only) | Source |
 |---|---|
 | og-7-day-curated-essence.jpg | crop of curated-essence-massage (client) |
-| og-10-day-balanced-journey.jpg | crop of women-friends-seaside (Pexels 6540137) |
+| og-10-day-balanced-journey.jpg | crop of hue-thien-mu-aodai (team) |
 | og-14-day-deep-pause.jpg | crop of woman-bay-sunset (team) |
 | og-hoi-an-lanterns.jpg | crop of lantern-maker (client, "Make Lanterns") |

@@ -25,10 +25,9 @@
   var PAGES = [
     ['Home', '/', 'Intentional travel and proactive longevity for women in Central Vietnam.', 'blooming passage time to bloom culture wellness beauty connection'],
     ['About Us', '/about-us/', 'A passage through Vietnam, a return to yourself: small groups, care and discovery.', 'story approach intention longevity discovery connection small group women wellbeing'],
-    ['Signature Journeys', '/tours/', 'Travel with intention. 7, 10 or 14 days in Central Vietnam, departing February – May 2027.', 'tours journeys trips packages itinerary price departures dates included how it works small group wellness longevity'],
+    ['Our Signature Experiences', '/tours/', 'Travel with intention. 7 or 10 days in Central Vietnam, departing February – May 2027.', 'tours journeys trips packages itinerary price departures dates included how it works small group wellness longevity'],
     ['7-Day Vietnam Escape', '/tours/7-day-curated-essence/', 'Vietnam Escape – Curated Essence. Hoi An & Da Nang, 7 days · 6 nights.', '7 days seven week curated essence escape hoi an da nang ba na hills golden bridge cooking tea silk basket boat spa beach'],
     ['10-Day Vietnam Journey', '/tours/10-day-balanced-journey/', 'Vietnam Journey – Deeper Discovery. Hoi An, Da Nang & Hue, 10 days · 9 nights.', '10 days ten deeper discovery hue imperial citadel royal tombs perfume river hoi an da nang farewell dinner shopping wellness'],
-    ['14-Day Vietnam Discovery', '/tours/14-day-deep-pause/', 'Vietnam Discovery – The Complete Experience. Hoi An, Da Nang, Hue & Phong Nha, 14 days · 13 nights.', '14 days fourteen two weeks complete experience phong nha caves cave limestone hue hoi an da nang farewell wellness'],
     ['Contact', '/contact-us/', 'A small step, a beautiful beginning. Tell us about your passage.', 'contact enquiry inquiry email phone plan book question'],
     ['Gallery', '/gallery/', 'Moments worth keeping: culture, flavour and shared moments in Central Vietnam.', 'gallery photos pictures images moments experience culture food cooking tailoring spa beauty'],
     ['FAQs', '/faqs/', 'A few answers to help you feel at home with Blooming Passage.', 'faq questions group size travel alone included optional wellness departure booking medical tourism pace airport reserve deposit'],
@@ -75,7 +74,7 @@
       '<button class="search-panel__close" type="button" aria-label="Close search">×</button>' +
       '</form>' +
       '<p class="search-panel__label"></p><ul class="search-panel__results"></ul>' +
-      '<p class="search-panel__empty" hidden>Nothing found. Try “Hue”, “massage”, “14 days” or “contact”.</p>' +
+      '<p class="search-panel__empty" hidden>Nothing found. Try “Hue”, “massage”, “10 days” or “contact”.</p>' +
       '</div></div>';
     body.appendChild(panel);
     input = panel.querySelector('.search-panel__input');
@@ -135,7 +134,7 @@
   var ANIM = [
     ['.ab-story__intro > *, .ab-title, .ab-text, .ab-letter__lead, .ab-letter__text > p, .ab-letter__turn, .ab-letter__close, .ab-care__item, .ab-talk__card', 'up'],
     ['.ab-value, .tour-card, .jcard, .story-card, .mini-card, .faq-item, .acc, .tfaq__item, .itin__item, .ct-card, .ct-info, .faq-cta, .tour-h, .tp-journeys__title, .tp-journeys__desc, .tp-faq__title, .tour-related__title, .faq-col__title, .post-content > h2, .post-content > p, .ct-intro > *', 'up'],
-    ['.ab-philo__head > *, .ab-philo__item, .ab-philo__close > *, .sj-head > *, .sj-intro__lead > *, .sj-intro__body > *, .sj-formula__inner > *, .sj-card, .sj-well__text > *, .sj-well__card, .sj-group__text > *, .sj-group__band, .sj-incl__list, .sj-incl__close, .sj-step, .sj-bloom > *, .sj-date, .sj-day', 'up'],
+    ['.ab-philo__head > *, .ab-philo__item, .ab-philo__close > *, .sj-head > *, .sj-intro__lead > *, .sj-intro__body > *, .sj-formula__inner > *, .sj-card, .sj-well__text > *, .sj-well__card, .sj-group__text > *, .sj-group__band, .sj-incl__list, .sj-incl__close, .sj-step, .sj-bloom > *, .sj-month, .sj-day', 'up'],
     ['.sj-group__img', 'img'],
     ['.ab-founder__photo, .ab-approach__img, .ab-care__img, .ab-place__img, .ab-talk__img, .ct-photo__img, .post-content img, .post-head__img', 'img']
   ];

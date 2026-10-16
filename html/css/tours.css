@@ -5,7 +5,7 @@ body.page-tours { background: var(--cream); }
 .tp-banner {
   position: relative;
   padding: 64px 24px 70px;
-  background: var(--gold) url(../images/cultural-immersion-dance.webp) 50% 40% / cover no-repeat;
+  background: var(--gold) url(../images/banner-hoian-aerial-dusk.webp) 50% 45% / cover no-repeat;
 }
 .tp-banner::before {
   content: "";
@@ -52,7 +52,7 @@ body.page-tours { background: var(--cream); }
 .tp-journeys__desc { margin-bottom: 10px; font: 400 15px/1.8 var(--sans); color: var(--text); }
 .tp-season { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 32px; font: italic 500 20px/1.4 var(--serif); color: var(--rust); }
 .tp-season span { font: 600 11px/1.6 var(--sans); font-style: normal; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); }
-.tour-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.tour-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 900px; margin-inline: auto; } /* two journeys (the 14-day was retired 2026-10-18) */
 .tour-card {
   position: relative;
   display: flex;
@@ -66,13 +66,13 @@ body.page-tours { background: var(--cream); }
   transition: transform .3s, box-shadow .3s;
 }
 /* each journey has its own soft tint: blush, sage, warm sand */
-.tour-card--essence { --tint: color-mix(in srgb, var(--rust) 11%, var(--paper)); --accent: color-mix(in srgb, var(--rust) 85%, #fff); }
-.tour-card--balanced { --tint: color-mix(in srgb, var(--sage) 13%, var(--paper)); --accent: var(--sage); }
+.tour-card--essence { --tint: var(--blush-soft); --accent: var(--terracotta); }
+.tour-card--balanced { --tint: color-mix(in srgb, var(--sage) 8%, var(--paper)); --accent: var(--sage); }
 .tour-card--pause { --tint: color-mix(in srgb, var(--ochre) 15%, var(--paper)); --accent: var(--ochre); }
 .tour-card[class*="tour-card--"] { background: var(--tint); border-color: transparent; }
 .tour-card[class*="tour-card--"] .tour-card__badge { background: var(--accent); }
 .tour-card__media { display: block; overflow: hidden; border-radius: 5px; }
-.tour-card__media img { width: 100%; height: 270px; object-fit: cover; border-radius: 5px; transition: transform .6s; }
+.tour-card__media img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 5px; transition: transform .6s; }
 .tour-card__badge {
   position: absolute;
   top: 24px;
@@ -94,7 +94,7 @@ body.page-tours { background: var(--cream); }
   margin: 8px 12px 4px;
   font: 500 32px/1.1 var(--serif);
 }
-.tour-card__title a { color: #121212; transition: color .2s; }
+.tour-card__title a { color: var(--ink); transition: color .2s; }
 .tour-card__title a:hover { color: var(--rust); }
 .tour-card__excerpt { min-height: 152px; margin: 0 12px; font-size: 14px; line-height: 1.8; color: var(--text); }
 .tour-meta { display: flex; align-items: center; margin: 0 12px; font-size: 13px; line-height: 1.75; color: var(--text); }
@@ -198,7 +198,7 @@ body.page-tours { background: var(--cream); }
 
 /* Intro */
 .sj-intro { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 30px 72px; align-items: start; }
-.sj-intro__big { margin-top: 26px; font: italic 400 24px/1.5 var(--serif); color: var(--brown-2); }
+.sj-intro__big { margin-top: 26px; font: italic 500 24px/1.5 var(--serif); color: var(--brown-2); }
 .sj-intro__body { display: flex; flex-direction: column; gap: 18px; padding-top: 34px; font-size: 15px; line-height: 1.9; color: var(--text); }
 .sj-intro__body strong { font-weight: 600; color: var(--ink); }
 .sj-time { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 8px; padding-top: 22px; font: 500 21px/1.4 var(--serif); color: var(--sage); border-top: 1px solid var(--line); }
@@ -236,7 +236,7 @@ body.page-tours { background: var(--cream); }
 .sj-well__card { display: flex; flex-direction: column; gap: 22px; padding: 34px; background: var(--paper); border: 1px solid var(--line-soft); border-radius: 6px 70px 6px 6px; }
 .sj-well__title { font: 500 26px/1.2 var(--serif); color: var(--ink); }
 .sj-well__card .sj-checks { display: flex; flex-direction: column; gap: 12px; }
-.sj-well__close { font: italic 400 19px/1.5 var(--serif); color: var(--brown-2); }
+.sj-well__close { font: italic 500 19px/1.5 var(--serif); color: var(--brown-2); }
 
 /* Small group difference */
 .sj-group { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 40px 72px; align-items: center; }
@@ -254,7 +254,7 @@ body.page-tours { background: var(--cream); }
 
 /* What's included */
 .sj-incl__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 32px; padding: 34px; background: var(--paper); border: 1px solid var(--line-soft); border-radius: 6px; }
-.sj-incl__close { max-width: 760px; margin-top: 28px; font: italic 400 21px/1.5 var(--serif); color: var(--brown-2); }
+.sj-incl__close { max-width: 760px; margin-top: 28px; font: italic 500 21px/1.5 var(--serif); color: var(--brown-2); }
 .sj-incl__list strong { display: block; margin-bottom: 2px; font-weight: 700; }
 .sj-incl__list li { color: var(--text); }
 .sj-incl__fine { max-width: 760px; margin-top: 16px; }
@@ -288,29 +288,27 @@ body.page-tours { background: var(--cream); }
 
 /* Upcoming trips */
 .sj-dates { margin-top: 50px; }
-.sj-date-list { border-top: 1px solid var(--line); }
-.sj-date { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: center; gap: 14px 32px; padding: 20px 0; border-bottom: 1px solid var(--line); }
-.sj-date__day { font: 500 26px/1.2 var(--serif); color: var(--ink); }
-.sj-date__day span { color: var(--rust); }
-.sj-date__head { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
-.sj-date__tag { font: 600 10.5px/1.6 var(--sans); letter-spacing: 1.4px; text-transform: uppercase; color: var(--muted); }
-.sj-date__plan { margin-top: 4px; padding: 8px 16px; font: 600 12px/1.5 var(--sans); color: #fff; background: var(--sage); border-radius: 999px; transition: background .2s; }
-.sj-date__plan:hover { background: var(--rust); }
-.sj-date__chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.sj-date__chip { display: flex; flex-direction: column; gap: 2px; padding: 12px 16px; background: var(--tint); border: 1px solid transparent; border-radius: 6px; transition: border-color .25s, transform .25s, box-shadow .25s; }
-.sj-date__chip strong { font-size: 13.5px; font-weight: 600; line-height: 1.5; color: var(--ink); }
-.sj-date__chip span { font-size: 12.5px; line-height: 1.5; color: var(--text); }
-.sj-date__chip strong::after { content: " →"; color: var(--accent); }
-.sj-date__chip:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 18px rgba(56, 45, 38, .08); }
-.sj-date__chip--essence, .sj-day--essence { --tint: color-mix(in srgb, var(--rust) 11%, var(--paper)); --accent: color-mix(in srgb, var(--rust) 85%, #fff); }
-.sj-date__chip--balanced, .sj-day--balanced { --tint: color-mix(in srgb, var(--sage) 13%, var(--paper)); --accent: var(--sage); }
-.sj-date__chip--pause, .sj-day--pause { --tint: color-mix(in srgb, var(--ochre) 15%, var(--paper)); --accent: var(--ochre); }
+/* departures grouped by month; each departure is one journey (colour = journey) */
+.sj-months { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+.sj-month__name { padding-bottom: 12px; margin-bottom: 16px; font: 500 28px/1.2 var(--serif); color: var(--ink); border-bottom: 1px solid var(--line); }
+.sj-month__name span { color: var(--rust); }
+.sj-month__list { display: grid; gap: 12px; }
+.sj-dep { display: flex; flex-direction: column; gap: 3px; padding: 14px 16px 14px 18px; background: var(--tint); border-left: 3px solid var(--accent); border-radius: 4px; transition: transform .25s, box-shadow .25s; }
+.sj-dep:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(56, 45, 38, .08); }
+.sj-dep__dates { font: 500 22px/1.2 var(--serif); color: var(--ink); }
+.sj-dep__journey { font-size: 13px; font-weight: 600; line-height: 1.5; color: color-mix(in srgb, var(--accent) 75%, var(--ink)); }
+.sj-dep__cta { margin-top: 4px; font-size: 12.5px; font-weight: 600; line-height: 1.5; color: var(--brown); }
+.sj-dep:hover .sj-dep__cta { color: var(--rust); }
+.sj-key { font-weight: 600; color: color-mix(in srgb, var(--accent) 75%, var(--ink)); }
+.sj-dep--essence, .sj-key--essence, .sj-day--essence { --tint: var(--blush-soft); --accent: var(--terracotta); }
+.sj-dep--balanced, .sj-key--balanced, .sj-day--balanced { --tint: color-mix(in srgb, var(--sage) 8%, var(--paper)); --accent: var(--sage); }
+.sj-day--pause { --tint: color-mix(in srgb, var(--ochre) 15%, var(--paper)); --accent: var(--ochre); }
 
 /* Day-by-day */
-.sj-days__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.sj-days__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .sj-day { display: flex; flex-direction: column; gap: 12px; padding: 30px 28px; font-size: 14px; line-height: 1.8; color: var(--text); background: var(--tint); border-top: 3px solid var(--accent); border-radius: 4px; transition: transform .3s, box-shadow .3s; }
 .sj-day:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(56, 45, 38, .09); }
-.sj-day__meta { font: 600 11px/1.6 var(--sans); letter-spacing: 1.6px; text-transform: uppercase; color: var(--accent); }
+.sj-day__meta { font: 600 11px/1.6 var(--sans); letter-spacing: 1.6px; text-transform: uppercase; color: color-mix(in srgb, var(--accent) 75%, var(--ink)); }
 .sj-day__title { font: 500 28px/1.15 var(--serif); color: var(--ink); }
 .sj-day__link { margin-top: auto; padding-top: 8px; font-size: 13px; font-weight: 600; color: var(--brown); }
 .sj-day:hover .sj-day__link { color: var(--rust); }
@@ -325,7 +323,7 @@ body.page-tours { background: var(--cream); }
   .sj-exp__grid, .sj-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sj-step:not(:last-child)::after { content: none; }
   .sj-incl__list, .sj-excl__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .sj-date { grid-template-columns: minmax(0, 1fr); }
+  .sj-months { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sj-group__img { height: 520px; }
   .tp-faq__title { font-size: 40px; }
 }
@@ -335,7 +333,7 @@ body.page-tours { background: var(--cream); }
   .sj-intro__body { padding-top: 0; }
   .sj-group__img { height: 420px; }
   .sj-days__list { grid-template-columns: minmax(0, 1fr); }
-  .tour-card__media img { height: 320px; }
+  .tour-card__media img { max-height: 460px; }
   .tour-card__excerpt { min-height: 0; }
 }
 @media (max-width: 767px) {
@@ -347,7 +345,7 @@ body.page-tours { background: var(--cream); }
   .tp-journeys__desc { margin-bottom: 10px; font-size: 14px; }
   .tp-season { margin-bottom: 26px; font-size: 18px; }
   .tp-journeys { padding-bottom: 40px; }
-  .tour-card__media img { height: 260px; }
+  .tour-card__media img { max-height: none; }
   .tp-faq__title { font-size: 36px; }
   .tp-faq__cols { flex-direction: column; gap: 0; }
   .sj-sec { width: calc(100% - 36px); padding: 46px 0; }
@@ -362,8 +360,7 @@ body.page-tours { background: var(--cream); }
   .sj-incl__list { padding: 24px; }
   .sj-group__img { height: 300px; border-radius: 3px 42px 3px 3px; }
   .sj-nos li { font-size: 18px; }
-  .sj-date__chips { grid-template-columns: minmax(0, 1fr); }
-  .sj-date__day { font-size: 24px; }
+  .sj-months { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .sj-incl__close { font-size: 19px; }
 }
 @media (prefers-reduced-motion: reduce) {

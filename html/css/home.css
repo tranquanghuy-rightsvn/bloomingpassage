@@ -59,7 +59,7 @@
   height: var(--wave-h);
   pointer-events: none;
 }
-.hw-back { fill: var(--rust); opacity: .6; }
+.hw-back { fill: var(--terracotta); opacity: .75; }
 .hw-front { fill: var(--cream); }
 .hero::after { content: ""; position: absolute; right: 0; bottom: 0; left: 0; z-index: 1; height: 3px; background: var(--cream); }
 .hero__content {
@@ -89,13 +89,13 @@
   padding: 18px 30px;
   font: 600 12px/15px var(--sans);
   letter-spacing: 2px;
-  color: var(--cream);
-  background: var(--sage);
-  border: 1px solid var(--cream);
+  color: #fff;
+  background: var(--rust);
+  border: 1px solid color-mix(in srgb, var(--gold) 70%, #fff);
   border-radius: 2px;
   transition: transform .25s, background-color .25s;
 }
-.btn-hero:hover { transform: scale(1.04); background: var(--rust); }
+.btn-hero:hover { transform: scale(1.04); background: var(--sage); }
 /* Hero text slides down into place on load, one line after another */
 .hero__title, .hero__desc, .btn-hero { animation: hero-drop .9s cubic-bezier(.22, .61, .36, 1) backwards; }
 .hero__title { animation-delay: .15s; }
@@ -134,10 +134,10 @@
 .about__text { display: flex; flex: 0 1 auto; width: calc(40% - 25.6px); max-width: 450px; flex-direction: column; align-items: flex-start; gap: 22px; }
 .about__eyebrow { font: 600 11px/22.4px var(--sans); letter-spacing: 2.2px; color: var(--sage); }
 .about__title { font: 500 52px/1.12 var(--serif); letter-spacing: -.5px; color: var(--ink); }
-.about__lead { font: italic 400 26px/1.45 var(--serif); color: var(--sage); }
+.about__lead { font: italic 500 26px/1.45 var(--serif); color: var(--sage); }
 .about__body { display: flex; flex-direction: column; gap: 12px; max-width: 450px; font: 400 15px/1.85 var(--sans); color: var(--ink); }
 .about__body .about__lead { padding: 4px 0 4px 18px; font-size: 23px; line-height: 1.4; border-left: 2px solid var(--gold); }
-.about__more { margin-top: 4px; font: italic 400 19px/1.4 var(--serif); color: var(--text); }
+.about__more { margin-top: 4px; font: italic 500 19px/1.4 var(--serif); color: var(--text); }
 .about__more + .link-story { margin-top: -14px; }
 .link-story {
   margin-top: 8px;
@@ -172,15 +172,15 @@
   mask: url(../images/ink-wash.svg) center / 100% 100% no-repeat;
 }
 .ink-art::before { inset: 14% 22% -9% -7%; background: var(--gold); opacity: .42; }
-.ink-art::after { inset: -8% -6% 40% 46%; background: var(--rust); opacity: .2; transform: scaleX(-1) rotate(4deg); }
+.ink-art::after { inset: -8% -6% 40% 46%; background: var(--blush); opacity: .55; transform: scaleX(-1) rotate(4deg); }
 .ink-art__deco { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
-.ink-art__swoosh { fill: var(--rust); opacity: .85; }
+.ink-art__swoosh { fill: var(--terracotta); opacity: .85; }
 .ink-art__bamboo .bb-stem, .ink-art__bamboo .bb-leaves path, .ink-art__bamboo .bb-stalk { fill: #4f6b2a; }
 .ink-art__bamboo .bb-joints { fill: none; stroke: #fff; stroke-linecap: round; }
 .ink-art__bamboo .bb-grow, .ink-art__bamboo .bb-rise, .ink-art__bamboo .bb-branch, .ink-art__bamboo .bb-leaves path { transform-box: fill-box; }
 .ink-art__bamboo .bb-grow { transform-origin: center; }
 .ink-art__bamboo .bb-rise { transform-origin: 50% 100%; }
-.ink-art__splat { fill: var(--rust); opacity: .7; }
+.ink-art__splat { fill: var(--terracotta); opacity: .7; }
 .ink-art__deco path, .ink-art__deco circle { transform-box: fill-box; transform-origin: center; }
 
 /* Appears in sequence when scrolled into view (home.js adds .is-in):
@@ -415,7 +415,7 @@
   transition: transform .3s, box-shadow .3s;
 }
 .tour-card:hover { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(56, 45, 38, .1); }
-.tour-card__img { width: 100%; height: 224px; object-fit: cover; border-radius: 6px; }
+.tour-card__img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
 .tour-card__badge {
   position: absolute;
   top: 20px;
@@ -430,8 +430,8 @@
   border-radius: 30px;
 }
 /* each journey has its own soft tint: blush, sage, warm sand */
-.tour-card--essence { --tint: color-mix(in srgb, var(--rust) 11%, var(--paper)); --accent: color-mix(in srgb, var(--rust) 85%, #fff); }
-.tour-card--balanced { --tint: color-mix(in srgb, var(--sage) 13%, var(--paper)); --accent: var(--sage); }
+.tour-card--essence { --tint: var(--blush-soft); --accent: var(--terracotta); }
+.tour-card--balanced { --tint: color-mix(in srgb, var(--sage) 8%, var(--paper)); --accent: var(--sage); }
 .tour-card--pause { --tint: color-mix(in srgb, var(--ochre) 15%, var(--paper)); --accent: var(--ochre); }
 .tour-card[class*="tour-card--"] { background: var(--tint); }
 .tour-card[class*="tour-card--"] .tour-card__badge { background: var(--accent); }
@@ -471,6 +471,7 @@
   box-shadow: 0 8px 22px rgba(56, 45, 38, .1);
   transition: transform .4s ease, box-shadow .4s ease;
 }
+.care-item__img--face { object-position: 50% 28%; } /* portrait photo: keep the face in the circle */
 .care-item:hover .care-item__img { transform: scale(1.04); box-shadow: 0 12px 28px rgba(56, 45, 38, .16); }
 .care-item__label { font: 500 18px/1.3 var(--serif); color: var(--brown); }
 
@@ -704,3 +705,24 @@
   .hero__title { font-size: 40px; }
   .hero__desc { font-size: 16px; }
 }
+
+/* ===== Brighter palette accents (client palette board, 2026-10-16) ===== */
+/* core values: a soft blush band with golden icons */
+.facets--values { margin-top: 30px; padding-top: 46px; padding-bottom: 46px; background: linear-gradient(180deg, var(--blush-soft), #fdf3ee); }
+.facets--values .facets__list { border-color: color-mix(in srgb, var(--gold) 55%, transparent); }
+.facets--values .facet__icon { color: var(--rust); background: var(--paper); box-shadow: inset 0 0 0 1px var(--gold), 0 6px 16px rgba(181, 85, 58, .1); }
+.facets--values .facet:hover .facet__icon { color: var(--paper); background: var(--terracotta); }
+/* round treatment photos: thin golden ring */
+.care-item__img { box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--gold); }
+/* why Central Vietnam: warm sand wash */
+.why { background: linear-gradient(180deg, var(--cream), var(--sand) 55%, var(--cream)); }
+/* closing invitation: blush-to-peach like the palette board */
+.cta {
+  padding-bottom: calc(clamp(44px, 6vw, 86px) + 40px);
+  background:
+    url(../images/central-vietnam-hand-drawn-v3.png) no-repeat 100% 100% / 600px,
+    linear-gradient(110deg, #fdf1ea, #f8dccf 60%, #f4cdbd);
+  background-blend-mode: soft-light, normal;
+}
+/* the footer band rises over the invitation, so its waves sit on the blush wash */
+body:has(.cta) .site-footer { --footer-lead: transparent; position: relative; margin-top: calc(-1 * clamp(44px, 6vw, 86px)); }

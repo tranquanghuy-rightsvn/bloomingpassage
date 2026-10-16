@@ -96,15 +96,15 @@ body { color: var(--ink); background: var(--cream); }
 }
 
 /* ----- Philosophy ----- */
-.ab-philo { background: var(--sand); border-top: 1px solid #ded1bf; border-bottom: 1px solid #ded1bf; }
+.ab-philo { background: var(--sand); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .ab-philo__head { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 64px; align-items: end; }
-.ab-philo__lead { max-width: 520px; font: italic 400 23px/1.5 var(--serif); color: var(--ink); }
+.ab-philo__lead { max-width: 520px; font: italic 500 23px/1.5 var(--serif); color: var(--ink); }
 .ab-philo__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 44px; }
-.ab-philo__item { display: flex; flex-direction: column; gap: 14px; padding: 30px 28px; background: var(--paper); border: 1px solid #dacbb7; border-radius: 24px 4px 4px; }
+.ab-philo__item { display: flex; flex-direction: column; gap: 14px; padding: 30px 28px; background: var(--paper); border: 1px solid var(--line); border-radius: 24px 4px 4px; }
 .ab-philo__num { font: 500 30px/1 var(--serif); color: var(--gold); }
 .ab-philo__title { font: 500 27px/1.15 var(--serif); letter-spacing: -.02em; color: var(--ink); }
 .ab-philo__close { display: flex; flex-direction: column; align-items: center; gap: 10px; max-width: 720px; margin-top: 48px; text-align: center; }
-.ab-philo__invite { font: italic 400 22px/1.5 var(--serif); color: var(--brown-2); }
+.ab-philo__invite { font: italic 500 22px/1.5 var(--serif); color: var(--brown-2); }
 .ab-philo__sign { margin-top: 6px; font: 500 28px/1.3 var(--serif); color: var(--ink); }
 .ab-philo__sign em { color: var(--rust-dark); }
 
@@ -130,7 +130,7 @@ body { color: var(--ink); background: var(--cream); }
 .ab-founder__photo::before { content: ""; position: absolute; inset: -14px; border: 1px solid var(--line); border-radius: 50%; }
 .ab-founder__img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; border-radius: 50%; box-shadow: 0 10px 28px rgba(56, 45, 38, .12); }
 .ab-founder__body { display: flex; flex-direction: column; gap: 22px; }
-.ab-founder__quote { display: flex; flex-direction: column; gap: 14px; max-width: 640px; margin: 0; font: italic 400 23px/1.55 var(--serif); color: var(--ink); }
+.ab-founder__quote { display: flex; flex-direction: column; gap: 14px; max-width: 640px; margin: 0; font: italic 500 23px/1.55 var(--serif); color: var(--ink); }
 .ab-founder__name { display: flex; flex-direction: column; gap: 2px; font: 500 26px/1.2 var(--serif); color: var(--ink); }
 /* Our story: a long letter, so the portrait stays in view beside it on wide screens */
 .ab-letter .ab-founder { align-items: start; }
@@ -140,7 +140,7 @@ body { color: var(--ink); background: var(--cream); }
 .ab-founder__frame::before { content: ""; position: absolute; inset: -14px; border: 1px solid var(--line); border-radius: 50%; }
 .ab-letter .ab-founder__name { align-items: center; text-align: center; }
 .ab-letter .ab-founder__body { max-width: 680px; }
-.ab-letter__lead { font: italic 400 26px/1.45 var(--serif); color: var(--ink); }
+.ab-letter__lead { font: italic 500 26px/1.45 var(--serif); color: var(--ink); }
 .ab-letter__text { display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.9; color: var(--text); }
 .ab-letter__turn { padding: 6px 0 6px 20px; font: italic 500 24px/1.4 var(--serif); color: var(--rust-dark); border-left: 2px solid var(--gold); }
 .ab-letter__close { margin-top: 6px; font: 500 28px/1.3 var(--serif); color: var(--ink); }
@@ -186,14 +186,14 @@ body { color: var(--ink); background: var(--cream); }
   align-items: center;
   gap: 18px;
   background: var(--sand);
-  border-top: 1px solid #ded1bf;
+  border-top: 1px solid var(--line);
 }
 .ab-talk__title { max-width: 850px; text-align: center; }
 .ab-talk__lead { max-width: 670px; text-align: center; }
 .ab-talk__grid { display: grid; grid-template-columns: 1.04fr 1fr; gap: 48px; margin-top: 30px; }
 .ab-talk__media { min-width: 0; }
 .ab-talk__img { width: 100%; height: 420px; object-fit: cover; border-radius: 4px; }
-.ab-talk__card { min-width: 0; padding: 30px; background: var(--paper); border: 1px solid #dacbb7; border-radius: 4px; }
+.ab-talk__card { min-width: 0; padding: 30px; background: var(--paper); border: 1px solid var(--line); border-radius: 4px; }
 .ab-form { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 18px; }
 .ab-form__field { min-width: 0; padding-bottom: 20px; }
 .ab-form__field--full, .ab-form__actions { grid-column: 1 / -1; }
@@ -287,3 +287,10 @@ body { color: var(--ink); background: var(--cream); }
   .ab-value__img, .ab-btn { transition: none; transform: none; }
 }
 .ab-letter { scroll-margin-top: var(--header-h, 90px); }
+
+/* the footer's wave band picks up the sand of the closing section, so the two read as one */
+body:has(.ab-talk) .site-footer { --footer-lead: var(--sand); }
+
+/* founder portrait: reveal as a widening circle, so the thin ring 14px outside the photo is never clipped */
+.js-anim .ab-founder__photo[data-anim="img"] { clip-path: circle(30% at 50% 50%); }
+.js-anim .ab-founder__photo[data-anim="img"].is-in { clip-path: circle(100% at 50% 50%); }

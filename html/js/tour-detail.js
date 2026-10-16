@@ -52,6 +52,12 @@
     var wanted = new URLSearchParams(location.search).get('departure');
     var dep = plan.querySelector('[name="departure"]');
     if (wanted && dep.querySelector('option[value="' + wanted + '"]')) dep.value = wanted;
+    // each departure belongs to one journey: keep the two selects in step
+    var jour = plan.querySelector('[name="journey"]');
+    var depJourney = function () { var o = dep.options[dep.selectedIndex]; return o ? o.getAttribute('data-journey') : null; };
+    dep.addEventListener('change', function () { if (depJourney()) jour.value = depJourney(); });
+    jour.addEventListener('change', function () { if (depJourney() && depJourney() !== jour.value) dep.value = ''; });
+    if (depJourney()) jour.value = depJourney();
     plan.addEventListener('submit', function (e) {
       e.preventDefault();
       var v = function (n) { var el = plan.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
