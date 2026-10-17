@@ -412,3 +412,4 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
 .plan-form textarea.field { height: 96px; margin-bottom: 18px; }
 /* portrait slides: keep the face in the wide frame (and in its thumbnail) */
 .tgal__face { object-position: 50% 18%; }
+.tgal__face--tea { object-position: 50% 8%; }
