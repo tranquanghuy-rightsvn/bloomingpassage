@@ -5,7 +5,7 @@ body.page-tours { background: var(--cream); }
 .tp-banner {
   position: relative;
   padding: 64px 24px 70px;
-  background: var(--gold) url(../images/banner-hoian-aerial-dusk.webp) 50% 45% / cover no-repeat;
+  background: var(--gold) url(../images/banner-hue-royal-aodai.webp) 50% 30% / cover no-repeat;
 }
 .tp-banner::before {
   content: "";
@@ -296,12 +296,15 @@ body.page-tours { background: var(--cream); }
 .sj-dep { display: flex; flex-direction: column; gap: 3px; padding: 14px 16px 14px 18px; background: var(--tint); border-left: 3px solid var(--accent); border-radius: 4px; transition: transform .25s, box-shadow .25s; }
 .sj-dep:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(56, 45, 38, .08); }
 .sj-dep__dates { font: 500 22px/1.2 var(--serif); color: var(--ink); }
-.sj-dep__journey { font-size: 13px; font-weight: 600; line-height: 1.5; color: color-mix(in srgb, var(--accent) 75%, var(--ink)); }
+/* journey name as a coloured pill: terracotta for 7 days, leaf green for 10 days (client request) */
+.sj-dep__journey { align-self: flex-start; margin: 4px 0 2px; padding: 3px 10px; font-size: 12.5px; font-weight: 700; line-height: 1.5; letter-spacing: .2px; color: #fff; background: var(--pill); border-radius: 999px; }
 .sj-dep__cta { margin-top: 4px; font-size: 12.5px; font-weight: 600; line-height: 1.5; color: var(--brown); }
 .sj-dep:hover .sj-dep__cta { color: var(--rust); }
-.sj-key { font-weight: 600; color: color-mix(in srgb, var(--accent) 75%, var(--ink)); }
+.sj-key { font-weight: 700; color: var(--pill); }
 .sj-dep--essence, .sj-key--essence, .sj-day--essence { --tint: var(--blush-soft); --accent: var(--terracotta); }
 .sj-dep--balanced, .sj-key--balanced, .sj-day--balanced { --tint: color-mix(in srgb, var(--sage) 8%, var(--paper)); --accent: var(--sage); }
+.sj-dep--essence, .sj-key--essence { --pill: var(--rust); }
+.sj-dep--balanced, .sj-key--balanced { --pill: #4f6b45; --tint: #eef3e8; --accent: #4f6b45; }
 .sj-day--pause { --tint: color-mix(in srgb, var(--ochre) 15%, var(--paper)); --accent: var(--ochre); }
 
 /* Day-by-day */

@@ -59,7 +59,6 @@ Free files below: commercial use allowed, no attribution required.
 | beach-sunset-calm (tour pages; original in source-images/free/) | Pexels 36123467 |
 | garden-meditation (tour pages; original in source-images/free/) | Pexels 13865894 |
 | facial-smile-treatment (tour pages; original in source-images/free/) | Pexels 7581075 |
-| hoian-yellow-street (tour pages; original in source-images/free/) | Pexels 38207562 |
 | conical-hat-makers (tour pages; original in source-images/free/) | Pexels 30174367 |
 | pottery-painting-hat (tour pages; original in source-images/free/) | Pexels 36652609 |
 | lotus-tea-ceremony (tour pages; original in source-images/free/) | Pexels 35869746 |
@@ -72,6 +71,11 @@ Free files below: commercial use allowed, no attribution required.
 | hoian-aodai-friends (7-Day Curated Essence cover: home, Journeys, journey cards) | Supplied by the team (2026-10-16, "image.png"; original in source-images-client/hoian-aodai-friends.png) |
 | rice-field-cycling-friends (Gallery #61, free to place) | Supplied by the team (2026-10-17, "Ảnh ChatGPT 00_30_01 … -1.png"; original in source-images-client/rice-field-cycling-friends.png) |
 | bp-experiences-collage (About Us "Your next chapter starts with a conversation") | Supplied by the team (2026-10-16, "Ảnh ChatGPT 23_39_09 … -4.png"; original in source-images-client/bp-experiences-collage.png) |
+| danang-resort-beach-slide (Home, first Da Nang slide) | Supplied by the team (2026-10-17, "image (13).png"; original in source-images-client/) |
+| hoian-river-lanterns-aodai-slide (Home, first Hoi An slide) | Supplied by the team (2026-10-17, "image (14).png"; original in source-images-client/) |
+| hue-ngo-mon-lotus-slide (Home, first Hue slide) | Supplied by the team (2026-10-17, "image (15).png"; original in source-images-client/) |
+| banner-hue-royal-aodai (Journeys banner; bottom strip cropped to drop the KLOOK watermark — likely Klook's photo, check rights) | Client file "ao dai-1.jpg"; original source-images-client/hue-royal-aodai-ngo-mon__klook.jpg |
+| banner-rice-planting (Gallery banner) | Supplied by the team (2026-10-17, "image.png" set; original source-images-client/rice-planting.png) |
 | longan-harvest (Home "Through the lens", large middle photo) | Supplied by the team (2026-10-16, "image (5).png"; original in source-images-client/longan-harvest.png) |
 | banh-mi-iced-coffee (Home + Gallery "Culinary Discovery" tab, replaces food-2-1024x1024) | Supplied by the team (2026-10-16, "image (17).png"; original in source-images-client/banh-mi-iced-coffee.png) |
 | facial-mask-brush (tour pages; original in source-images/free/) | Pexels 5659018 |
@@ -166,13 +170,14 @@ Added 2026-10-17: BP - Beauty 8 (facial mask, old Home "Facial Treatment" circle
 Added 2026-10-17: lantern-making-class, street-snack-friends, son-tra-hikers ("Coastal Trail Hikers’ Scenic Vista"), son-tra-banyan-hike (Gallery photos #15, #25, #28, #41).
 Added 2026-10-17: cooking-class-papaya (Home "Through the lens"; replaced by cooking-class-table).
 Added 2026-10-17: women-friends-seaside (Pexels 6540137, old 10-Day cover).
-Added 2026-10-17: BP- Healthcare 3 (blood pressure check, old "Proactive Health & Longevity" tab photo).
+(BP- Healthcare 3 was removed on 2026-10-17 and restored the same day at the client's request: Home + Gallery "Proactive Health & Longevity" tab.)
 Added 2026-10-17: beach-friends-relax (two friends on a sun lounger, client file "Thư giãn bên biển và núi xa.png").
 Added 2026-10-17: facial-treatment-clinic (Pexels 3985361, Health & Longevity tab).
 Added 2026-10-17: rice-paper-making (client file "Handmade Rice Paper.webp", Journeys "Artisan & Orchard" card).
 Added 2026-10-17: danang-beach-sign (Pexels 26550067, DANANG letters), hue-walking-street (client file "pho-di-bo-nguyen-dinh-chieu.png", Home Hue slide).
 Added 2026-10-17: village-pottery-wheel (Pexels 2134816, Journeys "Artisan & Orchard" card).
 Added 2026-10-17: women-friends-tea (Unsplash+ CY7HRD-XChk).
+Added 2026-10-17: hoian-yellow-street (Pexels 38207562), client asked to delete photo #123.
 
 Unsplash: https://unsplash.com/photos/<id> · Pexels: https://www.pexels.com/photo/<id>/ · Pixabay: https://pixabay.com/photos/<id>/
 Hoi An photos were softened slightly (saturation/contrast) so they sit together as one set.

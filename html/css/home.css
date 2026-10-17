@@ -726,3 +726,5 @@
 }
 /* the footer band rises over the invitation, so its waves sit on the blush wash */
 body:has(.cta) .site-footer { --footer-lead: transparent; position: relative; margin-top: calc(-1 * clamp(44px, 6vw, 86px)); }
+/* Hoi An first slide: keep the woman in the ao dai inside the tall frame */
+.place__slide--hoian-lady { object-position: 30% 50%; }

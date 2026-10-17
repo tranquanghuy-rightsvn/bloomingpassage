@@ -97,6 +97,12 @@
 .tour-facts .ic--flag { width: 24px; }
 .tour-facts__label { font-size: 13px; font-weight: 600; line-height: 19.5px; }
 .tour-facts__value { font-size: 14px; font-weight: 600; line-height: 23.1px; color: var(--brown-2); }
+/* Meals Included: two lines (breakfast / lunch & dinner), so it takes two columns */
+.tour-facts { align-items: start; }
+.tour-facts__meals { grid-column: span 2; align-items: flex-start; }
+.tour-facts__meals .tour-facts__label { flex-basis: 100%; }
+.tour-facts__meals .tour-facts__value { flex-basis: 100%; font-weight: 500; }
+.tour-facts__meals .tour-facts__value b { font-weight: 700; }
 
 .tour-intro { margin-top: 20px; margin-bottom: 36px; line-height: 1.75; }
 .tour-route { margin-top: 22px; font: 600 11px/1.7 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; color: var(--rust); }
@@ -377,6 +383,7 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
   .tour-meta__list { flex-wrap: wrap; row-gap: 0; font-size: 14px; line-height: 25.2px; }
   .tour-meta .share__title { font-size: 28px; line-height: 35px; }
   .tour-facts { grid-template-columns: minmax(0, 1fr); }
+  .tour-facts__meals { grid-column: auto; }
   .tour-facts li { padding-left: 34px; }
   .tour-body { gap: 48px; }
   .tour-h { font-size: 28px; line-height: 35px; }

@@ -6,7 +6,7 @@ body.is-cream { background: var(--cream); }
 .journal-banner {
   position: relative;
   padding: 64px 24px 70px;
-  background: var(--gold) url(../images/banner-mi-quang.webp) 50% 50% / cover no-repeat;
+  background: var(--gold) url(../images/night-3-1024x1024.jpg) 50% 50% / cover no-repeat;
 }
 .journal-banner::before {
   content: "";
