@@ -76,6 +76,7 @@ Free files below: commercial use allowed, no attribution required.
 | hue-ngo-mon-lotus-slide (Home, first Hue slide) | Supplied by the team (2026-10-17, "image (15).png"; original in source-images-client/) |
 | banner-hue-royal-aodai (Journeys banner; bottom strip cropped to drop the KLOOK watermark — likely Klook's photo, check rights) | Client file "ao dai-1.jpg"; original source-images-client/hue-royal-aodai-ngo-mon__klook.jpg |
 | banner-rice-planting (Gallery banner) | Supplied by the team (2026-10-17, "image.png" set; original source-images-client/rice-planting.png) |
+| hue-royal-dinner (10-day "A Royal Imperial Dining Experience") | Supplied by the team (2026-10-17, "Bữa tối ấm áp bên cung điện ven sông.png"; original in source-images-client/hue-royal-dinner.png) |
 | longan-harvest (Home "Through the lens", large middle photo) | Supplied by the team (2026-10-16, "image (5).png"; original in source-images-client/longan-harvest.png) |
 | banh-mi-iced-coffee (Home + Gallery "Culinary Discovery" tab, replaces food-2-1024x1024) | Supplied by the team (2026-10-16, "image (17).png"; original in source-images-client/banh-mi-iced-coffee.png) |
 | facial-mask-brush (tour pages; original in source-images/free/) | Pexels 5659018 |
