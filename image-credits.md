@@ -35,7 +35,7 @@ Free files below: commercial use allowed, no attribution required.
 | mineral-mud-bath (Gallery) | Client (source-images-client/mineral-mud-bath.png — "Thư giãn trong bồn tắm bùn khoáng.png") |
 | curated-essence-massage (7-Day Curated Essence cover: home, Journeys, journey cards; `-card` is a 1.6:1 crop) | Client (source-images-client/curated-essence-massage.png — "Ảnh ChatGPT 20_57_22 14 thg 10, 2026.png") |
 | danang-cafe-reading (About Us values card) | Client (source-images-client/danang-cafe-reading.png — "e4170e5e-f12c-4021-b6bc-9dad4df5091c.png") |
-| women-friends-beach-sunset (About Us values card "Longevity") | Supplied by the team (2026-10-16, "Ảnh ChatGPT 23_39_06 … -1.png"); full-size PNG kept in html/images until it is optimised |
+| women-friends-surf-sunset (About Us values card "Longevity") | Supplied by the team (2026-10-22, "Bốn người bạn dạo bước dưới hoàng hôn.png", AI-edited for more diverse women; replaces women-friends-beach-sunset, deleted); source PNG in source-images-client/women-friends-surf-sunset.png |
 | health-consultation-team | Client (source-images-client/tuvanykhoa.png) |
 | traditional-weaving (Home, "Beyond the Tourist Trail") | Client (source-images-client/tradional-det.png) |
 | pho-bo-herbs (Home Culinary tab) | Client (source-images-client/pho-bo-herbs.png — "Phở bò nóng hổi bên gia vị tươi.png") |

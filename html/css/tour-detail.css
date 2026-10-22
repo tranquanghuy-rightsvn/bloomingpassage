@@ -12,14 +12,23 @@
 
 .tgal__main { position: relative; overflow: hidden; border-radius: 16px; }
 .tgal__track { display: flex; align-items: flex-start; transition: transform .5s ease; }
-.tgal__track li { flex: 0 0 100%; }
+.tgal__track li { position: relative; flex: 0 0 100%; overflow: hidden; background: var(--cream); border-radius: 16px; }
+/* the whole photo is shown (no top/bottom crop); the leftover frame is filled with a soft, blurred copy of it */
+.tgal__track li::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background: var(--slide-bg, none) center / cover no-repeat;
+  filter: blur(28px) saturate(1.1);
+  opacity: .75;
+}
 .tgal__track img {
+  position: relative;
   width: 100%;
   height: auto;
   aspect-ratio: 3 / 2; /* every slide gets the same frame, so a portrait photo can't stretch the slider and leave a gap on phones */
   max-height: 580px;
-  object-fit: cover;
-  border-radius: 16px;
+  object-fit: contain;
 }
 .tgal__track .tgal__tall { aspect-ratio: 600 / 484; } /* same crop as the original's 600x484 rendition */
 .tgal__arrow, .tgal__nav {
@@ -410,6 +419,6 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
 .booking__title { margin: 6px 0 8px; font: 500 26px/1.25 var(--serif); text-align: center; color: var(--brown-2); }
 .booking__intro { margin-bottom: 18px; font-size: 13.5px; line-height: 1.65; text-align: center; color: var(--muted); }
 .plan-form textarea.field { height: 96px; margin-bottom: 18px; }
-/* portrait slides: keep the face in the wide frame (and in its thumbnail) */
-.tgal__face { object-position: 50% 18%; }
-.tgal__face--tea { object-position: 50% 8%; }
+/* portrait photos: keep the face in the cropped thumbnail (the main slide shows the whole photo) */
+.tgal__strip .tgal__face { object-position: 50% 18%; }
+.tgal__strip .tgal__face--tea { object-position: 50% 8%; }

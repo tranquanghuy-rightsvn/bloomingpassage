@@ -12,6 +12,12 @@
     var current = 0;
     var first = 0;
 
+    // blurred backdrop behind each uncropped slide: reuse its small thumbnail, so lazy slides stay lazy
+    Array.prototype.forEach.call(track.children, function (li, i) {
+      var thumb = thumbs[i] && thumbs[i].querySelector('img');
+      if (thumb) li.style.setProperty('--slide-bg', 'url("' + thumb.getAttribute('src') + '")');
+    });
+
     var perView = function () {
       return parseInt(getComputedStyle(strip).getPropertyValue('--per'), 10) || 4;
     };

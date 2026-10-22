@@ -357,6 +357,7 @@
 .exp-panel__fig { overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(45, 56, 50, .05); }
 .exp-panel__fig:first-child { grid-row: span 2; }
 .exp-panel__fig img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease, filter .5s ease; }
+.exp-panel__fig .exp-panel__img--right { object-position: 100% 50%; } /* dentist stands at the right edge of the photo */
 .exp-panel__fig:hover img { transform: scale(1.045); filter: brightness(1.035); }
 /* Tab images: settle in one after another each time a tab opens (first time: once the section is in view) */
 .exp-tab[open] .exp-panel__fig { animation: fig-in .8s cubic-bezier(.22, .61, .36, 1) backwards; }
