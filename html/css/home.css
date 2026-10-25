@@ -137,8 +137,7 @@
 .about__lead { font: italic 500 26px/1.45 var(--serif); color: var(--sage); }
 .about__body { display: flex; flex-direction: column; gap: 12px; max-width: 450px; font: 400 15px/1.85 var(--sans); color: var(--ink); }
 .about__body .about__lead { padding: 4px 0 4px 18px; font-size: 23px; line-height: 1.4; border-left: 2px solid var(--gold); }
-.about__more { margin-top: 4px; font: italic 500 19px/1.4 var(--serif); color: var(--text); }
-.about__more + .link-story { margin-top: -14px; }
+.about__sub { margin-top: -8px; font: italic 500 24px/1.4 var(--serif); color: var(--terracotta); }
 .link-story {
   margin-top: 8px;
   padding: 10px 0;
@@ -439,7 +438,7 @@
 }
 /* each journey has its own soft tint: blush, sage, warm sand */
 .tour-card--essence { --tint: var(--blush-soft); --accent: var(--terracotta); }
-.tour-card--balanced { --tint: color-mix(in srgb, var(--sage) 8%, var(--paper)); --accent: var(--sage); }
+.tour-card--balanced { --tint: color-mix(in srgb, var(--sage) 8%, var(--paper)); --accent: var(--terracotta); }
 .tour-card--pause { --tint: color-mix(in srgb, var(--ochre) 15%, var(--paper)); --accent: var(--ochre); }
 .tour-card[class*="tour-card--"] { background: var(--tint); }
 .tour-card[class*="tour-card--"] .tour-card__badge { background: var(--accent); }
@@ -660,6 +659,7 @@
   .btn-hero { margin-top: 14px; }
   .about__text { width: 100%; max-width: none; }
   .about__title { font-size: 38px; }
+  .about__sub { font-size: 20px; }
   .about__img { width: 100%; max-width: none; }
   .ink-art__bamboo { transform: translateX(10px); } /* stalks start left of the photo; nudge them in so the edge of the screen does not cut them */
   .sec-head { flex-wrap: wrap; }
