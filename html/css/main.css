@@ -68,23 +68,21 @@ em { font-style: italic; }
   border-bottom: 1px solid var(--line-soft);
   box-shadow: 0 3px 18px rgba(56, 45, 38, .04);
 }
-/* Logo in the centre, menu split left / right (search first on the left, CTA last on the right) */
+/* Logo on the left, menu on the right, then search and the CTA (client, 2026-10-28) */
 .site-header__inner {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   column-gap: 40px;
   max-width: 1290px;
   height: 96.5px;
   margin: 0 auto;
 }
-.site-header__logo { grid-column: 2; grid-row: 1; }
-.site-header__logo img { width: 196px; }
+.site-header__logo { grid-column: 1; grid-row: 1; justify-self: start; }
+.site-header__logo img { width: 250px; }
 .main-nav { display: contents; }
 .main-nav__list { display: flex; align-items: center; gap: 34px; }
-/* both groups hug the centred logo (as on the Hoang Yen header); search sits at the far right */
-.main-nav__list--left { grid-column: 1; grid-row: 1; justify-self: end; }
-.main-nav__list--right { grid-column: 3; grid-row: 1; justify-self: start; }
+.main-nav__list { grid-column: 2; grid-row: 1; justify-self: end; }
 .search-toggle {
   display: flex;
   align-items: center;
@@ -176,8 +174,8 @@ em { font-style: italic; }
 .site-footer::before { content: ""; display: block; height: var(--band); background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'><path fill='%232c3a2a' d='M0 30c140 0 260 48 460 44s300-30 520-14 320 26 460 4v26H0z'/><path fill='none' stroke='%23d9b078' stroke-width='1.6' d='M0 30c140 0 260 48 460 44s300-30 520-14 320 26 460 4'/></svg>") 50% 100% / 100% 100% no-repeat, var(--footer-lead, var(--cream)); }
 .site-footer__top {
   display: grid;
-  grid-template-columns: 1.25fr 1.35fr 1.4fr .8fr 1.2fr;
-  gap: 36px 32px;
+  grid-template-columns: minmax(200px, 1.1fr) 1.25fr 1.1fr .6fr 1.3fr 1.2fr;
+  gap: 36px 28px;
   max-width: 1264px;
   margin: 0 auto;
   padding: 44px 32px 36px;
@@ -242,17 +240,17 @@ em { font-style: italic; }
   .main-nav__list { gap: 24px; }
   .site-header__inner { column-gap: 28px; }
 }
-/* seven menu items: tighten a little more just above the burger breakpoint */
+/* tighten a little just above the burger breakpoint */
 @media (min-width: 1025px) and (max-width: 1160px) {
   .main-nav__list { gap: 18px; }
   .main-nav__link { font-size: 14px; }
   .site-header__inner { column-gap: 22px; }
-  .site-header__logo img { width: 176px; }
+  .site-header__logo img { width: 220px; }
 }
 @media (max-width: 1024px) {
   .site-header { margin-bottom: -76px; }
   .site-header__inner { height: auto; min-height: 76px; padding: 15px 0; column-gap: 12px; }
-  .site-header__logo img { width: min(210px, 46vw); }
+  .site-header__logo img { width: min(230px, 56vw); }
   .search-toggle--bar { width: 46px; height: 46px; }
   .search-toggle--bar svg { width: 23px; height: 23px; }
   .site-header__tools { gap: 8px; }
@@ -260,7 +258,11 @@ em { font-style: italic; }
   /* Inner pages: content starts 1px below the top, as under the original 77px inner header,
      whatever height the (home-sized) logo gives the header. --header-h is set by main.js. */
   .is-inner .site-header { margin-bottom: calc(1px - var(--header-h, 77px)); }
-  .site-header__actions { display: flex; grid-column: 1; grid-row: 1; justify-self: start; }
+  /* logo left; search, CTA and the burger on the right; the menu slides in from the right */
+  html { overflow-x: clip; } /* the closed menu waits just past the right edge: no sideways scroll */
+  .site-header__inner { grid-template-columns: 1fr auto auto; }
+  .site-header__tools { grid-column: 2; }
+  .site-header__actions { display: flex; grid-column: 3; grid-row: 1; justify-self: end; }
   .menu-toggle { display: flex; width: 46px; height: 46px; align-items: center; justify-content: center; color: var(--ink); }
   .menu-toggle svg { width: 24px; height: 24px; }
   .menu-overlay {
@@ -278,27 +280,26 @@ em { font-style: italic; }
     padding-top: 50px;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 99999;
     width: 320px;
     max-width: 85vw;
     height: 100vh;
     overflow-y: auto;
     background: var(--cream);
-    transform: translateX(-100%);
+    transform: translateX(100%);
     transition: transform .3s ease;
   }
   .menu-close { display: flex; position: absolute; top: 10px; right: 10px; width: 24px; height: 24px; color: var(--ink); }
   .menu-close svg { width: 24px; height: 24px; }
   .main-nav__list { flex-direction: column; align-items: stretch; gap: 10px; }
-  .main-nav__list--left, .main-nav__list--right { justify-self: stretch; }
-  .main-nav__list + .main-nav__list { margin-top: 10px; }
+  .main-nav__list { justify-self: stretch; }
   .main-nav__link { padding: 10px 15px; }
   .is-menu-open .main-nav { transform: none; }
   .is-menu-open .menu-overlay { opacity: 1; visibility: visible; }
 }
 @media (min-width: 901px) and (max-width: 1100px) {
-  .site-footer__top { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 30px; }
+  .site-footer__top { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 30px; }
   .footer-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 900px) {
@@ -347,6 +348,8 @@ em { font-style: italic; }
   .footer-col:last-child { padding-bottom: 22px; }
   .site-footer__bottom { padding: 0 24px 20px; }
   .site-footer__bottom p { font-size: 12px; }
+  .site-footer__bottom p > span:not(.site-footer__sep) { display: block; }
+  .site-footer__bottom .site-footer__sep { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -408,3 +411,9 @@ em { font-style: italic; }
 @media (prefers-reduced-motion: reduce) {
   .js-anim [data-anim] { opacity: 1; transform: none; clip-path: none; }
 }
+
+/* Footer: Explore holds the secondary pages too (FAQs, Gallery, Blog moved out of the main menu) */
+.footer-list--explore a, .footer-list--guest a { white-space: nowrap; }
+.site-footer__sep { margin: 0 10px; opacity: .6; }
+.site-footer__bottom a { text-decoration: underline; text-decoration-color: rgba(247, 243, 236, .4); text-underline-offset: 3px; }
+.site-footer__bottom a:hover { text-decoration-color: currentColor; }

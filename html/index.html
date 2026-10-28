@@ -40,7 +40,7 @@
    "url": "https://www.bloomingpassage.com/",
    "logo": {
     "@type": "ImageObject",
-    "url": "https://www.bloomingpassage.com/images/logo-blooming.png",
+    "url": "https://www.bloomingpassage.com/images/logo-blooming.png?v=2",
     "width": 196,
     "height": 56
    },
@@ -100,9 +100,9 @@
 </script>
 <link rel="preload" href="fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="images/hero-banner-poster.webp?v=3" imagesrcset="images/hero-banner-poster-960.webp?v=3 960w, images/hero-banner-poster.webp?v=3 1920w" imagesizes="100vw" fetchpriority="high">
-<link rel="stylesheet" href="css/main.css?v=20261117z">
-<link rel="stylesheet" href="css/home.css?v=20261025a">
+<link rel="preload" as="image" href="images/hero-banner-poster.webp?v=4" imagesrcset="images/hero-banner-poster-960.webp?v=4 960w, images/hero-banner-poster.webp?v=4 1920w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="css/main.css?v=20261029">
+<link rel="stylesheet" href="css/home.css?v=20261028">
 </head>
 <body>
 
@@ -113,25 +113,22 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
-    <a class="site-header__logo" href="/"><img src="images/logo-blooming.png" width="196" height="56" alt="Blooming Passage"></a>
+    <a class="site-header__logo" href="/"><img src="images/logo-blooming.png?v=2" width="196" height="56" alt="Blooming Passage"></a>
     <div class="site-header__tools">
       <button class="search-toggle search-toggle--bar" type="button" aria-label="Search the site" data-search-open><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.875" cy="10.875" r="7.125"/><path d="M15.95 15.95 20.5 20.5"/></svg></button>
-      <a class="header-cta" href="/contact-us/">Contact Us</a>
+      <a class="header-cta" href="/contact-us/#plan">Plan Your Trip</a>
     </div>
     <div class="menu-overlay"></div>
     <nav class="main-nav" aria-label="Main">
       <button class="menu-close" type="button" aria-label="Close menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
-      <ul class="main-nav__list main-nav__list--left">
-        <li><a class="main-nav__link is-active" href="/">Home</a></li>
-        <li><a class="main-nav__link" href="/about-us/">About Us</a></li>
+      <ul class="main-nav__list">
+        <li><a class="main-nav__link is-active" href="/" aria-current="page">Home</a></li>
+        <li><a class="main-nav__link" href="/our-story/">Our Story</a></li>
+        <li><a class="main-nav__link" href="/discover/">Discover</a></li>
         <li><a class="main-nav__link" href="/tours/">Journeys</a></li>
-      </ul>
-      <ul class="main-nav__list main-nav__list--right">
-        <li><a class="main-nav__link" href="/faqs/">FAQ</a></li>
-        <li><a class="main-nav__link" href="/gallery/">Gallery</a></li>
-        <li><a class="main-nav__link" href="/blog/">Blog</a></li>
+        <li><a class="main-nav__link" href="/contact-us/">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -141,13 +138,14 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero__media" aria-hidden="true">
-      <video class="hero__video is-active" muted playsinline preload="none" poster="images/hero-banner-poster.webp?v=3" data-src="videos/hero-banner-50-a.mp4?v=2"></video>
+      <video class="hero__video is-active" muted playsinline preload="none" poster="images/hero-banner-poster.webp?v=4" data-src="videos/hero-hoian-day.mp4"></video>
       <video class="hero__video" muted playsinline preload="none" data-src="videos/hero-banner-50-b.mp4"></video>
+      <video class="hero__video" muted playsinline preload="none" data-src="videos/hero-danang-hue.mp4"></video>
     </div>
     <div class="hero__content">
       <h1 class="hero__title">IT’S YOUR TIME<br>TO BLOOM.</h1>
       <p class="hero__desc">Curated Boutique Journeys<br><em>Through Central Vietnam</em></p>
-      <a class="btn-hero" href="/tours/">EXPLORE OUR COLLECTION</a>
+      <a class="btn-hero" href="/tours/">EXPLORE OUR JOURNEYS</a>
     </div>
     <svg class="hero-waves" viewBox="0 0 1440 205" preserveAspectRatio="none" aria-hidden="true"><path class="hw-back" d="M0,4 C40,22 140,13 260,20 C440,30 500,90 660,110 C820,130 900,80 1040,70 C1180,60 1300,120 1440,100 L1440,175 L0,175 Z"/><path class="hw-front" d="M0,15 C60,48 110,36 220,45 C400,60 460,113 620,130 C760,145 820,110 980,100 C1140,90 1280,140 1440,120 L1440,210 L0,210 Z"/></svg>
   </section>
@@ -169,7 +167,7 @@
         <p>From peaceful mornings by the sea to the timeless charm of Hoi An and the cultural richness of Hue, our thoughtfully curated journeys blend local discovery, moments of well-being, and genuine connections with like-minded women.</p>
         <p><strong>Inner Vitality Meets Outer Confidence.</strong></p>
       </div>
-      <a class="link-story" href="/about-us/#our-story">READ OUR STORY →</a>
+      <a class="link-story" href="/our-story/#our-story">READ OUR STORY →</a>
     </div>
   </section>
 
@@ -178,14 +176,14 @@
     <div class="sec-head">
       <div class="sec-head__text">
         <p class="eyebrow eyebrow--muted">CURATED JOURNEYS</p>
-        <h2 class="sec-head__title">Discover Our Curated Journeys</h2>
+        <h2 class="sec-head__title">Discover Central Vietnam</h2>
         <p class="sec-head__desc">Thoughtfully designed for rest, discovery and a brighter you, with a personal concierge from arrival to farewell.</p>
       </div>
     </div>
     <div class="tours__grid">
       <article class="tour-card tour-card--essence">
         <img class="tour-card__img" src="images/hoian-aodai-friends-768.webp" width="768" height="464" alt="Seven women in floral ao dai and conical hats strolling down a lantern-hung street in Hoi An" loading="lazy">
-        <p class="tour-card__badge">7 Days · From $3,295</p>
+        <p class="tour-card__badge">7 Days · $2,495</p>
         <h3 class="tour-card__title"><span class="tour-card__icon"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208,50a85.52,85.52,0,0,0-36.17,8c-14.67-25.9-40-38.79-41.15-39.37a6,6,0,0,0-5.36,0C124.18,19.21,98.84,32.1,84.17,58A85.52,85.52,0,0,0,48,50a6,6,0,0,0-6,6V96a86.1,86.1,0,0,0,80,85.77v40.52L82.68,202.63a6,6,0,0,0-5.36,10.74l48,24a6,6,0,0,0,5.36,0l48-24a6,6,0,1,0-5.36-10.74L134,222.29V181.77A86.1,86.1,0,0,0,214,96V56A6,6,0,0,0,208,50ZM128,30.88c6.46,3.84,23.07,15,33.33,32.94A86.5,86.5,0,0,0,128,104.5,86.5,86.5,0,0,0,94.67,63.82C104.93,45.83,121.54,34.71,128,30.88ZM54,96V62.24A74.11,74.11,0,0,1,122,136v33.76A74.1,74.1,0,0,1,54,96Zm148,0a74.1,74.1,0,0,1-68,73.76V136a74.11,74.11,0,0,1,68-73.76Z"/></svg></span>Vietnam Escape – Curated Essence</h3>
         <p class="tour-card__text">A beautiful introduction to Vietnam’s culture, coast, and soul.</p>
         <ul class="tour-card__list">
@@ -197,13 +195,13 @@
       </article>
       <article class="tour-card tour-card--balanced">
         <img class="tour-card__img" src="images/hue-thien-mu-aodai-768.webp" width="768" height="768" alt="A woman in a white ao dai on the stone steps below Thien Mu Pagoda in Hue at sunset" loading="lazy">
-        <p class="tour-card__badge">10 Days · From $4,295</p>
+        <p class="tour-card__badge">10 Days · $3,295</p>
         <h3 class="tour-card__title"><span class="tour-card__icon"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.45,40.19a6,6,0,0,0-5.64-5.64C140.43,30.11,80.14,52.71,54.53,95c-17.44,28.79-16.76,62.8,1.79,96.2L35.76,211.76a6,6,0,1,0,8.48,8.48L64.8,199.68c17.27,9.59,34.7,14.41,51.49,14.41A85.38,85.38,0,0,0,161,201.47C203.29,175.86,225.88,115.57,221.45,40.19Zm-66.66,151c-24.08,14.58-52.64,14.37-81.13-.39l90.59-90.59a6,6,0,0,0-8.48-8.48L65.18,182.34c-14.76-28.49-15-57-.39-81.13,22.68-37.43,76.63-57.8,145-54.95C212.59,114.58,192.22,168.54,154.79,191.21Z"/></svg></span>Vietnam Journey – Deeper Discovery</h3>
         <p class="tour-card__text">Experience more of Vietnam, with more time to connect, explore, and unwind.</p>
         <ul class="tour-card__list">
           <li>Everything in the 7-day Vietnam Escape</li>
           <li>Hue’s Imperial Citadel, royal tombs &amp; Perfume River</li>
-          <li>More time for yourself &amp; a farewell dinner</li>
+          <li>Deeper cultural discovery &amp; a more leisurely pace</li>
         </ul>
         <a class="btn-pill" href="/tours/10-day-balanced-journey/">View Journey →</a>
       </article>
@@ -311,7 +309,7 @@
         <h2 class="cta__title">Come curious.<br>Come open.<br><em>Come as you are.</em></h2>
       </div>
       <div class="cta__right">
-        <p class="cta__text">A thoughtfully paced journey through Central Vietnam, shaped around you.<br><br>Explore our journeys and tentative departure dates, ask us anything, or simply let us know you’re interested.</p>
+        <p class="cta__text">A thoughtfully paced journey through Central Vietnam, shaped around you.<br><br>Explore our journeys and spring 2027 departure dates, ask us anything, or simply let us know you’re interested.</p>
         <div class="cta__btns">
           <a class="btn-solid" href="/tours/">Find Your Journey &nbsp; →</a>
           <a class="btn-outline" href="/contact-us/">Let’s Connect &nbsp; ↗</a>
@@ -324,7 +322,7 @@
 <footer class="site-footer">
   <div class="site-footer__top">
     <div class="footer-brand">
-      <a href="/"><img class="footer-brand__logo" src="images/logo-blooming.png" width="250" height="72" alt="Blooming Passage" loading="lazy"></a>
+      <a href="/"><img class="footer-brand__logo" src="images/logo-blooming.png?v=2" width="250" height="72" alt="Blooming Passage" loading="lazy"></a>
       <p class="footer-brand__motto">It’s your time to bloom.</p>
       <p class="footer-brand__tag">Thoughtfully curated journeys through Central Vietnam.</p>
     </div>
@@ -344,10 +342,23 @@
     </div>
     <div class="footer-col">
       <h3 class="footer-col__title">Explore</h3>
-      <ul class="footer-list">
-        <li><a href="/tours/">Our Journeys</a></li>
-        <li><a href="/about-us/">Our Story</a></li>
-        <li><a href="/contact-us/">Contact Us</a></li>
+      <ul class="footer-list footer-list--explore">
+        <li><a href="/">Home</a></li>
+        <li><a href="/our-story/">Our Story</a></li>
+        <li><a href="/discover/">Discover</a></li>
+        <li><a href="/tours/">Journeys</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-col__title">Guest Information</h3>
+      <ul class="footer-list footer-list--guest">
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/payment-booking-terms/">Payment &amp; Booking Terms</a></li>
+        <li><a href="/cancellation-refund-policy/">Cancellation &amp; Refund Policy</a></li>
+        <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -360,7 +371,7 @@
     </div>
   </div>
   <div class="site-footer__bottom">
-    <p>© 2026 Blooming Passage. All rights reserved.</p>
+    <p><span>U.S.-Based Business</span><span class="site-footer__sep" aria-hidden="true">|</span><span>© 2026 Blooming Passage. All rights reserved.</span></p>
   </div>
 </footer>
 
@@ -394,7 +405,7 @@
   <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next">›</button>
 </div>
 
-<script src="js/main.js?v=20261120" defer></script>
-<script src="js/home.js?v=20261110" defer></script>
+<script src="js/main.js?v=20261026" defer></script>
+<script src="js/home.js?v=20261128" defer></script>
 </body>
 </html>

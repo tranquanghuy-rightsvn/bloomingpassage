@@ -1,6 +1,6 @@
 // Home page: hero video, experience tabs, gallery lightbox.
 (function () {
-  // Hero video (Hoi An from above, then the old town): poster first, then the parts play in turn and loop.
+  // Hero video (Hoi An by day and from above, then Da Nang and Hue): poster first, then the parts play in turn and loop.
   // The video is split at a scene cut into parts under 50 MB (GitHub); the next part preloads while one plays,
   // and is shown only once it is playing, so the hand-over has no blank frame.
   // Paused off-screen and in background tabs; skipped for reduced motion / data saver (the poster stays).
@@ -14,10 +14,11 @@
       var p = v.play();
       if (p && p.catch) p.catch(function () {}); // autoplay refused: the poster stays
     };
+    var load = function (v) { if (!v.src) { v.src = v.dataset.src; v.preload = 'auto'; } };
     parts.forEach(function (v, i) {
-      v.src = v.dataset.src;
-      v.preload = 'auto';
+      if (i < 2) load(v); // the rest load one part ahead, once the part before them is playing
       v.addEventListener('playing', function () {
+        load(parts[(i + 1) % parts.length]);
         if (i !== current) return;
         parts.forEach(function (o) { o.classList.toggle('is-active', o === v); });
         hero.classList.add('has-video');

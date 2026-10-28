@@ -24,11 +24,13 @@
   // Site search: a small client-side index of the pages (static site, no server search).
   var PAGES = [
     ['Home', '/', 'Intentional travel and proactive longevity for women in Central Vietnam.', 'blooming passage time to bloom culture wellness beauty connection'],
-    ['About Us', '/about-us/', 'A passage through Vietnam, a return to yourself: small groups, care and discovery.', 'story approach intention longevity discovery connection small group women wellbeing'],
-    ['Our Signature Experiences', '/tours/', 'Travel with intention. 7 or 10 days in Central Vietnam, departing February – May 2027.', 'tours journeys trips packages itinerary price departures dates included how it works small group wellness longevity'],
+    ['Our Story', '/our-story/', 'Reclaiming your vitality. Rediscovering yourself. Our philosophy and four pillars.', 'about us story founder amy philosophy pillars intention longevity discovery connection women wellbeing'],
+    ['Signature Experiences', '/tours/', 'More than a vacation. 7 or 10 days in Central Vietnam, departing March – April 2027.', 'tours journeys trips packages itinerary price departures dates included how it works small group'],
+    ['Discover', '/discover/', 'Small by design, culture and flavor, and wellness and longevity made your own.', 'approach small group culture culinary food artisans night wellness longevity beauty massage facial health check dental skin aesthetic consultation concierge'],
     ['7-Day Vietnam Escape', '/tours/7-day-curated-essence/', 'Vietnam Escape – Curated Essence. Hoi An & Da Nang, 7 days · 6 nights.', '7 days seven week curated essence escape hoi an da nang ba na hills golden bridge cooking tea silk basket boat spa beach'],
     ['10-Day Vietnam Journey', '/tours/10-day-balanced-journey/', 'Vietnam Journey – Deeper Discovery. Hoi An, Da Nang & Hue, 10 days · 9 nights.', '10 days ten deeper discovery hue imperial citadel royal tombs perfume river hoi an da nang farewell dinner shopping wellness'],
-    ['Contact', '/contact-us/', 'A small step, a beautiful beginning. Tell us about your passage.', 'contact enquiry inquiry email phone plan book question'],
+    ['Contact', '/contact-us/', 'Your next chapter starts with a conversation. Send an inquiry or request a discovery call.', 'contact enquiry inquiry email phone plan trip book question discovery call'],
+    ['Privacy Policy', '/privacy-policy/', 'How Blooming Passage collects, uses and protects your information.', 'privacy policy data personal information inquiry form cookies'],
     ['Gallery', '/gallery/', 'Moments worth keeping: culture, flavour and shared moments in Central Vietnam.', 'gallery photos pictures images moments experience culture food cooking tailoring spa beauty'],
     ['FAQs', '/faqs/', 'A few answers to help you feel at home with Blooming Passage.', 'faq questions group size travel alone included optional wellness departure booking medical tourism pace airport reserve deposit'],
     ['Blog – The Passage Journal', '/blog/', 'Stories, travel inspiration and little moments worth keeping.', 'blog journal stories articles hoi an hue da nang'],
@@ -183,3 +185,19 @@
     });
   }
 })();
+
+// Inquiry forms (Contact, tour "Plan Your Trip" cards): a static site has no mail server, so messages go through
+// FormSubmit's AJAX endpoint to the business inbox. The very first message asks travel@bloomingpassage.com to
+// confirm the form once (FormSubmit activation email); after that every inquiry arrives as an email.
+window.bpSendInquiry = function (fields) {
+  return fetch('https://formsubmit.co/ajax/travel@bloomingpassage.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify(Object.assign({ _template: 'table', _captcha: 'false' }, fields))
+  }).then(function (res) {
+    return res.json().then(function (data) {
+      if (!res.ok || String(data.success) !== 'true') throw new Error(data.message || 'Inquiry not sent');
+      return data;
+    });
+  });
+};

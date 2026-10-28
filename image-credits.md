@@ -21,6 +21,8 @@ Free files below: commercial use allowed, no attribution required.
 | massage-rejuvenate | Pexels 6560265 |
 | beach-bay (not used since 2026-10-17: the bay is not Da Nang) | Client (source-images-client/bai-bien-da-nang-non-nuoc-1722829280.jpg) |
 | danang-beach-huts (Home "Why Central Vietnam" collage) | Pexels 6875504 (Quang Nguyen Vinh), thatched beach umbrellas along the Da Nang coast; original source-images/free/danang-beach-huts__pexels-6875504.jpg |
+| banner-danang-dragon-bridge-dusk (Contact Us banner, 2026-10-28) | Pexels 2162459, Dragon Bridge and the Han River at dusk, Da Nang; original source-images/free/dragon-bridge-dusk__pexels-2162459.jpg |
+| banner-han-river-street-food (Discover banner, 2026-10-28) | Supplied by the team (AI-edited, source-images-client/banner-han-river-street-food.png) |
 | banner-hoian-aerial-dusk (Journeys page banner) | Pexels 12354626 (Ba Uoc Phung), Hoi An from above at dusk; original source-images/free/hoian-aerial-dusk__pexels-12354626.jpg |
 | danang-dragon-fire (Home, Da Nang slides) | Client (source-images-client/cau1749269131_3972.jpg) |
 | danang-street-food-dinner (Gallery) | Client (source-images-client/danang-street-food-dinner.png — "Bữa tối street food bên cầu Rồng.png") |

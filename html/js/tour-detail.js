@@ -51,8 +51,8 @@
     placeStrip();
   }
 
-  // "Plan Your Journey" card: no booking or payment while departures are tentative. A departure picked on the
-  // Journeys page (?departure=YYYY-MM-DD) is preselected; sending opens the visitor's email app with the details filled in.
+  // "Plan Your Trip" card: no booking or payment at this stage. A departure picked on the Journeys page
+  // (?departure=YYYY-MM-DD) is preselected; the inquiry is emailed through window.bpSendInquiry (main.js).
   var plan = document.querySelector('.plan-form');
   if (plan) {
     var wanted = new URLSearchParams(location.search).get('departure');
@@ -64,21 +64,41 @@
     dep.addEventListener('change', function () { if (depJourney()) jour.value = depJourney(); });
     jour.addEventListener('change', function () { if (depJourney() && depJourney() !== jour.value) dep.value = ''; });
     if (depJourney()) jour.value = depJourney();
+    var button = plan.querySelector('.book-form__submit');
+    var note = document.createElement('p');
+    note.className = 'plan-form__note';
+    note.setAttribute('role', 'status');
+    note.hidden = true;
+    plan.appendChild(note);
     plan.addEventListener('submit', function (e) {
       e.preventDefault();
       var v = function (n) { var el = plan.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
       var txt = function (n) { var el = plan.querySelector('[name="' + n + '"]'); return el && el.selectedIndex > -1 ? el.options[el.selectedIndex].text : ''; };
-      var body = [
-        'Name: ' + (v('first_name') + ' ' + v('last_name')).trim(),
-        'Email: ' + v('email'),
-        'Phone: ' + v('phone'),
-        'Preferred departure: ' + (v('departure') ? txt('departure') : 'Not chosen yet'),
-        'Journey: ' + txt('journey'),
-        'Guests: ' + v('guests'),
-        '',
-        v('message')
-      ].join('\n');
-      location.href = 'mailto:travel@bloomingpassage.com?subject=' + encodeURIComponent('Plan my journey: ' + txt('journey')) + '&body=' + encodeURIComponent(body);
+      var name = (v('first_name') + ' ' + v('last_name')).trim();
+      button.disabled = true;
+      button.textContent = 'Sending…';
+      note.hidden = true;
+      window.bpSendInquiry({
+        _subject: 'Plan my trip: ' + txt('journey') + (name ? ' (' + name + ')' : ''),
+        'Full name': name || '—',
+        email: v('email'),
+        'Phone': v('phone') || '—',
+        'Journey': txt('journey'),
+        'Preferred departure': v('departure') ? txt('departure') : 'Not chosen yet',
+        'Guests': v('guests'),
+        'Message': v('message') || '—'
+      }).then(function () {
+        plan.reset();
+        note.textContent = 'Thank you for reaching out. We look forward to connecting with you.';
+        note.className = 'plan-form__note is-sent';
+      }, function () {
+        note.innerHTML = 'Sorry, your inquiry could not be sent just now. Please try again, or email <a href="mailto:travel@bloomingpassage.com">travel@bloomingpassage.com</a>.';
+        note.className = 'plan-form__note';
+      }).then(function () {
+        note.hidden = false;
+        button.disabled = false;
+        button.textContent = 'Plan Your Trip';
+      });
     });
   }
 })();

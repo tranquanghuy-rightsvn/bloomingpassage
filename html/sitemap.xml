@@ -7,8 +7,20 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.bloomingpassage.com/about-us/</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/about-us/"/>
+    <loc>https://www.bloomingpassage.com/our-story/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/our-story/"/>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.bloomingpassage.com/discover/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/discover/"/>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.bloomingpassage.com/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/privacy-policy/"/>
     <lastmod>2026-10-15</lastmod>
     <priority>0.7</priority>
   </url>
@@ -27,12 +39,6 @@
   <url>
     <loc>https://www.bloomingpassage.com/tours/10-day-balanced-journey/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/tours/10-day-balanced-journey/"/>
-    <lastmod>2026-10-15</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.bloomingpassage.com/tours/14-day-deep-pause/</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/tours/14-day-deep-pause/"/>
     <lastmod>2026-10-15</lastmod>
     <priority>0.9</priority>
   </url>
@@ -65,5 +71,23 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/contact-us/"/>
     <lastmod>2026-10-15</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.bloomingpassage.com/terms-and-conditions/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/terms-and-conditions/"/>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.bloomingpassage.com/payment-booking-terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/payment-booking-terms/"/>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.bloomingpassage.com/cancellation-refund-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/cancellation-refund-policy/"/>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.5</priority>
   </url>
 </urlset>

@@ -1,3 +1,6 @@
 # The 14-day journey was retired on 2026-10-18; old links land on the Journeys page.
 /tours/14-day-deep-pause /tours/ 301
 /tours/14-day-deep-pause/* /tours/ 301
+# About Us became Our Story on 2026-10-26.
+/about-us /our-story/ 301
+/about-us/* /our-story/ 301

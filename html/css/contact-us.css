@@ -4,7 +4,11 @@ body { background: var(--cream); }
 /* ----- Page banner ----- */
 .page-banner {
   padding: 150px 15px 70px;
-  background: linear-gradient(90deg, rgba(45, 39, 33, .55), rgba(45, 39, 33, .35)), url(../images/coffee-banner.webp) center 50% / cover, var(--gold);
+  background: linear-gradient(90deg, rgba(45, 39, 33, .5), rgba(45, 39, 33, .3)), url(../images/banner-danang-dragon-bridge-dusk.webp) center 62% / cover, var(--gold);
+}
+/* Da Nang city photo (client, 2026-10-28): taller so the skyline and the Dragon Bridge both stay in frame */
+@media (min-width: 768px) {
+  .page-banner { display: grid; align-content: center; min-height: clamp(460px, 38vw, 600px); }
 }
 .page-banner__inner {
   display: flex;
@@ -24,102 +28,109 @@ body { background: var(--cream); }
 /* ----- Layout ----- */
 .ct { font-family: var(--sans); }
 .ct-sec { padding: 60px 24px 30px; }
-.ct-sec--info { padding: 30px 24px 60px; }
+.ct-sec--form { padding: 30px 24px 72px; }
 .ct-row {
   display: grid;
-  grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
-  gap: 60px;
-  align-items: center;
+  grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
+  gap: 56px;
+  align-items: start;
   max-width: 1200px;
   margin: 0 auto;
 }
-.ct-row--info { grid-template-columns: minmax(0, 56fr) minmax(0, 44fr); }
 
-/* ----- Intro ----- */
-.ct-intro { display: flex; flex-direction: column; gap: 24px; }
-.ct-eyebrow { font-size: 10px; font-weight: 500; line-height: 1.5; letter-spacing: .25em; color: var(--rust); }
+/* ----- Heading ----- */
+.ct-head { display: flex; flex-direction: column; align-items: center; gap: 20px; max-width: 760px; margin: 0 auto; text-align: center; }
 .ct-title { font: 500 clamp(36px, 4vw, 54px)/1.1 var(--serif); color: var(--brown); }
 .ct-title em { font-weight: 400; color: var(--rust); }
-.ct-lead { font-size: 15px; line-height: 1.8; color: var(--text); }
+.ct-lead { font-size: 15px; line-height: 1.85; color: var(--text); }
 
-/* ----- Form ----- */
-.ct-card { padding: 36px; background: var(--sand); border: 1px solid var(--line); border-radius: 4px; }
-.ct-form { display: flex; flex-direction: column; gap: 20px; }
-.ct-form__field { padding-bottom: 10px; }
-.ct-form__label { display: block; margin-bottom: 7px; font-size: 12px; font-weight: 500; line-height: 1.6; color: var(--text); }
+/* ----- Details beside the form ----- */
+.ct-aside { display: flex; flex-direction: column; gap: 26px; }
+.ct-aside__img { width: 100%; height: 300px; object-fit: cover; border-radius: 4px 70px 4px 4px; }
+.ct-block { display: flex; flex-direction: column; gap: 10px; padding-top: 22px; font-size: 15px; line-height: 1.8; color: var(--text); border-top: 1px solid var(--line); }
+.ct-block__title { font: 500 26px/1.2 var(--serif); color: var(--ink); }
+.ct-info__list li { font-size: 15px; line-height: 1.9; color: var(--text); }
+.ct-info__list strong { font-weight: 600; color: var(--brown); }
+.ct-info__list a { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.ct-sign { padding-top: 4px; font: 500 26px/1.35 var(--serif); color: var(--ink); }
+.ct-sign em { color: var(--rust-dark); }
+
+/* ----- Inquiry form ----- */
+.ct-card { padding: 36px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px 56px 6px 6px; box-shadow: 0 14px 34px rgba(56, 45, 38, .06); }
+.ct-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 20px; }
+.ct-form__head, .ct-form__field--full { grid-column: 1 / -1; }
+.ct-form__head { padding-bottom: 6px; text-align: center; border-bottom: 1px solid var(--line); }
+.ct-form__title { padding-bottom: 14px; font: 500 34px/1.15 var(--serif); color: var(--rust-dark); }
+.ct-form__field { min-width: 0; margin: 0; padding: 0; border: 0; }
+.ct-form__label { display: block; margin-bottom: 8px; padding: 0; font-size: 13px; font-weight: 600; line-height: 1.5; color: var(--ink); }
+.ct-form__req { color: var(--rust); }
+.ct-form__opt { font-weight: 400; color: var(--muted); }
+.ct-form__hint { margin: -4px 0 8px; font-size: 12px; line-height: 1.5; color: var(--muted); }
+.ct-form__control + .ct-form__hint { margin: 7px 0 0; }
 .ct-form__control {
   display: block;
   width: 100%;
   height: 48px;
-  padding: 13px 15px;
-  font: 400 14px/1.6 var(--sans);
+  padding: 12px 15px;
+  font: 400 14px/1.5 var(--sans);
   color: var(--brown);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 3px;
+  background: #fff;
+  border: 1px solid #d9d1c5;
+  border-radius: 4px;
 }
 .ct-form__control::placeholder { color: #8b897d; }
 .ct-form__control:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
-.ct-form__control--area { height: 155px; min-height: 155px; resize: vertical; }
+.ct-form__control--area { height: 130px; min-height: 130px; resize: vertical; }
+.ct-form__choice { display: flex; flex-direction: column; gap: 9px; }
+.ct-radio { display: flex; align-items: center; gap: 10px; font-size: 14px; line-height: 1.5; color: var(--text); cursor: pointer; }
+.ct-radio input { flex: none; width: 18px; height: 18px; margin: 0; accent-color: var(--sage); }
+.ct-radio a { color: var(--rust); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.ct-form__trap { position: absolute; left: -9999px; }
+.ct-form__foot { display: flex; flex-direction: column; gap: 14px; }
+.ct-form__privacy { font-size: 12.5px; line-height: 1.7; color: var(--muted); }
+.ct-form__privacy a { color: var(--brown); text-decoration: underline; text-underline-offset: 3px; }
 .ct-form__submit {
   width: 100%;
-  min-height: 48px;
-  padding: 13px 28px;
+  min-height: 52px;
+  padding: 14px 28px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.6;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
   color: var(--paper);
   background: var(--rust);
   border: 1px solid var(--rust);
-  border-radius: 3px;
+  border-radius: 4px;
   transition: background-color .25s;
 }
 .ct-form__submit:hover { background: var(--rust-dark); border-color: var(--rust-dark); }
+.ct-form__submit:disabled { opacity: .7; cursor: progress; }
+.ct-form__status { padding: 12px 14px; font-size: 13px; line-height: 1.6; color: var(--rust-dark); background: color-mix(in srgb, var(--rust) 8%, #fff); border-radius: 4px; }
+.ct-form__status a { text-decoration: underline; }
+.ct-form__note { font-size: 12px; color: var(--muted); }
+.ct-form__note span { color: var(--rust); }
+.ct-thanks { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 56px 12px; text-align: center; font-size: 15px; line-height: 1.8; color: var(--text); outline: none; }
+.ct-thanks[hidden] { display: none; }
+.ct-thanks__icon { width: 54px; height: 54px; margin-bottom: 10px; color: var(--sage); }
+.ct-thanks .ct-form__title { padding-bottom: 0; }
 
-/* ----- Photo ----- */
-.ct-photo { display: flex; flex-direction: column; gap: 14px; }
-.ct-photo__img { width: 100%; height: 440px; object-fit: cover; object-position: center 40%; border-radius: 4px 70px 4px 4px; }
-.ct-photo__caption { margin-top: 16px; font-size: 10px; line-height: 18px; letter-spacing: .2em; color: var(--rust); }
-.ct-photo__caption strong { display: inline-block; margin-top: 3px; font-size: 14px; font-weight: 500; line-height: 1.8; letter-spacing: 0; color: var(--text); }
-
-/* ----- Details ----- */
-.ct-info { display: flex; flex-direction: column; gap: 20px; }
-.ct-info__head { display: flex; flex-direction: column; align-items: flex-start; }
-.ct-info__title { margin-bottom: 18px; font: 500 40px/1.1 var(--serif); color: var(--brown); }
-.ct-info__list li { padding: 9px 0; font-size: 15px; line-height: 1.8; color: var(--text); border-bottom: 1px solid var(--line); }
-.ct-info__list li + li { margin-top: 8px; }
-.ct-info__list strong { font-weight: 500; color: var(--brown); }
-.ct-social { display: flex; gap: 21px; margin: 10px 0; }
-.ct-social__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  fill: var(--sage);
-  transition: background-color .25s, fill .25s;
+/* ----- Tablet / mobile ----- */
+@media (max-width: 1024px) {
+  .ct-row { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .ct-card { order: -1; }
 }
-.ct-social__link { color: var(--sage); }
-.ct-social__link svg { width: 15px; height: 15px; }
-.ct-social__link:hover { color: var(--cream); background: var(--sage); fill: var(--cream); }
-.ct-info__list a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
-.ct-info__text { font-size: 14px; line-height: 1.8; color: var(--text); }
-.ct-info__text p { margin-bottom: 16px; }
-.ct-link { padding-bottom: 5px; font-weight: 600; color: var(--rust); border-bottom: 1px solid var(--gold); transition: color .25s; }
-.ct-link:hover { color: var(--rust-dark); }
-
-/* ----- Mobile ----- */
 @media (max-width: 767px) {
-  .page-banner { padding: 130px 15px 48px; }
+  .page-banner { display: grid; align-content: center; min-height: 340px; padding: 130px 15px 48px; }
   .page-banner__title { font-size: 48px; }
-  .ct-sec { padding: 40px 24px 30px; }
-  .ct-sec--info { padding: 30px 24px 40px; }
-  .ct-row, .ct-row--info { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .ct-sec { padding: 40px 22px 20px; }
+  .ct-sec--form { padding: 20px 16px 48px; }
   .ct-title { font-size: 38px; }
-  .ct-card { padding: 24px; }
-  .ct-info { order: -1; }
-  .ct-photo__img { height: 300px; border-radius: 4px 48px 4px 4px; }
+  .ct-head, .ct-lead { text-align: left; align-items: flex-start; }
+  .ct-card { padding: 24px 18px; border-radius: 6px 40px 6px 6px; }
+  .ct-form { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .ct-form__title { font-size: 30px; }
+  .ct-aside__img { height: 220px; border-radius: 4px 48px 4px 4px; }
+  .ct-sign { font-size: 23px; }
 }
-#plan { scroll-margin-top: 130px; } /* "Plan Your Journey" links land on the whole form, below the fixed header */
+#plan { scroll-margin-top: 130px; } /* "Plan Your Trip" links land on the whole form, below the fixed header */

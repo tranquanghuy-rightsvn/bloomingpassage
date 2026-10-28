@@ -1,0 +1,28 @@
+/* ===== Privacy Policy page ===== */
+body { background: var(--cream); }
+
+.page-banner--plain { padding: 150px 15px 64px; background: var(--sage); }
+.page-banner__inner { display: flex; flex-direction: column; gap: 10px; max-width: 1290px; margin: 0 auto; text-align: center; }
+.page-banner__title { margin-bottom: 8px; font: 500 clamp(44px, 5vw, 68px)/1.1 var(--serif); color: var(--paper); }
+.page-banner__desc { font: 400 15px/1.7 var(--sans); color: #e8edf1; }
+
+.pp { padding: 60px 24px 80px; font-family: var(--sans); }
+.pp-doc { max-width: 780px; margin: 0 auto; font-size: 15px; line-height: 1.85; color: var(--text); }
+.pp-doc > * + * { margin-top: 16px; }
+.pp-doc h2 { margin-top: 40px; font: 500 30px/1.2 var(--serif); color: var(--ink); }
+.pp-doc h3 { margin-top: 28px; font: 600 13px/1.5 var(--sans); letter-spacing: 1.4px; text-transform: uppercase; color: var(--brown); }
+.pp-doc strong { font-weight: 600; color: var(--brown); }
+.pp-doc a { color: var(--rust); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.pp-doc ul { display: flex; flex-direction: column; gap: 8px; }
+.pp-doc ul li { position: relative; padding-left: 22px; }
+.pp-doc ul li::before { content: ""; position: absolute; top: .78em; left: 4px; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+.pp-doc .pp-contact li { padding-left: 0; }
+.pp-doc .pp-contact li::before { content: none; }
+.pp-updated { font: 600 11px/1.6 var(--sans); letter-spacing: 1.6px; text-transform: uppercase; color: var(--rust); }
+
+@media (max-width: 767px) {
+  .page-banner--plain { padding: 130px 15px 44px; }
+  .pp { padding: 40px 22px 56px; }
+  .pp-doc { font-size: 14.5px; }
+  .pp-doc h2 { margin-top: 32px; font-size: 26px; }
+}

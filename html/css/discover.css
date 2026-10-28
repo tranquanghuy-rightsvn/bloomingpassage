@@ -1,0 +1,101 @@
+/* ===== Discover page: Our Story's sections (our-story.css) + the experience tabs and care circles (home.css) ===== */
+
+/* home.css pins the header in the flow (home hero); inner pages overlap it like the other banners */
+@media (min-width: 1025px) {
+  .is-inner .site-header { margin-bottom: -90px; }
+}
+
+/* street-food photo (client, 2026-10-28): a taller banner so the four faces and the table both stay in frame */
+.page-banner--discover {
+  background: linear-gradient(rgba(29, 43, 34, .38), rgba(29, 43, 34, .42)), url(../images/banner-han-river-street-food.webp) center 48% / cover, var(--gold);
+}
+@media (min-width: 768px) {
+  .page-banner--discover { display: grid; align-content: center; min-height: clamp(520px, 44vw, 680px); }
+}
+
+/* ----- Our approach: two photos, the second tucked under the first ----- */
+.dc-approach__lead { display: flex; flex-direction: column; gap: 16px; }
+.dc-approach__media { position: relative; display: flex; flex-direction: column; align-items: flex-end; }
+.dc-approach .dc-approach__img { height: 360px; }
+.dc-approach__img--second {
+  position: relative;
+  width: 72%;
+  height: 280px;
+  margin-top: -64px;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 8px solid var(--cream);
+  border-radius: 4px 4px 4px 56px;
+}
+.dc-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.dc-pills li {
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sage);
+  background: color-mix(in srgb, var(--sage) 9%, var(--paper));
+  border: 1px solid color-mix(in srgb, var(--sage) 22%, transparent);
+  border-radius: 999px;
+}
+
+/* ----- Culture tabs: same rhythm as the other sections ----- */
+.dc .experience { padding-top: 60px; padding-bottom: 60px; }
+
+/* ----- Wellness & longevity ----- */
+.dc-well { display: grid; grid-template-columns: 1.06fr 1fr; gap: 32px 72px; align-items: center; }
+.dc-well__photo { min-width: 0; }
+.dc-well__text { display: flex; flex-direction: column; gap: 22px; }
+
+/* ----- Care circles: four beauty, five health ----- */
+.dc-care { padding-top: 40px; }
+.dc-care--health { padding-bottom: 72px; }
+.dc-group { display: flex; flex-direction: column; gap: 36px; }
+.dc-group__head { display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 760px; margin: 0 auto; text-align: center; }
+.dc-group__title { font: 500 clamp(34px, 3.5vw, 46px)/1.1 var(--serif); letter-spacing: -.02em; color: var(--ink); }
+.dc-group__title em { color: var(--rust-dark); }
+.dc-group__desc { max-width: 680px; }
+.dc .dc-care__list { gap: 32px 28px; }
+.dc .dc-care__list .care-item { flex: 0 0 calc((100% - 4 * 28px) / 5); }
+
+/* ----- Concierge, providers and the fine print ----- */
+.dc-concierge { display: grid; grid-template-columns: 1fr 1.05fr; gap: 32px 64px; align-items: start; margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--line); }
+.dc-concierge__main { display: flex; flex-direction: column; gap: 18px; }
+.dc-concierge__label { font: 600 11px/1.6 var(--sans); letter-spacing: 1.6px; text-transform: uppercase; color: var(--rust); }
+.dc-checks { display: flex; flex-direction: column; gap: 10px; }
+.dc-checks li { position: relative; padding-left: 30px; font-size: 14.5px; line-height: 1.7; color: var(--ink); }
+.dc-checks li::before { content: ""; position: absolute; top: 3px; left: 0; width: 20px; height: 20px; background: color-mix(in srgb, var(--sage) 12%, #fff); border-radius: 50%; }
+.dc-checks li::after { content: ""; position: absolute; top: 9px; left: 6px; width: 8px; height: 4px; border: solid var(--sage); border-width: 0 0 1.6px 1.6px; transform: rotate(-45deg); }
+.dc-concierge__close { margin-top: 6px; font: italic 500 21px/1.5 var(--serif); color: var(--brown-2); }
+.dc-concierge__side { display: flex; flex-direction: column; gap: 20px; }
+.dc-card { display: flex; flex-direction: column; gap: 14px; padding: 30px; font-size: 14.5px; line-height: 1.8; color: var(--text); background: var(--paper); border: 1px solid var(--line); border-radius: 6px 56px 6px 6px; }
+.dc-card__title { font: 500 28px/1.2 var(--serif); color: var(--ink); }
+.dc-links { display: flex; flex-direction: column; gap: 8px; }
+.dc-links a { font-weight: 600; color: var(--rust); border-bottom: 1px solid var(--gold); transition: color .25s; }
+.dc-links a:hover { color: var(--rust-dark); }
+.dc-note { padding: 20px 22px; font-size: 13px; line-height: 1.75; color: var(--muted); background: var(--paper); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; }
+.dc-note p + p { margin-top: 8px; }
+.dc-note .dc-note__title { font: 600 11px/1.6 var(--sans); letter-spacing: 1.6px; text-transform: uppercase; color: var(--rust); }
+.dc-note .dc-note__close { color: var(--text); }
+
+/* ----- Tablet ----- */
+@media (max-width: 1024px) {
+  .dc-well, .dc-concierge { column-gap: 36px; }
+  .dc .dc-care__list .care-item { flex-basis: calc((100% - 2 * 28px) / 3); }
+  .dc-approach .dc-approach__img { height: 320px; }
+  .dc-approach__img--second { height: 240px; }
+}
+
+/* ----- Mobile ----- */
+@media (max-width: 767px) {
+  .dc .experience { padding-top: 40px; padding-bottom: 40px; }
+  .dc-approach .dc-approach__img { height: 260px; }
+  .dc-approach__img--second { width: 78%; height: 190px; margin-top: -44px; border-width: 6px; border-radius: 3px 3px 3px 40px; }
+  .dc-well { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .dc-group { gap: 26px; }
+  .dc-group__title { font-size: 34px; }
+  .dc .dc-care__list { gap: 22px 14px; }
+  .dc .dc-care__list .care-item { flex-basis: calc((100% - 14px) / 2); }
+  .dc-concierge { grid-template-columns: minmax(0, 1fr); margin-top: 40px; padding-top: 36px; }
+  .dc-concierge__close { font-size: 19px; }
+  .dc-card { padding: 24px; border-radius: 6px 40px 6px 6px; }
+}

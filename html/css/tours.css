@@ -369,3 +369,20 @@ body.page-tours { background: var(--cream); }
 @media (prefers-reduced-motion: reduce) {
   .tour-card, .tour-card__media img, .tour-card__btn { transform: none !important; }
 }
+
+/* Choose your journey (2026-10-26): a short tick list replaces the icon rows */
+.tp-journeys__title em { color: var(--rust-dark); }
+.tour-card__list { display: flex; flex-direction: column; gap: 6px; margin: 2px 12px 0; }
+.tour-card__list li { position: relative; padding-left: 24px; font-size: 13.5px; line-height: 1.6; color: var(--text); }
+.tour-card__list li::before { content: ""; position: absolute; top: 6px; left: 2px; width: 10px; height: 5px; border: solid var(--accent, var(--sage)); border-width: 0 0 1.6px 1.6px; transform: rotate(-45deg); }
+
+/* Spring departures: two months side by side, two dates per row inside each month */
+.sj-months--two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+.sj-months--two .sj-month__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sj-dep__days { font-size: 12px; line-height: 1.5; color: var(--muted); }
+@media (max-width: 1024px) {
+  .sj-months--two { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .sj-months--two .sj-month__list { grid-template-columns: minmax(0, 1fr); }
+}

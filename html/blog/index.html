@@ -93,7 +93,7 @@
 </script>
 <link rel="preload" href="../fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../css/main.css?v=20261117z">
+<link rel="stylesheet" href="../css/main.css?v=20261029">
 <link rel="stylesheet" href="../css/blog.css?v=20261117r">
 </head>
 <body class="is-cream is-inner">
@@ -105,25 +105,22 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
-    <a class="site-header__logo" href="/"><img src="../images/logo-blooming.png" width="196" height="56" alt="Blooming Passage"></a>
+    <a class="site-header__logo" href="/"><img src="../images/logo-blooming.png?v=2" width="196" height="56" alt="Blooming Passage"></a>
     <div class="site-header__tools">
       <button class="search-toggle search-toggle--bar" type="button" aria-label="Search the site" data-search-open><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.875" cy="10.875" r="7.125"/><path d="M15.95 15.95 20.5 20.5"/></svg></button>
-      <a class="header-cta" href="/contact-us/">Contact Us</a>
+      <a class="header-cta" href="/contact-us/#plan">Plan Your Trip</a>
     </div>
     <div class="menu-overlay"></div>
     <nav class="main-nav" aria-label="Main">
       <button class="menu-close" type="button" aria-label="Close menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
-      <ul class="main-nav__list main-nav__list--left">
+      <ul class="main-nav__list">
         <li><a class="main-nav__link" href="/">Home</a></li>
-        <li><a class="main-nav__link" href="/about-us/">About Us</a></li>
+        <li><a class="main-nav__link" href="/our-story/">Our Story</a></li>
+        <li><a class="main-nav__link" href="/discover/">Discover</a></li>
         <li><a class="main-nav__link" href="/tours/">Journeys</a></li>
-      </ul>
-      <ul class="main-nav__list main-nav__list--right">
-        <li><a class="main-nav__link" href="/faqs/">FAQ</a></li>
-        <li><a class="main-nav__link" href="/gallery/">Gallery</a></li>
-        <li><a class="main-nav__link is-active" href="/blog/" aria-current="page">Blog</a></li>
+        <li><a class="main-nav__link" href="/contact-us/">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -132,7 +129,6 @@
 <main class="journal-page">
   <section class="journal-banner">
     <div class="journal-banner__inner">
-      <p class="journal-banner__crumb"><a href="/">Home</a><svg width="10" height="16" viewBox="0 0 7 16" aria-hidden="true"><path d="M0 15.5L4.94 0h1.44L1.44 15.5z"/></svg>Blog</p>
       <h1 class="journal-banner__title">The Passage Journal</h1>
       <p class="journal-banner__text">Stories, travel inspiration and little moments worth keeping. Take a breath, follow your curiosity and find ideas for your next passage.</p>
     </div>
@@ -175,7 +171,7 @@
 <footer class="site-footer">
   <div class="site-footer__top">
     <div class="footer-brand">
-      <a href="/"><img class="footer-brand__logo" src="../images/logo-blooming.png" width="250" height="72" alt="Blooming Passage" loading="lazy"></a>
+      <a href="/"><img class="footer-brand__logo" src="../images/logo-blooming.png?v=2" width="250" height="72" alt="Blooming Passage" loading="lazy"></a>
       <p class="footer-brand__motto">It’s your time to bloom.</p>
       <p class="footer-brand__tag">Thoughtfully curated journeys through Central Vietnam.</p>
     </div>
@@ -195,10 +191,23 @@
     </div>
     <div class="footer-col">
       <h3 class="footer-col__title">Explore</h3>
-      <ul class="footer-list">
-        <li><a href="/tours/">Our Journeys</a></li>
-        <li><a href="/about-us/">Our Story</a></li>
-        <li><a href="/contact-us/">Contact Us</a></li>
+      <ul class="footer-list footer-list--explore">
+        <li><a href="/">Home</a></li>
+        <li><a href="/our-story/">Our Story</a></li>
+        <li><a href="/discover/">Discover</a></li>
+        <li><a href="/tours/">Journeys</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-col__title">Guest Information</h3>
+      <ul class="footer-list footer-list--guest">
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/payment-booking-terms/">Payment &amp; Booking Terms</a></li>
+        <li><a href="/cancellation-refund-policy/">Cancellation &amp; Refund Policy</a></li>
+        <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -211,7 +220,7 @@
     </div>
   </div>
   <div class="site-footer__bottom">
-    <p>© 2026 Blooming Passage. All rights reserved.</p>
+    <p><span>U.S.-Based Business</span><span class="site-footer__sep" aria-hidden="true">|</span><span>© 2026 Blooming Passage. All rights reserved.</span></p>
   </div>
 </footer>
 
@@ -238,6 +247,6 @@
   </a>
 </nav>
 
-<script src="../js/main.js?v=20261120" defer></script>
+<script src="../js/main.js?v=20261026" defer></script>
 </body>
 </html>
