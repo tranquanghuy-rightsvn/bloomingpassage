@@ -80,7 +80,7 @@
 <link rel="preload" href="../fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../css/main.css?v=20261029">
-<link rel="stylesheet" href="../css/contact-us.css?v=20261028">
+<link rel="stylesheet" href="../css/contact-us.css?v=20261030">
 </head>
 <body class="is-inner">
 
@@ -203,6 +203,121 @@
             <label class="ct-form__label" for="ct-msg">What would you love to experience in Vietnam?</label>
             <p class="ct-form__hint" id="ct-msg-hint">Share your interests, hopes, or anything you’d like us to know.</p>
             <textarea class="ct-form__control ct-form__control--area" id="ct-msg" name="message" placeholder="I’d love to experience…" aria-describedby="ct-msg-hint"></textarea>
+          </div>
+          <div class="ct-profile ct-form__field--full" id="profile">
+            <h3 class="ct-profile__title">Comfort &amp; Preferences Profile</h3>
+            <p>Every traveler has different needs and preferences, and we want you to feel comfortable, supported, and cared for throughout your journey.</p>
+            <p>When you inquire, please let us know about any food allergies, dietary needs, mobility concerns, or other personal requirements that may help us plan your experience. We’ll do our best to accommodate your needs, although some requests depend on local availability and cannot be guaranteed.</p>
+            <p>By sharing your preferences and needs in advance, you help us create a more thoughtful, comfortable, and enjoyable experience for you.</p>
+          </div>
+          <fieldset class="ct-profile__sec ct-form__field--full">
+            <legend class="ct-profile__h">1. Dietary Needs &amp; Food Preferences</legend>
+            <p class="ct-form__hint">Please select your preferred meal option.</p>
+            <div class="ct-form__choice">
+              <label class="ct-radio"><input type="radio" name="diet" value="Regular meals"><span>Regular meals</span></label>
+              <label class="ct-radio"><input type="radio" name="diet" value="Vegetarian meals"><span>Vegetarian meals</span></label>
+              <label class="ct-radio"><input type="radio" name="diet" value="Other dietary needs or food allergies"><span>Other dietary needs or food allergies</span></label>
+            </div>
+            <div class="ct-profile__more">
+              <label class="ct-form__label" for="ct-diet-more">Additional Details <span class="ct-form__opt">(optional)</span></label>
+              <p class="ct-form__hint" id="ct-diet-more-hint">Please describe any dietary restrictions, food allergies, or other requirements we should know about.</p>
+              <textarea class="ct-form__control ct-form__control--short" id="ct-diet-more" name="diet_details" aria-describedby="ct-diet-more-hint"></textarea>
+            </div>
+            <p class="ct-profile__note"><strong>Important Note:</strong> Regular and vegetarian meals are subject to restaurant menus and ingredient availability. We cannot guarantee vegan, gluten-free, or other specialized dietary accommodations. Guests with food allergies or strict dietary restrictions must inform us before booking so we can assess whether we can accommodate your needs.</p>
+          </fieldset>
+          <fieldset class="ct-profile__sec ct-form__field--full">
+            <legend class="ct-profile__h">2. Mobility &amp; Physical Comfort</legend>
+            <p class="ct-form__hint">Do you have any mobility or physical comfort considerations? Select all that apply.</p>
+            <div class="ct-form__choice">
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="No special considerations"><span>No special considerations</span></label>
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="I prefer a relaxed pace with time to rest"><span>I prefer a relaxed pace with time to rest</span></label>
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="I may need assistance with stairs or uneven surfaces"><span>I may need assistance with stairs or uneven surfaces</span></label>
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="I have difficulty walking long distances or standing for extended periods"><span>I have difficulty walking long distances or standing for extended periods</span></label>
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="I use a mobility aid"><span>I use a mobility aid</span></label>
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="Other considerations"><span>Other considerations</span></label>
+            </div>
+            <div class="ct-profile__more">
+              <label class="ct-form__label" for="ct-mobility-more">Additional Details <span class="ct-form__opt">(optional)</span></label>
+              <p class="ct-form__hint" id="ct-mobility-more-hint">Please share any relevant details that may help us plan your experience.</p>
+              <textarea class="ct-form__control ct-form__control--short" id="ct-mobility-more" name="mobility_details" aria-describedby="ct-mobility-more-hint"></textarea>
+            </div>
+          </fieldset>
+          <fieldset class="ct-profile__sec ct-form__field--full">
+            <legend class="ct-profile__h">3. Travel Comfort &amp; Personal Preferences</legend>
+            <p class="ct-form__hint">What would help you feel most comfortable during your journey? Select all that apply.</p>
+            <div class="ct-form__choice">
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="A relaxed pace with downtime"><span>A relaxed pace with downtime</span></label>
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="A balance of guided activities and free time"><span>A balance of guided activities and free time</span></label>
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="Opportunities for shopping and personal exploration"><span>Opportunities for shopping and personal exploration</span></label>
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="Wellness and self-care experiences"><span>Wellness and self-care experiences</span></label>
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="Assistance with special arrangements, when available"><span>Assistance with special arrangements, when available</span></label>
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="Other preferences"><span>Other preferences</span></label>
+            </div>
+            <div class="ct-profile__more">
+              <label class="ct-form__label" for="ct-comfort-more">Additional Details <span class="ct-form__opt">(optional)</span></label>
+              <p class="ct-form__hint" id="ct-comfort-more-hint">Please share any other preferences that may help us personalize your journey.</p>
+              <textarea class="ct-form__control ct-form__control--short" id="ct-comfort-more" name="comfort_details" aria-describedby="ct-comfort-more-hint"></textarea>
+            </div>
+          </fieldset>
+          <fieldset class="ct-profile__sec ct-form__field--full">
+            <legend class="ct-profile__h">4. Optional Wellness &amp; Self-Care Experiences</legend>
+            <p class="ct-form__hint">Which experiences would you be interested in learning more about? Select all that apply. Your selections indicate interest only and do not constitute a booking.</p>
+            <p class="ct-profile__sub">Beauty &amp; Personal Well-Being</p>
+            <div class="ct-form__choice">
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Rejuvenating massage and relaxation treatments"><span>Rejuvenating massage and relaxation treatments</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Facial treatments"><span>Facial treatments</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Hair styling and personal grooming"><span>Hair styling and personal grooming</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Manicure and pedicure"><span>Manicure and pedicure</span></label>
+            </div>
+            <p class="ct-profile__sub">Proactive Health &amp; Prevention</p>
+            <div class="ct-form__choice">
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Executive health check-up"><span>Executive health check-up</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Dental consultation or care"><span>Dental consultation or care</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Skin health or dermatology consultation"><span>Skin health or dermatology consultation</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Aesthetic or beauty consultation"><span>Aesthetic or beauty consultation</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Consultation with a healthcare professional"><span>Consultation with a healthcare professional</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Other wellness or healthcare interests"><span>Other wellness or healthcare interests</span></label>
+            </div>
+            <div class="ct-profile__more">
+              <label class="ct-form__label" for="ct-wellness-more">Additional Details <span class="ct-form__opt">(optional)</span></label>
+              <p class="ct-form__hint" id="ct-wellness-more-hint">Please share any specific services you’re interested in or questions you’d like us to explore.</p>
+              <textarea class="ct-form__control ct-form__control--short" id="ct-wellness-more" name="wellness_details" aria-describedby="ct-wellness-more-hint"></textarea>
+            </div>
+            <p class="ct-profile__note"><strong>Important Note:</strong> These services are optional, may involve additional fees, and depend on provider availability, scheduling, and suitability. Independent providers are responsible for explaining services, recommendations, costs, and potential risks. You decide whether to proceed and pay providers directly. Blooming Passage can assist with coordinating appointments when available but does not provide medical advice or care, recommend treatments, or guarantee outcomes.</p>
+          </fieldset>
+          <div class="ct-profile__sec ct-form__field--full">
+            <label class="ct-profile__h" for="ct-else">5. Anything Else You’d Like Us to Know?</label>
+            <p class="ct-form__hint" id="ct-else-hint">Is there anything else that would help us plan a comfortable and enjoyable experience for you? <span class="ct-form__opt">(optional)</span></p>
+            <textarea class="ct-form__control ct-form__control--short" id="ct-else" name="anything_else" aria-describedby="ct-else-hint"></textarea>
+          </div>
+          <fieldset class="ct-profile__sec ct-profile__grid ct-form__field--full">
+            <legend class="ct-profile__h">6. Emergency Contact Information</legend>
+            <p class="ct-form__hint ct-form__field--full">For your safety and peace of mind, please provide the details of someone we can contact in the event of an emergency during your journey.</p>
+            <div class="ct-form__field">
+              <label class="ct-form__label" for="ct-ec-name">Emergency Contact Full Name <span class="ct-form__req" aria-hidden="true">*</span></label>
+              <input class="ct-form__control" id="ct-ec-name" type="text" name="ec_name" placeholder="Enter their full name" required>
+            </div>
+            <fieldset class="ct-form__field ct-form__choice">
+              <legend class="ct-form__label">Relationship to You <span class="ct-form__req" aria-hidden="true">*</span></legend>
+              <label class="ct-radio"><input type="radio" name="ec_relationship" value="Spouse or Partner" required><span>Spouse or Partner</span></label>
+              <label class="ct-radio"><input type="radio" name="ec_relationship" value="Family Member"><span>Family Member</span></label>
+              <label class="ct-radio"><input type="radio" name="ec_relationship" value="Friend"><span>Friend</span></label>
+              <label class="ct-radio"><input type="radio" name="ec_relationship" value="Other"><span>Other</span></label>
+            </fieldset>
+            <div class="ct-form__field">
+              <label class="ct-form__label" for="ct-ec-phone">Emergency Contact Phone Number <span class="ct-form__req" aria-hidden="true">*</span></label>
+              <input class="ct-form__control" id="ct-ec-phone" type="tel" name="ec_phone" placeholder="Include country code, e.g. +1" required>
+            </div>
+            <div class="ct-form__field">
+              <label class="ct-form__label" for="ct-ec-email">Emergency Contact Email Address <span class="ct-form__opt">(optional)</span></label>
+              <input class="ct-form__control" id="ct-ec-email" type="email" name="ec_email" placeholder="Enter their email address">
+            </div>
+            <p class="ct-form__hint ct-form__field--full">Please ensure that your emergency contact is aware that you have provided their information and that their contact details are current.</p>
+          </fieldset>
+          <div class="ct-profile__thought ct-form__field--full">
+            <p class="ct-profile__h">A Thoughtful Note</p>
+            <p>Blooming Passage will do its best to accommodate your preferences, although some requests depend on local availability and cannot be guaranteed.</p>
+            <p>Please note that Blooming Passage does not provide medical advice or medical care. Guests are responsible for assessing their fitness to travel, managing their own medical needs, and bringing any necessary medications.</p>
           </div>
           <p class="ct-form__trap" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
           <div class="ct-form__field--full ct-form__foot">
@@ -327,6 +442,10 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var val = function (n) { var el = form.elements[n]; return el ? String(el.value).trim() : ''; };
+      var picked = function (n) {
+        var v = Array.prototype.map.call(form.querySelectorAll('[name="' + n + '"]:checked'), function (el) { return el.value; });
+        return v.length ? v.join('; ') : '—';
+      };
       var label = function (v) { var r = form.querySelector('[name="journey"][value="' + v + '"]'); return r ? r.parentNode.textContent.trim() : ''; };
       button.disabled = true;
       button.textContent = 'Sending…';
@@ -340,7 +459,20 @@
         'Journey': label(journey()),
         'Preferred departure': dep.value ? dep.options[dep.selectedIndex].text : 'Not chosen yet',
         'Discovery call': form.querySelector('[name="call"]:checked').value,
-        'Would love to experience': val('message') || '—'
+        'Would love to experience': val('message') || '—',
+        'Meal option': picked('diet'),
+        'Dietary details': val('diet_details') || '—',
+        'Mobility & physical comfort': picked('mobility'),
+        'Mobility details': val('mobility_details') || '—',
+        'Travel comfort & preferences': picked('comfort'),
+        'Preference details': val('comfort_details') || '—',
+        'Wellness & self-care interests': picked('wellness'),
+        'Wellness details': val('wellness_details') || '—',
+        'Anything else': val('anything_else') || '—',
+        'Emergency contact name': val('ec_name'),
+        'Emergency contact relationship': picked('ec_relationship'),
+        'Emergency contact phone': val('ec_phone'),
+        'Emergency contact email': val('ec_email') || '—'
       }).then(function () {
         form.hidden = true;
         thanks.hidden = false;
@@ -354,6 +486,6 @@
     });
   })();
 </script>
-<script src="../js/main.js?v=20261026" defer></script>
+<script src="../js/main.js?v=20261030" defer></script>
 </body>
 </html>

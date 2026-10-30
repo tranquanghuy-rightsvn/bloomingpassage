@@ -7,26 +7,25 @@
 
 /* street-food photo (client, 2026-10-28): a taller banner so the four faces and the table both stay in frame */
 .page-banner--discover {
-  background: linear-gradient(rgba(29, 43, 34, .38), rgba(29, 43, 34, .42)), url(../images/banner-han-river-street-food.webp) center 48% / cover, var(--gold);
+  background: linear-gradient(rgba(29, 43, 34, .38), rgba(29, 43, 34, .42)), url(../images/banner-han-river-street-food.webp?v=2) center 48% / cover, var(--gold);
 }
 @media (min-width: 768px) {
   .page-banner--discover { display: grid; align-content: center; min-height: clamp(520px, 44vw, 680px); }
 }
 
-/* ----- Our approach: two photos, the second tucked under the first ----- */
+/* ----- Our approach: one large photo, two smaller ones side by side tucked under it ----- */
 .dc-approach__lead { display: flex; flex-direction: column; gap: 16px; }
-.dc-approach__media { position: relative; display: flex; flex-direction: column; align-items: flex-end; }
+.dc-approach__media { position: relative; display: flex; flex-direction: column; }
 .dc-approach .dc-approach__img { height: 360px; }
-.dc-approach__img--second {
-  position: relative;
-  width: 72%;
-  height: 280px;
-  margin-top: -64px;
+.dc-approach__pair { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: -64px 0 0 28px; }
+.dc-approach .dc-approach__pair .dc-approach__img {
+  width: 100%;
+  height: 250px;
   object-fit: cover;
-  object-position: center 30%;
   border: 8px solid var(--cream);
-  border-radius: 4px 4px 4px 56px;
 }
+.dc-approach__img--third { object-position: center 40%; border-radius: 4px 4px 4px 56px; }
+.dc-approach__img--second { object-position: center 30%; border-radius: 4px 4px 56px 4px; }
 .dc-pills { display: flex; flex-wrap: wrap; gap: 10px; }
 .dc-pills li {
   padding: 7px 16px;
@@ -82,14 +81,17 @@
   .dc-well, .dc-concierge { column-gap: 36px; }
   .dc .dc-care__list .care-item { flex-basis: calc((100% - 2 * 28px) / 3); }
   .dc-approach .dc-approach__img { height: 320px; }
-  .dc-approach__img--second { height: 240px; }
+  .dc-approach .dc-approach__pair .dc-approach__img { height: 220px; }
 }
 
 /* ----- Mobile ----- */
 @media (max-width: 767px) {
   .dc .experience { padding-top: 40px; padding-bottom: 40px; }
   .dc-approach .dc-approach__img { height: 260px; }
-  .dc-approach__img--second { width: 78%; height: 190px; margin-top: -44px; border-width: 6px; border-radius: 3px 3px 3px 40px; }
+  .dc-approach__pair { margin: -44px 0 0 14px; }
+  .dc-approach .dc-approach__pair .dc-approach__img { height: 160px; border-width: 5px; }
+  .dc-approach__img--third { border-radius: 3px 3px 3px 32px; }
+  .dc-approach__img--second { border-radius: 3px 3px 32px 3px; }
   .dc-well { grid-template-columns: minmax(0, 1fr); gap: 26px; }
   .dc-group { gap: 26px; }
   .dc-group__title { font-size: 34px; }
