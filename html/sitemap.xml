@@ -49,24 +49,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bloomingpassage.com/gallery/</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/gallery/"/>
-    <lastmod>2026-10-15</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.bloomingpassage.com/blog/</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/blog/"/>
-    <lastmod>2026-10-15</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.bloomingpassage.com/hoi-an-lanterns-craft-and-a-little-wonder/</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/hoi-an-lanterns-craft-and-a-little-wonder/"/>
-    <lastmod>2026-10-15</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.bloomingpassage.com/contact-us/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.bloomingpassage.com/contact-us/"/>
     <lastmod>2026-10-15</lastmod>

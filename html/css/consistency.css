@@ -1,0 +1,107 @@
+/* =====================================================================
+   Site-wide consistency layer (client request 2026-10-31)
+   Loaded LAST on every page so the same kind of element has the same
+   type and size everywhere. Scale:
+     H1 page banner ........ Cormorant 500, 72px (fluid down to 44px)
+     H2 section title ...... Cormorant 500, 46px (fluid down to 34px)
+     H3 card title ......... Cormorant 500, 28px (fluid down to 24px)
+     Eyebrow (section label) Montserrat 600, 14px, +2.8px tracking, rust
+     Small label / meta .... Montserrat 600, 12px, +1.6px tracking
+     Body .................. Montserrat 15px; card text 14px; notes 15px
+   Deliberate exceptions: the home hero, the closing CTA band, the
+   "Arrive. Exhale. Bloom." line, and Our Philosophy (kept smaller than
+   The Four Pillars at the client's request).
+   ===================================================================== */
+
+/* ----- H1: page banners ----- */
+.page-banner__title,
+.tp-banner__title,
+.faq-banner__title {
+  font-size: clamp(44px, 5vw, 72px);
+  letter-spacing: -1px;
+}
+
+/* ----- H2: section titles ----- */
+.ab-title,
+.ab-story__title,
+.sj-title,
+.sec-head__title,
+.about__title,
+.why__title,
+.places__title,
+.experience__title,
+.tp-journeys__title,
+.tp-faq__title,
+.dc-group__title,
+.ct-title {
+  font-size: clamp(34px, 3.4vw, 46px);
+}
+.experience__title--em { margin-top: -10px; }
+/* Our Philosophy stays one step smaller than The Four Pillars (client) */
+.ab-philo .ab-title { font-size: clamp(30px, 2.8vw, 38px); }
+/* tour-page FAQ heading matched the other tour-page headings */
+.tfaq__title { font: 500 32px/40px var(--serif); color: var(--brown-2); }
+
+/* ----- H3: card titles ----- */
+.tour-card__title,
+.sj-card__title,
+.sj-day__title,
+.dc-card__title,
+.ab-value__title,
+.ct-block__title {
+  font-size: clamp(24px, 2vw, 28px);
+}
+
+/* ----- Eyebrows: the small label above a section title ----- */
+.eyebrow,
+.sj-eyebrow,
+.ab-eyebrow,
+.cta__eyebrow,
+.faq-eyebrow {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.8px;
+}
+.ab-title[data-eyebrow]::before { font-size: 14px; letter-spacing: 2.8px; }
+
+/* ----- Small labels / meta lines ----- */
+.exp-panel__eyebrow,
+.sj-card__motto,
+.sj-day__meta,
+.dc-concierge__label,
+.dc-note__title,
+.pp-updated,
+.tour-route,
+.tour-disclaimer__title,
+.tour-facts__label,
+.tour-sub,
+.tour-card__route,
+.jbd__meta,
+.ab-founder__name span,
+.tp-season span {
+  font-size: 12px;
+  letter-spacing: 1.6px;
+}
+.dc-note .dc-note__title,
+.tour-content .tour-disclaimer .tour-disclaimer__title { font-size: 12px; letter-spacing: 1.6px; }
+.place__meta em { font-size: 12px; font-weight: 600; letter-spacing: 1.6px; }
+
+/* ----- Body copy ----- */
+.page-banner__desc,
+.photo-banner__desc { font-size: 16px; }
+.sec-head__desc { line-height: 1.8; }
+/* text inside cards and lists */
+.ab-value__text,
+.tour-card__body,
+.tour-card__highlights li,
+.sj-checks li,
+.sj-excl__list,
+.dc-checks li { font-size: 14px; line-height: 1.75; }
+/* the small bordered notes ("What's included varies…", "Please review…") */
+.sj-note,
+.sj-incl__fine,
+.tour-note { font-size: 15px; line-height: 1.75; color: var(--text); }
+
+/* ----- Layout: Our Story / Discover sections line up with the rest of the site (1200px) ----- */
+.ab-sec > * { max-width: 1200px; }

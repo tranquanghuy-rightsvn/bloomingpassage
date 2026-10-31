@@ -94,12 +94,12 @@
 .tour-meta .share__title { border: 0; font: 500 32px/40px var(--serif); color: var(--brown-2); }
 
 /* Tour details (client design, 2026-10-28): lotus + spaced title, then the facts with round icons, three to a row */
-.tour-details { padding: 34px 0 30px; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
-.tour-details__head { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-bottom: 30px; text-align: center; }
-.tour-details__lotus { width: 42px; height: 28px; color: var(--rust); }
-.tour-details__title { display: flex; align-items: center; gap: 22px; font: 500 30px/1.2 var(--serif); letter-spacing: .2em; text-transform: uppercase; color: var(--ink); }
-.tour-details__title::before, .tour-details__title::after { content: ""; width: 80px; height: 1px; background: var(--rust); opacity: .7; }
-.tour-details__sub { font: italic 400 19px/1.4 var(--serif); color: var(--ink); }
+.tour-details { padding: 26px 0 26px; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+.tour-details__head { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-bottom: 24px; text-align: center; }
+.tour-details__lotus { width: 30px; height: 20px; color: var(--rust); }
+.tour-details__title { display: flex; align-items: center; gap: 16px; font: 600 17px/1.2 var(--serif); letter-spacing: .24em; text-transform: uppercase; color: var(--ink); }
+.tour-details__title::before, .tour-details__title::after { content: ""; width: 48px; height: 1px; background: var(--rust); opacity: .7; }
+.tour-details__sub { font: italic 400 16px/1.4 var(--serif); color: var(--ink); }
 .tour-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 0; }
 .tour-facts li { display: grid; grid-template-columns: 64px minmax(0, 1fr); grid-template-rows: auto 1fr; column-gap: 20px; padding: 2px 26px; border-left: 1px solid color-mix(in srgb, var(--rust) 35%, transparent); }
 .tour-facts li:nth-child(3n + 1) { padding-left: 0; border-left: 0; }
@@ -397,9 +397,9 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
   .tour-facts__icon { width: 52px; height: 52px; }
   .tour-facts .ic { width: 24px; height: 24px; }
   .tour-facts__value { font-size: 19px; }
-  .tour-details__title { gap: 14px; font-size: 24px; }
-  .tour-details__title::before, .tour-details__title::after { width: 36px; }
-  .tour-details__sub { font-size: 17px; }
+  .tour-details__title { gap: 12px; font-size: 15px; }
+  .tour-details__title::before, .tour-details__title::after { width: 28px; }
+  .tour-details__sub { font-size: 15px; }
   .tour-body { gap: 48px; }
   .tour-h { font-size: 28px; line-height: 35px; }
   .itin__body p, .itin__body li, .tour-content p, .tour-content li, .tfaq__item p { font-size: 14px; line-height: 25.2px; }
@@ -430,3 +430,39 @@ textarea.field { height: 110px; padding: 15px 17px; border-radius: 16px; resize:
 .plan-form__note { padding: 10px 12px; font-size: 13px; line-height: 1.6; color: var(--rust-dark); background: color-mix(in srgb, var(--rust) 8%, #fff); border-radius: 4px; }
 .plan-form__note.is-sent { color: var(--sage); background: color-mix(in srgb, var(--sage) 9%, #fff); }
 .plan-form__note a { text-decoration: underline; }
+
+/* ===== Your "Journey-by-day" (client itinerary, 2026-10-31) ===== */
+.jbd { display: flex; flex-direction: column; gap: 22px; }
+.jbd__heading em { font-weight: 600; color: var(--rust); }
+.jbd__intro { display: flex; flex-direction: column; gap: 6px; padding: 22px 26px; background: var(--paper); border: 1px solid var(--line-soft); border-left: 3px solid var(--gold); border-radius: 4px 16px 16px 4px; }
+.jbd__name { font: 500 26px/1.2 var(--serif); color: var(--ink); }
+.jbd__meta { display: flex; flex-wrap: wrap; align-items: center; font: 600 12px/1.7 var(--sans); letter-spacing: 1.4px; text-transform: uppercase; color: var(--rust); }
+.jbd__meta i { margin: 0 10px; font-style: normal; color: var(--line-soft); }
+.jbd__lead { margin-top: 2px; font: italic 500 18px/1.5 var(--serif); color: var(--brown-2); }
+.jbd__days { position: relative; display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+/* a thin timeline joins the day markers */
+.jbd__days::before { content: ""; position: absolute; top: 28px; bottom: 28px; left: 27px; width: 1px; background: color-mix(in srgb, var(--gold) 60%, transparent); }
+.jbd__day { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 20px; padding: 14px 0; }
+.jbd__day + .jbd__day { border-top: 1px solid var(--line-soft); }
+.jbd__num { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 56px; height: 56px; font: 500 24px/1 var(--serif); color: var(--rust); background: var(--paper); border: 1px solid var(--gold); border-radius: 50%; }
+.jbd__num span { margin-bottom: 2px; font: 600 9px/1 var(--sans); letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); }
+.jbd__body { display: flex; flex-direction: column; gap: 6px; padding-top: 6px; }
+.jbd__title { margin: 0; font: 500 22px/1.25 var(--serif); color: var(--ink); }
+.jbd__place { display: inline-block; margin-left: 8px; padding: 2px 10px; font: 600 10.5px/1.6 var(--sans); letter-spacing: 1.2px; text-transform: uppercase; vertical-align: 3px; color: var(--sage); background: color-mix(in srgb, var(--sage) 10%, #fff); border-radius: 999px; }
+.jbd__flow { display: flex; flex-wrap: wrap; row-gap: 4px; margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.75; color: var(--text); }
+.jbd__flow li + li::before { content: "→"; margin: 0 8px; color: var(--rust); }
+@media (max-width: 767px) {
+  .jbd__intro { padding: 18px 18px; }
+  .jbd__name { font-size: 23px; }
+  .jbd__lead { font-size: 17px; }
+  .jbd__days::before { left: 21px; }
+  .jbd__day { grid-template-columns: 44px minmax(0, 1fr); gap: 14px; }
+  .jbd__num { width: 44px; height: 44px; font-size: 19px; }
+  .jbd__num span { font-size: 8px; letter-spacing: 1.2px; }
+  .jbd__title { font-size: 20px; }
+  .jbd__place { margin: 4px 0 0; }
+  /* phones: one activity per line, every line led by an arrow */
+  .jbd__flow { flex-direction: column; row-gap: 2px; font-size: 13.5px; }
+  .jbd__flow li { position: relative; padding-left: 18px; }
+  .jbd__flow li::before, .jbd__flow li + li::before { content: "→"; position: absolute; left: 0; margin: 0; color: var(--rust); }
+}

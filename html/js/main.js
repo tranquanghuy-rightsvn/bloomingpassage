@@ -31,10 +31,7 @@
     ['10-Day Vietnam Journey', '/tours/10-day-balanced-journey/', 'Vietnam Journey “Deeper Discovery”. Hoi An, Da Nang & Hue, 10 days · 9 nights.', '10 days ten deeper discovery hue imperial citadel royal tombs perfume river hoi an da nang farewell dinner shopping wellness'],
     ['Contact', '/contact-us/', 'Your next chapter starts with a conversation. Send an inquiry or request a discovery call.', 'contact enquiry inquiry email phone plan trip book question discovery call'],
     ['Privacy Policy', '/privacy-policy/', 'How Blooming Passage collects, uses and protects your information.', 'privacy policy data personal information inquiry form cookies'],
-    ['Gallery', '/gallery/', 'Moments worth keeping: culture, flavour and shared moments in Central Vietnam.', 'gallery photos pictures images moments experience culture food cooking tailoring spa beauty'],
     ['FAQs', '/faqs/', 'A few answers to help you feel at home with Blooming Passage.', 'faq questions group size travel alone included optional wellness departure booking medical tourism pace airport reserve deposit'],
-    ['Blog – The Passage Journal', '/blog/', 'Stories, travel inspiration and little moments worth keeping.', 'blog journal stories articles hoi an hue da nang'],
-    ['Hoi An: Lanterns, Craft and a Little Wonder', '/hoi-an-lanterns-craft-and-a-little-wonder/', 'Lantern-lit streets, local flavours, countryside gardens and makers.', 'hoi an lanterns craft food cao lau tra que cam thanh an bang beach evening blog']
   ];
   var fold = function (t) { return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
   var panel, input, results, label, lastFocus;

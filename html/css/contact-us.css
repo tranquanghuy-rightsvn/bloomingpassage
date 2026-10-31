@@ -4,7 +4,7 @@ body { background: var(--cream); }
 /* ----- Page banner ----- */
 .page-banner {
   padding: 150px 15px 70px;
-  background: linear-gradient(90deg, rgba(45, 39, 33, .5), rgba(45, 39, 33, .3)), url(../images/banner-danang-dragon-bridge-dusk.webp) center 62% / cover, var(--gold);
+  background: linear-gradient(90deg, rgba(45, 39, 33, .42), rgba(45, 39, 33, .18)), url(../images/bun-bo-hue.webp) center 45% / cover, var(--gold);
 }
 /* Da Nang city photo (client, 2026-10-28): taller so the skyline and the Dragon Bridge both stay in frame */
 @media (min-width: 768px) {

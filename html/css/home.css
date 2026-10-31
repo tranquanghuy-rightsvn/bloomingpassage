@@ -7,7 +7,7 @@
   background: var(--cream);
 }
 .sec > * { width: 100%; max-width: 1200px; }
-.eyebrow { font-size: 11px; letter-spacing: 2.8px; }
+.eyebrow { font-size: 14px; letter-spacing: 3px; }
 .eyebrow--muted { color: var(--muted); }
 .eyebrow--accent { color: var(--rust); }
 
@@ -446,6 +446,8 @@
 .tour-card__icon { flex: none; width: 24px; height: 24px; color: var(--accent, var(--sage)); }
 .tour-card__icon svg { display: block; width: 100%; height: 100%; }
 .tour-card__text { margin: 0 12px 14px; font-size: 15px; line-height: 1.6; color: var(--text); }
+.tour-card__tagline { margin: 0 12px 14px; font: italic 500 19px/1.45 var(--serif); color: var(--brown); }
+.tour-card__body { display: flex; flex-direction: column; gap: 12px; margin: 0 12px 24px; padding-top: 14px; font-size: 14.5px; line-height: 1.7; color: var(--text); border-top: 1px solid rgba(101, 87, 74, .15); }
 .tour-card__list { display: flex; flex-direction: column; align-self: stretch; gap: 8px; margin: 0 12px 22px; padding-top: 14px; border-top: 1px solid rgba(101, 87, 74, .15); }
 .tour-card__list li { position: relative; padding-left: 18px; font-size: 14px; line-height: 1.5; color: var(--ink); }
 .tour-card__list li::before { content: ""; position: absolute; top: .6em; left: 2px; width: 6px; height: 6px; background: var(--accent, var(--sage)); border-radius: 50%; }
@@ -491,11 +493,12 @@
 .why__title em { font-weight: 400; color: var(--rust); }
 .why__close { padding-top: 18px; font: italic 500 22px/1.45 var(--serif); color: var(--sage); border-top: 1px solid var(--line); }
 /* three photos overlapping like prints laid on a table */
-.why__media { position: relative; height: 500px; }
+.why__media { position: relative; height: 580px; }
 .why__img { position: absolute; object-fit: cover; border: 6px solid var(--paper); border-radius: 6px; box-shadow: 0 14px 34px rgba(56, 45, 38, .14); }
-.why__img--a { top: 0; left: 0; width: 62%; height: 58%; }
-.why__img--b { top: 14%; right: 0; width: 42%; height: 62%; border-radius: 80px 6px 6px; }
-.why__img--c { bottom: 0; left: 14%; width: 52%; height: 42%; }
+.why__img--a { top: 0; left: 0; width: 58%; height: 42%; }
+.why__img--b { top: 3%; right: 0; width: 40%; height: 50%; border-radius: 80px 6px 6px; }
+.why__img--c { top: 46%; left: 4%; width: 54%; height: 40%; }
+.why__img--d { bottom: 0; right: 4%; width: 36%; height: 46%; z-index: 1; }
 
 /* ===== Places ===== */
 .places { gap: 16px; }
@@ -642,7 +645,7 @@
   .exp-panel__gallery { width: 54%; gap: 10px; }
   .place { gap: 40px; }
   .why__inner { gap: 40px; }
-  .why__media { height: 420px; }
+  .why__media { height: 500px; }
   .place__img { flex-basis: calc(50% - 20px); width: calc(50% - 20px); }
   .place__body { padding: 24px 8px; }
   .lens__grid { gap: 18px; grid-template-rows: repeat(3, 145px) auto; grid-auto-rows: 145px; }
@@ -690,7 +693,7 @@
   .place__list { grid-template-columns: minmax(0, 1fr); }
   .place__lead { font-size: 19px; }
   .why { padding-top: 40px; padding-bottom: 46px; }
-  .why__media { height: clamp(300px, 90vw, 400px); }
+  .why__media { height: clamp(360px, 110vw, 480px); }
   .why__close { font-size: 20px; }
   .place__body { gap: 16px; padding: 28px 0 0; }
   .place__title { font-size: 36px; }
