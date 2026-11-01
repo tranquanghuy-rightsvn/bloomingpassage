@@ -105,3 +105,6 @@
 
 /* ----- Layout: Our Story / Discover sections line up with the rest of the site (1200px) ----- */
 .ab-sec > * { max-width: 1200px; }
+
+/* ----- Journey names: the motto sits on its own line under the title (client 2026-11-01) ----- */
+.title-motto { display: block; font-style: italic; }

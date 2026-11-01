@@ -30,10 +30,10 @@ Free files below: commercial use allowed, no attribution required.
 | hue-cyclo-riverside (Gallery) | Client (source-images-client/hue-cyclo-riverside.png — "Cyclo Ride Along the Historic Riverside.png"; replaced 2026-10-31 by AI-edited "Nụ cười bên bờ sông nắng ấm.png") |
 | night-market-portrait-sketch (Gallery) | Client (source-images-client/night-market-portrait-sketch.png — "Phác họa bên chợ đêm ven sông.png") |
 | pottery-class-friends (Gallery) | Client (source-images-client/pottery-class-friends.png — "Xưởng gốm ấm áp đầy sáng tạo.png") |
-| coconut-basket-boat (Gallery; bottom strip with AI-generator mark cropped off) | Client (source-images-client/coconut-basket-boat.jpeg) |
+| coconut-basket-boat (7-day gallery; AI-edited older guests 2026-11-01, ?v=2) | Supplied by the team ("Chuyến du ngoạn thuyền thúng giữa rừng dừa nước.png"; source-images-client/coconut-basket-boat.png) |
 | hoian-ao-dai-lotus (Gallery) | Client (source-images-client/hoian-ao-dai-lotus.png — "Nụ cười bên phố đèn lồng vàng xưa.png") |
 | hoian-lantern-boat-sunset (Gallery) | Client (source-images-client/hoian-lantern-boat-sunset.png) |
-| rice-field-cycling (Gallery) | Client (source-images-client/rice-field-cycling.png) |
+| rice-field-cycling (10-day gallery; AI-edited older guests 2026-11-01, ?v=2) | Supplied by the team ("Đạp xe giữa đồng lúa xanh mát.png"; source-images-client/rice-field-cycling.png) |
 | hoian-cycling-lanterns (Gallery; `-768` is a 3:2 crop) | Client (source-images-client/hoian-cycling-lanterns.png — "Đạp xe giữa phố đèn lồng Hội An.png"; replaced 2026-10-31 by AI-edited "Hai phụ nữ đạp xe phố cổ rực nắng.png") |
 | mineral-mud-bath (Gallery) | Client (source-images-client/mineral-mud-bath.png — "Thư giãn trong bồn tắm bùn khoáng.png") |
 | curated-essence-massage (7-Day Curated Essence cover: home, Journeys, journey cards; `-card` is a 1.6:1 crop) | Client (source-images-client/curated-essence-massage.png — "Ảnh ChatGPT 20_57_22 14 thg 10, 2026.png") |
@@ -240,7 +240,9 @@ so they are used where no place is named.
 | og-hoi-an-lanterns.jpg | crop of lantern-maker (client, "Make Lanterns") |
 
 Replaced 2026-10-31 with AI-edited versions supplied by the team (old versions deleted):
-| motorbike-tour-laugh (10-day gallery) | Supplied by the team ("Cặp đôi trên chiếc Vespa trắng.png"; source-images-client/motorbike-tour-laugh.png) |
+| motorbike-tour-laugh (10-day gallery) | Supplied by the team ("Niềm vui trên chiếc Vespa trắng.png", re-edited 2026-11-01, ?v=3; source-images-client/motorbike-tour-laugh.png) |
+| img-8 (7-day gallery, ao dai fitting; AI-edited 2026-11-01, ?v=2) | Supplied by the team ("Buổi thử áo dài giữa không gian thanh lịch.png"; source-images-client/aodai-fitting-img-8.png) |
+| img-9 (10-day gallery, brocade shawl fitting; AI-edited 2026-11-01, ?v=2) | Supplied by the team ("Khách hàng lớn tuổi thử áo choàng thổ cẩm.png"; source-images-client/brocade-shawl-fitting-img-9.png) |
 | cooking-class-garden (10-day gallery) | Supplied by the team ("Phụ nữ trung niên cùng nấu ăn ngoài vườn.png"; source-images-client/cooking-class-garden.png) |
 | img-1 (7-day gallery, tea-table selfie; old img-1-1024x1024 deleted) | Supplied by the team ("Nụ cười đa sắc bên bàn trà (1).png"; source-images-client/tea-table-friends-selfie.png) |
 | noodle-stall-friends (10-day gallery) | Supplied by the team ("Bữa ăn đường phố cùng ba người bạn.png"; source-images-client/noodle-stall-friends.png) |
