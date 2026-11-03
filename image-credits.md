@@ -16,6 +16,7 @@ Free files below: commercial use allowed, no attribution required.
 | hero-hoian-4 (14-day tour itinerary only) | Unsplash DTwAg5cqcaM |
 | hero-hoian-5 | Unsplash TRtyDemHzGM |
 | hoian-japanese-bridge | Pexels 14021776 |
+| banner-basket-boats-aerial (Essentials banner) | Pexels 32874870, aerial view of basket boats in the Cam Thanh coconut forest, Hoi An (client asked for a banner like this, 2026-11-03); original source-images/free/banner-basket-boats-aerial__pexels-32874870.jpg |
 | women-friends-hoian-journey (home group photo) | Supplied by the team ("Friends’ Journey Through Hoi An", 2026-10-09); sides and sky extended slightly so all six women sit inside the ink-brush frame |
 | women-friends-garden | **Unsplash+ 5nlE10fnnNA** (14-day tour gallery) |
 | massage-rejuvenate | Pexels 6560265 |

@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Comfort &amp; Preferences Profile – Blooming Passage</title>
+<meta name="description" content="Share your dietary needs, comfort preferences, wellness interests and emergency contact so we can prepare your Blooming Passage journey.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preload" href="../fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/main.css?v=20261029">
+<link rel="stylesheet" href="../css/contact-us.css?v=20261103">
+<link rel="stylesheet" href="../css/consistency.css?v=20261101">
+</head>
+<body class="is-inner">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="site-header__actions">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <a class="site-header__logo" href="/"><img src="../images/logo-blooming.png?v=3" width="196" height="56" alt="Blooming Passage"></a>
+    <div class="site-header__tools">
+      <button class="search-toggle search-toggle--bar" type="button" aria-label="Search the site" data-search-open><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.875" cy="10.875" r="7.125"/><path d="M15.95 15.95 20.5 20.5"/></svg></button>
+      <a class="header-cta" href="/contact-us/#plan">Plan Your Trip</a>
+    </div>
+    <div class="menu-overlay"></div>
+    <nav class="main-nav" aria-label="Main">
+      <button class="menu-close" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <ul class="main-nav__list">
+        <li><a class="main-nav__link" href="/">Home</a></li>
+        <li><a class="main-nav__link" href="/our-story/">Our Story</a></li>
+        <li><a class="main-nav__link" href="/discover/">Discover</a></li>
+        <li><a class="main-nav__link" href="/tours/">Journeys</a></li>
+        <li><a class="main-nav__link" href="/essentials/">Essentials</a></li>
+        <li><a class="main-nav__link" href="/contact-us/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-banner page-banner--plain">
+  <div class="page-banner__inner">
+    <h1 class="page-banner__title">Comfort &amp; Preferences Profile</h1>
+    <p class="page-banner__desc">Help us prepare a journey that feels right for you.</p>
+  </div>
+</section>
+
+<main class="ct">
+  <!-- Comfort & Preferences Profile (client 2026-11-03: sent to guests after they show interest, not on the first inquiry) -->
+  <section class="ct-sec ct-sec--form">
+    <div class="ct-row ct-row--single">
+      <div class="ct-card" id="plan">
+        <form class="ct-form" id="profile-form">
+          <div class="ct-profile ct-profile--lead ct-form__field--full" id="profile">
+            <h2 class="ct-profile__title">Your Comfort &amp; Preferences</h2>
+            <p>Every traveler has different needs and preferences, and we want you to feel comfortable, supported, and cared for throughout your journey.</p>
+            <p>When you inquire, please let us know about any food allergies, dietary needs, mobility concerns, or other personal requirements that may help us plan your experience. We’ll do our best to accommodate your needs, although some requests depend on local availability and cannot be guaranteed.</p>
+            <p>By sharing your preferences and needs in advance, you help us create a more thoughtful, comfortable, and enjoyable experience for you.</p>
+          </div>
+          <div class="ct-form__field">
+            <label class="ct-form__label" for="ct-name">Full Name <span class="ct-form__req" aria-hidden="true">*</span></label>
+            <input class="ct-form__control" id="ct-name" type="text" name="name" placeholder="Enter your full name" autocomplete="name" required>
+          </div>
+          <div class="ct-form__field">
+            <label class="ct-form__label" for="ct-email">Email Address <span class="ct-form__req" aria-hidden="true">*</span></label>
+            <input class="ct-form__control" id="ct-email" type="email" name="email" placeholder="The email you used for your inquiry" autocomplete="email" required>
+          </div>
+          <fieldset class="ct-profile__sec ct-form__field--full">
+            <legend class="ct-profile__h">1. Dietary Needs &amp; Food Preferences</legend>
+            <p class="ct-form__hint">Please select your preferred meal option.</p>
+            <div class="ct-form__choice">
+              <label class="ct-radio"><input type="radio" name="diet" value="Regular meals"><span>Regular meals</span></label>
+              <label class="ct-radio"><input type="radio" name="diet" value="Vegetarian meals"><span>Vegetarian meals</span></label>
+              <label class="ct-radio"><input type="radio" name="diet" value="Other dietary needs or food allergies"><span>Other dietary needs or food allergies</span></label>
+            </div>
+            <div class="ct-profile__more">
+              <label class="ct-form__label" for="ct-diet-more">Additional Details <span class="ct-form__opt">(optional)</span></label>
+              <p class="ct-form__hint" id="ct-diet-more-hint">Please describe any dietary restrictions, food allergies, or other requirements we should know about.</p>
+              <textarea class="ct-form__control ct-form__control--short" id="ct-diet-more" name="diet_details" aria-describedby="ct-diet-more-hint"></textarea>
+            </div>
+            <p class="ct-profile__note"><strong>Important Note:</strong> Regular and vegetarian meals are subject to restaurant menus and ingredient availability. We cannot guarantee vegan, gluten-free, or other specialized dietary accommodations. Guests with food allergies or strict dietary restrictions must inform us before booking so we can assess whether we can accommodate your needs.</p>
+          </fieldset>
+          <fieldset class="ct-profile__sec ct-form__field--full">
+            <legend class="ct-profile__h">2. Mobility &amp; Physical Comfort</legend>
+            <p class="ct-form__hint">Do you have any mobility or physical comfort considerations? Select all that apply.</p>
+            <div class="ct-form__choice">
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="No special considerations"><span>No special considerations</span></label>
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="I prefer a relaxed pace with time to rest"><span>I prefer a relaxed pace with time to rest</span></label>
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="I may need assistance with stairs or uneven surfaces"><span>I may need assistance with stairs or uneven surfaces</span></label>
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="I have difficulty walking long distances or standing for extended periods"><span>I have difficulty walking long distances or standing for extended periods</span></label>
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="I use a mobility aid"><span>I use a mobility aid</span></label>
+              <label class="ct-radio"><input type="checkbox" name="mobility" value="Other considerations"><span>Other considerations</span></label>
+            </div>
+            <div class="ct-profile__more">
+              <label class="ct-form__label" for="ct-mobility-more">Additional Details <span class="ct-form__opt">(optional)</span></label>
+              <p class="ct-form__hint" id="ct-mobility-more-hint">Please share any relevant details that may help us plan your experience.</p>
+              <textarea class="ct-form__control ct-form__control--short" id="ct-mobility-more" name="mobility_details" aria-describedby="ct-mobility-more-hint"></textarea>
+            </div>
+          </fieldset>
+          <fieldset class="ct-profile__sec ct-form__field--full">
+            <legend class="ct-profile__h">3. Travel Comfort &amp; Personal Preferences</legend>
+            <p class="ct-form__hint">What would help you feel most comfortable during your journey? Select all that apply.</p>
+            <div class="ct-form__choice">
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="A relaxed pace with downtime"><span>A relaxed pace with downtime</span></label>
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="A balance of guided activities and free time"><span>A balance of guided activities and free time</span></label>
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="Opportunities for shopping and personal exploration"><span>Opportunities for shopping and personal exploration</span></label>
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="Wellness and self-care experiences"><span>Wellness and self-care experiences</span></label>
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="Assistance with special arrangements, when available"><span>Assistance with special arrangements, when available</span></label>
+              <label class="ct-radio"><input type="checkbox" name="comfort" value="Other preferences"><span>Other preferences</span></label>
+            </div>
+            <div class="ct-profile__more">
+              <label class="ct-form__label" for="ct-comfort-more">Additional Details <span class="ct-form__opt">(optional)</span></label>
+              <p class="ct-form__hint" id="ct-comfort-more-hint">Please share any other preferences that may help us personalize your journey.</p>
+              <textarea class="ct-form__control ct-form__control--short" id="ct-comfort-more" name="comfort_details" aria-describedby="ct-comfort-more-hint"></textarea>
+            </div>
+          </fieldset>
+          <fieldset class="ct-profile__sec ct-form__field--full">
+            <legend class="ct-profile__h">4. Optional Wellness &amp; Self-Care Experiences</legend>
+            <p class="ct-form__hint">Which experiences would you be interested in learning more about? Select all that apply. Your selections indicate interest only and do not constitute a booking.</p>
+            <p class="ct-profile__sub">Beauty &amp; Personal Well-Being</p>
+            <div class="ct-form__choice">
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Rejuvenating massage and relaxation treatments"><span>Rejuvenating massage and relaxation treatments</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Facial treatments"><span>Facial treatments</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Hair styling and personal grooming"><span>Hair styling and personal grooming</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Manicure and pedicure"><span>Manicure and pedicure</span></label>
+            </div>
+            <p class="ct-profile__sub">Proactive Health &amp; Prevention</p>
+            <div class="ct-form__choice">
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Executive health check-up"><span>Executive health check-up</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Dental consultation or care"><span>Dental consultation or care</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Skin health or dermatology consultation"><span>Skin health or dermatology consultation</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Aesthetic or beauty consultation"><span>Aesthetic or beauty consultation</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Consultation with a healthcare professional"><span>Consultation with a healthcare professional</span></label>
+              <label class="ct-radio"><input type="checkbox" name="wellness" value="Other wellness or healthcare interests"><span>Other wellness or healthcare interests</span></label>
+            </div>
+            <div class="ct-profile__more">
+              <label class="ct-form__label" for="ct-wellness-more">Additional Details <span class="ct-form__opt">(optional)</span></label>
+              <p class="ct-form__hint" id="ct-wellness-more-hint">Please share any specific services you’re interested in or questions you’d like us to explore.</p>
+              <textarea class="ct-form__control ct-form__control--short" id="ct-wellness-more" name="wellness_details" aria-describedby="ct-wellness-more-hint"></textarea>
+            </div>
+            <p class="ct-profile__note"><strong>Important Note:</strong> These services are optional, may involve additional fees, and depend on provider availability, scheduling, and suitability. Independent providers are responsible for explaining services, recommendations, costs, and potential risks. You decide whether to proceed and pay providers directly. Blooming Passage can assist with coordinating appointments when available but does not provide medical advice or care, recommend treatments, or guarantee outcomes.</p>
+          </fieldset>
+          <div class="ct-profile__sec ct-form__field--full">
+            <label class="ct-profile__h" for="ct-else">5. Anything Else You’d Like Us to Know?</label>
+            <p class="ct-form__hint" id="ct-else-hint">Is there anything else that would help us plan a comfortable and enjoyable experience for you? <span class="ct-form__opt">(optional)</span></p>
+            <textarea class="ct-form__control ct-form__control--short" id="ct-else" name="anything_else" aria-describedby="ct-else-hint"></textarea>
+          </div>
+          <fieldset class="ct-profile__sec ct-profile__grid ct-form__field--full">
+            <legend class="ct-profile__h">6. Emergency Contact Information</legend>
+            <p class="ct-form__hint ct-form__field--full">For your safety and peace of mind, please provide the details of someone we can contact in the event of an emergency during your journey.</p>
+            <div class="ct-form__field">
+              <label class="ct-form__label" for="ct-ec-name">Emergency Contact Full Name <span class="ct-form__req" aria-hidden="true">*</span></label>
+              <input class="ct-form__control" id="ct-ec-name" type="text" name="ec_name" placeholder="Enter their full name" required>
+            </div>
+            <fieldset class="ct-form__field ct-form__choice">
+              <legend class="ct-form__label">Relationship to You <span class="ct-form__req" aria-hidden="true">*</span></legend>
+              <label class="ct-radio"><input type="radio" name="ec_relationship" value="Spouse or Partner" required><span>Spouse or Partner</span></label>
+              <label class="ct-radio"><input type="radio" name="ec_relationship" value="Family Member"><span>Family Member</span></label>
+              <label class="ct-radio"><input type="radio" name="ec_relationship" value="Friend"><span>Friend</span></label>
+              <label class="ct-radio"><input type="radio" name="ec_relationship" value="Other"><span>Other</span></label>
+            </fieldset>
+            <div class="ct-form__field">
+              <label class="ct-form__label" for="ct-ec-phone">Emergency Contact Phone Number <span class="ct-form__req" aria-hidden="true">*</span></label>
+              <input class="ct-form__control" id="ct-ec-phone" type="tel" name="ec_phone" placeholder="Include country code, e.g. +1" required>
+            </div>
+            <div class="ct-form__field">
+              <label class="ct-form__label" for="ct-ec-email">Emergency Contact Email Address <span class="ct-form__opt">(optional)</span></label>
+              <input class="ct-form__control" id="ct-ec-email" type="email" name="ec_email" placeholder="Enter their email address">
+            </div>
+            <p class="ct-form__hint ct-form__field--full">Please ensure that your emergency contact is aware that you have provided their information and that their contact details are current.</p>
+          </fieldset>
+          <div class="ct-profile__thought ct-form__field--full">
+            <p class="ct-profile__h">A Thoughtful Note</p>
+            <p>Blooming Passage will do its best to accommodate your preferences, although some requests depend on local availability and cannot be guaranteed.</p>
+            <p>Please note that Blooming Passage does not provide medical advice or medical care. Guests are responsible for assessing their fitness to travel, managing their own medical needs, and bringing any necessary medications.</p>
+          </div>
+          <p class="ct-form__trap" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
+          <div class="ct-form__field--full ct-form__foot">
+            <p class="ct-form__privacy">Your information will be used to prepare your journey and be handled in accordance with our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+            <button class="ct-form__submit" type="submit">Send My Profile</button>
+            <p class="ct-form__status" role="alert" hidden></p>
+            <p class="ct-form__note"><span aria-hidden="true">*</span> Required fields</p>
+          </div>
+        </form>
+        <div class="ct-thanks" hidden tabindex="-1">
+          <span class="ct-thanks__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.2 2.4 2.4 4.6-5"/></svg></span>
+          <h2 class="ct-form__title">Thank you for sharing.</h2>
+          <p>We’ll use your preferences to help prepare a comfortable, enjoyable journey for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__top">
+    <div class="footer-brand">
+      <a href="/"><img class="footer-brand__logo" src="../images/logo-blooming.png?v=3" width="250" height="72" alt="Blooming Passage" loading="lazy"></a>
+      <p class="footer-brand__motto">It’s your time to bloom.</p>
+      <p class="footer-brand__tag">Thoughtfully curated journeys through Central Vietnam.</p>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-col__title">Contact Us</h3>
+      <ul class="footer-list footer-list--contact">
+        <li><span class="footer-list__label">Email</span><a href="mailto:travel@bloomingpassage.com">travel@bloomingpassage.com</a></li>
+        <li><span class="footer-list__label">Phone</span><a href="tel:+17257770146">(725) 777-0146</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-col__title">Office Hours</h3>
+      <ul class="footer-list footer-list--hours">
+        <li><span class="footer-list__label">Monday – Friday</span>9:00 AM – 5:00 PM (Pacific Time)</li>
+        <li><span class="footer-list__label">Saturday – Sunday</span>By appointment</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-col__title">Explore</h3>
+      <ul class="footer-list footer-list--explore">
+        <li><a href="/">Home</a></li>
+        <li><a href="/our-story/">Our Story</a></li>
+        <li><a href="/discover/">Discover</a></li>
+        <li><a href="/tours/">Journeys</a></li>
+        <li><a href="/essentials/">Essentials</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-col__title">Guest Information</h3>
+      <ul class="footer-list footer-list--guest">
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/payment-booking-terms/">Payment &amp; Booking Terms</a></li>
+        <li><a href="/cancellation-refund-policy/">Cancellation &amp; Refund Policy</a></li>
+        <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-col__title">Follow Us</h3>
+      <ul class="footer-list footer-list--social">
+        <li><a href="https://www.facebook.com/profile.php?id=61594327830098" target="_blank" rel="noopener"><span class="footer-social__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.25-1.46 1.5-1.46H16.6V4.46A21 21 0 0 0 14.3 4.3c-2.28 0-3.84 1.39-3.84 3.95v2.25H7.9v3h2.56V21h3.04z"/></svg></span><span><b>Facebook</b>@bloomingpassage.com</span></a></li>
+        <li><a href="https://www.instagram.com/bloomingpassage.com/" target="_blank" rel="noopener"><span class="footer-social__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.05" fill="currentColor" stroke="none"/></svg></span><span><b>Instagram</b>@bloomingpassage.com</span></a></li>
+        <li><a href="https://www.tiktok.com/@bloomingpassage.com" target="_blank" rel="noopener"><span class="footer-social__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span><span><b>TikTok</b>@bloomingpassage.com</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p><span>U.S.-Based Business</span><span class="site-footer__sep" aria-hidden="true">|</span><span>© 2026 Blooming Passage. All rights reserved.</span></p>
+  </div>
+</footer>
+
+<a class="back-top" href="#" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</a>
+
+<nav class="mobile-bar" aria-label="Quick links">
+  <a class="mobile-bar__item" href="/">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M8.14438 19.7824V16.7156C8.14437 15.9384 8.77632 15.307 9.55909 15.3021H12.4333C13.2195 15.3021 13.8569 15.935 13.8569 16.7156V19.7735C13.8569 20.4476 14.4047 20.9954 15.0836 21.0003H17.0445C17.9603 21.0027 18.8394 20.6431 19.4878 20.001C20.1362 19.3589 20.5007 18.4871 20.5007 17.5778V8.86617C20.5006 8.13171 20.1727 7.43504 19.6053 6.96383L12.9436 1.67459C11.7792 0.749448 10.116 0.779334 8.98604 1.74571L2.46766 6.96383C1.87339 7.42115 1.5182 8.11989 1.50065 8.86617V17.569C1.50065 19.464 3.04803 21.0003 4.95682 21.0003H6.87294C7.19982 21.0027 7.51414 20.8754 7.74612 20.6467C7.97811 20.4181 8.10858 20.107 8.10857 19.7824H8.14438Z" stroke-width="1.5"/></svg>
+    <span>Home</span>
+  </a>
+  <a class="mobile-bar__item" href="/tours/">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6H21M8 12H21M8 18H21M3 6H3.01M3 12H3.01M3 18H3.01"/></svg>
+    <span>Journeys</span>
+  </a>
+  <a class="mobile-bar__item" href="/contact-us/">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+    <span>Contact</span>
+  </a>
+  <a class="mobile-bar__item" href="#search" data-search-open>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.875" cy="10.875" r="7.875"/><path d="M16.4437 16.4437L21 21"/></svg>
+    <span>Search</span>
+  </a>
+</nav>
+
+<script>
+  // Comfort & Preferences Profile: sent through window.bpSendInquiry (main.js); a confirmation replaces the form.
+  (function () {
+    var form = document.getElementById('profile-form');
+    var status = form.querySelector('.ct-form__status');
+    var button = form.querySelector('.ct-form__submit');
+    var thanks = document.querySelector('.ct-thanks');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var val = function (n) { var el = form.elements[n]; return el ? String(el.value).trim() : ''; };
+      var picked = function (n) {
+        var v = Array.prototype.map.call(form.querySelectorAll('[name="' + n + '"]:checked'), function (el) { return el.value; });
+        return v.length ? v.join('; ') : '—';
+      };
+      button.disabled = true;
+      button.textContent = 'Sending…';
+      status.hidden = true;
+      window.bpSendInquiry({
+        _subject: 'Comfort & Preferences Profile from ' + val('name') + ' (bloomingpassage.com)',
+        _honey: val('_honey'),
+        'Full name': val('name'),
+        email: val('email'),
+        'Meal option': picked('diet'),
+        'Dietary details': val('diet_details') || '—',
+        'Mobility & physical comfort': picked('mobility'),
+        'Mobility details': val('mobility_details') || '—',
+        'Travel comfort & preferences': picked('comfort'),
+        'Preference details': val('comfort_details') || '—',
+        'Wellness & self-care interests': picked('wellness'),
+        'Wellness details': val('wellness_details') || '—',
+        'Anything else': val('anything_else') || '—',
+        'Emergency contact name': val('ec_name'),
+        'Emergency contact relationship': picked('ec_relationship'),
+        'Emergency contact phone': val('ec_phone'),
+        'Emergency contact email': val('ec_email') || '—'
+      }).then(function () {
+        form.hidden = true;
+        thanks.hidden = false;
+        thanks.focus();
+      }, function () {
+        status.innerHTML = 'Sorry, your profile could not be sent just now. Please try again, or email us at <a href="mailto:travel@bloomingpassage.com">travel@bloomingpassage.com</a>.';
+        status.hidden = false;
+        button.disabled = false;
+        button.textContent = 'Send My Profile';
+      });
+    });
+  })();
+</script>
+<script src="../js/main.js?v=20261103" defer></script>
+</body>
+</html>

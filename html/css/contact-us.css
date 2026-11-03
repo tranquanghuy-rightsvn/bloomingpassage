@@ -153,3 +153,10 @@ body { background: var(--cream); }
   .ct-sign { font-size: 23px; }
 }
 #plan { scroll-margin-top: 130px; } /* "Plan Your Trip" links land on the whole form, below the fixed header */
+
+/* Comfort & Preferences Profile page (2026-11-03): one centred form card, no side column */
+.ct-row--single { display: block; max-width: 880px; margin: 0 auto; }
+.ct-profile--lead { padding-top: 0; border-top: 0; }
+/* the profile page is a private form: plain green banner, so the Contact photo is not shown twice */
+.page-banner--plain { min-height: 0; background: var(--sage); }
+@media (min-width: 1025px) { .page-banner--plain { min-height: 340px; } }
