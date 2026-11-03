@@ -174,7 +174,7 @@ em { font-style: italic; }
 .site-footer::before { content: ""; display: block; height: var(--band); background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'><path fill='%232c3a2a' d='M0 30c140 0 260 48 460 44s300-30 520-14 320 26 460 4v26H0z'/><path fill='none' stroke='%23d9b078' stroke-width='1.6' d='M0 30c140 0 260 48 460 44s300-30 520-14 320 26 460 4'/></svg>") 50% 100% / 100% 100% no-repeat, var(--footer-lead, var(--cream)); }
 .site-footer__top {
   display: grid;
-  grid-template-columns: minmax(200px, 1.1fr) 1.25fr 1.1fr .6fr 1.3fr 1.2fr;
+  grid-template-columns: minmax(200px, 1.3fr) 1.25fr 1.1fr .7fr 1.3fr; /* Follow Us removed 2026-11-03 (social pages not ready) */
   gap: 36px 28px;
   max-width: 1264px;
   margin: 0 auto;
@@ -299,7 +299,7 @@ em { font-style: italic; }
   .is-menu-open .menu-overlay { opacity: 1; visibility: visible; }
 }
 @media (min-width: 901px) and (max-width: 1100px) {
-  .site-footer__top { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 30px; }
+  .site-footer__top { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 30px; }
   .footer-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 900px) {
@@ -368,7 +368,9 @@ em { font-style: italic; }
 .js-anim [data-anim="left"] { transform: translateX(-56px); }
 .js-anim [data-anim="right"] { transform: translateX(56px); }
 .js-anim [data-anim="img"] { transform: scale(1.08); clip-path: inset(8% 6% 8% 6% round 6px); }
-.js-anim [data-anim].is-in { opacity: 1; transform: none; clip-path: inset(0 0 0 0 round 0); }
+.js-anim [data-anim].is-in { opacity: 1; transform: none; }
+/* only photos open up with clip-path; text must never keep a clip, or italic tails (f, g) and long words get cut (Safari) */
+.js-anim [data-anim="img"].is-in { clip-path: inset(0 0 0 0 round 0); }
 
 .page-banner, .tp-banner, .journal-banner, .photo-banner { position: relative; overflow: hidden; isolation: isolate; }
 .page-banner::after, .tp-banner::after, .journal-banner::after, .photo-banner::after {
