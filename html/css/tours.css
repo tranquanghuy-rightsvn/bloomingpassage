@@ -7,8 +7,8 @@ body.page-tours { background: var(--cream); }
   padding: 64px 24px 70px;
   background: var(--gold) url(../images/banner-hue-royal-aodai.webp) 50% 30% / cover no-repeat;
 }
-.tp-banner--essentials { background-image: url(../images/banner-basket-boats-aerial.webp); background-position: 50% 45%; }
-@media (max-width: 768px) { .tp-banner--essentials { background-image: url(../images/banner-basket-boats-aerial-768.webp); } }
+.tp-banner--essentials { background-image: url(../images/banner-coconut-forest-basket-boats.webp); background-position: 50% 50%; }
+@media (max-width: 768px) { .tp-banner--essentials { background-image: url(../images/banner-coconut-forest-basket-boats-768.webp); } }
 .tp-banner::before {
   content: "";
   position: absolute;
