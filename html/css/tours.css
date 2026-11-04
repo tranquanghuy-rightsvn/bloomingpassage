@@ -15,8 +15,11 @@ body.page-tours { background: var(--cream); }
   inset: 0;
   background: linear-gradient(90deg, rgba(30, 43, 34, .62), rgba(30, 43, 34, .38));
 }
-/* the aerial basket-boat photo is busy: a darker, centred shade keeps the banner text readable */
-.tp-banner--essentials::before { background: radial-gradient(ellipse 60% 75% at 50% 50%, rgba(24, 34, 27, .72), rgba(24, 34, 27, .5)); }
+/* Essentials photo: keep it bright, only a soft shade behind the text; a text shadow does the rest */
+.tp-banner--essentials::before { background: radial-gradient(ellipse 48% 62% at 50% 50%, rgba(24, 34, 27, .42), rgba(24, 34, 27, .08) 100%); }
+.tp-banner--essentials .tp-banner__title,
+.tp-banner--essentials .tp-banner__text,
+.tp-banner--essentials .tp-banner__note { text-shadow: 0 1px 3px rgba(0, 0, 0, .55), 0 0 22px rgba(0, 0, 0, .45); }
 .tp-banner__inner {
   position: relative;
   display: flex;
