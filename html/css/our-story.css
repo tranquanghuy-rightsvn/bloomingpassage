@@ -78,7 +78,7 @@ body { color: var(--ink); background: var(--cream); }
 .ab-story__eyebrow { grid-area: eyebrow; align-self: end; }
 .ab-story__title { grid-area: title; align-self: start; font-size: clamp(38px, 4.1vw, 54px); }
 .ab-story__copy { grid-area: copy; max-width: 520px; }
-.ab-values { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin-top: 42px; }
+.ab-values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 42px; }
 .ab-value { display: flex; flex-direction: column; gap: 18px; min-width: 0; overflow: hidden; border-radius: 24px 4px 4px; }
 .ab-value__img {
   width: 100%;
@@ -243,7 +243,7 @@ body { color: var(--ink); background: var(--cream); }
   .ab-story__intro { gap: 14px 36px; }
   .ab-story__copy { max-width: 100%; }
   .ab-approach__title, .ab-care__title, .ab-place__title, .ab-talk__title { font-size: 40px; }
-  .ab-values { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+  .ab-values { gap: 30px; }
   .ab-philo__head { gap: 14px 36px; }
   .ab-philo__list { grid-template-columns: minmax(0, 1fr); }
   .ab-value__img { height: 220px; }
@@ -259,8 +259,8 @@ body { color: var(--ink); background: var(--cream); }
   .ab-text { font-size: 14px; }
   .ab-story__intro { grid-template-areas: "eyebrow" "title" "copy"; grid-template-columns: minmax(0, 1fr); gap: 18px; align-items: start; }
   .ab-story__title { font-size: 37px; }
-  .ab-values { gap: 28px 20px; margin-top: 30px; }
-  .ab-value__img { height: 145px; border-radius: 18px 3px 3px; }
+  .ab-values { grid-template-columns: minmax(0, 1fr); gap: 28px 20px; margin-top: 30px; }
+  .ab-value__img { height: 200px; border-radius: 18px 3px 3px; }
   .ab-value__title { font-size: 26px; }
   .ab-philo__head { grid-template-columns: minmax(0, 1fr); }
   .ab-philo .ab-title { font-size: 32px; }

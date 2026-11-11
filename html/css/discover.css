@@ -46,8 +46,7 @@
 .dc-well__text { display: flex; flex-direction: column; gap: 22px; }
 
 /* ----- Care circles: four beauty, five health ----- */
-.dc-care { padding-top: 40px; }
-.dc-care--health { padding-bottom: 72px; }
+.dc-care { padding-top: 40px; padding-bottom: 72px; }
 .dc-group { display: flex; flex-direction: column; gap: 36px; }
 .dc-group__head { display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 760px; margin: 0 auto; text-align: center; }
 .dc-group__title { font: 500 clamp(34px, 3.5vw, 46px)/1.1 var(--serif); letter-spacing: -.02em; color: var(--ink); }

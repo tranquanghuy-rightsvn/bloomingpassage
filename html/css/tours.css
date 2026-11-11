@@ -221,7 +221,7 @@ body.page-tours { background: var(--cream); }
 .sj-formula__text { max-width: 560px; font-size: 15px; line-height: 1.8; color: rgba(245, 242, 234, .86); }
 
 /* Four signature experiences */
-.sj-exp__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.sj-exp__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .sj-card { display: flex; flex-direction: column; overflow: hidden; background: var(--paper); border: 1px solid var(--line-soft); border-radius: 24px 6px 6px; transition: transform .3s, box-shadow .3s; }
 .sj-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(56, 45, 38, .09); }
 .sj-card__img { width: 100%; height: 190px; object-fit: cover; }
@@ -356,7 +356,8 @@ body.page-tours { background: var(--cream); }
 @media (max-width: 1024px) {
   .tp-banner__inner { padding: 120px 0 65px; }
   .sj-intro, .sj-well, .sj-group { column-gap: 40px; }
-  .sj-exp__grid, .sj-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sj-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sj-exp__grid { gap: 16px; }
   .sj-step:not(:last-child)::after { content: none; }
   .sj-incl__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sj-excl__list { columns: 2; }
