@@ -99,6 +99,7 @@ body { color: var(--ink); background: var(--cream); }
 /* ----- Philosophy ----- */
 .ab-philo { background: var(--sand); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .ab-philo__head { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 64px; align-items: end; }
+.ab-philo__head--plain { grid-template-columns: minmax(0, 1fr); max-width: 760px; gap: 12px; }
 /* Client 2026-10-31: this section reads smaller than The Four Pillars below it */
 .ab-philo.ab-sec { padding-top: 44px; padding-bottom: 44px; }
 .ab-philo .ab-title { font-size: 38px; }
